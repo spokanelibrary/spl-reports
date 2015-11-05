@@ -49,42 +49,35 @@ add_filter('query_vars', 'add_spl_reports_query_vars');
 
 
 function wp_spl_reports($params=null) {
-
-	return spl_reports($params);
+	$view = get_query_var('spl-reports');
+	if ( !empty($view) ) {
+  	$view = explode('/', $view);
+  }
+	return spl_reports($view, $params);
 
 }
 add_shortcode('spl_reports', 'wp_spl_reports');
 
-function spl_reports($params=null) {
+function spl_reports($view=null, $params=null) {
 	require_once 'class/SPL_Report.php';
 
 	$report = null;
-
-	$view = get_query_var('spl-reports');
-	if ( !empty($view) ) {
-  	$view = explode('/', $view);
-    if ( !empty($view) ) {
-    	$report = new SPL_Report($view, $params);
-		}
+	if ( $view ) {
+		$report = new SPL_Report($view, $params);
 	}
 
-	
 	if ( is_object($report) ) {
 		return $report->output();
-	} 
-
-	
+	} 	
 }
 
 
 function spl_reports_ajax() {
-	wp_send_json($_POST);
-	//wp_send_json( spl_reports() );
+	wp_send_json( spl_reports($_POST['params']) );
 	wp_die();
 } 
 function spl_reports_ajax_anon() {
-	wp_send_json($_POST);
-	//wp_send_json( spl_reports() );
+	wp_send_json( spl_reports($_POST['params']) );
 	wp_die();
 } 
 
