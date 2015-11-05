@@ -54,7 +54,7 @@ function wp_spl_reports($params) {
 		default:
 			break;
 	}
-	$vars = get_query_var();
+	$vars = get_query_var('reports');
 	return '<pre>'.print_r($vars,true).'</pre>';
 	if ( is_object($report) ) {
 		return $report->output();
