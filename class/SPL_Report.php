@@ -35,6 +35,7 @@ class SPL_Report {
 	protected function getHtml() {
 		$html = dirname(__DIR__).'/html/'.get_class($this).'.html';
 		file_get_contents($html);
+		return $html;
 	}
 
 	public function output() {
