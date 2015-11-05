@@ -54,11 +54,11 @@ function wp_spl_reports($params) {
 		default:
 			break;
 	}
-
+	return '<pre>'.print_r($params,true).'</pre>';
 	if ( is_object($report) ) {
 		return $report->output();
 	} 
-	return $params[0];
+	
 }
 
 add_shortcode('spl_reports', 'wp_spl_reports');
