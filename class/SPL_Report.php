@@ -17,7 +17,7 @@ class SPL_Report {
 		$this->view = $view;
 		$this->params = $params;
 
-		$this->output = $this->getReport();
+		$this->getReport();
 
 	}
 
