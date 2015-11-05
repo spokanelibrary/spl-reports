@@ -1,8 +1,8 @@
 $.ajax({ 
 	url: '/wordpress/wp-admin/admin-ajax.php'
 	, data: { action: 'spl_reports' }
-			, type: 'POST'
-			, params: { id: 1 }
+			//, type: 'POST'
+			, params: { test:'test' }
 	})
 	.done(function(obj) {  
 		console.log(obj);
