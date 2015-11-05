@@ -28,6 +28,11 @@ class SPL_Report {
 		$this->output = $report->data;
 	} 
 
+	protected function loadJs() {
+		$js = plugins_url('js/'.get_class().'.js', dirname(__FILE__));
+		wp_enqueue_script( get_class(), $js );
+	}
+
 	public function output() {
 		return $this->output;
 	}
