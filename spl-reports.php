@@ -23,7 +23,7 @@ if ( is_admin() ) {
   add_action( 'wp_ajax_nopriv_my_frontend_action', 'my_frontend_action_callback' );
   //add_action( 'wp_ajax_my_backend_action', 'my_backend_action_callback' );
   // Add other back-end action hooks here
-}
+} 
 
 
 // remember to visit permalinks page to flush cache
@@ -52,13 +52,6 @@ add_filter('query_vars', 'add_spl_reports_query_vars');
 
 require_once 'class/SPL_Report.php';
 
-function my_frontend_action_callback() {
-	echo 'test';
-	//wp_send_json( array('test'=>'ing') );
-	die(); 
-	//exit;
-} 
-
 function wp_spl_reports($params) {
 
 	$report = null;
@@ -79,7 +72,11 @@ function wp_spl_reports($params) {
 
 }
 
-
+function my_frontend_action_callback() {
+	//echo 'test';
+	wp_send_json( array('test'=>'ing') );
+	wp_die(); 
+} 
 
 add_shortcode('spl_reports', 'wp_spl_reports');
 
