@@ -66,7 +66,7 @@ function spl_reports($params=null, $ajax=null) {
 		}
 	}
 
-	/*
+	
 	if ( is_object($report) ) {
 		if ( $ajax ) {
 			wp_send_json( $report->output() );
@@ -75,7 +75,7 @@ function spl_reports($params=null, $ajax=null) {
 			return $report->output();
 		}
 	} 
-	*/
+	
 }
 
 /*
