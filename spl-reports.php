@@ -61,8 +61,8 @@ function wp_spl_reports($params) {
 		    // Add other back-end action hooks here
 			} else {
 			    // Add non-Ajax front-end action hooks here
-					wp_send_json( array('test'=>'ing') );
-					//$report = new SPL_Report($view, $params);
+					//wp_send_json( array('test'=>'ing') );
+					$report = new SPL_Report($view, $params);
 			}
 
 		}
