@@ -22,14 +22,34 @@ class SPL_Report {
 	}
 
 	protected function getReport() {
-		wp_send_json( array('test'=>'ing') );
+		do_action( 'wp_ajax_' . $_POST['action'] );
+		add_action( 'wp_ajax_myajax-submit', 'myajax_submit' );
+
+		//wp_send_json( array('test'=>'ing') );
+		/*
 		exit;
 		//
 		$path = plugin_dir_path( __FILE__ );
 		include $path .'SPL_034_Branch_Unique_items.php';
 		$report = new SPL_034_Branch_Unique_items();
 		$this->output = $report->data;
+		*/
 	} 
+
+	static function myajax_submit() {
+		// get the submitted parameters
+		 $postID = $_POST['postID'];
+		 
+		 // generate the response
+		 $response = json_encode( array( 'success' =&gt; true ) );
+		 
+		 // response output
+		 header( "Content-Type: application/json" );
+		 echo $response;
+		 
+		 // IMPORTANT: don't forget to "exit"
+		 exit;
+	}
 
 	protected function loadJs() {
 		wp_enqueue_script( get_class(), plugins_url('js/'.get_class($this).'.js', dirname(__FILE__)) );
