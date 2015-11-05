@@ -57,7 +57,7 @@ function wp_spl_reports($params) {
 			if ( !empty($view) ) {
 		  	$view = explode('/', $view);
 		    if ( !empty($view) ) {
-		  		return '<pre>'.print_r($vars,true).'</pre>';
+		  		return '<pre>'.print_r($view,true).'</pre>';
 				}
 			}
 
