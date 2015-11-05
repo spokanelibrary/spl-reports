@@ -51,7 +51,7 @@ require_once 'class/SPL_Report.php';
 
 function wp_spl_reports($params) {
 
-	spl_reports($params);
+	return spl_reports($params);
 
 }
 
