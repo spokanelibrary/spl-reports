@@ -18,6 +18,14 @@ if ( !isset($_SESSION) ) {
 	//session_start();
 }
 
+if ( is_admin() ) {
+		    add_action( 'wp_ajax_my_frontend_action', 'my_frontend_action_callback' );
+		    add_action( 'wp_ajax_nopriv_my_frontend_action', 'my_frontend_action_callback' );
+		    //add_action( 'wp_ajax_my_backend_action', 'my_backend_action_callback' );
+		    // Add other back-end action hooks here
+			}
+
+
 // remember to visit permalinks page to flush cache
 function add_spl_reports_rewrite_rules() {   
 
@@ -60,7 +68,6 @@ function wp_spl_reports($params) {
 	if ( !empty($view) ) {
   	$view = explode('/', $view);
     if ( !empty($view) ) {
-    	echo $view;
     	if ( is_admin() ) {
 		    add_action( 'wp_ajax_my_frontend_action', 'my_frontend_action_callback' );
 		    add_action( 'wp_ajax_nopriv_my_frontend_action', 'my_frontend_action_callback' );
