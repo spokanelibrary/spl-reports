@@ -1,5 +1,5 @@
 $.ajax({ 
-	url: 'admin-ajax.php'
+	url: '/admin-ajax.php'
 	, data: { params: { action: 'my_frontend_action' } }
 	})
 	.done(function(obj) {  
