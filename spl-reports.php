@@ -53,7 +53,7 @@ function wp_spl_reports($params=null) {
 	return spl_reports($params);
 
 }
-add_shortcode('spl_reports', 'wp_spl_reports');
+
 
 function spl_reports($params=null, $ajax=null) {
 	require_once 'class/SPL_Report.php';
@@ -88,5 +88,5 @@ function spl_reports_ajax_anon() {
 	spl_reports(null, true);
 } 
 
-
+add_shortcode('spl_reports', 'wp_spl_reports');
 ?>
