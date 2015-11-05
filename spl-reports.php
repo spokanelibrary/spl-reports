@@ -53,16 +53,14 @@ function wp_spl_reports($params) {
 
 		default:
 
-			
-			/*
+			$view = get_query_var('spl-reports');
 			if ( !empty($view) ) {
-		    				$view = explode('/', $view);
-		     				if ( !empty($view) ) {
-		     					$this->params = $view;
-		   */
-
-			$vars = get_query_var('spl-reports');
-			return '<pre>'.print_r($vars,true).'</pre>';
+		  	$view = explode('/', $view);
+		    if ( !empty($view) ) {
+		    	$this->params = $view;
+		  		return '<pre>'.print_r($vars,true).'</pre>';
+				}
+			}
 
 			break;
 	}
