@@ -55,7 +55,7 @@ function wp_spl_reports($params) {
 
 }
 
-function spl_reports($params=null) {
+function spl_reports($params=null, $ajax=null) {
 	$report = null;
 
 	$view = get_query_var('spl-reports');
@@ -67,20 +67,20 @@ function spl_reports($params=null) {
 	}
 
 	if ( is_object($report) ) {
-		return $report->output();
+		if ( $ajax ) {
+			wp_send_json( $report->output() );
+			wp_die();
+		} else {
+			return $report->output();
+		}
 	} 
 }
 
 function spl_reports_ajax() {
-	//echo 'test';
-	wp_send_json( array('auth'=>'yes') );
-	wp_die(); 
+	spl_reports(null, true)
 } 
-
 function spl_reports_ajax_anon() {
-	//echo 'test';
-	wp_send_json( array('auth'=>'no') );
-	wp_die(); 
+	spl_reports(null, true)
 } 
 
 add_shortcode('spl_reports', 'wp_spl_reports');
