@@ -53,11 +53,11 @@ function wp_spl_reports($params=null) {
 	return spl_reports($params);
 
 }
-
+add_shortcode('spl_reports', 'wp_spl_reports');
 
 function spl_reports($params=null, $ajax=null) {
 	require_once 'class/SPL_Report.php';
-	
+
 	$report = null;
 
 	$view = get_query_var('spl-reports');
@@ -82,11 +82,15 @@ function spl_reports($params=null, $ajax=null) {
 
 
 function spl_reports_ajax() {
-	spl_reports(null, true);
+	//spl_reports(null, true);
+	wp_send_json( 'test' );
+	wp_die();
 } 
 function spl_reports_ajax_anon() {
-	spl_reports(null, true);
+	//spl_reports(null, true);
+	wp_send_json( 'test' );
+	wp_die();
 } 
 
-add_shortcode('spl_reports', 'wp_spl_reports');
+
 ?>
