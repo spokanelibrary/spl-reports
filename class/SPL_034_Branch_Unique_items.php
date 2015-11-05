@@ -5,7 +5,7 @@ class SPL_034_Branch_Unique_items extends SPL_Report {
 	var $data;
 
 	function __construct() {
-		$this->data = 'testing some data' .  plugins_url(__FILE__, 'js');
+		$this->data = 'testing some data' .  plugins_url(null, __FILE__);
 	}
 
 }
