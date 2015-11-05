@@ -1,6 +1,7 @@
 $.ajax({ 
 	url: '/wordpress/wp-admin/admin-ajax.php'
-	, data: { params: { action: 'nopriv_my_frontend_action' } }
+	, data: { action: 'nopriv_my_frontend_action' }
+			, params: { }
 	})
 	.done(function(obj) {  
 		console.log(obj);
