@@ -1,5 +1,5 @@
 <?php
-session_start();
-echo 'test';
+include ('/wordpress/wp-config.php');
+
 print_r($_SESSION);
 ?>
