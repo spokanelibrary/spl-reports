@@ -77,7 +77,7 @@ function wp_spl_reports($params) {
 }
 
 function my_frontend_action_callback() {
-	wp_send_json( array('test'=>'ing') );
+	//wp_send_json( array('test'=>'ing') );
 	exit;
 } 
 
