@@ -70,12 +70,14 @@ function spl_reports($view=null, $params=null) {
 }
 
 function spl_reports_ajax() {
-	wp_send_json( spl_reports($_POST) );
+	wp_send_json($_POST);
+	//wp_send_json( spl_reports($_POST) );
 	wp_die();
 } 
 
 function spl_reports_ajax_anon() {
-	wp_send_json( spl_reports($_POST) );
+	wp_send_json($_POST);
+	//wp_send_json( spl_reports($_POST) );
 	wp_die();
 } 
 
