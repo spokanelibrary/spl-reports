@@ -22,6 +22,9 @@ class SPL_Report {
 	}
 
 	protected function getReport() {
+		wp_send_json( array('test'=>'ing') );
+		exit;
+		//
 		$path = plugin_dir_path( __FILE__ );
 		include $path .'SPL_034_Branch_Unique_items.php';
 		$report = new SPL_034_Branch_Unique_items();
