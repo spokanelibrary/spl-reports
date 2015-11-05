@@ -78,13 +78,13 @@ function spl_reports($params=null) {
 
 
 function spl_reports_ajax() {
-	wp_send_json($test);
-	wp_send_json( spl_reports() );
+	wp_send_json($_POST);
+	//wp_send_json( spl_reports() );
 	wp_die();
 } 
 function spl_reports_ajax_anon() {
-	//wp_send_json($test);
-	wp_send_json( spl_reports() );
+	wp_send_json($_POST);
+	//wp_send_json( spl_reports() );
 	wp_die();
 } 
 
