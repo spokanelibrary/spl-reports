@@ -1,6 +1,6 @@
 $.ajax({ 
-	url: 'http://staff.spokanelibrary.org/reports/id/1/'
-	, data: { params: { } }
+	url: 'admin-ajax.php'
+	, data: { params: { action: 'my_frontend_action' } }
 	})
 	.done(function(obj) {  
 		console.log(obj);
