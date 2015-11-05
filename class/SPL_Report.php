@@ -32,6 +32,11 @@ class SPL_Report {
 		wp_enqueue_script( get_class(), plugins_url('js/'.get_class($this).'.js', dirname(__FILE__)) );
 	}
 
+	protected function getHtml() {
+		$html = dirname(__DIR__).'/html/'.get_class($this).'.html';
+		file_get_contents($html);
+	}
+
 	public function output() {
 		return $this->output;
 	}
