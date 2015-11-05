@@ -15,7 +15,7 @@ Version: 0.1
 */
 
 if ( !isset($_SESSION) ) {
-	session_start();
+	//session_start();
 }
 
 // remember to visit permalinks page to flush cache
@@ -54,7 +54,15 @@ function wp_spl_reports($params) {
   	$view = explode('/', $view);
     if ( !empty($view) ) {
 
-    	$report = new SPL_Report($view, $params);
+    	if ( is_admin() ) {
+		    add_action( 'wp_ajax_my_frontend_action', 'my_frontend_action_callback' );
+		    add_action( 'wp_ajax_nopriv_my_frontend_action', 'my_frontend_action_callback' );
+		    //add_action( 'wp_ajax_my_backend_action', 'my_backend_action_callback' );
+		    // Add other back-end action hooks here
+			} else {
+			    // Add non-Ajax front-end action hooks here
+					$report = new SPL_Report($view, $params);
+			}
 
 		}
 	}
@@ -65,6 +73,10 @@ function wp_spl_reports($params) {
 	} 
 
 }
+
+function my_frontend_action_callback() {
+	wp_send_json( array('test'=>'ing') );
+} 
 
 add_shortcode('spl_reports', 'wp_spl_reports');
 
