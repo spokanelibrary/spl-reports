@@ -45,8 +45,9 @@ add_filter('query_vars', 'add_spl_reports_query_vars');
 require_once 'class/SPL_Report.php';
 
 function my_frontend_action_callback() {
-	echo 'test';
-	//wp_send_json( array('test'=>'ing') );
+
+	wp_send_json( array('test'=>'ing') );
+	wp_die(); 
 	//exit;
 } 
 
