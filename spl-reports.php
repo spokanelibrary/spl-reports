@@ -71,25 +71,26 @@ function spl_reports($params=null, $ajax=null) {
 	
 	if ( is_object($report) ) {
 		if ( $ajax ) {
-			wp_send_json( $report->output() );
+			wp_send_json( 'ok' );
 			wp_die();
 		} else {
 			return $report->output();
 		}
 	} 
+
 	
 }
 
 
 function spl_reports_ajax() {
-	//spl_reports(null, true);
-	wp_send_json( 'test' );
-	wp_die();
+	spl_reports(null, true);
+	//wp_send_json( 'test' );
+	//wp_die();
 } 
 function spl_reports_ajax_anon() {
-	//spl_reports(null, true);
-	wp_send_json( 'test' );
-	wp_die();
+	spl_reports(null, true);
+	//wp_send_json( 'test' );
+	//wp_die();
 } 
 
 
