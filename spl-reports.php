@@ -49,7 +49,7 @@ add_filter('query_vars', 'add_spl_reports_query_vars');
 
 require_once 'class/SPL_Report.php';
 
-function wp_spl_reports($params) {
+function wp_spl_reports($params=null) {
 
 	return spl_reports($params);
 
