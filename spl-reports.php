@@ -58,6 +58,8 @@ function wp_spl_reports($params) {
 	
 	if ( is_object($report) ) {
 		return $report->output();
+	} else {
+		return 'test';
 	}
 
 }
