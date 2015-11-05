@@ -9,7 +9,7 @@ class SPL_034_Branch_Unique_items extends SPL_Report {
 		
 		wp_enqueue_script( get_class(), $js );
 
-		$this->data = 'test';
+		$this->data = dirname(__FILE__);
 	}
 
 }
