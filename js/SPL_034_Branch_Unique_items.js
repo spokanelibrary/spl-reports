@@ -1,6 +1,7 @@
 $.ajax({ 
 	url: '/wordpress/wp-admin/admin-ajax.php'
 	, data: { action: 'my_frontend_action' }
+			, type: 'POST'
 			, params: { }
 	})
 	.done(function(obj) {  
