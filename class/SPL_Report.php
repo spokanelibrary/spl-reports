@@ -22,7 +22,7 @@ class SPL_Report {
 	}
 
 	protected function getReport() {
-		include 'SPL_034_Branch_Unique_items.php';
+		include plugin_dir_path( __FILE__ ).'class/'.'SPL_034_Branch_Unique_items.php';
 		$report = new SPL_034_Branch_Unique_items();
 		$this->output = $report->data;
 	} 
