@@ -9,9 +9,12 @@ class SPL_Report {
 	
 	var $summary = null;
 
-	function __construct() {
+	function __construct($view=null, $params=null) {
 		
 		$this->apikey = getenv('SPL_KEY');
+
+
+		$this->output = print_r($view, true);
 
 	}
 

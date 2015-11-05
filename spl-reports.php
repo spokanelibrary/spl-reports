@@ -49,20 +49,16 @@ function wp_spl_reports($params) {
 
 	$report = null;
 
-	switch ( $params[0] ) {
+	$view = get_query_var('spl-reports');
+	if ( !empty($view) ) {
+  	$view = explode('/', $view);
+    if ( !empty($view) ) {
 
-		default:
+    	$report = new SPL_Report($view, $params);
 
-			$view = get_query_var('spl-reports');
-			if ( !empty($view) ) {
-		  	$view = explode('/', $view);
-		    if ( !empty($view) ) {
-		  		return '<pre>'.print_r($view,true).'</pre>';
-				}
-			}
-
-			break;
+		}
 	}
+
 
 	if ( is_object($report) ) {
 		return $report->output();
