@@ -1,7 +1,7 @@
 $.ajax({ 
 	url: '/wordpress/wp-admin/admin-ajax.php'
 	, data: { action: 'spl_reports'
-			, params: { 'spl-reports': 1 } 
+			, params: { 'spl-reports': 'id/1' } 
 			}
 			//, type: 'POST'
 			
