@@ -30,8 +30,8 @@ class SPL_Report {
 
 	protected function loadJs() {
 		$js = plugins_url('js/'.get_class($this).'.js', dirname(__FILE__));
-		return $js;
-		//wp_enqueue_script( get_class(), $js );
+		//return $js;
+		wp_enqueue_script( get_class(), $js );
 	}
 
 	public function output() {
