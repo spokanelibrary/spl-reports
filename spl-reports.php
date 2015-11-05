@@ -60,7 +60,7 @@ function wp_spl_reports($params) {
 	if ( !empty($view) ) {
   	$view = explode('/', $view);
     if ( !empty($view) ) {
-
+    	echo $view;
     	if ( is_admin() ) {
 		    add_action( 'wp_ajax_my_frontend_action', 'my_frontend_action_callback' );
 		    add_action( 'wp_ajax_nopriv_my_frontend_action', 'my_frontend_action_callback' );
