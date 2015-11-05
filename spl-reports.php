@@ -55,13 +55,10 @@ function wp_spl_reports($params) {
 			break;
 	}
 
-	
 	if ( is_object($report) ) {
 		return $report->output();
-	} else {
-		return 'test';
-	}
-
+	} 
+	return $params[0];
 }
 
 add_shortcode('spl_reports', 'wp_spl_reports');
