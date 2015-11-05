@@ -11,9 +11,9 @@ class SPL_034_Branch_Unique_items extends SPL_Report {
 
 		//wp_enqueue_script( get_class(), $js );
 
-		$this->loadJs();
+		$this->data = $this->loadJs();
 
-		$this->data = file_get_contents($html);
+		//$this->data = file_get_contents($html);
 	}
 
 }
