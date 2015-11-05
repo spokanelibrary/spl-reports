@@ -22,11 +22,9 @@ if ( is_admin() ) {
   // Add other back-end action hooks here
 } 
 
-
 // remember to visit permalinks page to flush cache
 function add_spl_reports_rewrite_rules() {   
 
-	// rpa pages
 	$url = 'reports';
 	$page = 'reports';
 	$query = 'spl-reports'; // you must register in query vars
@@ -71,15 +69,14 @@ function spl_reports($view=null, $params=null) {
 	} 	
 }
 
-
 function spl_reports_ajax() {
-	wp_send_json( spl_reports($_POST['params']) );
-	wp_die();
-} 
-function spl_reports_ajax_anon() {
-	wp_send_json( spl_reports($_POST['params']) );
+	wp_send_json( spl_reports($_REQUEST['params']) );
 	wp_die();
 } 
 
+function spl_reports_ajax_anon() {
+	wp_send_json( spl_reports($_REQUEST['params']) );
+	wp_die();
+} 
 
 ?>
