@@ -1,5 +1,5 @@
 $.ajax({ 
-	url: '/wp-admin/admin/admin-ajax.php'
+	url: '/wordpress/wp-admin/admin-ajax.php'
 	, data: { params: { action: 'my_frontend_action' } }
 	})
 	.done(function(obj) {  
