@@ -22,15 +22,13 @@ class SPL_Report {
 	}
 
 	protected function getReport() {
-
-		//wp_send_json( array('test'=>'ing') );
-
-		
+		$this->output = print_r($view, true);
+		/*
 		$path = plugin_dir_path( __FILE__ );
 		include $path .'SPL_034_Branch_Unique_items.php';
 		$report = new SPL_034_Branch_Unique_items();
 		$this->output = $report->data;
-		
+		*/
 	} 
 
 	protected function loadJs() {
