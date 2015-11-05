@@ -1,6 +1,6 @@
 $.ajax({ 
 	url: '/wordpress/wp-admin/admin-ajax.php'
-	, data: { action: 'my_frontend_action' }
+	, data: { action: 'spl_reports' }
 			, type: 'POST'
 			, params: { }
 	})
