@@ -1,1 +1,1 @@
-This is just some html;
+alert('hello!');
