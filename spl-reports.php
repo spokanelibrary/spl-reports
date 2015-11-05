@@ -23,7 +23,6 @@ if ( is_admin() ) {
   add_action( 'wp_ajax_nopriv_my_frontend_action', 'my_frontend_action_callback' );
   //add_action( 'wp_ajax_my_backend_action', 'my_backend_action_callback' );
   // Add other back-end action hooks here
-  exit;
 }
 
 
