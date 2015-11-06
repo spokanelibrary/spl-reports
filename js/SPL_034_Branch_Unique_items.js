@@ -1,6 +1,5 @@
 var splReport = {
-	init: {}
-	,config: splReportConfig
+	config:splReportConfig
 
 	,init: function() {
 		_self = this;
@@ -9,7 +8,7 @@ var splReport = {
 	,initUI: function() {
 		$('body').on('submit', '.spl-report-control', function(e) {
 			e.preventDefault();
-			_self.getReport();
+			this.getReport();
 		});
 	}
 	,getReport: function() {
