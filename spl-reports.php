@@ -1,5 +1,5 @@
 <?php
-error_reporting(1);
+error_reporting(E_ALL);
 /**
  * @package SPL_Reports
  * @version 0.1
