@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL);
+
 class SPL_Report {
 
 	var $params;
