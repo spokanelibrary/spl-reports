@@ -2,8 +2,9 @@ var splReport = {
 	config:splReportConfig
 	//,_this: this
 	,init: function() {
-		_this = this;
+		var _this = this;
 		this.initUI();
+		return _this;
 	} 
 	,initUI: function() {
 		
@@ -30,6 +31,4 @@ var splReport = {
 		*/
 	}
 
-};
-
-splReport.init();
+}.init();
