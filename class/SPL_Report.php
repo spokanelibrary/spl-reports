@@ -24,7 +24,9 @@ class SPL_Report {
 
 		$class = $this->getReportClass();
 		include $class->path;
-		$report = new $class->name($this->params, $this->config);
+
+		
+		$report = new SPL_034_Branch_Unique_items($this->params, $this->config);
 
 		if ( $this->params['ajax'] ) {
 			$this->output = array('this'=>'test');
