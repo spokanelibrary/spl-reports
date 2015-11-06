@@ -23,8 +23,10 @@ var splReport = {
 		)
 		.done(function(obj) { 
 			console.log(obj);
+			console.log('done');
 		})
 		.fail(function() {
+			console.log('fail');
 		})
 		.always(function() {
 			console.log('always');
