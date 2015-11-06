@@ -6,7 +6,7 @@ var splReport = {
 		this.initUI();
 	} 
 	,initUI: function() {
-		$('body').on('submit', 'spl-report-control', function(e) {
+		$('body').on('submit', '.spl-report-control', function(e) {
 			e.preventDefault();
 			_self.getReport();
 		});
