@@ -8,7 +8,6 @@ var splReportConfig = {
 						, id: $('.spl-report').data('spl-report-id') 
 						} 
 					}
-			, type: 'POST'
 	}
 
 };
