@@ -3,7 +3,8 @@ var splReport = {
 
 	,init: function() {
 		_this = this;
-		this.initUI();
+		this.getReport();
+		//this.initUI();
 	} 
 	,initUI: function() {
 		
