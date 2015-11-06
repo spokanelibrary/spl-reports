@@ -6,7 +6,7 @@ class SPL_Report {
 	var $config;
 	var $apikey;
 	var $output;
-	var $endpoint = 'http://app.spokanelibrary.org/v3/spl-reports/';
+	var $endpoint = 'https://app.spokanelibrary.org/v3/spl-reports/';
 
 	function __construct($params=null, $config=null) {
 		$this->params = $params;
