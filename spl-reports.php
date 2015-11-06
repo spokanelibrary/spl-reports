@@ -73,7 +73,7 @@ function spl_reports($config=null, $params=null) {
 
 	$report = null;
 	//if ( $config ) {
-		$report = new SPL_Report($config, $params);
+		//$report = new SPL_Report($config, $params);
 	//}
 
 	if ( is_object($report) ) {
