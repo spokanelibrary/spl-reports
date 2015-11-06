@@ -52,17 +52,19 @@ function wp_spl_reports($params=null) {
   	$view = explode('/', $view);
   }
 
-  /*
+  
   if ( $view[0] ) {
-  	if ( ('id' == $view[0]) && isset($view[1]) ) {
+  	if ( 'id' == $view[0] && isset($view[1]) ) {
   		$config['id'] = $view[1];
   	} else {
   		$config['id'] = $view[0];
   	}
   }
-
-	return spl_reports($config, $params);
-	*/
+  
+	if ( $config ) {
+		return spl_reports($config, $params);
+	}
+	
 }
 add_shortcode('spl_reports', 'wp_spl_reports');
 
