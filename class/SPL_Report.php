@@ -25,7 +25,7 @@ class SPL_Report {
 		$class = $this->getReportClass();
 		include $class->path;
 
-		
+
 		$report = new SPL_034_Branch_Unique_items($this->params, $this->config);
 
 		if ( $this->params['ajax'] ) {
@@ -41,6 +41,8 @@ class SPL_Report {
 		$class = new stdClass();
 		$class->name = 'SPL_034_Branch_Unique_items';
 		$class->path = plugin_dir_path( __FILE__ ).'SPL_034_Branch_Unique_items.php';
+		
+		return $class;
 	}
 
 	protected function loadJs() {
