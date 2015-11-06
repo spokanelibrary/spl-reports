@@ -1,11 +1,9 @@
 var splReport = {
-	_self: this
-	
-	,config:splReportConfig
+	config:splReportConfig
 
 	,init: function() {
-		var _self = this;
-		_self.initUI();
+		_self = this;
+		this.initUI();
 	} 
 	,initUI: function() {
 		$('body').on('submit', '.spl-report-control', function(e) {
@@ -29,4 +27,6 @@ var splReport = {
 		*/
 	}
 
-}.init();
+}
+
+splReport.init();
