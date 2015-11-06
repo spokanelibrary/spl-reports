@@ -34,6 +34,10 @@ class SPL_Report {
 		}
 	} 
 
+	public function getParams() {
+		return $this->params;
+	}
+
 	protected function getReportClass() {
 		$class = new stdClass();
 		$class->name = 'SPL_034_Branch_Unique_items';
