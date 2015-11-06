@@ -1,9 +1,8 @@
-var splReport = {
-	_self: this
-	,config:splReportConfig
+splReport = {
+	config:splReportConfig
 
 	,init: function() {
-		//_self = this;
+		_self = this;
 		this.initUI();
 	} 
 	,initUI: function() {
