@@ -4,14 +4,19 @@ var splReport = {
 , init: function() {
 		_self = this;
 
-		$.ajax(_self.config.api)
+		this.getReport();
+} 
+, getReport: function() {
+		$.ajax(
+		_self.config.api
+		)
 		.done(function(obj) {  
 			console.log(obj);
 		})
 		.fail(function() {
 		})
 		.always(function() {
-	});
-} 
+		});
+}
 
 }.init();
