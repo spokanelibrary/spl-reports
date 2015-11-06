@@ -5,8 +5,9 @@ var splReport = {
 		_this = this;
 		//_this.getReport();
 		$('body').on('submit', '.spl-report-control', function(e) {
-			e.preventDefault();
+			
 			_this.getReport();
+			e.preventDefault();
 		});
 
 		this.initUI();
