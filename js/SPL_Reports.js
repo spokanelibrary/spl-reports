@@ -13,7 +13,8 @@ var splReportConfig = {
 	}
 
 	,init: function() {
-
+		_this = this;
+		this.initUI();
 	}
 	,initUI: function() {
 		$('body').on('submit', '.spl-report-control', function(e) {
@@ -23,7 +24,7 @@ var splReportConfig = {
 	}
 	,getReport: function() {
 		$.ajax(
-			_this.config.api
+			_this.api
 		)
 		.done(function(obj) { 
 			console.log(obj);
