@@ -1,6 +1,6 @@
 <?php
 
-class SPL_034_Branch_Unique_items extends SPL_Report {
+class SPL_034_Branch_Unique_Items extends SPL_Report {
 
 	var $api = '34';
 
