@@ -26,7 +26,13 @@ class SPL_Report {
 		include $path .'SPL_034_Branch_Unique_items.php';
 		$report = new SPL_034_Branch_Unique_items($this->params, $this->config);
 
-		$this->output = $report->tmpl;
+		if ( $this->params['ajax'] ) {
+			$this->output = array('this'=>'test');
+		} else {
+			$report->loadJs();
+			$this->output = $report->geteTmpl;	
+		}
+
 	} 
 
 	protected function loadJs() {
