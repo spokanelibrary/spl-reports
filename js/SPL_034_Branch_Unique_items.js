@@ -12,8 +12,8 @@ var splReport = {
 		
 		$('body').on('submit', '.spl-report-control', function(e) {
 			e.preventDefault();
-			console.log(_this);
-			_this.getReport();
+			//console.log(_this);
+			_this().getReport();
 		});
 		
 	}
