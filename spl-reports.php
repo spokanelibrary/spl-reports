@@ -76,7 +76,8 @@ function spl_reports_ajax() {
 } 
 
 function spl_reports_ajax_anon() {
-	spl_reports_ajax();
+	wp_send_json( spl_reports($_REQUEST['params']) );
+	wp_die();
 } 
 
 ?>
