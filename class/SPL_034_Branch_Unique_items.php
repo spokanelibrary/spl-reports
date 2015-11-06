@@ -8,7 +8,7 @@ class SPL_034_Branch_Unique_items extends SPL_Report {
 	protected function processData($data=null) {
 		
 		//parent::processData($data);
-		$data['sg'] = 'test';
+		$data->sg = 'test';
 		return $data;
 	}
 
