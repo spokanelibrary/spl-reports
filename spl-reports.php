@@ -71,6 +71,11 @@ add_shortcode('spl_reports', 'wp_spl_reports');
 
 function spl_reports($config=null, $params=null) {
 	include __DIR__.'/class/SPL_Report.php';
+	if ( file_exists(__DIR__.'/class/SPL_Report.php') ) {
+		return 'yes';
+	} else {
+		return 'no';
+	}
 
 	$report = null;
 	//if ( $config ) {
