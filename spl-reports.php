@@ -67,10 +67,10 @@ function wp_spl_reports($params=null) {
 	
 }
 add_shortcode('spl_reports', 'wp_spl_reports');
+require_once 'class/SPL_Report.php';
 
 function spl_reports($config=null, $params=null) {
-	require_once 'class/SPL_Report.php';
-
+	
 	$report = null;
 	//if ( $config ) {
 		//$report = new SPL_Report($config, $params);
