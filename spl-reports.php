@@ -60,7 +60,7 @@ function wp_spl_reports($params=null) {
   		$config['id'] = $view[0];
   	}
   }
-
+  return $config;
 	if ( $config ) {
 		return spl_reports($config, $params);
 	}
