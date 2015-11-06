@@ -2,11 +2,10 @@ splReport = {
 	config:splReportConfig
 
 	,init: function() {
-		_self = this;
+		var _self = this;
 		this.initUI();
 	} 
 	,initUI: function() {
-		_self.getReport();
 		
 		$('body').on('submit', '.spl-report-control', function(e) {
 			e.preventDefault();
