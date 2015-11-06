@@ -33,7 +33,7 @@ class SPL_Report {
 	} 
 
 	protected function getReportData() {
-		return $this->endpoint;
+		return $this->curlProxy($this->endpoint, $this->params);
 	}
 
 	protected function getReportClass() {
