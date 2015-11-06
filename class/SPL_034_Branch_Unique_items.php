@@ -5,12 +5,13 @@ class SPL_034_Branch_Unique_items extends SPL_Report {
 	var $params;
 	var $config;
 
-	function __construct() {
-	
+	function __construct($params, $config) {
+		$this->params = $params;
+		$this->config = $config;
 	}
 
 	function getReportData() {
-		return parent::$params;
+		return $this->$params;
 	}
 
 }
