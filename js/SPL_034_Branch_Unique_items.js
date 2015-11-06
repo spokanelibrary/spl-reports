@@ -4,14 +4,13 @@ var splReport = {
 	,init: function() {
 		_this = this;
 		//_this.getReport();
-		//this.initUI();
+		this.initUI();
 	} 
 	,initUI: function() {
 		
 		$('body').on('submit', '.spl-report-control', function(e) {
 			_this.getReport();
 			e.preventDefault();
-			
 		});
 		
 	}
