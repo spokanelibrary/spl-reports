@@ -13,6 +13,8 @@ var splReport = {
 		});
 	}
 	,getReport: function() {
+		console.log('test');
+		/*
 		$.ajax(
 		_self.config.api
 		)
@@ -23,6 +25,7 @@ var splReport = {
 		})
 		.always(function() {
 		});
+		*/
 	}
 
 }.init();
