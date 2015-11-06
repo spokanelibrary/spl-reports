@@ -21,10 +21,10 @@ class SPL_Report {
 	}
 
 	protected function getReport() {
-		$path = plugin_dir_path( __FILE__ );
 
-		include $path .'SPL_034_Branch_Unique_items.php';
-		$report = new SPL_034_Branch_Unique_items($this->params, $this->config);
+		$class = $this->getReportClass();
+		include $class->path;
+		$report = new $class->name($this->params, $this->config);
 
 		if ( $this->params['ajax'] ) {
 			$this->output = array('this'=>'test');
@@ -34,6 +34,12 @@ class SPL_Report {
 		}
 
 	} 
+
+	protected function getReportClass() {
+		$class = new stdClass();
+		$class->name = 'SPL_034_Branch_Unique_items';
+		$class->path = plugin_dir_path( __FILE__ ).'SPL_034_Branch_Unique_items.php';
+	}
 
 	protected function loadJs() {
 		wp_enqueue_script( get_class(), plugins_url('js/'.get_class($this).'.js', dirname(__FILE__)) );
