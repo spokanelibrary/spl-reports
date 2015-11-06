@@ -19,7 +19,7 @@ class SPL_Report {
 	public function getReport() {
 		$class = $this->getReportClass();
 		include $class->path;
-		$report = new $class->name($params);
+		$report = new $class->name($this->params);
 
 		//$report->setProperty('params', $this->params);
 		//$report->setProperty('config', $this->config);
