@@ -23,7 +23,10 @@ class SPL_Report {
 			$this->output = $report->getReportData();
 		} else {
 			$report->loadJs();
-			$this->output = $report->getTmpl();	
+			$html = '<div class="spl-report" data-spl-report-id="'.$this->params['id'].'">'.PHP_EOL;
+			$html .= $report->getTmpl();	
+			$html .= PHP_EOL.'</div>'.PHP_EOL;
+			$this->output = $html;
 		}
 		
 	} 
