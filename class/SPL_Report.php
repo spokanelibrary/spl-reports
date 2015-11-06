@@ -17,7 +17,7 @@ class SPL_Report {
 		$this->params = $params;
 		$this->config = $config;
 
-		$this->getReport();
+		//$this->getReport();
 	}
 
 	protected function getReport() {
