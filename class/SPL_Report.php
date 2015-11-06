@@ -2,7 +2,7 @@
 
 class SPL_Report {
 
-	var $view;
+	var $config;
 	var $params;
 	var $output;
 
@@ -10,11 +10,11 @@ class SPL_Report {
 	
 	var $summary = null;
 
-	function __construct($view=null, $params=null) {
+	function __construct($config=null, $params=null) {
 		
 		$this->apikey = getenv('SPL_KEY');
 
-		$this->view = $view;
+		$this->config = $config
 		$this->params = $params;
 
 		$this->getReport();
@@ -28,7 +28,7 @@ class SPL_Report {
 		include $path .'SPL_034_Branch_Unique_items.php';
 		$report = new SPL_034_Branch_Unique_items();
 		
-		$this->output = print_r($this->view, true);
+		$this->output = print_r($this->config, true);
 		//$this->output = $report->data;
 		
 	} 

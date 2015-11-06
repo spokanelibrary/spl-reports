@@ -51,17 +51,26 @@ function wp_spl_reports($params=null) {
 	if ( !empty($view) ) {
   	$view = explode('/', $view);
   }
-	return spl_reports($view, $params);
+
+  if ( $view[0] ) {
+  	if ( 'id' = $view[0] && isset($view[1] ) {
+  		$config['id'] = $view[1];
+  	} else {
+  		$config['id'] = $view[0];
+  	}
+  }
+
+	return spl_reports($config, $params);
 
 }
 add_shortcode('spl_reports', 'wp_spl_reports');
 
-function spl_reports($view=null, $params=null) {
+function spl_reports($config=null, $params=null) {
 	require_once 'class/SPL_Report.php';
 
 	$report = null;
 	if ( $view ) {
-		$report = new SPL_Report($view, $params);
+		$report = new SPL_Report($config, $params);
 	}
 
 	if ( is_object($report) ) {
