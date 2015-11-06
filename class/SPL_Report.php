@@ -17,17 +17,16 @@ class SPL_Report {
 		$this->params = $params;
 		$this->config = $config;
 
-		//$this->getReport();
+		$this->getReport();
 	}
 
-	public function getReport() {
+	protected function getReport() {
 		$class = $this->getReportClass();
 		include $class->path;
 		$report = new $class->name($this);
 
 		if ( $this->params['ajax'] ) {
 			$this->output = $report->getReportData();
-			//$this->output = $this->params;
 		} else {
 			$report->loadJs();
 			$this->output = $report->getTmpl();	
