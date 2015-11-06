@@ -2,13 +2,10 @@
 
 class SPL_Report {
 
-	var $config;
 	var $params;
-	var $output;
-
+	var $config;
 	var $apikey;
-	
-	var $summary = null;
+	var $output;
 
 	function __construct($params=null, $config=null) {
 		$this->params = $params;
@@ -22,7 +19,8 @@ class SPL_Report {
 		$report = new $class->name($this->params, $this->config);
 
 		if ( $this->params['ajax'] ) {
-			$this->output = $report->getReportData();
+			$this->output = $class->scan;
+			//$this->output = $report->getReportData();
 		} else {
 			$report->loadJs();
 			$this->output = $report->getTmpl();	
@@ -34,6 +32,18 @@ class SPL_Report {
 		$class->name = 'SPL_034_Branch_Unique_items';
 		$class->path = plugin_dir_path( __FILE__ ).'SPL_034_Branch_Unique_items.php';
 		
+
+    $files = scandir( plugin_dir_path( __FILE__ ) );
+    foreach ($files as $file) {
+        // ignore directories and hidden files
+        if(0 !== stripos($file, '.')) {
+            if (substr_count($file, $this->id)) {
+                // trim off file extension
+                $class->scan = stristr($file, '.', true);
+            }
+        }
+    }
+
 		return $class;
 	}
 
