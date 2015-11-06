@@ -1,4 +1,4 @@
-splReport = {
+splReport: function() {
 	config:splReportConfig
 
 	,init: function() {
@@ -29,6 +29,6 @@ splReport = {
 		*/
 	}
 
-}
+};
 
 splReport.init();
