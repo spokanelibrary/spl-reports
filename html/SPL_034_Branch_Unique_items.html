@@ -1,7 +1,8 @@
 <form class="form-inline spl-report-control" data-spl-report-id="34">
-	<h1>Unique Items <small>by branch</small></h1>
+	<h2>Unique Items <small>by branch</small></h2>
 	<fieldset>
 		<legend>
+			List items held <i>only</i> by the selected branch.
 		</legend>
 		<div class="form-group">
 			<label for="branch"><strong>Select Branch:</strong></label>
@@ -13,5 +14,19 @@
 		    <option value="so">South Hill</option>
 			</select> 
 		</div>
+
+		<button type="submit" class="btn btn-default">Run Report</button>
+
+		Note: You cannot select Downtown because that would crash your browser.
+
+		This report filters out items with the following status codes:
+
+		    Lost
+		    Withdrawn
+		    On Order
+		    In Cataloging
+
+		It also filters out items with the following collection codes:
+		afram, forn, fornj, pbka, pbkj 
 	</fieldset>
 </form>
