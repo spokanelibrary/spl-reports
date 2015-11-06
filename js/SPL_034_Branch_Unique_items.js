@@ -6,7 +6,10 @@ var splReport = {
 		this.initUI();
 	} 
 	,initUI: function() {
-		//this.getReport();
+		$('body').on('submit', 'spl-report-control', function(e) {
+			e.preventDefault();
+			this.getReport();
+		});
 	}
 	,getReport: function() {
 		$.ajax(
