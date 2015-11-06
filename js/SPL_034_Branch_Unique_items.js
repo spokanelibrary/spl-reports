@@ -4,7 +4,7 @@ var splReport = {
 , init: function() {
 		_self = this;
 
-		this.getReport();
+		//this.getReport();
 } 
 , getReport: function() {
 		$.ajax(
