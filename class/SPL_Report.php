@@ -23,7 +23,7 @@ class SPL_Report {
 	protected function getReport() {
 		$class = $this->getReportClass();
 		include $class->path;
-		$report = new $class->name($this->params, $this->config);
+		$report = new $class->name($this);
 
 		if ( $this->params['ajax'] ) {
 			$this->output = $report->getReportData();
