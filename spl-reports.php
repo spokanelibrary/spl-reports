@@ -14,7 +14,7 @@ Author URI: http://seangirard.com
 Version: 0.1
 */
 
-
+include __DIR__.'/class/SPL_Report.php';
 
 if ( is_admin() ) {
   add_action( 'wp_ajax_spl_reports', 'spl_reports_ajax' );
@@ -70,7 +70,7 @@ function wp_spl_reports($params=null) {
 add_shortcode('spl_reports', 'wp_spl_reports');
 
 function spl_reports($config=null, $params=null) {
-	include __DIR__.'/class/SPL_Report.php';
+	
 	
 	$report = null;
 	if ( $config ) {
