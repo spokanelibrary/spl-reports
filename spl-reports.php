@@ -72,9 +72,9 @@ function spl_reports($config=null, $params=null) {
 	require_once 'class/SPL_Report.php';
 
 	$report = null;
-	if ( $config ) {
+	//if ( $config ) {
 		$report = new SPL_Report($config, $params);
-	}
+	//}
 
 	if ( is_object($report) ) {
 		return $report->output();
