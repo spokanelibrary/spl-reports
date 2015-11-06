@@ -74,7 +74,7 @@ if ( file_exists(__DIR__.'/class/SPL_Report.php') ) {
 		//return 'yes';
 		include __DIR__.'/class/SPL_Report.php';
 	} else {
-		return 'no';
+		//return 'no';
 	}
 function spl_reports($config=null, $params=null) {
 	
