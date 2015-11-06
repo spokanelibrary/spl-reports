@@ -20,7 +20,7 @@ class SPL_Report {
 		//$this->getReport();
 	}
 
-	protected function getReport() {
+	public function getReport() {
 		$class = $this->getReportClass();
 		include $class->path;
 		$report = new $class->name($this);
