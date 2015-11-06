@@ -21,9 +21,9 @@ class SPL_Report {
 		include $class->path;
 		$report = new $class->name($this);
 
-		$report->setProperty('params', $this->params);
-		$report->setProperty('config', $this->config);
-		$report->setProperty('apikey', $this->apikey);
+		//$report->setProperty('params', $this->params);
+		//$report->setProperty('config', $this->config);
+		//$report->setProperty('apikey', $this->apikey);
 
 		if ( $this->params['ajax'] ) {
 			$this->output = $report->getReportData();
@@ -35,7 +35,7 @@ class SPL_Report {
 
 	public function setProperty($var=null, $val=null) {
 		if ( $var && $val ) {
-			$this->params = $val;
+			$this->$var = $val;
 		}
 	}
 
