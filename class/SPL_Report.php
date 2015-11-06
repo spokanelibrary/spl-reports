@@ -14,7 +14,7 @@ class SPL_Report {
 	}
 
 	public function getReport() {
-		return 'test';
+		$this->output = 'test';
 		/*
 		$class = $this->getReportClass();
 		include $class->path;
