@@ -40,7 +40,7 @@ var splReport = {
 		
 	}
 	,showReport: function(result) {
-		console.log(result);
+		//console.log(result);
 		this.tmpl = Handlebars.compile( $('.spl-report-tmpl').html() );
 		$('.spl-report-result').html( this.tmpl({ result:result }));
 	}
