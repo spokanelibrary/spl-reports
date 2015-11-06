@@ -18,7 +18,7 @@ var splReport = {
 	}
 	,getReport: function() {
 		//console.log(_this.config.api);
-		$.ajax(
+		$.ajax({
 			url: '/wordpress/wp-admin/admin-ajax.php'
 		,data: { action: 'spl_reports'
 						,params: { 
@@ -27,7 +27,7 @@ var splReport = {
 					} 
 		}
 		,type: 'POST'
-		)
+		})
 		.done(function(obj) { 
 			console.log(obj);
 			console.log('done');
