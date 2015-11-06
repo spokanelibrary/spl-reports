@@ -1,12 +1,14 @@
 var splReport = {
 	config:splReportConfig
 
-, init: function() {
+	,init: function() {
 		_self = this;
-
+		this.initUI();
+	} 
+	,initUI: function() {
 		//this.getReport();
-} 
-, getReport: function() {
+	}
+	,getReport: function() {
 		$.ajax(
 		_self.config.api
 		)
@@ -17,6 +19,6 @@ var splReport = {
 		})
 		.always(function() {
 		});
-}
+	}
 
 }.init();
