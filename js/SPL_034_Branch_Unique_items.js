@@ -29,7 +29,7 @@ var splReport = {
 		}
 		,type: 'POST'
 		})
-		.done(function(obj) { 
+		.success(function(obj) { 
 			console.log(obj);
 			console.log('done');
 		})
