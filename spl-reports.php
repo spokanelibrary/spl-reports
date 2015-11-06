@@ -53,7 +53,7 @@ function wp_spl_reports($params=null) {
   }
 
   if ( $view[0] ) {
-  	if ( 'id' == $view[0] && isset($view[1]) ) {
+  	if ( ('id' == $view[0]) && isset($view[1]) ) {
   		$config['id'] = $view[1];
   	} else {
   		$config['id'] = $view[0];
@@ -70,7 +70,7 @@ function spl_reports($config=null, $params=null) {
 
 	$report = null;
 	if ( $view ) {
-		$report = new SPL_Report($config, $params);
+		//$report = new SPL_Report($config, $params);
 	}
 
 	if ( is_object($report) ) {
