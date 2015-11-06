@@ -18,16 +18,14 @@ class SPL_Report {
 		$class = $this->getReportClass();
 		include $class->path;
 		$report = new $class->name($this->params, $this->config);
-				$this->output = 'test';
 
-		/*
 		if ( $this->params['ajax'] ) {
 			$this->output = $report->getReportData();
 		} else {
 			$report->loadJs();
 			$this->output = $report->getTmpl();	
 		}
-		*/
+		
 	} 
 
 	protected function getReportClass() {
