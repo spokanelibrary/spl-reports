@@ -6,6 +6,7 @@ class SPL_Report {
 	var $config;
 	var $apikey;
 	var $output;
+	var $endpont = 'http://app.spokanelibrary.org/v3/';
 
 	function __construct($params=null, $config=null) {
 		$this->params = $params;
@@ -30,6 +31,10 @@ class SPL_Report {
 		}
 		
 	} 
+
+	protected function getReportData() {
+		return $this->params;
+	}
 
 	protected function getReportClass() {
 		$class = new stdClass();
