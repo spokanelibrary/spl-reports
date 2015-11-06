@@ -1,5 +1,6 @@
 var splReport = {
-	config:splReportConfig
+	init: {}
+	,config: splReportConfig
 
 	,init: function() {
 		_self = this;
