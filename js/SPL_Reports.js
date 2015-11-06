@@ -15,7 +15,6 @@ var splReportConfig = {
 	,init: function() {
 		_this = this;
 		this.initUI();
-		splReport.setUI();
 	}
 	,initUI: function() {
 		$('body').on('submit', '.spl-report-control', function(e) {
