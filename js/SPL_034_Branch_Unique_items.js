@@ -1,7 +1,7 @@
 var splReport = {
 	config:splReportConfig
 	,init: function() {
-		_this = this;
+		this.setUI();
 	}
 	,setUI: function() {
 		console.log('stub');
