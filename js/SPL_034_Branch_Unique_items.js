@@ -1,4 +1,3 @@
-splReport.init();
 var splReport = {
 	config:splReportConfig
 
@@ -20,4 +19,4 @@ var splReport = {
 	});
 } 
 
-}
+}.init();
