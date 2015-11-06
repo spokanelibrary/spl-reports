@@ -7,7 +7,7 @@ class SPL_034_Branch_Unique_items extends SPL_Report {
 	// override data processing, if necessary
 	protected function processData($data=null) {
 		
-		parent::processData($data);
+		return parent::processData($data);
 		//$data->sg = 'test';
 		//return $data;
 	}
