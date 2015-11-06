@@ -9,6 +9,7 @@ var splReportConfig = {
 					} 
 		}
 		,type: 'POST'
+		,dataType: 'json'
 	}
 
 };

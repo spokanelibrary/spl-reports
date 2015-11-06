@@ -18,17 +18,8 @@ var splReport = {
 		
 	}
 	,getReport: function() {
-		//console.log(_this.config.api);
 		$.ajax({
-			url: '/wordpress/wp-admin/admin-ajax.php'
-		,data: { action: 'spl_reports'
-						,params: { 
-							ajax:true
-							,id: $('.spl-report').data('spl-report-id') 
-					} 
-		}
-		,type: 'POST'
-		,dataType: 'json'
+			_this.config.api
 		})
 		.done(function(obj) { 
 			console.log(obj);
