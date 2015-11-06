@@ -13,7 +13,7 @@ Author: Sean Girard
 Author URI: http://seangirard.com
 Version: 0.1
 */
-require_once 'class/SPL_Report.php';
+//require_once 'class/SPL_Report.php';
 
 
 if ( is_admin() ) {
