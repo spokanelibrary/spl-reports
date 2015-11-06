@@ -43,7 +43,8 @@ class SPL_Report {
             }
         }
     }
-    $class->scan = $this->params['id'];
+    $class->scan = $files;
+    //$class->scan = $this->params['id'];
 		return $class;
 	}
 
