@@ -1,10 +1,7 @@
 var splReportUI = {
 
-	,init: function() {
-		this.setUI();
-	}
-	,setUI: function() {
+	setUI: function() {
 		console.log('stub');
 	}
 
-}.init();
+}.setUI();
