@@ -24,4 +24,5 @@ var splReport = {
 		});
 	}
 
-}.init();
+}
+splReport.init();
