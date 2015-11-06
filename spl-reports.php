@@ -52,6 +52,7 @@ function wp_spl_reports($params=null) {
   	$view = explode('/', $view);
   }
 
+  /*
   if ( $view[0] ) {
   	if ( ('id' == $view[0]) && isset($view[1]) ) {
   		$config['id'] = $view[1];
@@ -61,7 +62,7 @@ function wp_spl_reports($params=null) {
   }
 
 	return spl_reports($config, $params);
-
+	*/
 }
 add_shortcode('spl_reports', 'wp_spl_reports');
 
