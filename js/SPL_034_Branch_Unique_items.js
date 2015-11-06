@@ -4,12 +4,11 @@ var splReport = {
 	,init: function() {
 		_self = this;
 		this.initUI();
-		this.getReport();
 	} 
 	,initUI: function() {
 		$('body').on('submit', '.spl-report-control', function(e) {
 			e.preventDefault();
-			_self.getReport();
+			console.log(test);
 		});
 	}
 	,getReport: function() {
