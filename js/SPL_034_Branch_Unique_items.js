@@ -2,14 +2,14 @@ var splReport = {
 	config:splReportConfig
 
 	,init: function() {
-		var _this = this;
+		_this = this;
 		this.initUI();
 	} 
 	,initUI: function() {
 		
 		$('body').on('submit', '.spl-report-control', function(e) {
 			e.preventDefault();
-			console.log(_self);
+			console.log(_this);
 			_this.getReport();
 		});
 		
