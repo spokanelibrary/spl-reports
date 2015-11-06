@@ -26,7 +26,7 @@ class SPL_Report {
 		$report = new $class->name($this);
 
 		if ( $this->params['ajax'] ) {
-			$this->output = 'test';
+			$this->output = $report;
 			//$this->output = $report->getReportData();
 		} else {
 			$report->loadJs();
