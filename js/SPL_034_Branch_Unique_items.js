@@ -7,12 +7,12 @@ splReport = {
 	} 
 	,initUI: function() {
 		_self.getReport();
-		/*
+		
 		$('body').on('submit', '.spl-report-control', function(e) {
 			e.preventDefault();
 			_self.getReport();
 		});
-		*/
+		
 	}
 	,getReport: function() {
 		console.log('test');
