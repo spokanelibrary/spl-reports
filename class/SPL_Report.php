@@ -34,7 +34,7 @@ class SPL_Report {
 		}
 	} 
 
-	protected function setProperty($var=null, $val=null) {
+	public function setProperty($var=null, $val=null) {
 		if ( $var && $val ) {
 			$this->$var = $val;
 		}
