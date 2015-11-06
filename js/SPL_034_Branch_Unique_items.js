@@ -1,4 +1,4 @@
-var splReport = function() {
+var splReport = {
 	config:splReportConfig
 
 	,init: function() {
