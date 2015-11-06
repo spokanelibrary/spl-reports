@@ -27,6 +27,7 @@ class SPL_Report {
 
 		if ( $this->params['ajax'] ) {
 			$this->output = $report->getReportData();
+			//$this->output = $this->params;
 		} else {
 			$report->loadJs();
 			$this->output = $report->getTmpl();	
