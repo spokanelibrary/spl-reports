@@ -19,6 +19,7 @@ var splReport = {
 		_this.config.api
 		)
 		.done(function(obj) {  
+			console.log('test');
 			console.log(obj);
 		})
 		.fail(function() {
