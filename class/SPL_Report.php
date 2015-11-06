@@ -22,7 +22,7 @@ class SPL_Report {
 			$this->output = $report->getReportData();
 		} else {
 			$report->loadJs();
-			$this->output = $report->getTmpl();	
+			//$this->output = $report->getTmpl();	
 		}
 	} 
 
