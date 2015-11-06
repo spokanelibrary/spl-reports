@@ -4,7 +4,7 @@ var splReport = {
 	,config:splReportConfig
 
 	,init: function() {
-		//var _self = this;
+		var _self = this;
 		_self.initUI();
 	} 
 	,initUI: function() {
