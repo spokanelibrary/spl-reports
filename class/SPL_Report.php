@@ -2,8 +2,8 @@
 
 class SPL_Report {
 
-	var $config;
-	var $params;
+	public $config;
+	public $params;
 	var $output;
 
 	var $apikey;
