@@ -14,6 +14,8 @@ class SPL_Report {
 	}
 
 	public function getReport() {
+		return 'test';
+		/*
 		$class = $this->getReportClass();
 		include $class->path;
 		$report = new $class->name($this->params, $this->config);
@@ -22,8 +24,9 @@ class SPL_Report {
 			$this->output = $report->getReportData();
 		} else {
 			$report->loadJs();
-			//$this->output = $report->getTmpl();	
+			$this->output = $report->getTmpl();	
 		}
+		*/
 	} 
 
 	protected function getReportClass() {
