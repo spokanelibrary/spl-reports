@@ -19,7 +19,7 @@ class SPL_Report {
 		$report = new $class->name($this->params, $this->config);
 
 		if ( $this->params['ajax'] ) {
-			$this->output = $class->scan;
+			$this->output = $class;
 			//$this->output = $report->getReportData();
 		} else {
 			$report->loadJs();
@@ -29,8 +29,8 @@ class SPL_Report {
 
 	protected function getReportClass() {
 		$class = new stdClass();
-		$class->name = 'SPL_034_Branch_Unique_items';
-		$class->path = plugin_dir_path( __FILE__ ).'SPL_034_Branch_Unique_items.php';
+		//$class->name = 'SPL_034_Branch_Unique_items';
+		//$class->path = plugin_dir_path( __FILE__ ).'SPL_034_Branch_Unique_items.php';
 		
 
     $files = scandir( plugin_dir_path( __FILE__ ) );
@@ -39,8 +39,9 @@ class SPL_Report {
       if(0 !== stripos($file, '.')) {
         //$class->scan = $this->params['id'];
         if (substr_count($file, $this->params['id'])) {
+          $class->path = plugin_dir_path( __FILE__ ).$file;
           // trim off file extension
-          $class->scan = stristr($file, '.', true);
+          $class->name = stristr($file, '.', true);
         }
       }
     }
