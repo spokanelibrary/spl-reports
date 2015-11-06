@@ -11,19 +11,19 @@ class SPL_Report {
 	var $summary = null;
 
 	function __construct($params=null, $config=null) {
-		
-		$this->apikey = getenv('SPL_KEY');
-
 		$this->params = $params;
 		$this->config = $config;
-
-		//$this->getReport();
+		$this->apikey = getenv('SPL_KEY');
 	}
 
 	public function getReport() {
 		$class = $this->getReportClass();
 		include $class->path;
 		$report = new $class->name($this);
+
+		$report->setProperty('params', $this->params);
+		$report->setProperty('config', $this->config);
+		$report->setProperty('apikey', $this->apikey);
 
 		if ( $this->params['ajax'] ) {
 			//$this->output = 'test';
@@ -34,8 +34,10 @@ class SPL_Report {
 		}
 	} 
 
-	public function getParams() {
-		return $this->params;
+	protected function setProperty($var=null, $val=null) {
+		if ( $var && $val ) {
+			$this->$var = $val;
+		}
 	}
 
 	protected function getReportClass() {
