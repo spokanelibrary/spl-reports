@@ -70,10 +70,11 @@ function wp_spl_reports($params=null) {
 add_shortcode('spl_reports', 'wp_spl_reports');
 
 function spl_reports($config=null, $params=null) {
-	return 'test';
 	if ( file_exists(__DIR__.'/class/SPL_Report.php') ) {
 		//return 'yes';
 		include __DIR__.'/class/SPL_Report.php';
+		return 'test';
+	
 	} else {
 		return 'no';
 	}
@@ -83,9 +84,9 @@ function spl_reports($config=null, $params=null) {
 		//$report = new SPL_Report($config, $params);
 	//}
 
-	if ( is_object($report) ) {
-		return $report->output();
-	} 	
+	//if ( is_object($report) ) {
+		//return $report->output();
+	//} 	
 }
 
 function spl_reports_ajax() {
