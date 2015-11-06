@@ -21,15 +21,14 @@ var splReport = {
 		//console.log(_this.config.api);
 		$.ajax({
 			url: '/wordpress/wp-admin/admin-ajax.php'
-		,data: { action: 'spl_reports'
+			,data: { action: 'spl_reports'
 						,params: { 
 							ajax:true
 							,id: $('.spl-report').data('spl-report-id') 
 					} 
-		}
-		,type: 'POST'
+			}
 		})
-		.success(function(obj) { 
+		.done(function(obj) { 
 			console.log(obj);
 			console.log('done');
 		})
