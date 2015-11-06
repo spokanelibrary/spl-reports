@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL);
+
 /**
  * @package SPL_Reports
  * @version 0.1
@@ -70,7 +70,7 @@ function wp_spl_reports($params=null) {
 add_shortcode('spl_reports', 'wp_spl_reports');
 
 function spl_reports($config=null, $params=null) {
-	
+	return 'test';
 	if ( file_exists(__DIR__.'/class/SPL_Report.php') ) {
 		//return 'yes';
 		include __DIR__.'/class/SPL_Report.php';
