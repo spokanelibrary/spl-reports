@@ -10,24 +10,23 @@ class SPL_Report {
 	
 	var $summary = null;
 
-	function __construct($config=null, $params=null) {
+	function __construct($params=null, $config=null) {
 		
 		$this->apikey = getenv('SPL_KEY');
 
-		$this->config = $config;
 		$this->params = $params;
+		$this->config = $config;
 
 		$this->getReport();
-
 	}
 
 	protected function getReport() {
-		
 		$path = plugin_dir_path( __FILE__ );
+
 		include $path .'SPL_034_Branch_Unique_items.php';
 		$report = new SPL_034_Branch_Unique_items();
-		$this->output = print_r($this->config, true);
 
+		$this->output = print_r($this->params, true);
 	} 
 
 	protected function loadJs() {
