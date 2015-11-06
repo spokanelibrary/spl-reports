@@ -9,14 +9,14 @@ var splReport = {
 	,initUI: function() {
 		
 		$('body').on('submit', '.spl-report-control', function(e) {
-			_this.getReport();
 			e.preventDefault();
+			_this.getReport();
 		});
 		
 	}
 	,getReport: function() {
 		$.ajax(
-		_this.config.api
+		{_this.config.api}
 		)
 		.done(function(obj) { 
 			console.log(obj);
