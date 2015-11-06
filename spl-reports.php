@@ -13,7 +13,7 @@ Author: Sean Girard
 Author URI: http://seangirard.com
 Version: 0.1
 */
-//require_once 'class/SPL_Report.php';
+
 
 
 if ( is_admin() ) {
@@ -70,7 +70,11 @@ function wp_spl_reports($params=null) {
 add_shortcode('spl_reports', 'wp_spl_reports');
 
 function spl_reports($config=null, $params=null) {
-	
+	//require_once 'class/SPL_Report.php';
+	if ( file_exists('class/SPL_Report.php') ) {
+		return 'yes';
+	}
+
 	$report = null;
 	//if ( $config ) {
 		//$report = new SPL_Report($config, $params);
