@@ -3,14 +3,15 @@ var splReport = {
 
 	,init: function() {
 		_this = this;
-		this.getReport();
+		_this.getReport();
 		//this.initUI();
 	} 
 	,initUI: function() {
 		
 		$('body').on('submit', '.spl-report-control', function(e) {
-			e.preventDefault();
 			_this.getReport();
+			e.preventDefault();
+			
 		});
 		
 	}
@@ -18,8 +19,7 @@ var splReport = {
 		$.ajax(
 		_this.config.api
 		)
-		.done(function(obj) {  
-			console.log('test');
+		.done(function(obj) { 
 			console.log(obj);
 		})
 		.fail(function() {
