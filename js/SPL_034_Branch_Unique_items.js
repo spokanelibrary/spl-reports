@@ -7,7 +7,7 @@ var splReport = {
 		$.ajax({ 
 			url: _self.config.api.endpoint
 		, data: { action: 'spl_reports'
-						, params: { ajax:true, id: _self.config.rid, endpoint: _self.config.api } 
+						, params: { ajax:true, id: _self.config.api.rid} 
 						}
 				, type: 'POST'
 				
