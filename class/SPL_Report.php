@@ -37,6 +37,7 @@ class SPL_Report {
     foreach ($files as $file) {
       // ignore directories and hidden files
       if(0 !== stripos($file, '.')) {
+        $class->scan = $this->params['id'];
         if (substr_count($file, $this->params['id'])) {
           // trim off file extension
           $class->scan = stristr($file, '.', true);
