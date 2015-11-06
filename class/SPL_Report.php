@@ -21,7 +21,7 @@ class SPL_Report {
 		$report = new $class->name($this->params, $this->config);
 
 		if ( $this->params['ajax'] ) {
-			$this->output = $report->getReportData();
+			$this->output = $report->processData($report->getReportData());
 		} else {
 			$report->loadJs();
 			$html = '<div class="spl-report" data-spl-report-id="'.$this->params['id'] .'">'.PHP_EOL;
@@ -37,7 +37,7 @@ class SPL_Report {
 		$data = $this->curlProxy($this->endpoint.$this->api
 													, $this->params);
 		return json_decode($data->response);
-		//return json_decode($this->processData($data->response));
+		return json_decode($this->processData($data->response));
 	}
 
 	protected function processData($data=null) {
