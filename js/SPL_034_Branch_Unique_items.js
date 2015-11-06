@@ -8,7 +8,7 @@ var splReport = {
 			e.preventDefault();
 			_this.getReport();
 		});
-		
+
 		this.initUI();
 	} 
 	,initUI: function() {
@@ -17,7 +17,7 @@ var splReport = {
 		
 	}
 	,getReport: function() {
-		console.log(_this.config.api);
+		//console.log(_this.config.api);
 		$.ajax(
 			_this.config.api
 		)
@@ -27,6 +27,7 @@ var splReport = {
 		.fail(function() {
 		})
 		.always(function() {
+			console.log('always');
 		});
 		
 	}
