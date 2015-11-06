@@ -11,9 +11,9 @@ class SPL_034_Branch_Unique_items extends SPL_Report {
 		$this->config = $config;
 	}
 	*/
-	
+
 	public function getReportData() {
-		return $this->params;
+		return $this;
 	}
 
 }
