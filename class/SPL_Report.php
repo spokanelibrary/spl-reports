@@ -26,7 +26,7 @@ class SPL_Report {
 		include $class->path;
 
 
-		$report = new SPL_034_Branch_Unique_items($this->params, $this->config);
+		$report = new $class->name($this->params, $this->config);
 
 		if ( $this->params['ajax'] ) {
 			$this->output = array('this'=>'test');
