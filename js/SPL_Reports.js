@@ -22,7 +22,11 @@ var splReportConfig = {
 			_this.getReport();
 		});
 	}
+	,getVals: function() {
+		return {test: 'test'};
+	}
 	,getReport: function() {
+		this.api.data.params.vals = this.getVals();
 		$.ajax(
 			_this.api
 		)
@@ -35,6 +39,5 @@ var splReportConfig = {
 		});
 		
 	}
-
 
 }.init();
