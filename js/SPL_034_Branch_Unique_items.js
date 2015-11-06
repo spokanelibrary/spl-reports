@@ -3,7 +3,7 @@ var splReport = {
 
 	,init: function() {
 		_this = this;
-		_this.getReport();
+		//_this.getReport();
 		//this.initUI();
 	} 
 	,initUI: function() {
