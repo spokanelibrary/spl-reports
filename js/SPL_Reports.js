@@ -1,9 +1,15 @@
 var splReportConfig = {
 
 	api: { 
-		endpoint: '/wordpress/wp-admin/admin-ajax.php' 
-	,	rid: $('.spl-report').data('spl-report-id')
-	}
+
+		{ 
+			url: '/wordpress/wp-admin/admin-ajax.php'
+		, data: { action: 'spl_reports'
+						, params: { ajax:true, id: $('.spl-report').data('spl-report-id'} 
+						}
+				, type: 'POST'
+				
+		}
 
 
 }
