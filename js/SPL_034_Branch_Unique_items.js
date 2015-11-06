@@ -2,8 +2,10 @@ var splReport = {
 	config:splReportConfig
 
 , init: function() {
+		_self = this;
+
 		$.ajax({ 
-			url: '/wordpress/wp-admin/admin-ajax.php'
+			url: _self.config.api.endpoint
 		, data: { action: 'spl_reports'
 						, params: { ajax:true, id: 34, endpoint: splReportConfig.api } 
 						}
