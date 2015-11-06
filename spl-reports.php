@@ -62,6 +62,7 @@ add_shortcode('spl_reports', 'wp_spl_reports');
 
 function spl_reports($params=null, $config=null) {
 	$report = new SPL_Report($params, $config);
+	$report->getReport();
 	if ( is_object($report) ) {
 		return $report->output();
 	} else {

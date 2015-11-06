@@ -2,8 +2,8 @@
 
 class SPL_Report {
 
-	public $config;
-	public $params;
+	var $config;
+	var $params;
 	var $output;
 
 	var $apikey;
@@ -17,7 +17,7 @@ class SPL_Report {
 		$this->params = $params;
 		$this->config = $config;
 
-		$this->getReport();
+		//$this->getReport();
 	}
 
 	protected function getReport() {

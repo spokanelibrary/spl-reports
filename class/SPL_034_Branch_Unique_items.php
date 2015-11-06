@@ -2,16 +2,16 @@
 
 class SPL_034_Branch_Unique_items extends SPL_Report {
 
-	
-	function __construct($caller) {
-		$this->caller = $caller;
-		//$this->params = $params;
-		//$this->config = $config;
+	var $params;
+	var $config;
+
+	function __construct($params=null, $config=null) {
+		$this->params = $params;
+		$this->config = $config;
 	}
 
 	public function getReportData() {
-		//return 'test';
-		return $this->caller->params;
+		return $this->params;
 	}
 
 }
