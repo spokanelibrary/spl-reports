@@ -11,4 +11,4 @@ var splReportConfig = {
 			, type: 'POST'
 	}
 
-}
+};
