@@ -10,7 +10,7 @@ class SPL_034_Branch_Unique_items extends SPL_Report {
 	}
 
 	function getReportData() {
-		return parent->$params;
+		return parent::$params;
 	}
 
 }
