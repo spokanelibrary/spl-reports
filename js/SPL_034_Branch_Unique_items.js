@@ -9,7 +9,8 @@ var splReport = {
 		
 		$('body').on('submit', '.spl-report-control', function(e) {
 			e.preventDefault();
-			_self.getReport();
+			console.log(_self);
+			//_self.getReport();
 		});
 		
 	}
