@@ -73,6 +73,8 @@ function spl_reports($config=null, $params=null) {
 	//require_once 'class/SPL_Report.php';
 	if ( file_exists('class/SPL_Report.php') ) {
 		return 'yes';
+	} else {
+		return 'no';
 	}
 
 	$report = null;
