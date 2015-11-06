@@ -45,8 +45,8 @@ class SPL_Report {
 	}
 
 	protected function loadJs() {
-		wp_enqueue_script( 'spl-reports-config', plugins_url('js/SPL_Reports.js', dirname(__FILE__)) );
 		wp_enqueue_script( get_class(), plugins_url('js/'.get_class($this).'.js', dirname(__FILE__)) );
+		wp_enqueue_script( 'spl-reports-config', plugins_url('js/SPL_Reports.js', dirname(__FILE__)) );
 	}
 
 	protected function getTmpl() {

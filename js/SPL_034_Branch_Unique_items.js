@@ -1,5 +1,6 @@
 var splReport = {
 	config:splReportConfig
+	
 , init: function() {
 		$.ajax({ 
 			url: '/wordpress/wp-admin/admin-ajax.php'
