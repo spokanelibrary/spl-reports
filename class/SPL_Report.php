@@ -24,9 +24,9 @@ class SPL_Report {
 	protected function getReport() {
 		
 		
-		$path = plugin_dir_path( __FILE__ );
-		include $path .'SPL_034_Branch_Unique_items.php';
-		$report = new SPL_034_Branch_Unique_items();
+		//$path = plugin_dir_path( __FILE__ );
+		//include $path .'SPL_034_Branch_Unique_items.php';
+		//$report = new SPL_034_Branch_Unique_items();
 		
 		$this->output = print_r($this->config, true);
 		//$this->output = $report->data;
