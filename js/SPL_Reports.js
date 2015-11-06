@@ -1,4 +1,4 @@
-var splReportConfig = {
+var splReport = {
 
 	api: {  
 		url: '/wordpress/wp-admin/admin-ajax.php'
@@ -31,13 +31,16 @@ var splReportConfig = {
 			_this.api
 		)
 		.done(function(obj) { 
-			console.log(obj);
+			_this.showReport(obj);
 		})
 		.fail(function() {
 		})
 		.always(function() {
 		});
 		
+	}
+	,showReport: function(result) {
+		console.log(result);
 	}
 
 }.init();

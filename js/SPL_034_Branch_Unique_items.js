@@ -1,5 +1,5 @@
-var splReport = {
-	config:splReportConfig
+var splReportUI = {
+
 	,init: function() {
 		this.setUI();
 	}
