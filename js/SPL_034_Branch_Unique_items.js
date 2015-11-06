@@ -1,6 +1,6 @@
 var splReport = {
 	config:splReportConfig
-	,_this: this;
+	,_this: this
 	,init: function() {
 		//var _this = this;
 		this.initUI();
