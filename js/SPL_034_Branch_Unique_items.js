@@ -1,11 +1,11 @@
-var splReport() = {
-	var _self: this;
+var splReport = {
+	_self: this
 	
-	config:splReportConfig
+	,config:splReportConfig
 
 	,init: function() {
 		//var _self = this;
-		this.initUI();
+		_self.initUI();
 	} 
 	,initUI: function() {
 		$('body').on('submit', '.spl-report-control', function(e) {
