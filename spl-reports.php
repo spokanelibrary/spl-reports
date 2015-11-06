@@ -60,7 +60,7 @@ function wp_spl_reports($params=null) {
   		$config['id'] = $view[0];
   	}
   }
-  
+
 	if ( $config ) {
 		return spl_reports($config, $params);
 	}
@@ -72,8 +72,8 @@ function spl_reports($config=null, $params=null) {
 	require_once 'class/SPL_Report.php';
 
 	$report = null;
-	if ( $view ) {
-		//$report = new SPL_Report($config, $params);
+	if ( $config ) {
+		$report = new SPL_Report($config, $params);
 	}
 
 	if ( is_object($report) ) {
