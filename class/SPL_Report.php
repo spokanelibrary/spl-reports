@@ -26,7 +26,6 @@ class SPL_Report {
 		$report->setProperty('apikey', $this->apikey);
 
 		if ( $this->params['ajax'] ) {
-			//$this->output = 'test';
 			$this->output = $report->getReportData();
 		} else {
 			$report->loadJs();
@@ -36,7 +35,7 @@ class SPL_Report {
 
 	public function setProperty($var=null, $val=null) {
 		if ( $var && $val ) {
-			$this->$var = $val;
+			$this->params = $val;
 		}
 	}
 
