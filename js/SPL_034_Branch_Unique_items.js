@@ -8,7 +8,7 @@ var splReport = {
 	,initUI: function() {
 		$('body').on('submit', '.spl-report-control', function(e) {
 			e.preventDefault();
-			console.log('test');
+			_self.getReport();
 		});
 	}
 	,getReport: function() {
