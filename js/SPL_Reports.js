@@ -23,7 +23,7 @@ var splReportConfig = {
 		});
 	}
 	,getVals: function() {
-		var vals = $('form.spl-report-control').serialize();
+		var vals = $('form.spl-report-control').serializeArray();
 		return
 	}
 	,getReport: function() {
