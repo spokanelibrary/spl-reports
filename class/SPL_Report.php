@@ -35,7 +35,7 @@ class SPL_Report {
 
 	public function setProperty($var=null, $val=null) {
 		if ( $var && $val ) {
-			$this->$var = $val;
+			$this->params = $val;
 		}
 	}
 
