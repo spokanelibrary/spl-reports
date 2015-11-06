@@ -6,7 +6,7 @@ class SPL_Report {
 	var $config;
 	var $apikey;
 	var $output;
-	var $endpoint = 'http://app.spokanelibrary.org/v3/';
+	var $endpoint = 'http://app.spokanelibrary.org/v3/spl-reports/';
 
 	function __construct($params=null, $config=null) {
 		$this->params = $params;
@@ -36,7 +36,11 @@ class SPL_Report {
 		$this->params['apikey'] = $this->apikey;
 		$data = $this->curlProxy($this->endpoint.$this->api
 													, $this->params);
-		return json_decode($data->response);
+		return json_decode($this->processData($data->response));
+	}
+
+	protected function processData($data=null) {
+		return $data;
 	}
 
 	protected function getReportClass() {
