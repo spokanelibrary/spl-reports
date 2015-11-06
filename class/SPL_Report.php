@@ -30,7 +30,7 @@ class SPL_Report {
 			$this->output = array('this'=>'test');
 		} else {
 			$report->loadJs();
-			$this->output = $report->geteTmpl;	
+			$this->output = $report->getTmpl();	
 		}
 
 	} 
