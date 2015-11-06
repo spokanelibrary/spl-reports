@@ -19,11 +19,7 @@ class SPL_Report {
 	public function getReport() {
 		$class = $this->getReportClass();
 		include $class->path;
-		$report = new $class->name($this->params);
-
-		//$report->setProperty('params', $this->params);
-		//$report->setProperty('config', $this->config);
-		//$report->setProperty('apikey', $this->apikey);
+		$report = new $class->name($this->params, $this->config);
 
 		if ( $this->params['ajax'] ) {
 			$this->output = $report->getReportData();
@@ -32,12 +28,6 @@ class SPL_Report {
 			$this->output = $report->getTmpl();	
 		}
 	} 
-
-	public function setProperty($var=null, $val=null) {
-		if ( $var && $val ) {
-			$this->params = $val;
-		}
-	}
 
 	protected function getReportClass() {
 		$class = new stdClass();
