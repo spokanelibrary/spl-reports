@@ -1,5 +1,9 @@
 var splReportConfig = {
 
-	api: { endpoint: 'http://app.spokanelibrary.org/v3/' }
+	api: { 
+		endpoint: '/wordpress/wp-admin/admin-ajax.php' 
+	,	test: true
+	}
+
 
 }
