@@ -2,13 +2,14 @@
 
 class SPL_034_Branch_Unique_items extends SPL_Report {
 
-	var $data;
+	var $tmpl;
+	var $json;
 
 	function __construct() {
 
 		$this->loadJs();
 
-		$this->data = $this->getHtml();
+		$this->tmpl = $this->getTmpl();
 	}
 
 }
