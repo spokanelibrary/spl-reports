@@ -18,9 +18,9 @@ var splReport = {
 		
 	}
 	,getReport: function() {
-		$.ajax({
+		$.ajax(
 			_this.config.api
-		})
+		)
 		.done(function(obj) { 
 			console.log(obj);
 			console.log('done');
