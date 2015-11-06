@@ -24,9 +24,9 @@ class SPL_Report {
 		$path = plugin_dir_path( __FILE__ );
 
 		include $path .'SPL_034_Branch_Unique_items.php';
-		$report = new SPL_034_Branch_Unique_items();
+		$report = new SPL_034_Branch_Unique_items($this->params, $this->config);
 
-		$this->output = print_r($this->params, true);
+		$this->output = $report->tmpl;
 	} 
 
 	protected function loadJs() {
