@@ -36,7 +36,7 @@ class SPL_Report {
 		$this->params['apikey'] = $this->apikey;
 		$data = $this->curlProxy($this->endpoint.$this->api
 													, $this->params);
-		return $data->response;
+		return json_decode($data->response);
 	}
 
 	protected function getReportClass() {
