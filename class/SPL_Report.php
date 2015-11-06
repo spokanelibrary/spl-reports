@@ -43,7 +43,7 @@ class SPL_Report {
             }
         }
     }
-
+    $class->scan = $this->params;
 		return $class;
 	}
 
