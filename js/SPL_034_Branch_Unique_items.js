@@ -6,7 +6,7 @@ var splReport = {
 	,init: function() {
 		//_this = this;
 		this.initUI();
-		return _this;
+		//return _this;
 	} 
 	,initUI: function() {
 		
