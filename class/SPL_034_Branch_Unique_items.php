@@ -14,7 +14,7 @@ class SPL_034_Branch_Unique_items extends SPL_Report {
 
 	public function getReportData() {
 		$this->test = 'test';
-		return $this->test;
+		return $this->params;
 	}
 
 }
