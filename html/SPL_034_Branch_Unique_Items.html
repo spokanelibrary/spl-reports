@@ -72,7 +72,7 @@
 	{{/each}}
 	</table>
 
-	<table class="table table-condensed table-bordered table-striped">
+	<table class="table table-condensed table-bordered table-striped" style="table-layout:fixed;">
 	<thead>
 	<tr>
 		<th>Call #</th>
@@ -85,12 +85,12 @@
 	</thead>
 	{{#each sorted}}
 	<tr>
-		<td><small>{{call}}</small></td>
-		<td><small>{{barcode}}</small></td>
-		<td><small>{{title}}</small></td>
-		<td><small>{{collection}}</small></td>
-		<td><small>{{type}}</small></td>
-		<td><small>{{status}}</small></td>
+		<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><small>{{call}}</small></td>
+		<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><small>{{barcode}}</small></td>
+		<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><small>{{title}}</small></td>
+		<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><small>{{collection}}</small></td>
+		<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><small>{{type}}</small></td>
+		<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><small>{{status}}</small></td>
 	</tr>
 	{{/each}}
 	</table>
