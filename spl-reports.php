@@ -81,7 +81,9 @@ function spl_reports_ajax_anon() {
 }
 
 function spl_reports_ajax_admin() {
-	spl_reports_ajax();
+	//spl_reports_ajax();
+	wp_send_json( 'logged in' );
+	wp_die();
 } 
 
 ?>
