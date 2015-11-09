@@ -3,7 +3,7 @@ var splReport = {
 	api: {  
 		url: '//staff.spokanelibrary.org/wordpress/wp-admin/admin-ajax.php'
 		,data: { action: 'spl_reports'
-						,security: $('.spl-report').data('spl-report-nonce') 
+						,nonce: $('.spl-report').data('spl-report-nonce') 
 						,params: { 
 							ajax:true
 							,id: $('.spl-report').data('spl-report-id') 
