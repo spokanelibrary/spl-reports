@@ -15,7 +15,8 @@ class SPL_Report {
 	}
 
 	public function getReport() {
-		
+		$this->output = 'Report not found';
+		return;
 		$class = $this->getReportClass();
 		include $class->path;
 		$report = new $class->name($this->params, $this->config);
