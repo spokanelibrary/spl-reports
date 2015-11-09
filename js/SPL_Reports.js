@@ -50,6 +50,8 @@ var splReport = {
 		//console.log(result);
 		this.tmpl = Handlebars.compile( $('.spl-report-tmpl').html() );
 		$('.spl-report-result').html( this.tmpl({ report:report }));
+
+		$('.table-dynatable').dynatable();
 	}
 
 }.init();
