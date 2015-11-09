@@ -2,7 +2,7 @@
 
 class SPL_034_Branch_Unique_Items extends SPL_Report {
 
-	var $api = '34';
+	//var $api = '34';
 
 	// override data processing, if necessary
 	protected function processData($data=null) {	
