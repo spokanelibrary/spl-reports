@@ -24,7 +24,7 @@ var splReport = {
 		});
 	}
 	,getVals: function() {
-		return $('form.spl-report-control').serializeArray();
+		return JSON.stringify($('form.spl-report-control').serializeArray());
 	}
 	,getReport: function() {
 		this.api.data.params.vals = this.getVals();
