@@ -24,7 +24,12 @@ var splReport = {
 		});
 	}
 	,getVals: function() {
-		return JSON.stringify($('form.spl-report-control').serializeArray());
+		var vals = {};
+		var form = $('form.spl-report-control').serializeArray();
+		$.each(form, function() {
+			vals[this.name] = this.value || '';
+		});
+		return vals;
 	}
 	,getReport: function() {
 		this.api.data.params.vals = this.getVals();
