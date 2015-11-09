@@ -1,7 +1,7 @@
 var splReport = {
 
 	api: {  
-		url: 'https://staff.spokanelibrary.org/wordpress/wp-admin/admin-ajax.php'
+		url: 'http://staff.spokanelibrary.org/wordpress/wp-admin/admin-ajax.php'
 		,data: { action: 'spl_reports'
 						,security: $('.spl-report').data('spl-report-nonce') 
 						,params: { 
