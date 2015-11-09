@@ -51,7 +51,7 @@ var splReport = {
 		this.tmpl = Handlebars.compile( $('.spl-report-tmpl').html() );
 		$('.spl-report-result').html( this.tmpl({ report:report }));
 
-		$('.table-dynatable').dynatable();
+		$('.dynatable').dynatable();
 	}
 
 }.init();
