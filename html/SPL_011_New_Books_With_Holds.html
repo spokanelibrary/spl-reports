@@ -29,7 +29,7 @@
 </div>
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
-	<table class="table table-condensed table-bordered table-striped" style="table-layout:fixed;">
+	<table class="table table-condensed table-bordered table-striped">
 	<thead>
 	<tr>
 		<th></th>
@@ -37,7 +37,14 @@
 	</thead>
 	{{#each sorted}}
 	<tr>
-		<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{title}}</td>
+		<td>
+		{{title}}
+		<ul>
+		{{#each items}}
+			<li>{{barcode}}</li>
+		{{/each}}
+		</ul>
+		</td>
 		<td>{{call_number}}</td>
 		<td>{{bib_245h}}</td>
 		<td>{{received_date}}</td>
