@@ -31,7 +31,7 @@ class SPL_Report {
 		} else {
 			$report->loadJs();
 			$html = '<div class="spl-report"
-								data-spl-report-nonce="'. $spl_report_nonce ).'"
+								data-spl-report-nonce="'.$spl_report_nonce.'"
 								data-spl-report-id="'.$this->params['id'] .'">'.PHP_EOL;
 			$html .= $report->getTmpl();	
 			$html .= PHP_EOL.'</div>'.PHP_EOL;
