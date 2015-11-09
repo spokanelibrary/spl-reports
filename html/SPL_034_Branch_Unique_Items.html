@@ -57,17 +57,17 @@
 </div>
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
-	<table class="table table-condensed table-bordered">
+	<table class="table table-condensed table-bordered table-striped<">
 
 	{{#each sorted}}
 	<tr>
-		<td>{{bib}}</td>
-		<td>{{call}}</td>
-		<td>{{barcode}}</td>
-		<td>{{title}}</td>
-		<td>{{collection}}</td>
-		<td>{{type}}</td>
-		<td>{{status}}</td>
+		<td><small>{{bib}}</small></td>
+		<td><small>{{call}}</small></td>
+		<td><small>{{barcode}}</small></td>
+		<td><small>{{title}}</small></td>
+		<td><small>{{collection}}</small></td>
+		<td><small>{{type}}</small></td>
+		<td><small>{{status}}</small></td>
 	</tr>
 	{{/each}}
 	</table>
