@@ -20,19 +20,23 @@ class SPL_Report {
 		include $class->path;
 		$report = new $class->name($this->params, $this->config);
 
-		if ( $this->params['ajax'] ) {
+		if ( is_object($class) ) {
+			if ( $this->params['ajax'] ) {
 
-			if ( wp_verify_nonce( $_REQUEST['nonce'], 'spl-report-nonce-'.$this->params['id'] ) ) {
-				$this->output = $report->processData($report->getReportData());
+				if ( wp_verify_nonce( $_REQUEST['nonce'], 'spl-report-nonce-'.$this->params['id'] ) ) {
+					$this->output = $report->processData($report->getReportData());
+				}
+			} else {
+				$report->loadJs();
+				$html = '<div class="spl-report"
+									data-spl-report-nonce="'.wp_create_nonce( 'spl-report-nonce-'.$this->params['id'] ).'"
+									data-spl-report-id="'.$this->params['id'] .'">'.PHP_EOL;
+				$html .= $report->getTmpl();	
+				$html .= PHP_EOL.'</div>'.PHP_EOL;
+				$this->output = $html;
 			}
 		} else {
-			$report->loadJs();
-			$html = '<div class="spl-report"
-								data-spl-report-nonce="'.wp_create_nonce( 'spl-report-nonce-'.$this->params['id'] ).'"
-								data-spl-report-id="'.$this->params['id'] .'">'.PHP_EOL;
-			$html .= $report->getTmpl();	
-			$html .= PHP_EOL.'</div>'.PHP_EOL;
-			$this->output = $html;
+			$this->output = 'Report not found';
 		}
 		
 	} 
