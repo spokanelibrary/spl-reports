@@ -1,0 +1,45 @@
+<form class="form-inline spl-report-control">
+	<h2>New Book With Holds</h2>
+	<fieldset>
+		<legend>
+			Identify items in SS with holds
+		</legend>
+
+		<button type="submit" class="btn btn-success">
+			Run Report <small class="glyphicon glyphicon-arrow-right"></small>
+		</button>
+		<a href="./" class="btn btn-default pull-right">
+			<small class="glyphicon glyphicon-refresh"></small> Reset</a>
+
+	</fieldset>
+</form>
+
+<hr>
+
+<div class="spl-report-result"></div>
+
+<br>
+<br>
+<div class="well well-sm spl-report-summary">
+	<h3>Summary</h3>
+	<p>
+		All bibs which have AT LEAST ONE item in item_status 'n' OR 't', AND have have AT LEAST ONE unfilled request.
+	</p>
+
+</div>
+<script class="spl-report-tmpl" type="text/x-handlebars-template">
+{{#with report}}
+	<table class="table table-condensed table-bordered table-striped">
+	<thead>
+	<tr>
+		<th></th>
+	</tr>
+	</thead>
+	{{#each sorted}}
+	<tr>
+		<td><small></small></td>
+	</tr>
+	{{/each}}
+	</table>
+{{/with}}
+</script>
