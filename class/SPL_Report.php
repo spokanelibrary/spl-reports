@@ -21,13 +21,13 @@ class SPL_Report {
 		$report = new $class->name($this->params, $this->config);
 
 		if ( $this->params['ajax'] ) {
-			$this->output = wp_verify_nonce( $_REQUEST['security'], 'spl-report-nonce-'.$post->ID );
-			$this->output = 'spl-report-nonce-'.$post->ID;
+			$this->output = wp_verify_nonce( $_REQUEST['security'], 'spl-report-nonce-'.$this->params['id'] );
+			//$this->output = 'spl-report-nonce-'.$post->ID;
 			//$this->output = $report->processData($report->getReportData());
 		} else {
 			$report->loadJs();
 			$html = '<div class="spl-report"
-								data-spl-report-nonce="'. wp_create_nonce( 'spl-report-nonce-'.$post->ID ).'"
+								data-spl-report-nonce="'. wp_create_nonce( 'spl-report-nonce-'.$this->params['id'] ).'"
 								data-spl-report-id="'.$this->params['id'] .'">'.PHP_EOL;
 			$html .= $report->getTmpl();	
 			$html .= PHP_EOL.'</div>'.PHP_EOL;
