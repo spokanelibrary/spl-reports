@@ -45,10 +45,10 @@ var splReport = {
 		});
 		
 	}
-	,showReport: function(result) {
+	,showReport: function(report) {
 		//console.log(result);
 		this.tmpl = Handlebars.compile( $('.spl-report-tmpl').html() );
-		$('.spl-report-result').html( this.tmpl({ result:result }));
+		$('.spl-report-result').html( this.tmpl({ report:report }));
 	}
 
 }.init();

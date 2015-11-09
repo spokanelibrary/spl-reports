@@ -56,7 +56,14 @@
 	<ul>
 </div>
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
-{{#with result}}
-	This is a template
+{{#with report}}
+	<table class="table table-condensed table-bordered">
+
+	{{#each sorted}}
+	<tr>
+		<td>
+	</tr>
+	{{/each}}
+	</table>
 {{/with}}
 </script>
