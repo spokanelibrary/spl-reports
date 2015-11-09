@@ -60,6 +60,21 @@
 	<table class="table table-condensed table-bordered table-striped">
 	<thead>
 	<tr>
+		<th>Collection</th>
+		<th>Item Count</th>
+	</tr>
+	</thead>
+	{{#each meta.totals}}
+	<tr>
+		<td><small>{{collection}}</small></td>
+		<td><small>{{bib_count}}</small></td>
+	</tr>
+	{{/each}}
+	</table>
+
+	<table class="table table-condensed table-bordered table-striped">
+	<thead>
+	<tr>
 		<th>Call #</th>
 		<th>Barcode</th>
 		<th>Title</th>
