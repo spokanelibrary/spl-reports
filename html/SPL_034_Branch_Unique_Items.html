@@ -58,6 +58,7 @@
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
 	<table class="table table-condensed table-bordered table-striped table-dynatable">
+	<thead>
 	<tr>
 		<th>Call #</th>
 		<th>Barcode</th>
@@ -66,6 +67,7 @@
 		<th>Item Type</th>
 		<th>Item Status</th>
 	</tr>
+	</thead>
 	{{#each sorted}}
 	<tr>
 		<td><small>{{call}}</small></td>
