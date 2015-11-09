@@ -29,7 +29,7 @@ var splReport = {
 		$.each(form, function() {
 			vals[this.name] = this.value || '';
 		});
-		return vals;
+		return form;
 	}
 	,getReport: function() {
 		this.api.data.params.vals = this.getVals();
