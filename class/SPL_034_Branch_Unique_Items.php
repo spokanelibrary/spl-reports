@@ -2,9 +2,14 @@
 
 class SPL_034_Branch_Unique_Items extends SPL_Report {
 
-	//var $api = '34';
+	/*
+	 *	overload api endpoint, if necessary
+	 */
+	//var $api = '';
 
-	// override data processing, if necessary
+	/*
+	 *	overload data processing, if necessary
+	 */
 	protected function processData($data=null) {	
 		return parent::processData($data);
 	}

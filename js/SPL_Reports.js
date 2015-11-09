@@ -5,7 +5,7 @@ var splReport = {
 		,data: { action: 'spl_reports'
 						,nonce: $('.spl-report').data('spl-report-nonce') 
 						,params: { 
-							ajax:true
+							ajax: true
 							,id: $('.spl-report').data('spl-report-id') 
 					} 
 		}
