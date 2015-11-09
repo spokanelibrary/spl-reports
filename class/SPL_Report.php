@@ -21,7 +21,8 @@ class SPL_Report {
 		$report = new $class->name($this->params, $this->config);
 
 		if ( $this->params['ajax'] ) {
-			$this->output = $report->processData($report->getReportData());
+			$this->output = check_ajax_referer( 'spl-report-nonce-'.$post->ID );
+			//$this->output = $report->processData($report->getReportData());
 		} else {
 			$report->loadJs();
 			$html = '<div class="spl-report"
