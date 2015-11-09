@@ -40,12 +40,15 @@ class SPL_Report {
 	} 
 
 	protected function getReportError( $msg='Unknown error' ) {
-		$html = null;
-		$html .= '<div class="alert alert-danger">'.PHP_EOL;
-		$html .= '<b>Error:</b> '.$msg.PHP_EOL;
-		$html .= '</div>'.PHP_EOL;
-
-		return $html;
+		if ( $this->params['ajax'] ) {
+			$error = array('Error'=>$msg);
+		} else {
+			$error = null;
+			$error .= '<div class="alert alert-danger">'.PHP_EOL;
+			$error .= '<b>Error:</b> '.$msg.PHP_EOL;
+			$error .= '</div>'.PHP_EOL;
+		}
+		return $error;
 	}
 
 	protected function getReportData() {
