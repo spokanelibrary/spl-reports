@@ -39,11 +39,13 @@ class SPL_Report {
 		}	
 	} 
 
-	protected function getReportError( $msg='Error' ) {
+	protected function getReportError( $msg='Unknown error' ) {
 		$html = null;
 		$html .= '<div class="alert alert-danger">'.PHP_EOL;
-		$html .= $msg.PHP_EOL;
+		$html .= '<b>Error:</b> '.$msg.PHP_EOL;
 		$html .= '</div>'.PHP_EOL;
+
+		return $html;
 	}
 
 	protected function getReportData() {
