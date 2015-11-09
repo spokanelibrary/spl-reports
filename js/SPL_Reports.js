@@ -33,6 +33,7 @@ var splReport = {
 	}
 	,getReport: function() {
 		this.api.data.params.vals = this.getVals();
+		$('.spl-report-result').html('<div class="alert alert-info">Please wait&hellip;</div>');
 		$.ajax(
 			_this.api
 		)
