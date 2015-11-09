@@ -20,6 +20,8 @@ class SPL_Report {
 		include $class->path;
 		$report = new $class->name($this->params, $this->config);
 
+		$spl_report_nonce = wp_create_nonce( 'spl-report-nonce-'.$this->params['id'];
+
 		if ( $this->params['ajax'] ) {
 
 			//$this->output = wp_verify_nonce( $_REQUEST['security'], 'spl-report-'.$this->params['id'] );
@@ -29,7 +31,7 @@ class SPL_Report {
 		} else {
 			$report->loadJs();
 			$html = '<div class="spl-report"
-								data-spl-report-nonce="'. wp_create_nonce( 'spl-report-nonce-'.$this->params['id'] ).'"
+								data-spl-report-nonce="'. $spl_report_nonce ).'"
 								data-spl-report-id="'.$this->params['id'] .'">'.PHP_EOL;
 			$html .= $report->getTmpl();	
 			$html .= PHP_EOL.'</div>'.PHP_EOL;
