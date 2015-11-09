@@ -22,7 +22,7 @@ class SPL_Report {
 
 		if ( $this->params['ajax'] ) {
 			$this->output = wp_verify_nonce( $_REQUEST['security'], 'spl-report-nonce-'.$this->params['id'] );
-			//$this->output = 'spl-report-nonce-'.$post->ID;
+			$this->output = 'spl-report-nonce-'.$this->params['id'];
 			//$this->output = $report->processData($report->getReportData());
 		} else {
 			$report->loadJs();
