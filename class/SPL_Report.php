@@ -35,9 +35,16 @@ class SPL_Report {
 				$this->output = $html;
 			}
 		} else {
-			$this->output = 'Report not found';
+			$this->output = $this->getReportError('Report not found');
 		}	
 	} 
+
+	protected function getReportError( $msg='Error' ) {
+		$html = null;
+		$html .= '<div class="alert alert-danger">'.PHP_EOL;
+		$html .= $msg.PHP_EOL;
+		$html .= '</div>'.PHP_EOL;
+	}
 
 	protected function getReportData() {
 		$params['apikey'] = $this->apikey;
