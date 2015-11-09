@@ -19,6 +19,7 @@ include __DIR__.'/class/SPL_Report.php';
 if ( is_admin() ) {
   add_action( 'wp_ajax_spl_reports', 'spl_reports_ajax' );
   add_action( 'wp_ajax_nopriv_spl_reports', 'spl_reports_ajax_anon' );
+  add_action( 'wp_ajax_my_backend_action', 'spl_reports_ajax_admin' );
 } 
 
 // remember to visit permalinks page to flush cache
@@ -76,6 +77,10 @@ function spl_reports_ajax() {
 } 
 
 function spl_reports_ajax_anon() {
+	spl_reports_ajax();
+}
+
+function spl_reports_ajax_admin() {
 	spl_reports_ajax();
 } 
 
