@@ -20,7 +20,7 @@ class SPL_Report {
 		include $class->path;
 		$report = new $class->name($this->params, $this->config);
 
-		$spl_report_nonce = wp_create_nonce( 'spl-report-nonce-'.$this->params['id'];
+		$spl_report_nonce = wp_create_nonce( 'spl-report-nonce-'.$this->params['id'] );
 
 		if ( $this->params['ajax'] ) {
 
