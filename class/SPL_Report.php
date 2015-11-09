@@ -16,7 +16,7 @@ class SPL_Report {
 
 	public function getReport() {
 		$class = $this->getReportClass();
-		if ( is_object($class) ) {
+		if ( is_object($class) && $class->path ) {
 			include $class->path;
 			$report = new $class->name($this->params, $this->config);
 
