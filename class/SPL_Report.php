@@ -15,13 +15,11 @@ class SPL_Report {
 	}
 
 	public function getReport() {
-		$this->output = 'Report not found';
-		return;
 		$class = $this->getReportClass();
-		include $class->path;
-		$report = new $class->name($this->params, $this->config);
-
 		if ( is_object($class) ) {
+			include $class->path;
+			$report = new $class->name($this->params, $this->config);
+
 			if ( $this->params['ajax'] ) {
 
 				if ( wp_verify_nonce( $_REQUEST['nonce'], 'spl-report-nonce-'.$this->params['id'] ) ) {
@@ -38,8 +36,7 @@ class SPL_Report {
 			}
 		} else {
 			$this->output = 'Report not found';
-		}
-		
+		}	
 	} 
 
 	protected function getReportData() {
