@@ -78,7 +78,7 @@ class SPL_Report {
 
 		<div class="panel spl-hero-intranet spl-hero-brand-gray-b">
 			<div class="panel-heading">
-				<h4>Older reports <small>on intra<small></h4>
+				<h4>Older reports (intra)</h4>
 			</div>
 			<div class="panel-body">
 				<div class="row">
