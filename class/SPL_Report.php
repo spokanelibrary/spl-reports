@@ -102,7 +102,10 @@ class SPL_Report {
 		$html .= null;
 		if ( $list ) {
 			foreach ( $list as $menu ) {
-				$html .= '<h4>'.$menu->label.'</h4>';
+				$html .= '<div class="btn-group">';
+				$html .= '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+				$html .= $menu->label.' <span class="caret"></span></button>';
+				$html .= '</div>';
 			}
 		}
 
@@ -118,6 +121,7 @@ class SPL_Report {
 		$other = new stdClass();
 		$reports = new stdClass();
 
+		$dash->circ->id = 'dash-circ';
 		$dash->circ->label = 'Circulation';
 		$dash->circ->menu = array();
 		$dash->circ->menu[] = array('Circulation Monthly: Totals by Collection'
