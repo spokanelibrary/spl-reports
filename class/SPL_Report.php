@@ -40,6 +40,7 @@ class SPL_Report {
 			} else {
 				$this->output = $this->getReportError('Report not found');
 			}	
+		}
 	} 
 
 	protected function getReportError( $msg='Unknown error' ) {
