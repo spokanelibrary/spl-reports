@@ -51,6 +51,7 @@ class SPL_Report {
 		$html = null;
 
 		$html .= '
+		<h3>Reports Dashboard</h3>
 		<div class="row">
 			<div class="col-md-3">
 			Stats Dashboard
@@ -59,10 +60,20 @@ class SPL_Report {
 			Updated Reports
 			</div>
 			<div class="col-md-3">
-			Old (Intra) reports
-			</div>
-			<div class="col-md-3">
 			Apps and Tools
+			</div>
+		</div>
+		
+		<h3>Old (Intra) reports</h3>
+		<div class="row">
+			<div class="col-md-4">
+			...
+			</div>
+			<div class="col-md-4">
+			...
+			</div>
+			<div class="col-md-4">
+			...
 			</div>
 		</div>
 		';
