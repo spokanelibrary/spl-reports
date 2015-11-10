@@ -53,25 +53,29 @@ class SPL_Report {
 		//$html .= '<pre>'.print_r($db, true).'</pre>';
 
 		$html .= '
-		<div class="alert alert-success">
-			<h3>New Reports</h3>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">New Reports</h3>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-3">
+						<h4>Reports Dashboard</h4>
+						'.$this->getReportList($db->dash, $class).'
+						</div>
+						<div class="col-md-3">
+						Updated Reports
+						</div>
+						<div class="col-md-3">
+						Apps and Tools
+						</div>
+						<div class="col-md-3">
+						Other Reporting Sources
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-3">
-			<h4>Reports Dashboard</h4>
-			'.$this->getReportList($db->dash, $class).'
-			</div>
-			<div class="col-md-3">
-			Updated Reports
-			</div>
-			<div class="col-md-3">
-			Apps and Tools
-			</div>
-			<div class="col-md-3">
-			Other Reporting Sources
-			</div>
-		</div>
-		
+
 		<div class="alert alert-info">
 			<h3>Old (Intra) reports</h3>
 		</div>
