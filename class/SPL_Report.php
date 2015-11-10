@@ -50,6 +50,8 @@ class SPL_Report {
 		$db = $this->getReportDB();
 		$html = null;
 
+		$html .= '<pre>'.print_r($db, true).'</pre>';
+
 		$html .= '
 		<h3>Reports Dashboard</h3>
 		<div class="row">
@@ -97,9 +99,19 @@ class SPL_Report {
 	}
 
 	private function getReportDB() {
-		$db = array();
+		$db = new stdClass();
 
-		$db['test'] = 'menu';
+		$apps  new stdClass();
+		$dash = new stdClass();
+		$intra = new stdClass();
+		$other = new stdClass();
+		$reports = new stdClass();
+
+		$db->apps = $apps;
+		$db->dash = $dash;
+		$db->intra = $intra;
+		$db->other = $other;
+		$db->reports = $reports;
 
 		return $db;
 	}
