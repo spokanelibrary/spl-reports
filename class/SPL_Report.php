@@ -103,7 +103,7 @@ class SPL_Report {
 		if ( $list ) {
 			foreach ( $list as $menu ) {
 				$html .= '<div class="btn-group">';
-				$html .= '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+				$html .= '<button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
 				$html .= $menu->label.' <span class="caret"></span></button>';
 				if ( is_array($menu->list) ) {
 					$html .= '<ul class="dropdown-menu">';
@@ -132,7 +132,6 @@ class SPL_Report {
 		$other = new stdClass();
 		$reports = new stdClass();
 
-		//$dash->circ->id = 'dash-circ';
 		$dash->circ->label = 'Circulation';
 		$dash->circ->list = array();
 		$dash->circ->list[] = array('Circulation Monthly: Totals by Collection'
