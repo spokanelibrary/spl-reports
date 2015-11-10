@@ -62,6 +62,9 @@ class SPL_Report {
 			<div class="col-md-3">
 			Apps and Tools
 			</div>
+			<div class="col-md-3">
+			Other Reporting Sources
+			</div>
 		</div>
 		
 		<h3>Old (Intra) reports</h3>
