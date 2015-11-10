@@ -101,7 +101,7 @@ class SPL_Report {
 	private function getReportDB() {
 		$db = new stdClass();
 
-		$apps  new stdClass();
+		$apps = new stdClass();
 		$dash = new stdClass();
 		$intra = new stdClass();
 		$other = new stdClass();
