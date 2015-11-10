@@ -86,17 +86,18 @@ class SPL_Report {
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-sm-6 col-md-3">
-					...
+						<h4>Circulation</h4>
 					</div>
 					<div class="col-sm-6 col-md-3">
-					...
+						<h4>Collection Development</h4>
 					</div>
 					<div class="clearfix visible-sm"></div>
 					<div class="col-sm-6 col-md-3">
-					...
+						<h4>Business &amp; Finance</h4>
 					</div>
 					<div class="col-sm-6 col-md-3">
-					...
+						<h4>Serials</h4>
+						<h4>Youth Services</h4>
 					</div>
 				</div>
 			</div>
