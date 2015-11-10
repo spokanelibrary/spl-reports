@@ -25,6 +25,9 @@
 	<p>
 		All bibs which have AT LEAST ONE item in item_status 'n' OR 't', AND have have AT LEAST ONE unfilled request.
 	</p>
+	<p>
+		<b>Note:</b> A maximum of <b>5</b> barcodes is shown here
+	</p>
 
 </div>
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
@@ -32,13 +35,21 @@
 	<table class="table table-condensed table-bordered table-striped">
 	<thead>
 	<tr>
-		<th></th>
+		<th>Bib</th>
+		<th>Call #</th>
+		<th>Received</th>
+		<th>Collection</th>
+		<th>Requests</th>
 	</tr>
 	</thead>
 	{{#each sorted}}
 	<tr>
 		<td>
-		{{title}}
+		<b>{{title}}</b>
+		{{#if bib_245h}}
+		<br>
+		{{bib_245h}}
+		{{/if}}
 		<ul>
 		{{#each items}}
 			<li>{{barcode}}</li>
@@ -46,7 +57,6 @@
 		</ul>
 		</td>
 		<td>{{call_number}}</td>
-		<td>{{bib_245h}}</td>
 		<td>{{received_date}}</td>
 		<td>{{collection}}</td>
 		<td>{{request_count}}</td>
