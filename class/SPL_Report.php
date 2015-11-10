@@ -56,7 +56,7 @@ class SPL_Report {
 		<h3>Reports Dashboard</h3>
 		<div class="row">
 			<div class="col-md-3">
-			Stats Dashboard
+			'.$this->getReportList($db->dash).'
 			</div>
 			<div class="col-md-3">
 			Updated Reports
@@ -94,6 +94,17 @@ class SPL_Report {
 		$html = null;
 
 		//$html .= 'navbar';
+
+		return $html;
+	}
+
+	protected function getReportList($list) {
+		$html .= null;
+		if ( $list ) {
+			foreach ( $list as $menu ) {
+				$html .= '<h4>'.$menu->label.'</h4>';
+			}
+		}
 
 		return $html;
 	}
