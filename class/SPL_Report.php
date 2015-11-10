@@ -16,7 +16,7 @@ class SPL_Report {
 
 	public function getReport() {
 		$html = $this->getReportNavbar();
-		if ( !isset($this->params['id']) ) {
+		if ( empty($this->params['id']) ) {
 			$html .= 'menu';
 			$this->output = $html;
 		} else {
