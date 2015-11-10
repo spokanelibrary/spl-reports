@@ -69,6 +69,7 @@ class SPL_Report {
 					<div class="clearfix visible-sm"></div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Apps and Tools</h4>
+						'.$this->getReportList($db->dash, $class).'
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Other Reports</h4>
@@ -149,6 +150,36 @@ class SPL_Report {
 		$other = new stdClass();
 		$reports = new stdClass();
 
+		/*
+		 *	Converted Reports
+		 */
+		$reports->coll->label = 'Collections';
+		$reports->coll->list[] = array('Unique Items by Branch'
+													,'./34/');
+
+		$reports->ss->label = 'Support Services';
+		$reports->ss->list[] = array('New Items with Holds'
+													,'./11/');
+
+		/*
+		 *	Apps & Tools
+		 */
+		$apps->nmr->label = 'New Material Requests';
+		$apps->nmr->list[] = array('NMR Staff Portal'
+													,'http://dash.spokanelibrary.org/connect/request');
+		$apps->nmr->list[] = array('NMR on our website'
+													,'http://www.spokanelibrary.org/request');
+
+		$reports->cfr->label = 'Content Filter Requests';
+		$reports->cfr->list[] = array('View &amp; Manage Filter Requests'
+													,'http://dash.spokanelibrary.org/connect/unblock');
+		$reports->cfr->list[] = array('Process Filter Requests in Firewall'
+													,'https://199.237.16.1/login');
+
+		/*
+		 *	Dashboard Reports
+		 */
+
 		$dash->circ->label = 'Circulation';
 		$dash->circ->list[] = array('Circulation Monthly: Totals by Collection'
 													,'http://dash.spokanelibrary.org/stats/circulation-monthly');
@@ -192,20 +223,6 @@ class SPL_Report {
 		$dash->cust->list[] = array('Item &amp; Request Limits'
 													,'http://dash.spokanelibrary.org/stats/item-request-limits');
 		
-		/*
-		$dash->circ->list[] = array(''
-													,'');
-		*/		
-
-
-		$reports->coll->label = 'Collections';
-		$reports->coll->list[] = array('Unique Items at Branch'
-													,'./34/');
-
-		$reports->ss->label = 'Support Services';
-		$reports->ss->list[] = array('New Items with Holds'
-													,'./11/');
-
 
 		$db->apps = $apps;
 		$db->dash = $dash;
