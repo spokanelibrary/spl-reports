@@ -107,6 +107,8 @@ class SPL_Report {
 		$other = new stdClass();
 		$reports = new stdClass();
 
+		$reports->{11}->name = 'my name';
+
 		$db->apps = $apps;
 		$db->dash = $dash;
 		$db->intra = $intra;
