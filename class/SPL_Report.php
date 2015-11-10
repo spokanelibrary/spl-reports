@@ -53,24 +53,24 @@ class SPL_Report {
 		//$html .= '<pre>'.print_r($db, true).'</pre>';
 
 		$html .= '
-		<div class="panel panel-primary">
+		<div class="panel panel-primary spl-hero-intranet spl-hero-brand-purple-a">
 			<div class="panel-heading">
 				<h3 class="panel-title">New Reports</h3>
 			</div>
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-md-3">
-						<h4>Reports Dashboard</h4>
+						<h4>Dashboard Reports</h4>
 						'.$this->getReportList($db->dash, $class).'
 						</div>
 						<div class="col-md-3">
-						Updated Reports
+						Reader Reports
 						</div>
 						<div class="col-md-3">
 						Apps and Tools
 						</div>
 						<div class="col-md-3">
-						Other Reporting Sources
+						Other Reports
 					</div>
 				</div>
 			</div>
