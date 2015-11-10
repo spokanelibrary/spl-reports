@@ -288,12 +288,29 @@ class SPL_Report {
 		$intra->circ->bus->label = 'Business Office';
 		$intra->circ->bus->list[] = array('Daily Fee Payment Detail'
 																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=45');
-		$intra->circ->borr->list[] = array('Waives Detail'
+		$intra->circ->bus->list[] = array('Waives Detail'
 																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=128');
-		//$intra->circ->borr->list[] = array(''
-		//														,'');
 
 		$intra->circ->circ->label = 'Circulation';
+		$intra->circ->circ->list[] = array('Circulation by login (daily/hourly) - working?'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=86');
+		$intra->circ->circ->list[] = array('Circulation by outreach sites (monthly) - crashes db?'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=68');
+		$intra->circ->circ->list[] = array('Circulation summary for Outreach'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=67');
+		$intra->circ->circ->list[] = array('Courtesy email reminders list'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=90');
+		$intra->circ->circ->list[] = array('Customers with an "edc" block'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=122');
+		$intra->circ->circ->list[] = array('Item status check'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=33');
+		$intra->circ->circ->list[] = array('System Notice Lookup'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=165');
+		$intra->circ->circ->list[] = array('Zip codes of checked out items'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=35');
+
+		//$intra->circ->borr->list[] = array(''
+		//														,'');
 
 		$intra->circ->clean->label = 'Cleanup';
 
