@@ -84,6 +84,9 @@ class SPL_Report {
 				<h4>Older reports (intra)</h4>
 			</div>
 			<div class="panel-body">
+				<p>
+					<b>Note:</b> I am still populating this list.
+				</p>
 				<div class="row">
 					<div class="col-sm-6 col-md-3">
 						<h4>Circulation</h4>
@@ -278,10 +281,17 @@ class SPL_Report {
 		$intra->circ->borr->label = 'Borrowers';
 		$intra->circ->borr->list[] = array('Cost of all materials currently out to customer'
 																,'http://web.spokanelibrary.org/reports/091');
-		//$intra->circ->borr->list[] = array(''
-		//														,'');
+		$intra->circ->borr->list[] = array('Outreach cards by location'
+																,'http://web.spokanelibrary.org/reports/066');
+
 
 		$intra->circ->bus->label = 'Business Office';
+		$intra->circ->bus->list[] = array('Daily Fee Payment Detail'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=45');
+		$intra->circ->borr->list[] = array('Waives Detail'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=128');
+		//$intra->circ->borr->list[] = array(''
+		//														,'');
 
 		$intra->circ->circ->label = 'Circulation';
 
