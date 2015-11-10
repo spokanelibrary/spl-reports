@@ -15,8 +15,10 @@ class SPL_Report {
 	}
 
 	public function getReport() {
+		$html = $this->getReportNavbar();
 		if ( !isset($this->params['id']) ) {
-			$this->output = 'menu';
+			$html .= 'menu';
+			$this->output = $html;
 		} else {
 			$class = $this->getReportClass();
 			if ( is_object($class) && $class->path ) {
@@ -28,21 +30,45 @@ class SPL_Report {
 					}
 				} else {
 					$report->loadJs();
-					$html = '<div class="spl-report"
+					$html .= '<div class="spl-report"
 										data-spl-report-nonce="'.wp_create_nonce( 'spl-report-nonce-'.$this->params['id'] ).'"
 										data-spl-report-id="'.$this->params['id'] .'">'.PHP_EOL;
 					$html .= $report->getTmpl();	
 					$html .= PHP_EOL.'</div>'.PHP_EOL;
+
 					$this->output = $html;
 				}
 			} else {
-				$this->output = $this->getReportError('Report not found');
+				$html .= $this->getReportError('Report not found');
+				$this->output = $html;
 			}	
 		}
 	} 
 
 	protected function getReportMenu() {
-		
+		$db = $this->getReportDB();
+		$html = null;
+
+		$html .= 'menu';
+
+		return $html;
+	}
+
+	protected function getReportNavbar() {
+		$db = $this->getReportDB();
+		$html = null;
+
+		$html .= 'navbar';
+
+		return $html;
+	}
+
+	private function getReportDB() {
+		$db = array();
+
+		$db['test'] = 'menu';
+
+		return $db;
 	}
 
 	protected function getReportError( $msg='Unknown error' ) {
@@ -54,6 +80,7 @@ class SPL_Report {
 			$error .= '<b>Error:</b> '.$msg.PHP_EOL;
 			$error .= '</div>'.PHP_EOL;
 		}
+		
 		return $error;
 	}
 
@@ -65,7 +92,7 @@ class SPL_Report {
 		}
 		$data = $this->curlProxy($this->endpoint.$this->api
 													, $params);
-		//return json_decode($data->response);
+
 		return json_decode($this->processData($data->response));
 	}
 
