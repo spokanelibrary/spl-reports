@@ -102,6 +102,7 @@ class SPL_Report {
 		$html .= null;
 		if ( $list ) {
 			foreach ( $list as $menu ) {
+				$html .= '<p>';
 				$html .= '<div class="btn-group">';
 				$html .= '<button type="button" class="btn btn-'.$class.' dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
 				$html .= $menu->label.' <span class="caret"></span></button>';
@@ -117,6 +118,7 @@ class SPL_Report {
 					$html .= '</ul>';
 				}
 				$html .= '</div>';
+				$html .= '</p>';
 			}
 		}
 
