@@ -46,7 +46,7 @@ class SPL_Report {
 		}
 	} 
 
-	protected function getReportMenu($class=null) {
+	protected function getReportMenu($class='primary') {
 		$db = $this->getReportDB();
 		$html = null;
 
@@ -98,7 +98,7 @@ class SPL_Report {
 		return $html;
 	}
 
-	protected function getReportList($list, $class="primary") {
+	protected function getReportList($list, $class='default') {
 		$html .= null;
 		if ( $list ) {
 			foreach ( $list as $menu ) {
