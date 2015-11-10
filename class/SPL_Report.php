@@ -60,6 +60,7 @@ class SPL_Report {
 				<div class="row">
 					<div class="col-sm-6 col-md-3">
 						<h4>Converted Reports</h4>
+						'.$this->getReportList($db->reports, $class).'
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Dashboard Reports</h4>
@@ -112,7 +113,7 @@ class SPL_Report {
 		return $html;
 	}
 
-	protected function getReportList($list, $class='default') {
+	protected function getReportList($list, $class='link') {
 		$html .= null;
 		if ( $list ) {
 			foreach ( $list as $menu ) {
@@ -178,7 +179,18 @@ class SPL_Report {
 		/*
 		$dash->circ->list[] = array(''
 													,'');
-		*/													
+		*/		
+
+
+		$report->coll->label = 'Collections';
+		$report->coll->list[] = array('Unique Items at Branch'
+													,'./34/');
+
+		$report->ss->label = 'Support Services';
+		$report->ss->list[] = array('New Items with Holds'
+													,'./11/');
+
+
 		$db->apps = $apps;
 		$db->dash = $dash;
 		$db->intra = $intra;
