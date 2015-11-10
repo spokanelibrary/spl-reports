@@ -96,6 +96,7 @@ class SPL_Report {
 					<div class="clearfix visible-sm"></div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Business &amp; Finance</h4>
+						'.$this->getReportList($db->fin->coll).'
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Serials</h4>
@@ -268,6 +269,10 @@ class SPL_Report {
 																,'http://dash.spokanelibrary.org/stats/balance-sheet');
 
 
+		/*
+		 *	Intra Reports
+		 */
+
 		$intra->circ->borr->label = 'Borrowers';
 
 		$intra->circ->bus->label = 'Business Office';
@@ -309,6 +314,22 @@ class SPL_Report {
 		$intra->coll->labels->label = 'Label Requests';
 
 		$intra->coll->subjects->label = 'Subject Headings';
+
+
+
+
+
+		$intra->fin->borr->label = 'Bib Records';
+
+		$intra->fin->budget->label = 'Budget';
+
+		$intra->fin->bus->label = 'Business Office';
+
+		$intra->fin->cleanup->label = 'Cleanup';
+
+		$intra->fin->ca->label = 'Collection Agency';
+
+		$intra->fin->borr->label = 'Internal Audit';
 
 
 
