@@ -68,7 +68,7 @@ class SPL_Report {
 					</div>
 					<div class="clearfix visible-sm"></div>
 					<div class="col-sm-6 col-md-3">
-						<h4>Apps and Tools</h4>
+						<h4>Apps &amp; Tools</h4>
 						'.$this->getReportList($db->apps).'
 					</div>
 					<div class="col-sm-6 col-md-3">
