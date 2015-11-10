@@ -96,7 +96,7 @@ class SPL_Report {
 					<div class="clearfix visible-sm"></div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Business &amp; Finance</h4>
-						'.$this->getReportList($db->fin->coll).'
+						'.$this->getReportList($db->intra->fin).'
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Serials</h4>
