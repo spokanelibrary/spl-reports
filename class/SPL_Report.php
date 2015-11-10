@@ -76,21 +76,26 @@ class SPL_Report {
 			</div>
 		</div>
 
-		<div class="alert alert-info">
-			<h3>Old (Intra) reports</h3>
-		</div>
-		<div class="row">
-			<div class="col-md-3">
-			...
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Old (Intra) reports</h3>
 			</div>
-			<div class="col-md-3">
-			...
-			</div>
-			<div class="col-md-3">
-			...
-			</div>
-			<div class="col-md-3">
-			...
+			<div class="panel-body">
+
+				<div class="row">
+					<div class="col-md-3">
+					...
+					</div>
+					<div class="col-md-3">
+					...
+					</div>
+					<div class="col-md-3">
+					...
+					</div>
+					<div class="col-md-3">
+					...
+					</div>
+				</div>
 			</div>
 		</div>
 		';
