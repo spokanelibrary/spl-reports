@@ -87,7 +87,7 @@ class SPL_Report {
 				<div class="row">
 					<div class="col-sm-6 col-md-3">
 						<h4>Circulation</h4>
-						'.$this->getReportList($intra->circ->borr).'
+						'.$this->getReportList($db->intra->circ->borr).'
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Collection Development</h4>
