@@ -53,7 +53,9 @@ class SPL_Report {
 		//$html .= '<pre>'.print_r($db, true).'</pre>';
 
 		$html .= '
+		<div class="alert alert-info">
 		<h3>New Reports</h3>
+		</div>
 		<div class="row">
 			<div class="col-md-3">
 			<h4>Reports Dashboard</h4>
