@@ -45,7 +45,7 @@ class SPL_Report {
 		}
 	} 
 
-	protected function getReportMenu($class='link') {
+	protected function getReportMenu() {
 		$db = $this->getReportDB();
 		$html = null;
 
@@ -60,19 +60,20 @@ class SPL_Report {
 				<div class="row">
 					<div class="col-sm-6 col-md-3">
 						<h4>Converted Reports</h4>
-						'.$this->getReportList($db->reports, $class).'
+						'.$this->getReportList($db->reports).'
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Dashboard Reports</h4>
-						'.$this->getReportList($db->dash, $class).'
+						'.$this->getReportList($db->dash).'
 					</div>
 					<div class="clearfix visible-sm"></div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Apps and Tools</h4>
-						'.$this->getReportList($db->apps, $class).'
+						'.$this->getReportList($db->apps).'
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Other Reports</h4>
+						'.$this->getReportList($db->other).'
 					</div>
 				</div>
 			</div>
@@ -160,6 +161,18 @@ class SPL_Report {
 		$reports->ss->label = 'Support Services';
 		$reports->ss->list[] = array('New Items with Holds'
 													,'./11/');
+
+		/*
+		 *	Other Reports
+		 */
+		$other->cust->label = 'Customers';
+		$other->cust->list[] = array('WiFi Use Count'
+																,'http://web.spokanelibrary.org/spl-wireless-track/');
+
+		$other->fin->label = 'Business & Finance';
+		$other->fin->list[] = array('EnvisionWare Tableau Server'
+																,'http://10.14.51.103/');
+
 
 		/*
 		 *	Apps & Tools
