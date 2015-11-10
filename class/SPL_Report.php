@@ -50,7 +50,7 @@ class SPL_Report {
 		$db = $this->getReportDB();
 		$html = null;
 
-		$html .= '<pre>'.print_r($db, true).'</pre>';
+		//$html .= '<pre>'.print_r($db, true).'</pre>';
 
 		$html .= '
 		<h3>Reports Dashboard</h3>
@@ -103,7 +103,7 @@ class SPL_Report {
 		if ( $list ) {
 			foreach ( $list as $menu ) {
 				$html .= '<div class="btn-group">';
-				$html .= '<button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+				$html .= '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
 				$html .= $menu->label.' <span class="caret"></span></button>';
 				if ( is_array($menu->list) ) {
 					$html .= '<ul class="dropdown-menu">';
