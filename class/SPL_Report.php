@@ -87,6 +87,7 @@ class SPL_Report {
 				<div class="row">
 					<div class="col-sm-6 col-md-3">
 						<h4>Circulation</h4>
+						'.$this->getReportList($intra->circ->borr).'
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Collection Development</h4>
@@ -264,6 +265,10 @@ class SPL_Report {
 		$dash->fin->label = 'Business & Finance';
 		$dash->fin->list[] = array('Balance Sheet (beta)'
 																,'http://dash.spokanelibrary.org/stats/balance-sheet');
+
+
+		$intra->circ->borr->label = 'Borrowers';
+
 
 		$db->apps = $apps;
 		$db->dash = $dash;
