@@ -246,6 +246,9 @@ class SPL_Report {
 		$dash->cust->list[] = array('Item &amp; Request Limits'
 													,'http://dash.spokanelibrary.org/stats/item-request-limits');
 		
+		$dash->fin->label = 'Business & Finance';
+		$dash->fin->list[] = array('Balance Sheet (beta)'
+																,'http://dash.spokanelibrary.org/stats/balance-sheet');
 
 		$db->apps = $apps;
 		$db->dash = $dash;
