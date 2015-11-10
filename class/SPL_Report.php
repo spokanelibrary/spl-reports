@@ -66,13 +66,16 @@ class SPL_Report {
 		
 		<h3>Old (Intra) reports</h3>
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-3">
 			...
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-3">
 			...
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-3">
+			...
+			</div>
+			<div class="col-md-3">
 			...
 			</div>
 		</div>
@@ -85,7 +88,7 @@ class SPL_Report {
 		$db = $this->getReportDB();
 		$html = null;
 
-		$html .= 'navbar';
+		//$html .= 'navbar';
 
 		return $html;
 	}
