@@ -22,9 +22,7 @@ class SPL_Report {
 			if ( is_object($class) && $class->path ) {
 				include $class->path;
 				$report = new $class->name($this->params, $this->config);
-
 				if ( $this->params['ajax'] ) {
-
 					if ( wp_verify_nonce( $_REQUEST['nonce'], 'spl-report-nonce-'.$this->params['id'] ) ) {
 						$this->output = $report->processData($report->getReportData());
 					}
@@ -42,6 +40,8 @@ class SPL_Report {
 			}	
 		}
 	} 
+
+	protected 
 
 	protected function getReportError( $msg='Unknown error' ) {
 		if ( $this->params['ajax'] ) {
@@ -63,7 +63,7 @@ class SPL_Report {
 		}
 		$data = $this->curlProxy($this->endpoint.$this->api
 													, $params);
-		return json_decode($data->response);
+		//return json_decode($data->response);
 		return json_decode($this->processData($data->response));
 	}
 
