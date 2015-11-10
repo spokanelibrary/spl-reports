@@ -176,6 +176,8 @@ class SPL_Report {
 		$other->cust->label = 'Customers';
 		$other->cust->list[] = array('WiFi Use Count'
 																,'http://web.spokanelibrary.org/spl-wireless-track/');
+		$other->cust->list[] = array('Summer Reading Signup'
+																,'http://web.spokanelibrary.org/reports/107');
 
 		$other->ss->label = 'Support Services';
 		$other->ss->list[] = array(' Support Services Stats Summary Monthly'
