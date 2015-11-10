@@ -91,6 +91,7 @@ class SPL_Report {
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Collection Development</h4>
+						'.$this->getReportList($db->intra->coll).'
 					</div>
 					<div class="clearfix visible-sm"></div>
 					<div class="col-sm-6 col-md-3">
