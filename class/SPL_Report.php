@@ -153,7 +153,7 @@ class SPL_Report {
 		/*
 		 *	Converted Reports
 		 */
-		$reports->coll->label = 'Collections';
+		$reports->coll->label = 'Collection Development';
 		$reports->coll->list[] = array('Unique Items by Branch'
 													,'./34/');
 
@@ -209,7 +209,7 @@ class SPL_Report {
 		$dash->circ->list[] = array('Circulation Turnover by Call Type'
 													,'http://dash.spokanelibrary.org/stats/circulation-monthly-call-type');
 
-		$dash->coll->label = 'Collections';
+		$dash->coll->label = 'Collection Development';
 		$dash->coll->list[] = array('Collection Balancing'
 													,'http://dash.spokanelibrary.org/stats/collection-balance');
 		$dash->coll->list[] = array('&nbsp;&nbsp;Lost in Transfer'
