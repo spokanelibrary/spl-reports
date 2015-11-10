@@ -180,6 +180,12 @@ class SPL_Report {
 		$apps->circ->list[] = array('Process New Library Cards'
 													,'http://dash.spokanelibrary.org/connect/libcard');
 
+		$apps->ss->label = 'Support Services';
+		$apps->ss->list[] = array('Process OneClick MARC Records'
+													,'http://web.spokanelibrary.org/oneclick/');
+		$apps->ss->list[] = array('Process OverDrive Metadata'
+													,'http://web.spokanelibrary.org/overdrive/');
+		
 		/*
 		 *	Dashboard Reports
 		 */
