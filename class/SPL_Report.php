@@ -55,7 +55,7 @@ class SPL_Report {
 		$html .= '
 		<div class="panel spl-hero-intranet spl-hero-brand-blue-f">
 			<div class="panel-heading">
-				<h4 class="">New Reports</h4>
+				<h4 class="">Newer Reports</h4>
 			</div>
 			<div class="panel-body">
 				<div class="row">
@@ -78,7 +78,7 @@ class SPL_Report {
 
 		<div class="panel spl-hero-intranet spl-hero-brand-gray-b">
 			<div class="panel-heading">
-				<h4>Old (Intra) reports</h4>
+				<h4>Older (Intra) reports</h4>
 			</div>
 			<div class="panel-body">
 				<div class="row">
