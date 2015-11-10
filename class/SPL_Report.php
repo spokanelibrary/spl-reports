@@ -286,6 +286,31 @@ class SPL_Report {
 		$intra->circ->ill->label = 'ILL';
 
 
+
+
+
+		$intra->coll->bib->label = 'Bib Records';
+
+		$intra->coll->circ->label = 'Circulation';
+
+		$intra->coll->clean->label = 'Clean Up';
+
+		$intra->coll->cd->label = 'Collection Development';
+
+		$intra->coll->holds->label = 'Holds';
+
+		$intra->coll->items->label = 'Item Records';
+
+		$intra->coll->new->label = 'New Materials';
+
+		$intra->coll->noncirc->label = 'Non-Circ';
+
+		$intra->coll->labels->label = 'Label Requests';
+
+		$intra->coll->subjects->label = 'Subject Headings';
+
+
+
 		$db->apps = $apps;
 		$db->dash = $dash;
 		$db->intra = $intra;
