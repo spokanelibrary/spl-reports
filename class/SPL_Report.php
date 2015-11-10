@@ -176,6 +176,22 @@ class SPL_Report {
 		$dash->coll->list[] = array('divider'=>true);
 		$dash->coll->list[] = array('New Material Requests (monthly)'
 													,'http://dash.spokanelibrary.org/stats/collection-nmr');
+		
+		$dash->cust->label = 'Customers';
+		$dash->cust->list[] = array('EnvisionWare Gates &amp; Events'
+													,'http://dash.spokanelibrary.org/stats/envisionware-gates-events');
+		$dash->cust->list[] = array('EnvisionWare PC Activity'
+													,'http://dash.spokanelibrary.org/stats/envisionware-pc-activity');
+		$dash->cust->list[] = array('divider'=>true);
+		$dash->cust->list[] = array('Customer Fines &amp; Fees Waived'
+													,'http://dash.spokanelibrary.org/stats/customer-fines-waived');
+		$dash->cust->list[] = array('New Cards Issued'
+													,'http://dash.spokanelibrary.org/stats/new-cards');
+		$dash->cust->list[] = array('Hold Activity: Picked Up / Expired'
+													,'http://dash.spokanelibrary.org/stats/hold-activity-weekly');
+		$dash->cust->list[] = array('Item &amp; Request Limits'
+													,'http://dash.spokanelibrary.org/stats/item-request-limits');
+		
 		/*
 		$dash->circ->list[] = array(''
 													,'');
