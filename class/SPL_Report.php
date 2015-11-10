@@ -41,7 +41,9 @@ class SPL_Report {
 		}
 	} 
 
-	protected 
+	protected function getReportMenu() {
+		
+	}
 
 	protected function getReportError( $msg='Unknown error' ) {
 		if ( $this->params['ajax'] ) {
