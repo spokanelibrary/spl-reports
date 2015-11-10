@@ -53,9 +53,10 @@ class SPL_Report {
 		//$html .= '<pre>'.print_r($db, true).'</pre>';
 
 		$html .= '
-		<h3>Reports Dashboard</h3>
+		<h3>New Reports</h3>
 		<div class="row">
 			<div class="col-md-3">
+			<h4>Reports Dashboard</h4>
 			'.$this->getReportList($db->dash, $class).'
 			</div>
 			<div class="col-md-3">
