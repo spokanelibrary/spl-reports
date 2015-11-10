@@ -46,7 +46,7 @@ class SPL_Report {
 		}
 	} 
 
-	protected function getReportMenu() {
+	protected function getReportMenu($class=null) {
 		$db = $this->getReportDB();
 		$html = null;
 
@@ -56,7 +56,7 @@ class SPL_Report {
 		<h3>Reports Dashboard</h3>
 		<div class="row">
 			<div class="col-md-3">
-			'.$this->getReportList($db->dash).'
+			'.$this->getReportList($db->dash, $class).'
 			</div>
 			<div class="col-md-3">
 			Updated Reports
@@ -98,12 +98,12 @@ class SPL_Report {
 		return $html;
 	}
 
-	protected function getReportList($list) {
+	protected function getReportList($list, $class="primary") {
 		$html .= null;
 		if ( $list ) {
 			foreach ( $list as $menu ) {
 				$html .= '<div class="btn-group">';
-				$html .= '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+				$html .= '<button type="button" class="btn btn-'.$class.' dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
 				$html .= $menu->label.' <span class="caret"></span></button>';
 				if ( is_array($menu->list) ) {
 					$html .= '<ul class="dropdown-menu">';
