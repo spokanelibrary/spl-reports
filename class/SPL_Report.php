@@ -60,17 +60,17 @@ class SPL_Report {
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-md-3">
+						<h4>Updated Reports</h4>
+					</div>
+					<div class="col-md-3">
 						<h4>Dashboard Reports</h4>
 						'.$this->getReportList($db->dash, $class).'
-						</div>
-						<div class="col-md-3">
-						Reader Reports
-						</div>
-						<div class="col-md-3">
-						Apps and Tools
-						</div>
-						<div class="col-md-3">
-						Other Reports
+					</div>
+					<div class="col-md-3">
+						<h4>Apps and Tools</h4>
+					</div>
+					<div class="col-md-3">
+						<h4>Other Reports</h4>
 					</div>
 				</div>
 			</div>
@@ -81,7 +81,6 @@ class SPL_Report {
 				<h4>Old (Intra) reports</h4>
 			</div>
 			<div class="panel-body">
-
 				<div class="row">
 					<div class="col-md-3">
 					...
