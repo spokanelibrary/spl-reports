@@ -16,7 +16,7 @@ class SPL_Report {
 
 	public function getReport() {
 		if ( !isset($this->params['id']) ) {
-			$this->outpu = 'menu';
+			$this->output = 'menu';
 		} else {
 			$class = $this->getReportClass();
 			if ( is_object($class) && $class->path ) {
