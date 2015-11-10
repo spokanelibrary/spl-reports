@@ -105,6 +105,17 @@ class SPL_Report {
 				$html .= '<div class="btn-group">';
 				$html .= '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
 				$html .= $menu->label.' <span class="caret"></span></button>';
+				if ( is_array($menu->list) ) {
+					$html .= '<ul class="dropdown-menu">';
+					foreach ( $menu->list as $i=>$item ) {
+						if ( $item['divider'] ) {
+							$html .= '<li role="separator" class="divider"></li>';
+						} else {
+							$html .= '<li><a href="'.$item[1].'">'.$item[0].'</a></li>';
+						}
+					}	
+					$html .= '</ul>';
+				}
 				$html .= '</div>';
 			}
 		}
@@ -121,13 +132,14 @@ class SPL_Report {
 		$other = new stdClass();
 		$reports = new stdClass();
 
-		$dash->circ->id = 'dash-circ';
+		//$dash->circ->id = 'dash-circ';
 		$dash->circ->label = 'Circulation';
-		$dash->circ->menu = array();
-		$dash->circ->menu[] = array('Circulation Monthly: Totals by Collection'
+		$dash->circ->list = array();
+		$dash->circ->list[] = array('Circulation Monthly: Totals by Collection'
 													,'http://dash.spokanelibrary.org/stats/circulation-monthly');
-		$dash->circ->menu[] = array('Circulation Daily: by Hour'
+		$dash->circ->list[] = array('Circulation Daily: by Hour'
 													,'http://dash.spokanelibrary.org/stats/circulation-daily');
+		$dash->circ->list[] = array('divider'=>true);
 
 		//$reports->{11}->name = 'my name';
 
