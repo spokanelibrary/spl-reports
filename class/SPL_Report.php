@@ -104,7 +104,7 @@ class SPL_Report {
 			foreach ( $list as $menu ) {
 				$html .= '<p>';
 				$html .= '<div class="btn-group">';
-				$html .= '<button type="button" class="btn btn-'.$class.' dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+				$html .= '<button type="button" class="btn btn-lg btn-'.$class.' dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
 				$html .= $menu->label.' <span class="caret"></span></button>';
 				if ( is_array($menu->list) ) {
 					$html .= '<ul class="dropdown-menu">';
