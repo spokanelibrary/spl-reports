@@ -100,7 +100,9 @@ class SPL_Report {
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Serials</h4>
+						'.$this->getReportList($db->intra->serial).'
 						<h4>Youth Services</h4>
+						'.$this->getReportList($db->intra->ya).'
 					</div>
 				</div>
 			</div>
@@ -294,7 +296,6 @@ class SPL_Report {
 
 
 
-
 		$intra->coll->bib->label = 'Bib Records';
 
 		$intra->coll->circ->label = 'Circulation';
@@ -318,7 +319,6 @@ class SPL_Report {
 
 
 
-
 		$intra->fin->borr->label = 'Bib Records';
 
 		$intra->fin->budget->label = 'Budget';
@@ -330,6 +330,20 @@ class SPL_Report {
 		$intra->fin->ca->label = 'Collection Agency';
 
 		$intra->fin->borr->label = 'Internal Audit';
+
+
+
+
+		$intra->serial->circ->label = 'Circulation';
+
+		$intra->serial->items->label = 'Item Records';
+
+
+
+
+		$intra->ya->circ->label = 'Circulation';
+
+		$intra->ya->cd->label = 'Collection Development';
 
 
 
