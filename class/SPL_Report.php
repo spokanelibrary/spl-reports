@@ -133,7 +133,6 @@ class SPL_Report {
 		$reports = new stdClass();
 
 		$dash->circ->label = 'Circulation';
-		$dash->circ->list = array();
 		$dash->circ->list[] = array('Circulation Monthly: Totals by Collection'
 													,'http://dash.spokanelibrary.org/stats/circulation-monthly');
 		$dash->circ->list[] = array('Circulation Daily: by Hour'
@@ -152,6 +151,14 @@ class SPL_Report {
 		$dash->circ->list[] = array('Circulation Turnover by Call Type'
 													,'http://dash.spokanelibrary.org/stats/circulation-monthly-call-type');
 
+		$dash->coll->label = 'Collections';
+		$dash->coll->list[] = array('Collection Balancing'
+													,'http://dash.spokanelibrary.org/stats/collection-balance');
+		$dash->coll->list[] = array('&nbsp;&nbsp;Lost in Transfer'
+													,'http://dash.spokanelibrary.org/stats/collection-transfer');
+		$dash->coll->list[] = array('divider'=>true);
+		$dash->coll->list[] = array('New Material Requests (monthly)'
+													,'http://dash.spokanelibrary.org/stats/collection-nmr');
 		/*
 		$dash->circ->list[] = array(''
 													,'');
