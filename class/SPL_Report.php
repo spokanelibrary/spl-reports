@@ -60,7 +60,7 @@ class SPL_Report {
 				<div class="row">
 					<div class="col-sm-6 col-md-3">
 						<h4>Converted Reports</h4>
-						'.$this->getReportList($db->apps, $class).'
+						'.$this->getReportList($db->reports, $class).'
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Dashboard Reports</h4>
@@ -69,7 +69,7 @@ class SPL_Report {
 					<div class="clearfix visible-sm"></div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Apps and Tools</h4>
-						'.$this->getReportList($db->dash, $class).'
+						'.$this->getReportList($db->apps, $class).'
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Other Reports</h4>
@@ -170,11 +170,15 @@ class SPL_Report {
 		$apps->nmr->list[] = array('NMR on our website'
 													,'http://www.spokanelibrary.org/request');
 
-		$reports->cfr->label = 'Content Filter Requests';
-		$reports->cfr->list[] = array('View &amp; Manage Filter Requests'
+		$apps->cfr->label = 'Content Filter Requests';
+		$apps->cfr->list[] = array('View &amp; Manage Filter Requests'
 													,'http://dash.spokanelibrary.org/connect/unblock');
-		$reports->cfr->list[] = array('Process Filter Requests in Firewall'
+		$apps->cfr->list[] = array('Process Filter Requests in Firewall'
 													,'https://199.237.16.1/login');
+
+		$apps->circ->label = 'Circulation';
+		$apps->circ->list[] = array('Process New Library Cards'
+													,'http://dash.spokanelibrary.org/connect/libcard');
 
 		/*
 		 *	Dashboard Reports
