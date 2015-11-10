@@ -138,9 +138,12 @@ class SPL_Report {
 													,'http://dash.spokanelibrary.org/stats/circulation-monthly');
 		$dash->circ->list[] = array('Circulation Daily: by Hour'
 													,'http://dash.spokanelibrary.org/stats/circulation-daily');
+		$dash->circ->list[] = array('Circulation Hourly: in Date Range'
+													,'http://dash.spokanelibrary.org/stats/circulation-hourly-date-range');
 		$dash->circ->list[] = array('divider'=>true);
-
-		//$reports->{11}->name = 'my name';
+		$dash->circ->list[] = array('X1 Circulation History'
+													,'http://dash.spokanelibrary.org/stats/circulation-x1-history');
+		$dash->circ->list[] = array('divider'=>true);
 
 		$db->apps = $apps;
 		$db->dash = $dash;
