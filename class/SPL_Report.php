@@ -50,7 +50,22 @@ class SPL_Report {
 		$db = $this->getReportDB();
 		$html = null;
 
-		$html .= 'menu';
+		$html .= '
+		<div class="row">
+			<div class="col-md-3">
+			Stats Dashboard
+			</div>
+			<div class="col-md-3">
+			Updated Reports
+			</div>
+			<div class="col-md-3">
+			Old (Intra) reports
+			</div>
+			<div class="col-md-3">
+			Apps and Tools
+			</div>
+		</div>
+		';
 
 		return $html;
 	}
