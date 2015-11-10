@@ -165,9 +165,22 @@ class SPL_Report {
 		/*
 		 *	Other Reports
 		 */
+		$other->circ->label = 'Circulation';
+		$other->circ->list[] = array('Fee Waive Summary by Customer'
+																,'http://web.spokanelibrary.org/reports/176');
+		$other->circ->list[] = array('Item Borrower History (George Only)'
+																,'http://web.spokanelibrary.org/reports/177');
+		$other->circ->list[] = array('Borrowers Forced to Debt Collection'
+																,'http://web.spokanelibrary.org/reports/184');
+
 		$other->cust->label = 'Customers';
 		$other->cust->list[] = array('WiFi Use Count'
 																,'http://web.spokanelibrary.org/spl-wireless-track/');
+
+		$other->ss->label = 'Support Services';
+		$other->ss->list[] = array(' Support Services Stats Summary Monthly'
+																,'http://web.spokanelibrary.org/reports/153');
+
 
 		$other->fin->label = 'Business & Finance';
 		$other->fin->list[] = array('EnvisionWare Tableau Server'
@@ -177,6 +190,16 @@ class SPL_Report {
 		/*
 		 *	Apps & Tools
 		 */
+		$apps->circ->label = 'Circulation';
+		$apps->circ->list[] = array('Process New Library Cards'
+													,'http://dash.spokanelibrary.org/connect/libcard');
+
+		$apps->ss->label = 'Support Services';
+		$apps->ss->list[] = array('Process OneClick MARC Records'
+													,'http://web.spokanelibrary.org/oneclick/');
+		$apps->ss->list[] = array('Process OverDrive Metadata'
+													,'http://web.spokanelibrary.org/overdrive/');
+		
 		$apps->nmr->label = 'New Material Requests';
 		$apps->nmr->list[] = array('NMR Staff Portal'
 													,'http://dash.spokanelibrary.org/connect/request');
@@ -188,17 +211,6 @@ class SPL_Report {
 													,'http://dash.spokanelibrary.org/connect/unblock');
 		$apps->cfr->list[] = array('Process Filter Requests in Firewall'
 													,'https://199.237.16.1/login');
-
-		$apps->circ->label = 'Circulation';
-		$apps->circ->list[] = array('Process New Library Cards'
-													,'http://dash.spokanelibrary.org/connect/libcard');
-
-		$apps->ss->label = 'Support Services';
-		$apps->ss->list[] = array('Process OneClick MARC Records'
-													,'http://web.spokanelibrary.org/oneclick/');
-		$apps->ss->list[] = array('Process OverDrive Metadata'
-													,'http://web.spokanelibrary.org/overdrive/');
-		
 		/*
 		 *	Dashboard Reports
 		 */
