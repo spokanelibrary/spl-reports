@@ -144,7 +144,18 @@ class SPL_Report {
 		$dash->circ->list[] = array('X1 Circulation History'
 													,'http://dash.spokanelibrary.org/stats/circulation-x1-history');
 		$dash->circ->list[] = array('divider'=>true);
+		$dash->circ->list[] = array('Circulation Snapshot: Right Now!'
+													,'http://dash.spokanelibrary.org/stats/circulation-snapshot');
+		$dash->circ->list[] = array('Circulation Snapshot Averages: Live in the Past!'
+													,'http://dash.spokanelibrary.org/stats/circulation-snapshot-average');
+		$dash->circ->list[] = array('divider'=>true);
+		$dash->circ->list[] = array('Circulation Turnover by Call Type'
+													,'http://dash.spokanelibrary.org/stats/circulation-monthly-call-type');
 
+		/*
+		$dash->circ->list[] = array(''
+													,'');
+		*/													
 		$db->apps = $apps;
 		$db->dash = $dash;
 		$db->intra = $intra;
