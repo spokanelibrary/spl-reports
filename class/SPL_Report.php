@@ -107,7 +107,12 @@ class SPL_Report {
 		$other = new stdClass();
 		$reports = new stdClass();
 
-		$reports->{11}->name = 'my name';
+		$dash->circ->label = 'Circulation';
+		$dash->circ->lists = array();
+		$dash->circ->lists[] = array('Circulation Monthly: Totals by Collection'
+													,'http://dash.spokanelibrary.org/stats/circulation-monthly');
+
+		//$reports->{11}->name = 'my name';
 
 		$db->apps = $apps;
 		$db->dash = $dash;
