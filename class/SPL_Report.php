@@ -182,12 +182,12 @@ class SPL_Report {
 		*/		
 
 
-		$report->coll->label = 'Collections';
-		$report->coll->list[] = array('Unique Items at Branch'
+		$reports->coll->label = 'Collections';
+		$reports->coll->list[] = array('Unique Items at Branch'
 													,'./34/');
 
-		$report->ss->label = 'Support Services';
-		$report->ss->list[] = array('New Items with Holds'
+		$reports->ss->label = 'Support Services';
+		$reports->ss->list[] = array('New Items with Holds'
 													,'./11/');
 
 
