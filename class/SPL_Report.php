@@ -269,6 +269,22 @@ class SPL_Report {
 
 		$intra->circ->borr->label = 'Borrowers';
 
+		$intra->circ->bus->label = 'Business Office';
+
+		$intra->circ->circ->label = 'Circulation';
+
+		$intra->circ->clean->label = 'Cleanup';
+
+		$intra->circ->ca->label = 'Collection Agency';
+
+		$intra->circ->holds->label = 'Holds';
+
+		$intra->circ->items->label = 'Item Records';
+
+		$intra->circ->search->label = 'Search Lists';
+
+		$intra->circ->ill->label = 'ILL';
+
 
 		$db->apps = $apps;
 		$db->dash = $dash;
