@@ -276,6 +276,10 @@ class SPL_Report {
 		 */
 
 		$intra->circ->borr->label = 'Borrowers';
+		$intra->circ->borr->list[] = array('Cost of all materials currently out to customer'
+																,'http://web.spokanelibrary.org/reports/091');
+		//$intra->circ->borr->list[] = array(''
+		//														,'');
 
 		$intra->circ->bus->label = 'Business Office';
 
