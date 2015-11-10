@@ -46,7 +46,7 @@ class SPL_Report {
 		}
 	} 
 
-	protected function getReportMenu($class='primary') {
+	protected function getReportMenu($class='link') {
 		$db = $this->getReportDB();
 		$html = null;
 
