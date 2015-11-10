@@ -58,17 +58,18 @@ class SPL_Report {
 			</div>
 			<div class="panel-body">
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-sm-6 col-md-3">
 						<h4>Converted Reports</h4>
 					</div>
-					<div class="col-md-3">
+					<div class="col-sm-6 col-md-3">
 						<h4>Dashboard Reports</h4>
 						'.$this->getReportList($db->dash, $class).'
 					</div>
-					<div class="col-md-3">
+					<div class="clearfix visible-sm"></div>
+					<div class="col-sm-6 col-md-3">
 						<h4>Apps and Tools</h4>
 					</div>
-					<div class="col-md-3">
+					<div class="col-sm-6 col-md-3">
 						<h4>Other Reports</h4>
 					</div>
 				</div>
