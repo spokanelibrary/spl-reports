@@ -362,11 +362,42 @@ class SPL_Report {
 		$intra->coll->bib->list[] = array('Bibs without a MARC 092 field'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=19');
 
+
 		$intra->coll->circ->label = 'Circulation';
+		$intra->coll->circ->list[] = array('Percentage of missing and lost items'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=27');
+		$intra->coll->circ->list[] = array('Turnover by collection'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=139');
+
 
 		$intra->coll->clean->label = 'Clean Up';
+		$intra->coll->clean->list[] = array('8-digit barcodes by location and collection'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=160');
+		$intra->coll->clean->list[] = array('Bibs with a cutter beginning with a number'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=163');
+		$intra->coll->clean->list[] = array('Drama cleanup'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=1');
+		$intra->coll->clean->list[] = array('Items with support services notes'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=22');
+		$intra->coll->clean->list[] = array('JTAutoentry: Bibs to mark staff_only'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=133');
+		$intra->coll->clean->list[] = array('JTAutoentry: Bibs to unmark staff_only'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=132');
+		$intra->coll->clean->list[] = array('Juvenile/Easy Bib/Item Call Number Discrepency'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=130');
+		$intra->coll->clean->list[] = array('MARC 245a is NULL'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=131');
+		$intra->coll->clean->list[] = array('Possible itype/collection code irregularities'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=148');
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=149');
+		$intra->coll->clean->list[] = array('YA collection code not in agreement with call number'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=146');
+
+		
 
 		$intra->coll->cd->label = 'Collection Development';
+		//$intra->coll->cd->list[] = array(''
+		//															,'');
 
 		$intra->coll->holds->label = 'Holds';
 
