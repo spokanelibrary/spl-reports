@@ -347,6 +347,20 @@ class SPL_Report {
 
 
 		$intra->coll->bib->label = 'Bib Records';
+		$intra->circ->bib->list[] = array('1XX, 6XX, 7XX text not proper authority cross-reference'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=129');
+		$intra->circ->bib->list[] = array('Bibs potentially marked erroneously as "staff-only"'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=4');
+		$intra->circ->bib->list[] = array('Bibs potentially marked with an incorrect bib status'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=15');
+		$intra->circ->bib->list[] = array('Bibs where the 092 and 100 fields do not match'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=17');
+		$intra->circ->bib->list[] = array('Bibs which may need to be marked "staff-only"'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=16');
+		$intra->circ->bib->list[] = array('Bibs with no items'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=9');
+		$intra->circ->bib->list[] = array('Bibs without a MARC 092 field'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=19');
 
 		$intra->coll->circ->label = 'Circulation';
 
