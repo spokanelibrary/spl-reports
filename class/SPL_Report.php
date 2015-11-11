@@ -443,7 +443,7 @@ class SPL_Report {
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=74');
 		$intra->coll->labels->list[] = array('Unapproved call number label requests (print)'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=78');
-
+		/*
 		$intra->coll->subjects->label = 'Subject Headings';
 		$intra->coll->subjects->list[] = array('Adult records with juvenile fiction subject headings'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=2');
@@ -457,7 +457,7 @@ class SPL_Report {
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=12');
 		$intra->coll->subjects->list[] = array('Young adult fiction subfield errors'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=8');
-		
+		*/
 		/*
 		$intra->fin->borr->label = 'Bib Records';
 		$intra->fin->borr->list[] = array('Customers with credit balances in Horizon'
