@@ -226,9 +226,9 @@ class SPL_Report {
 		//											,'http://www.spokanelibrary.org/request');
 
 		$apps->cfr->label = 'Content Filter Requests';
-		$apps->cfr->list[] = array('View &amp; Manage Filter Requests'
+		$apps->cfr->list[] = array('View &amp; Manage Content Filter Requests'
 													,'http://dash.spokanelibrary.org/connect/unblock');
-		$apps->cfr->list[] = array('Process Filter Requests in Firewall'
+		$apps->cfr->list[] = array('Process Content Filter Requests in Firewall'
 													,'https://199.237.16.1/login');
 		/*
 		 *	Dashboard Reports
