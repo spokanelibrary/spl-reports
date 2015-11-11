@@ -309,22 +309,40 @@ class SPL_Report {
 		$intra->circ->circ->list[] = array('Zip codes of checked out items'
 																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=35');
 
-		//$intra->circ->borr->list[] = array(''
-		//														,'');
 
 		$intra->circ->clean->label = 'Cleanup';
+		$intra->circ->clean->list[] = array('Items with public services notes'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=21');
+		$intra->circ->clean->list[] = array('Lost in transit (by checkin location)'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=42');
+		$intra->circ->clean->list[] = array('Lost in transit (by collection)'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=43');
+		$intra->circ->clean->list[] = array('Older material in new collection codes'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=41');
 
 		$intra->circ->ca->label = 'Collection Agency';
-
-		$intra->circ->holds->label = 'Holds';
-
-		$intra->circ->items->label = 'Item Records';
+		$intra->circ->ca->list[] = array('Patrons going to debt collection soon'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=46');
 
 		$intra->circ->search->label = 'Search Lists';
+		$intra->circ->search->list[] = array('Complete trace search list searching at the site'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=97');
+		$intra->circ->search->list[] = array('Create new trace search list'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=95');
+		$intra->circ->search->list[] = array('Current trace search list (full)'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=96');
+		$intra->circ->search->list[] = array('Finalize trace search list searching for all sites'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=98');
+		$intra->circ->search->list[] = array('Trace search list log'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=99');
+		$intra->circ->search->list[] = array('View current search list'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=101');
 
 		$intra->circ->ill->label = 'ILL';
-
-
+		$intra->circ->ill->list[] = array('ILL Cards Expiration Update'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=144');
+		$intra->circ->ill->list[] = array('ILL cards with money owed'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=145');
 
 
 		$intra->coll->bib->label = 'Bib Records';
