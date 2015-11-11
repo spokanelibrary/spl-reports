@@ -553,6 +553,7 @@ class SPL_Report {
 
 		$db->apps = $apps;
 		$db->dash = $dash;
+		$db->todo = $todo;
 		$db->intra = $intra;
 		$db->other = $other;
 		$db->reports = $reports;
