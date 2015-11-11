@@ -157,7 +157,7 @@ class SPL_Report {
 
 		$apps = new stdClass();
 		$dash = new stdClass();
-		$todo = new stdClass();
+		//$todo = new stdClass();
 		$intra = new stdClass();
 		$other = new stdClass();
 		$reports = new stdClass();
