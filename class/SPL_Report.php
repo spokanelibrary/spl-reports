@@ -502,11 +502,27 @@ class SPL_Report {
 		
 
 		$intra->fin->cleanup->label = 'Cleanup';
-
+		$intra->fin->cleanup->list[] = array('Statement Anomolies'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=118');
+		
 		$intra->fin->ca->label = 'Collection Agency';
+		$intra->fin->ca->list[] = array('All customers in collection'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=120');
+		$intra->fin->ca->list[] = array('Customers with money owing $50.00 and 50 days'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=123');
+		$intra->fin->ca->list[] = array('Total owed by customers in collection'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=121');
+		$intra->fin->ca->list[] = array('Weekly collection agency summary'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=119');
 
-		$intra->fin->borr->label = 'Internal Audit';
-
+		$intra->fin->audit->label = 'Internal Audit';
+		$intra->fin->audit->list[] = array('Library cards renewed with money owing (Weekly)'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=63');
+		$intra->fin->audit->list[] = array('Staff card waives'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=61');
+		$intra->fin->audit->list[] = array('Weekly blocks deleted'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=62');
+		
 
 
 
