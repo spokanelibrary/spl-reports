@@ -458,12 +458,13 @@ class SPL_Report {
 		$intra->coll->subjects->list[] = array('Young adult fiction subfield errors'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=8');
 		
-
+		/*
 		$intra->fin->borr->label = 'Bib Records';
 		$intra->fin->borr->list[] = array('Customers with credit balances in Horizon'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=59');
 		$intra->fin->borr->list[] = array('Library cards with staff btypes'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=58');
+		*/
 		/*
 		$intra->fin->budget->label = 'Budget';
 		$intra->fin->budget->list[] = array('Budget Expenditures and circulation by Dewey range'
