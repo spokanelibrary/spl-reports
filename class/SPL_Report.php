@@ -479,7 +479,7 @@ class SPL_Report {
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=25');
 		
 
-		/*
+		
 		$intra->fin->bus->label = 'Business Office';
 		$intra->fin->bus->list[] = array('A/R'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=55');
@@ -499,7 +499,7 @@ class SPL_Report {
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=140');
 		$intra->fin->bus->list[] = array('Weekly Pay/Waive Summary'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=44');
-		*/
+		
 
 		$intra->fin->cleanup->label = 'Cleanup';
 
