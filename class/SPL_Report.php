@@ -61,6 +61,8 @@ class SPL_Report {
 					<div class="col-sm-6 col-md-3">
 						<h4>Converted Reports</h4>
 						'.$this->getReportList($db->reports).'
+						<h4>ToDo Reports</h4>
+						'.$this->getReportList($db->todo).'
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Dashboard Reports</h4>
@@ -85,7 +87,7 @@ class SPL_Report {
 			</div>
 			<div class="panel-body">
 				<p>
-					<b>Note:</b> I am still populating this list.
+					<b>Note:</b> I have already weeded a few things here that I am pretty sure are obsolete. -sg
 				</p>
 				<div class="row">
 					<div class="col-sm-6 col-md-3">
