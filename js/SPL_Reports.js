@@ -39,6 +39,7 @@ var splReport = {
 		)
 		.done(function(obj) { 
 			_this.showReport(obj);
+			console.log('autoload');
 		})
 		.fail(function() {
 		})
