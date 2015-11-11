@@ -1,0 +1,68 @@
+<form class="form-inline spl-report-control">
+	<h2>New Books With Holds</h2>
+	<fieldset>
+		<legend>
+			Identifies items in SS with holds, for expidited processing
+		</legend>
+
+		<button type="submit" class="btn btn-success">
+			Run Report <small class="glyphicon glyphicon-arrow-right"></small>
+		</button>
+		<a href="./" class="btn btn-default pull-right">
+			<small class="glyphicon glyphicon-refresh"></small> Reset</a>
+
+	</fieldset>
+</form>
+
+<hr>
+
+<div class="spl-report-result"></div>
+
+<br>
+<br>
+<div class="well well-sm spl-report-summary">
+	<h3>Summary</h3>
+	<p>
+		All bibs which have AT LEAST ONE item in item_status 'n' OR 't', AND have have AT LEAST ONE unfilled request.
+		Items in the Star collection are excluded
+	</p>
+	<p>
+		<b>Note:</b> A maximum of <b>5</b> barcodes are shown here.
+	</p>
+
+</div>
+<script class="spl-report-tmpl" type="text/x-handlebars-template">
+{{#with report}}
+	<table class="table table-condensed table-bordered table-striped">
+	<thead>
+	<tr>
+		<th>Bib</th>
+		<th>Call #</th>
+		<th>Collection</th>
+		<th>Received</th>
+		<th>Requests</th>
+	</tr>
+	</thead>
+	{{#each sorted}}
+	<tr>
+		<td>
+		<b>{{title}}</b>
+		{{#if bib_245h}}
+		<br>
+		{{bib_245h}}
+		{{/if}}
+		<ul>
+		{{#each items}}
+			<li>{{barcode}}</li>
+		{{/each}}
+		</ul>
+		</td>
+		<td>{{call_number}}</td>
+		<td>{{collection}}</td>
+		<td>{{received_date}}</td>
+		<td>{{request_count}}</td>
+	</tr>
+	{{/each}}
+	</table>
+{{/with}}
+</script>
