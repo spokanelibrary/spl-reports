@@ -369,7 +369,7 @@ class SPL_Report {
 		$intra->coll->circ->list[] = array('Turnover by collection'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=139');
 
-		/*
+		
 		$intra->coll->clean->label = 'Clean Up';
 		$intra->coll->clean->list[] = array('8-digit barcodes by location and collection'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=160');
@@ -389,10 +389,10 @@ class SPL_Report {
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=131');
 		$intra->coll->clean->list[] = array('Possible itype/collection code irregularities'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=148');
+		$intra->coll->clean->list[] = array('Spine label & item call number disagreement'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=149');
 		$intra->coll->clean->list[] = array('YA collection code not in agreement with call number'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=146');
-	*/
 		
 
 		$intra->coll->cd->label = 'Collection Development';
