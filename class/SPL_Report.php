@@ -249,7 +249,7 @@ class SPL_Report {
 		$dash->coll->label = 'Collection Development';
 		$dash->coll->list[] = array('Collection Balancing'
 													,'http://dash.spokanelibrary.org/stats/collection-balance');
-		$dash->coll->list[] = array('&nbsp;&nbsp;Lost in Transfer'
+		$dash->coll->list[] = array('Lost in Transfer'
 													,'http://dash.spokanelibrary.org/stats/collection-transfer');
 		$dash->coll->list[] = array('divider'=>true);
 		$dash->coll->list[] = array('New Material Requests (monthly)'
