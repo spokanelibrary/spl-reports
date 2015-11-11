@@ -134,7 +134,7 @@ class SPL_Report {
 				//$html .= $menu->label.' <span class="caret"></span></button>';
 				if ( is_array($menu->list) ) {
 					//$html .= '<ul class="dropdown-menu">';
-					$html .= '<ul class="nav nav-list">';
+					$html .= '<ul class="nav nav-pills nav-stacked">';
 					foreach ( $menu->list as $i=>$item ) {
 						if ( $item['divider'] ) {
 							$html .= '<li role="separator" class="divider"></li>';
