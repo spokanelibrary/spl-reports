@@ -522,21 +522,31 @@ class SPL_Report {
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=61');
 		$intra->fin->audit->list[] = array('Weekly blocks deleted'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=62');
-		
-
+				
 
 
 		$intra->serial->circ->label = 'Circulation';
-
+		$intra->serial->circ->list[] = array('Periodicals routing list'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=83');
+		
 		$intra->serial->items->label = 'Item Records';
+		$intra->serial->items->list[] = array('Periodical copy list'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=81');
+		$intra->serial->items->list[] = array('Periodical copy list Curr Rec\'d Only'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=171');
+		$intra->serial->items->list[] = array('Serial Weirdness'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=141');
 
 
 
-
-		$intra->ya->circ->label = 'Circulation';
+		//$intra->ya->circ->label = 'Circulation';
 
 		$intra->ya->cd->label = 'Collection Development';
-
+		$intra->ya->cd->list[] = array('Dewey - date (Easy Non-fiction)'
+														,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=32');
+		$intra->ya->cd->list[] = array('Dewey - date (Juvenile Non-fiction)'
+														,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=31');
+		
 
 
 		$db->apps = $apps;
