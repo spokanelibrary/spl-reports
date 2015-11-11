@@ -138,9 +138,6 @@ class SPL_Report {
 					foreach ( $menu->list as $i=>$item ) {
 						if ( $item['divider'] ) {
 							//$html .= '<li role="separator" class="divider"></li>';
-							$html .= '</ul>';
-							$html .= '<hr>';
-							$html .= '<ul class="nav nav-pills nav-stacked">';
 						} else {
 							$html .= '<li><a href="'.$item[1].'">'.$item[0].'</a></li>';
 						}
