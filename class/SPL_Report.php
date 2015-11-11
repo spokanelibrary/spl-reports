@@ -157,6 +157,7 @@ class SPL_Report {
 
 		$apps = new stdClass();
 		$dash = new stdClass();
+		$dash = new stdClass();
 		$intra = new stdClass();
 		$other = new stdClass();
 		$reports = new stdClass();
@@ -171,6 +172,10 @@ class SPL_Report {
 		$reports->ss->label = 'Support Services';
 		$reports->ss->list[] = array('New Items with Holds'
 													,'./11/');
+
+		$todo->create->label 'Reports Needed';
+		$todo->create->list[] = array('Non-res tieout'
+													,'#');
 
 		/*
 		 *	Other Reports
@@ -307,8 +312,8 @@ class SPL_Report {
 																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=33');
 		$intra->circ->circ->list[] = array('System Notice Lookup'
 																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=165');
-		$intra->circ->circ->list[] = array('Zip codes of checked out items'
-																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=35');
+		//$intra->circ->circ->list[] = array('Zip codes of checked out items'
+		//														,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=35');
 
 
 		$intra->circ->clean->label = 'Cleanup';
@@ -455,10 +460,43 @@ class SPL_Report {
 		
 
 		$intra->fin->borr->label = 'Bib Records';
+		$intra->fin->borr->list[] = array('Customers with credit balances in Horizon'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=59');
+		$intra->fin->borr->list[] = array('Library cards with staff btypes'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=58');
 
 		$intra->fin->budget->label = 'Budget';
-
+		$intra->fin->budget->list[] = array('Budget Expenditures and circulation by Dewey range'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=158');
+		$intra->fin->budget->list[] = array('Budget Expenditures by Location'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=157');
+		$intra->fin->budget->list[] = array('Budget Transfer'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=13');
+		$intra->fin->budget->list[] = array('Collection values by collection'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=26');
+		$intra->fin->budget->list[] = array('Collection values by location'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=25');
+		
 		$intra->fin->bus->label = 'Business Office';
+		$intra->fin->bus->list[] = array('A/R'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=55');
+		$intra->fin->bus->list[] = array('Bounced checks'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=56');
+		$intra->fin->bus->list[] = array('Daily Payment Detail (Business Office)'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=135');
+		$intra->fin->bus->list[] = array('Deleted item search'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=60');
+		$intra->fin->bus->list[] = array('Deleted Items List'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=175');
+		$intra->fin->bus->list[] = array('Item holdings with values'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=57');
+		$intra->fin->bus->list[] = array('Monthly pay waive'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=52');
+		$intra->fin->bus->list[] = array('Waives Detail (Business Office)'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=140');
+		$intra->fin->bus->list[] = array('Weekly Pay/Waive Summary'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=44');
+
 
 		$intra->fin->cleanup->label = 'Cleanup';
 
