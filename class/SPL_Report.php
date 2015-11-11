@@ -128,12 +128,13 @@ class SPL_Report {
 		$html .= null;
 		if ( $list ) {
 			foreach ( $list as $menu ) {
-				$html .= '<p>';
-				$html .= '<div class="btn-group">';
-				$html .= '<button type="button" class="btn btn-lg btn-'.$class.' dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
-				$html .= $menu->label.' <span class="caret"></span></button>';
+				//$html .= '<p>';
+				//$html .= '<div class="btn-group">';
+				//$html .= '<button type="button" class="btn btn-lg btn-'.$class.' dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+				//$html .= $menu->label.' <span class="caret"></span></button>';
 				if ( is_array($menu->list) ) {
-					$html .= '<ul class="dropdown-menu">';
+					//$html .= '<ul class="dropdown-menu">';
+					$html .= '<ul class="nav nav-list">';
 					foreach ( $menu->list as $i=>$item ) {
 						if ( $item['divider'] ) {
 							$html .= '<li role="separator" class="divider"></li>';
@@ -143,8 +144,8 @@ class SPL_Report {
 					}	
 					$html .= '</ul>';
 				}
-				$html .= '</div>';
-				$html .= '</p>';
+				//$html .= '</div>';
+				//$html .= '</p>';
 			}
 		}
 
