@@ -400,15 +400,39 @@ class SPL_Report {
 		//															,'');
 
 		$intra->coll->holds->label = 'Holds';
+		$intra->coll->holds->list[] = array('Bibs in Support Services with possible hold problems'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=5');
+		$intra->coll->holds->list[] = array('Holds ratio'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=10');
+		$intra->coll->holds->list[] = array('Titles with possible un-fillable holds'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=49');
 
 		$intra->coll->items->label = 'Item Records';
+		$intra->coll->cd->list[] = array('Staff-only items in circulation'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=84');
+		$intra->coll->cd->list[] = array('Viable items by location'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=159');
 
 		$intra->coll->new->label = 'New Materials';
+		$intra->coll->new->list[] = array('Bibs with items created 6+ months ago and in item_status "on order"'
+															,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=50');
+		$intra->coll->new->list[] = array('New books to regular collection script'
+															,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=169');
 
 		$intra->coll->noncirc->label = 'Non-Circ';
+		$intra->coll->noncirc->list[] = array('Biography non-circulation'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=39');
+		$intra->coll->noncirc->list[] = array('Fiction non-circulation'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=38');
+		$intra->coll->noncirc->list[] = array('Miscellaneous non-circulation'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=40');
+		$intra->coll->noncirc->list[] = array('Non-fiction non-circulation'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=37');
 
 		$intra->coll->labels->label = 'Label Requests';
-
+		//$intra->coll->labels->list[] = array(''
+		//															,'');
+		
 		$intra->coll->subjects->label = 'Subject Headings';
 
 
