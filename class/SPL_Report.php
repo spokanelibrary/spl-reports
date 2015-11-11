@@ -52,6 +52,14 @@ class SPL_Report {
 		//$html .= '<pre>'.print_r($db, true).'</pre>';
 
 		$html .= '
+		<blockquote>
+			<b>This is a master list of all reports currently in use.</b> 
+			If you don\'t see something listed here, or if you see an obsolete or non-functional report, please send in a <a href="mailto:itsupport@spokanelibrary.org">Tech Request</a>! 
+			Right now this is mostly a collection of links to older reporting sources. 
+			I will be porting <b>all</b> of our reports to the staff intranet in the coming months. 
+			Reports already converted are listed under <b>Converted Reports</b>.
+			<small>sean</small>
+		</blockquote>
 		<div class="panel spl-hero-intranet spl-hero-brand-blue-f">
 			<div class="panel-heading">
 				<h4 class="">Newer Reports</h4>
