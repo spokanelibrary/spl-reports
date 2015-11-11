@@ -175,7 +175,7 @@ class SPL_Report {
 
 		$todo->create->label 'Reports Needed';
 		$todo->create->list[] = array('Non-res tieout'
-													,'#');
+													,'./');
 
 		/*
 		 *	Other Reports
