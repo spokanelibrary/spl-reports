@@ -465,7 +465,7 @@ class SPL_Report {
 		$intra->fin->borr->list[] = array('Library cards with staff btypes'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=58');
 		
-		/*
+		
 		$intra->fin->budget->label = 'Budget';
 		$intra->fin->budget->list[] = array('Budget Expenditures and circulation by Dewey range'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=158');
@@ -477,7 +477,7 @@ class SPL_Report {
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=26');
 		$intra->fin->budget->list[] = array('Collection values by location'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=25');
-		*/
+		
 
 		/*
 		$intra->fin->bus->label = 'Business Office';
