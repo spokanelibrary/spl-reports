@@ -40,6 +40,9 @@ class SPL_Report {
 
 						$this->output = $html;
 					}
+				} else {
+					$html .= $this->getReportError('Report not loaded');
+					$this->output = $html;
 				}
 			} else {
 				$html .= $this->getReportError('Report not found');
