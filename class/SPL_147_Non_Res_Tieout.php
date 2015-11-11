@@ -1,6 +1,6 @@
 <?php
 
-class SPL_147_Res_Tieout extends SPL_Report {
+class SPL_147_Non_Res_Tieout extends SPL_Report {
 
 	/*
 	 *	overload api endpoint, if necessary
