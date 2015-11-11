@@ -215,8 +215,8 @@ class SPL_Report {
 		$apps->nmr->label = 'New Material Requests';
 		$apps->nmr->list[] = array('NMR Staff Portal'
 													,'http://dash.spokanelibrary.org/connect/request');
-		$apps->nmr->list[] = array('NMR on our website'
-													,'http://www.spokanelibrary.org/request');
+		//$apps->nmr->list[] = array('NMR on our website'
+		//											,'http://www.spokanelibrary.org/request');
 
 		$apps->cfr->label = 'Content Filter Requests';
 		$apps->cfr->list[] = array('View &amp; Manage Filter Requests'
