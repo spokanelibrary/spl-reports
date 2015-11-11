@@ -173,7 +173,7 @@ class SPL_Report {
 		$reports->ss->list[] = array('New Items with Holds'
 													,'./11/');
 
-		$todo->create->label 'Reports Needed';
+		$todo->create->label = 'Reports Needed';
 		$todo->create->list[] = array('Non-res tieout'
 													,'./');
 
