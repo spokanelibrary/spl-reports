@@ -362,14 +362,14 @@ class SPL_Report {
 		$intra->coll->bib->list[] = array('Bibs without a MARC 092 field'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=19');
 
-		/*
+		
 		$intra->coll->circ->label = 'Circulation';
 		$intra->coll->circ->list[] = array('Percentage of missing and lost items'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=27');
 		$intra->coll->circ->list[] = array('Turnover by collection'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=139');
 
-
+		/*
 		$intra->coll->clean->label = 'Clean Up';
 		$intra->coll->clean->list[] = array('8-digit barcodes by location and collection'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=160');
