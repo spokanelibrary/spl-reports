@@ -24,12 +24,15 @@ var splReport = {
 		});
 
 
-		$('.form-group .input-group.date').datepicker({
-        startDate: "+1d",
-        endDate: "+1y",
-        daysOfWeekDisabled: "0",
-        autoclose: true
-    });
+		$datepicker = $('.form-group .input-group.date');
+		if ( $datepicker ) {
+			$datepicker.datepicker({
+	        startDate: "+1d",
+	        endDate: "+1y",
+	        daysOfWeekDisabled: "0",
+	        autoclose: true
+	    });
+		}
 
 
 	}
