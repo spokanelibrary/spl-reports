@@ -75,7 +75,6 @@ var splReport = {
 		    recordCount: false,
 		    perPageSelect: false
 		  }
-		  ,sorts: { 'name': -1 }
 		});
 		
 
