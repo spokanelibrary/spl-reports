@@ -65,7 +65,18 @@ var splReport = {
 		$('.spl-report-result').html( this.tmpl({ report:report }));
 
 
-		$('.dynatable').dynatable();
+		$('.dynatable').dynatable({
+
+			features: {
+	    paginate: false,
+	    sort: false,
+	    pushState: false,
+	    search: false,
+	    recordCount: true,
+	    perPageSelect: false
+	  }
+
+		});
 		
 
 	}
