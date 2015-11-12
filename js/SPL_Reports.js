@@ -25,6 +25,7 @@ var splReport = {
 
 
 		$datepicker = $('.form-group .input-group.date');
+		console.log($datepicker);
 		if ( $datepicker ) {
 			$datepicker.datepicker({
 	        startDate: "+1d",
