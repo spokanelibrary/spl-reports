@@ -73,7 +73,7 @@ var splReport = {
 		    pushState: false,
 		    search: false,
 		    recordCount: false,
-		    perPageSelect: true
+		    perPageSelect: false
 		  }
 		});
 		
