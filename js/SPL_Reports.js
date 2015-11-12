@@ -67,14 +67,7 @@ var splReport = {
 
 		$('.dynatable').dynatable({
 
-			features: {
-	    paginate: false,
-	    sort: false,
-	    pushState: false,
-	    search: false,
-	    recordCount: true,
-	    perPageSelect: false
-	  }
+			
 
 		});
 		
