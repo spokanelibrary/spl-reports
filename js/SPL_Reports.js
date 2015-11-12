@@ -53,7 +53,14 @@ var splReport = {
 
 
 		$('.dynatable').dynatable();
-		$('.datepicker').datepicker({});
+		
+		$('.form-group .input-group.datepicker').datepicker({
+        startDate: "+1d",
+        endDate: "+1y",
+        daysOfWeekDisabled: "0",
+        autoclose: true
+    });
+
 	}
 
 }.init();
