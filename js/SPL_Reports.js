@@ -69,7 +69,7 @@ var splReport = {
 		
 			features: {
 		    paginate: false,
-		    sort: false,
+		    sort: true,
 		    pushState: false,
 		    search: false,
 		    recordCount: false,
