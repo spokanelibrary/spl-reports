@@ -23,7 +23,7 @@
 <div class="well well-sm spl-report-summary">
 	<h3>Summary</h3>
 	<p>
-		All bibs which have AT LEAST ONE item in item_status 'n' OR 't', AND have have AT LEAST ONE unfilled request.
+		All bibs which have AT LEAST ONE item in item_status 'n' OR 't', AND have have AT LEAST ONE unfilled request AND have a barcode beginning with acq.
 		Items in the Star collection are excluded
 	</p>
 	<p>
@@ -39,6 +39,7 @@
 		<th>Bib</th>
 		<th>Call #</th>
 		<th>Collection</th>
+		<th>Copies</th>
 		<th>Received</th>
 		<th>Requests</th>
 	</tr>
@@ -59,6 +60,7 @@
 		</td>
 		<td>{{call_number}}</td>
 		<td>{{collection}}</td>
+		<td>{{copies}}</td>
 		<td>{{received_date}}</td>
 		<td>{{request_count}}</td>
 	</tr>
