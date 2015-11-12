@@ -53,7 +53,7 @@ var splReport = {
 
 
 		$('.dynatable').dynatable();
-		$('.datepicker').datepicker();
+		$('.datepicker').datepicker({});
 	}
 
 }.init();
