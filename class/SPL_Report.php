@@ -217,9 +217,13 @@ class SPL_Report {
 
 	protected function loadJs() {
 		wp_enqueue_script( 'spl-reports-config', plugins_url('js/SPL_Reports.js', dirname(__FILE__)) );
+		
 		wp_enqueue_script( 'spl-reports-datepicker', plugins_url('js/vendor/bootstrap-datepicker.js', dirname(__FILE__)) );
+		wp_enqueue_style( 'spl-reports-datepicker-css', plugins_url('css/vendor/datepicker.min.css', dirname(__FILE__)) );
+		
 		wp_enqueue_script( 'spl-reports-dynatable', plugins_url('js/vendor/jquery.dynatable.js', dirname(__FILE__)) );
 		wp_enqueue_style( 'spl-reports-dynatable-css', plugins_url('css/vendor/jquery.dynatable.css', dirname(__FILE__)) );
+		
 		if ( file_exists(plugins_url('js/'.get_class($this).'.js')) ) {	
 			wp_enqueue_script( get_class(), plugins_url('js/'.get_class($this).'.js', dirname(__FILE__)) );
 		}
