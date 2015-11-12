@@ -22,6 +22,16 @@ var splReport = {
 			e.preventDefault();
 			_this.getReport();
 		});
+
+
+		$('.form-group .input-group.datepicker').datepicker({
+        startDate: "+1d",
+        endDate: "+1y",
+        daysOfWeekDisabled: "0",
+        autoclose: true
+    });
+
+
 	}
 	,getVals: function() {
 		var vals = {};
@@ -51,12 +61,6 @@ var splReport = {
 		this.tmpl = Handlebars.compile( $('.spl-report-tmpl').html() );
 		$('.spl-report-result').html( this.tmpl({ report:report }));
 
-		$('.form-group .input-group.datepicker').datepicker({
-        startDate: "+1d",
-        endDate: "+1y",
-        daysOfWeekDisabled: "0",
-        autoclose: true
-    });
 
 		$('.dynatable').dynatable();
 		
