@@ -34,6 +34,7 @@
 	<thead>
 	<tr>
 		<th>Bib</th>
+		<th>Title</th>
 		<th>Call #</th>
 		<th>Collection</th>
 		<th>Copies</th>
@@ -43,6 +44,7 @@
 	</thead>
 	{{#each sorted}}
 	<tr>
+		<td>{{bib}}</td>
 		<td>
 		<b>{{title}}</b>
 		{{#if bib_245h}}
