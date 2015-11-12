@@ -24,7 +24,7 @@ var splReport = {
 		});
 
 
-		$('.form-group .input-group.datepicker').datepicker({
+		$('.form-group .input-group.date').datepicker({
         startDate: "+1d",
         endDate: "+1y",
         daysOfWeekDisabled: "0",
