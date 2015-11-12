@@ -51,15 +51,15 @@ var splReport = {
 		this.tmpl = Handlebars.compile( $('.spl-report-tmpl').html() );
 		$('.spl-report-result').html( this.tmpl({ report:report }));
 
-
-		$('.dynatable').dynatable();
-		
 		$('.form-group .input-group.datepicker').datepicker({
         startDate: "+1d",
         endDate: "+1y",
         daysOfWeekDisabled: "0",
         autoclose: true
     });
+
+		$('.dynatable').dynatable();
+		
 
 	}
 
