@@ -14,7 +14,7 @@
 	</fieldset>
 </form>
 
-<hr>
+<hr class="hidden-print">
 
 <div class="spl-report-result"></div>
 
@@ -45,13 +45,7 @@
 	{{#each sorted}}
 	<tr>
 		<td>{{bib}}</td>
-		<td>
-		<b>{{title}}</b>
-		{{#if bib_245h}}
-		<br>
-		{{bib_245h}}
-		{{/if}}
-		</td>
+		<td><b>{{title}}</b></td>
 		<td>{{call_number}}</td>
 		<td>{{collection}}</td>
 		<td>{{copies}}</td>
