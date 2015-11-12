@@ -71,8 +71,8 @@ var splReport = {
 		    paginate: false,
 		    sort: true,
 		    pushState: false,
-		    search: true,
-		    recordCount: true,
+		    search: false,
+		    recordCount: false,
 		    perPageSelect: true
 		  }
 		});
