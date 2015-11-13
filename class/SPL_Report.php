@@ -17,7 +17,6 @@ class SPL_Report {
 	public function getReport() {
 		$html = null;
 		if ( empty($this->params['id']) ) {
-			$html .= '<pre>'.print_r($this->getReportTemplateClass(), true).'</pre>';
 			$html .= $this->getReportMenu();
 			$this->output = $html;
 		} else {
@@ -38,6 +37,9 @@ class SPL_Report {
 						$html .= '<div class="spl-report"
 											data-spl-report-nonce="'.wp_create_nonce( 'spl-report-nonce-'.$this->params['id'] ).'"
 											data-spl-report-id="'.$this->params['id'] .'">'.PHP_EOL;
+						
+						$html .= '<pre>'.print_r($this->getReportTemplateClass(), true).'</pre>';
+
 						$html .= $report->getTmpl();	
 						$html .= PHP_EOL.'</div>'.PHP_EOL;
 						//$html .= PHP_EOL.'</div>'.PHP_EOL;
@@ -206,6 +208,21 @@ class SPL_Report {
     $class = new stdClass();
 
     return scandir( plugin_dir_path( __DIR__ ) . 'html' );
+
+
+    $files = scandir( plugin_dir_path( __DIR__ ) . 'html'  );
+    foreach ($files as $file) {
+      // ignore directories and hidden files
+      if(0 !== stripos($file, '.')) {
+        //$class->scan = $this->params['id'];
+        if ( substr_count(strtolower(str_ireplace('_', '-', $file)), strtolower($this->params['id'])) ) {
+          $class->path = plugin_dir_path( __FILE__ ).$file;
+          // trim off file extension
+          $class->name = stristr($file, '.', true);
+        }
+      }
+    }
+
 
     return $class;
   }
