@@ -20,12 +20,13 @@ class SPL_Report {
 			$html .= $this->getReportMenu();
 			$this->output = $html;
 		} else {
+			//$html .= '<pre>'.print_r($this->getReportTemplateClass(), true).'</pre>';
 			$class = $this->getReportClass();
 			if ( is_object($class) && $class->path ) {
 				include $class->path;
 				if ( class_exists($class->name) ) {
-					$report = new $class->name($this->params, $this->config);
-				
+					//$report = new $class->name($this->params, $this->config);
+					$report = $this;
 					if ( $this->params['ajax'] ) {
 						if ( wp_verify_nonce( $_REQUEST['nonce'], 'spl-report-nonce-'.$this->params['id'] ) ) {
 							$this->output = $report->processData($report->getReportData());
@@ -37,9 +38,6 @@ class SPL_Report {
 						$html .= '<div class="spl-report"
 											data-spl-report-nonce="'.wp_create_nonce( 'spl-report-nonce-'.$this->params['id'] ).'"
 											data-spl-report-id="'.$this->params['id'] .'">'.PHP_EOL;
-						
-						$html .= '<pre>'.print_r($this->getReportTemplateClass(), true).'</pre>';
-
 						$html .= $report->getTmpl();	
 						$html .= PHP_EOL.'</div>'.PHP_EOL;
 						//$html .= PHP_EOL.'</div>'.PHP_EOL;
