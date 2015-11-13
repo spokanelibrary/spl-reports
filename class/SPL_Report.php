@@ -32,10 +32,14 @@ class SPL_Report {
 						}
 					} else {
 						$report->loadJs();
+						$html .= '<div class="row">'.PHP_EOL;
+						$html .= '<div class="col-sm-12">'.PHP_EOL;
 						$html .= '<div class="spl-report"
 											data-spl-report-nonce="'.wp_create_nonce( 'spl-report-nonce-'.$this->params['id'] ).'"
 											data-spl-report-id="'.$this->params['id'] .'">'.PHP_EOL;
 						$html .= $report->getTmpl();	
+						$html .= PHP_EOL.'</div>'.PHP_EOL;
+						$html .= PHP_EOL.'</div>'.PHP_EOL;
 						$html .= PHP_EOL.'</div>'.PHP_EOL;
 
 						$this->output = $html;
