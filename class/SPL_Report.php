@@ -26,7 +26,7 @@ class SPL_Report {
 				include $class->path;
 				if ( class_exists($class->name) ) {
 					//$report = new $class->name($this->params, $this->config);
-					$report = $this;
+					$report = new SPL_Report($this->params, $this->config);
 					if ( $this->params['ajax'] ) {
 						if ( wp_verify_nonce( $_REQUEST['nonce'], 'spl-report-nonce-'.$this->params['id'] ) ) {
 							$this->output = $report->processData($report->getReportData());
