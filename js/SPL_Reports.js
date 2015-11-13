@@ -24,7 +24,7 @@ var splReport = {
 		});
 
 
-		$datepicker = $('.datepicker');
+		$datepicker = $('.date');
 		if ( $datepicker.length ) {
 			console.log('date');
 			$datepicker.datepicker({
