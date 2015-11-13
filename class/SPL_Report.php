@@ -20,8 +20,8 @@ class SPL_Report {
 			$html .= $this->getReportMenu();
 			$this->output = $html;
 		} else {
-			$html .= '<pre>'.print_r($this->getReportTemplateClass(), true).'</pre>';
-			$class = $this->getReportClass();
+			//$html .= '<pre>'.print_r($this->getReportTemplateClass(), true).'</pre>';
+			$class = $this->getReportClassTmpl();
 			if ( is_object($class) && $class->path ) {
 				include $class->path;
 				if ( class_exists($class->name) ) {
