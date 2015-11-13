@@ -207,7 +207,7 @@ class SPL_Report {
 	protected function getReportTemplateClass() {
     $class = new stdClass();
 
-    $files = scandir( plugin_dir_path( __DIR__ ) . 'html'  );
+    $files = scandir( plugin_dir_path( __DIR__ ).'html' );
     foreach ($files as $file) {
       // ignore directories and hidden files
       if(0 !== stripos($file, '.')) {
@@ -217,7 +217,7 @@ class SPL_Report {
           $class->name = stristr($file, '.', true);
 
           $class->path = plugin_dir_path( __FILE__ ).$class->name.'.php';
-          $class->tmpl = plugin_dir_path( __DIR__ ) . $file;
+          $class->tmpl = plugin_dir_path( __DIR__ ).'html/'. $file;
         }
       }
     }
