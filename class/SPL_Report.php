@@ -21,7 +21,7 @@ class SPL_Report {
 			$this->output = $html;
 		} else {
 			//$html .= '<pre>'.print_r($this->getReportTemplateClass(), true).'</pre>';
-			$class = $this->getReportClass();
+			$class = $this->getReportTemplateClass();
 			if ( is_object($class) && $class->path ) {
 				include $class->path;
 				if ( class_exists($class->name) ) {
