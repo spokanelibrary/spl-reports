@@ -205,7 +205,7 @@ class SPL_Report {
 	protected function getReportTemplateClass() {
     $class = new stdClass();
 
-    return $files = plugin_dir_path( 'html' );
+    return plugin_dir_path( __DIR__ );
 
     return $class;
   }
