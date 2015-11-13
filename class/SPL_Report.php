@@ -217,7 +217,7 @@ class SPL_Report {
           $class->name = stristr($file, '.', true);
 
           $class->path = plugin_dir_path( __FILE__ ).$class->name.'.php';
-          $class->tmpl = plugin_dir_path( __DIR__ ) . $file  );
+          $class->tmpl = plugin_dir_path( __DIR__ ) . $file;
         }
       }
     }
