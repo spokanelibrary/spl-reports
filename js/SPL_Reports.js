@@ -27,7 +27,7 @@ var splReport = {
 		$datepicker = $('.datepicker');
 		if ( $datepicker.length ) {
 			console.log('date');
-			$datepicker.datepicker({
+			$datepicker.datetimepicker({
 	        startDate: "+1d",
 	        endDate: "+1y",
 	        daysOfWeekDisabled: "0",
