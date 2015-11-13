@@ -24,7 +24,7 @@ var splReport = {
 		});
 
 
-		$datepicker = $('.date');
+		$datepicker = $('.spl-report-date');
 		if ( $datepicker.length ) {
 			$datepicker.datepicker({
 	        startDate: "+1d",
