@@ -33,6 +33,7 @@
 	<table class="dynatable table table-condensed table-bordered table-striped">
 	<thead>
 	<tr>
+		<th><i class="glyphicon glyphicon-ok"></i></th>
 		<th>Bib</th>
 		<th>Title</th>
 		<th>Call #</th>
@@ -40,11 +41,11 @@
 		<th>Copies</th>
 		<th>Received</th>
 		<th>Requests</th>
-		<th><i class="glyphicon glyphicon-ok"></i></th>
 	</tr>
 	</thead>
 	{{#each sorted}}
 	<tr>
+		<td><input type="checkbox"></td>
 		<td>{{bib}}</td>
 		<td><b>{{title}}</b></td>
 		<td>{{call_number}}</td>
@@ -52,7 +53,6 @@
 		<td>{{copies}}</td>
 		<td>{{received_date}}</td>
 		<td>{{request_count}}</td>
-		<td><input type="checkbox"></td>
 	</tr>
 	{{/each}}
 	</table>
