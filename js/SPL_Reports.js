@@ -24,7 +24,7 @@ var splReport = {
 		});
 
 
-		$datepicker = $('.form-group .input-group.datepicker');
+		$datepicker = $('.datepicker');
 		if ( $datepicker.length ) {
 			console.log('date');
 			$datepicker.datepicker({
