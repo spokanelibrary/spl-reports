@@ -213,9 +213,11 @@ class SPL_Report {
       if(0 !== stripos($file, '.')) {
         //$class->scan = $this->params['id'];
         if ( substr_count(strtolower(str_ireplace('_', '-', $file)), strtolower($this->params['id'])) ) {
-          $class->path = plugin_dir_path( __FILE__ ).$file;
           // trim off file extension
           $class->name = stristr($file, '.', true);
+
+          $class->path = plugin_dir_path( __FILE__ ).$class->name.'.php';
+          $class->tmpl = plugin_dir_path( __DIR__ ) . $file  )
         }
       }
     }
