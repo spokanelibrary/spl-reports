@@ -26,7 +26,7 @@ var splReport = {
 
 		$datepicker = $('.form-group .input-group.datepicker');
 		if ( $datepicker.length ) {
-			$datepicker.datepicker({
+			$datepicker.datetimepicker({
 	        startDate: "+1d",
 	        endDate: "+1y",
 	        daysOfWeekDisabled: "0",
