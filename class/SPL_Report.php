@@ -30,12 +30,12 @@ class SPL_Report {
 					$report = new $class->stub($this->params, $this->config);
 				} 
 				if ( is_object($report) ) {
-					$html .= 'test';
 					if ( $this->params['ajax'] ) {
 						if ( wp_verify_nonce( $_REQUEST['nonce'], 'spl-report-nonce-'.$this->params['id'] ) ) {
 							$this->output = $report->processData($report->getReportData());
 						}
 					} else {
+						$html .= 'test';
 						$report->loadJs();
 						//$html .= '<div class="row">'.PHP_EOL;
 						//$html .= '<div class="col-sm-12">'.PHP_EOL;
