@@ -24,9 +24,12 @@ class SPL_Report {
 			$class = $this->getReportTemplateClass();
 			if ( is_object($class) && $class->path ) {
 				include $class->path;
-				if ( class_exists($class->name) ) {
+				if ( $class->name && class_exists($class->name) ) {
 					$report = new $class->name($this->params, $this->config);
-					
+				} elseif ( $class->stub && class_exists($class->stub) ) {
+					$report = new $class->stub($this->params, $this->config);
+				} 
+				if ( is_object($report) ) {
 					if ( $this->params['ajax'] ) {
 						if ( wp_verify_nonce( $_REQUEST['nonce'], 'spl-report-nonce-'.$this->params['id'] ) ) {
 							$this->output = $report->processData($report->getReportData());
