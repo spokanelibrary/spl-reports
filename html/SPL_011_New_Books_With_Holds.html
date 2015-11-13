@@ -30,7 +30,7 @@
 </div>
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
-	<table class="table table-condensed table-bordered table-striped">
+	<table class="dynatable table table-condensed table-bordered table-striped">
 	<thead>
 	<tr>
 		<th><i class="glyphicon glyphicon-ok"></i></th>
@@ -46,12 +46,12 @@
 	{{#each sorted}}
 	<tr>
 		<td class="text-center"><input type="checkbox"></td>
-		<td><h5>{{title}}</h5></td>
+		<td><b>{{title}}</b></td>
 		<td>{{bib}}</td>
-		<td>{{call_number}}</td>
+		<td><small>{{call_number}}</small></td>
 		<td>{{collection}}</td>
 		<td>{{copies}}</td>
-		<td><h5>{{received_date}}</h5></td>
+		<td><small>{{received_date}}</small></td>
 		<td>{{request_count}}</td>
 	</tr>
 	{{/each}}
