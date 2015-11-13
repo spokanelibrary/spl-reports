@@ -35,7 +35,6 @@ class SPL_Report {
 							$this->output = $report->processData($report->getReportData());
 						}
 					} else {
-						$html .= 'test';
 						$report->loadJs();
 						//$html .= '<div class="row">'.PHP_EOL;
 						//$html .= '<div class="col-sm-12">'.PHP_EOL;
@@ -265,8 +264,13 @@ class SPL_Report {
 		}
 	}
 
-	protected function getTmpl() {
-		$html = file_get_contents( dirname(__DIR__).'/html/'.get_class($this).'.html' );
+	protected function getTmpl($tmpl=null) {
+		if ( $tmpl ) {
+			$html = file_get_contents( $tmpl );
+		} else {
+			$html = file_get_contents( dirname(__DIR__).'/html/'.get_class($this).'.html' );
+		}
+
 		return $html;
 	}
 
