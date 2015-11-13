@@ -220,6 +220,11 @@ class SPL_Report {
       }
     }
 
+    if ( !file_exists($class->path) ) {
+    	$class->path = plugin_dir_path( __FILE__ ).'SPL_Report_Stub.php';
+    	$class->stub = 'SPL_Report_Stub';
+    }
+
 
     return $class;
   }
