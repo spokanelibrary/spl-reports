@@ -17,6 +17,7 @@ class SPL_Report {
 	public function getReport() {
 		$html = null;
 		if ( empty($this->params['id']) ) {
+			$html .= '<pre>'.print_r($this->getReportTemplateClass(), true).'</pre>';
 			$html .= $this->getReportMenu();
 			$this->output = $html;
 		} else {
@@ -200,6 +201,14 @@ class SPL_Report {
 	protected function processData($data=null) {
 		return $data;
 	}
+
+	protected function getReportTemplateClass() {
+    $class = new stdClass();
+
+    return $files = plugin_dir_path(  );
+
+    return $class;
+  }
 
 	protected function getReportClass() {
 		$class = new stdClass();
