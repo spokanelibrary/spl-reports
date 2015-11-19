@@ -40,60 +40,61 @@
   <div class="tab-content">
     
     <div role="tabpanel" class="tab-pane active" id="av">
-    {{#each sorted.av}}
-    <table class="dynatable table table-condensed table-bordered table-striped">
-		<thead>
-		<tr>
-			<th><i class="glyphicon glyphicon-ok"></i></th>
-			<th>Title</th>
-			<th>Bib #</th>
-			<th>Call #</th>
-			<th>Coll.</th>
-			<th>Cop.</th>
-			<th>Rec.</th>
-			<th>Req.</th>
-		</tr>
-		</thead>
-		<tr>
-			<td class="text-center"><input type="checkbox"></td>
-			<td><b style="whitespace:no-wrap;">{{title}}</b></td>
-			<td><small>{{bib}}</small></td>
-			<td><small>{{call_number}}</small></td>
-			<td><small>{{collection}}</small></td>
-			<td><small>{{copies}}</small></td>
-			<td><small>{{received_date}}</small></td>
-			<td><small>{{request_count}}</small></td>
-		</tr>
-		</table>
-    {{/each}}
+	    <table class="dynatable table table-condensed table-bordered table-striped">
+			<thead>
+			<tr>
+				<th><i class="glyphicon glyphicon-ok"></i></th>
+				<th>Title</th>
+				<th>Bib #</th>
+				<th>Call #</th>
+				<th>Coll.</th>
+				<th>Cop.</th>
+				<th>Rec.</th>
+				<th>Req.</th>
+			</tr>
+			</thead>
+			<tr>
+				{{#each sorted.av}}
+				<td class="text-center"><input type="checkbox"></td>
+				<td><b style="whitespace:no-wrap;">{{title}}</b></td>
+				<td><small>{{bib}}</small></td>
+				<td><small>{{call_number}}</small></td>
+				<td><small>{{collection}}</small></td>
+				<td><small>{{copies}}</small></td>
+				<td><small>{{received_date}}</small></td>
+				<td><small>{{request_count}}</small></td>
+			</tr>
+			{{/each}}
+			</table>
     </div>
     
     <div role="tabpanel" class="tab-pane" id="print">
-    {{#each sorted.print}}
-    <thead>
-		<tr>
-			<th><i class="glyphicon glyphicon-ok"></i></th>
-			<th>Title</th>
-			<th>Bib #</th>
-			<th>Call #</th>
-			<th>Coll.</th>
-			<th>Cop.</th>
-			<th>Rec.</th>
-			<th>Req.</th>
-		</tr>
-		</thead>
-		<tr>
-			<td class="text-center"><input type="checkbox"></td>
-			<td><b style="whitespace:no-wrap;">{{title}}</b></td>
-			<td><small>{{bib}}</small></td>
-			<td><small>{{call_number}}</small></td>
-			<td><small>{{collection}}</small></td>
-			<td><small>{{copies}}</small></td>
-			<td><small>{{received_date}}</small></td>
-			<td><small>{{request_count}}</small></td>
-		</tr>
-		</table>
-    {{/each}}
+	    <table class="dynatable table table-condensed table-bordered table-striped">
+	    <thead>
+			<tr>
+				<th><i class="glyphicon glyphicon-ok"></i></th>
+				<th>Title</th>
+				<th>Bib #</th>
+				<th>Call #</th>
+				<th>Coll.</th>
+				<th>Cop.</th>
+				<th>Rec.</th>
+				<th>Req.</th>
+			</tr>
+			</thead>
+			{{#each sorted.print}}
+			<tr>
+				<td class="text-center"><input type="checkbox"></td>
+				<td><b style="whitespace:no-wrap;">{{title}}</b></td>
+				<td><small>{{bib}}</small></td>
+				<td><small>{{call_number}}</small></td>
+				<td><small>{{collection}}</small></td>
+				<td><small>{{copies}}</small></td>
+				<td><small>{{received_date}}</small></td>
+				<td><small>{{request_count}}</small></td>
+			</tr>
+			{{/each}}
+			</table>
     </div>
   </div>
 
