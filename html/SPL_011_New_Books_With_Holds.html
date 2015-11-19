@@ -30,6 +30,18 @@
 </div>
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
+
+	<ul class="nav nav-tabs" role="tablist">
+	  <li role="presentation" class="active"><a href="#av" aria-controls="hav" role="tab" data-toggle="tab">AV</a></li>
+	  <li role="presentation"><a href="#print" aria-controls="print" role="tab" data-toggle="tab">Print</a></li>
+	</ul>
+
+	<!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="av">AV</div>
+    <div role="tabpanel" class="tab-pane" id="print">Print</div>
+  </div>
+
 	<table class="dynatable table table-condensed table-bordered table-striped">
 	<thead>
 	<tr>
