@@ -43,7 +43,20 @@
 		<th>Req.</th>
 	</tr>
 	</thead>
-	{{#each sorted}}
+	{{#each sorted.av}}
+	<tr>
+		<td class="text-center"><input type="checkbox"></td>
+		<td><b style="whitespace:no-wrap;">{{title}}</b></td>
+		<td><small>{{bib}}</small></td>
+		<td><small>{{call_number}}</small></td>
+		<td><small>{{collection}}</small></td>
+		<td><small>{{copies}}</small></td>
+		<td><small>{{received_date}}</small></td>
+		<td><small>{{request_count}}</small></td>
+	</tr>
+	{{/each}}
+	</table>
+	{{#each sorted.print}}
 	<tr>
 		<td class="text-center"><input type="checkbox"></td>
 		<td><b style="whitespace:no-wrap;">{{title}}</b></td>
