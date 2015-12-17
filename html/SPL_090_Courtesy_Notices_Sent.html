@@ -68,16 +68,18 @@
 			<tr>
 				<td>{{full_name}}</td>
 				<td>{{email}}</td>
-				<td>{{datestamp}}</td>
+				<td><small>{{datestamp}}</small></td>
 				<td>
-					</p>
-					<a class="btn btn-block" href="#">More Detail</a>
-					</p>
 					{{#if ../../meta.display.material}}
 					Material Due
 					{{/if}}
 					{{#if ../../meta.display.expiry}}
-					Expiring Card
+					<p>
+						Expiring: {{expiry}}
+					</p>
+					<p>
+						Owed: {{owed}}
+					</p>
 					{{/if}}
 				</td>
 			</tr>
