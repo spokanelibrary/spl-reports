@@ -7,8 +7,8 @@
 		<div class="form-group">
 			<label>Notice Type:</label>
 			<select class="form-control" name="notice">
-		    <option value="material-due">Materials Due</option>
-		    <option value="card-expiry">Expiring Card</option>
+		    <option value="material">Materials Due</option>
+		    <option value="expiry">Expiring Card</option>
 			</select> 
 		</div>
 
@@ -46,16 +46,23 @@
 			<h4>{{sorted.error}}</h4>
 		</div>
 		{{else}}
+			{{if ../meta.display.material}}
+			Material Due
+			{{/if}}
+
+			{{if ../meta.display.expiry}}
+			Card Expiry
+			{{/if}}
+
 			<table class="dynatable table table-condensed table-bordered table-striped">
 			<thead>
 			<tr>
-				<th><i class="glyphicon glyphicon-ok"></i></th>
 				<th>Name</th>
 			</tr>
 			</thead>	
 			{{#each sorted}}
 			<tr>
-				{{sorted.full_name}}
+				<td>{{full_name}}</td>
 			</tr>
 			{{/each}}
 			</table>
