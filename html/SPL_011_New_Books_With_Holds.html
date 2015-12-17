@@ -127,6 +127,21 @@
 				</tr>
 				{{/each}}
 			{{/if}}
+			</table>
+
+			<table class="dynatable table table-condensed table-bordered table-striped">
+	    <thead>
+			<tr>
+				<th><i class="glyphicon glyphicon-ok"></i></th>
+				<th>Title</th>
+				<th>Bib #</th>
+				<th>Call #</th>
+				<th>Coll.</th>
+				<th>Cop.</th>
+				<th>Rec.</th>
+				<th>Req.</th>
+			</tr>
+			</thead>
 			{{#if sorted.print.many}}
 				{{#each sorted.print.many}}
 				<tr>
