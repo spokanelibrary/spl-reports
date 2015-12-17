@@ -60,18 +60,28 @@
 			<tr>
 				<th>Name</th>
 				<th>Email</th>
-				<th>Sent</th>
 				<th>Detail</th>
 			</tr>
 			</thead>	
 			{{#each sorted}}
 			<tr>
 				<td>{{full_name}}</td>
-				<td>{{email}}</td>
-				<td><small>{{datestamp}}</small></td>
+				<td>
+					{{email}}
+					<br>
+					<small>Sent: {{datestamp}}</small>
+					<br>
+					<small>{{response.id}}</small>
+				</td>
 				<td>
 					{{#if ../../meta.display.material}}
-					Material Due
+					{{#each titles}}
+					<p>
+						{{barcode}}
+						<br>
+						{{title}}
+					</p>
+					{{/each}}
 					{{/if}}
 					{{#if ../../meta.display.expiry}}
 					<small>Expiring: {{expiry}}</small>
