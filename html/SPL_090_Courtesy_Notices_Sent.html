@@ -1,5 +1,5 @@
 <form class="form-inline spl-report-control">
-	<h2>Courtesy Notices Sent<small>by barcode</small></h2>
+	<h2>Courtesy Notices Sent <small>by barcode</small></h2>
 	<fieldset>
 		<legend>
 			Lookup courtesy notices sent to a customer.
@@ -40,42 +40,6 @@
 </div>
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
-	<table class="table table-condensed table-bordered table-striped">
-	<thead>
-	<tr>
-		<th>Collection</th>
-		<th>Item Count</th>
-	</tr>
-	</thead>
-	{{#each meta.totals}}
-	<tr>
-		<td><small>{{collection}}</small></td>
-		<td><small>{{bib_count}}</small></td>
-	</tr>
-	{{/each}}
-	</table>
 
-	<table class="table table-condensed table-bordered table-striped" style="table-layout:fixed;">
-	<thead>
-	<tr>
-		<th>Call #</th>
-		<th>Barcode</th>
-		<th>Title</th>
-		<th>Collection</th>
-		<th>Item Type</th>
-		<th>Item Status</th>
-	</tr>
-	</thead>
-	{{#each sorted}}
-	<tr>
-		<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><small>{{call}}</small></td>
-		<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><small>{{barcode}}</small></td>
-		<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><small>{{title}}</small></td>
-		<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><small>{{collection}}</small></td>
-		<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><small>{{type}}</small></td>
-		<td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><small>{{status}}</small></td>
-	</tr>
-	{{/each}}
-	</table>
 {{/with}}
 </script>
