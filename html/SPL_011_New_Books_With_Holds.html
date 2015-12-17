@@ -54,17 +54,32 @@
 			</tr>
 			</thead>
 			<tr>
-				{{#each sorted.av}}
-				<td class="text-center"><input type="checkbox"></td>
-				<td><b style="whitespace:no-wrap;">{{title}}</b></td>
-				<td><small>{{bib}}</small></td>
-				<td><small>{{call_number}}</small></td>
-				<td><small>{{collection}}</small></td>
-				<td><small>{{copies}}</small></td>
-				<td><small>{{received_date}}</small></td>
-				<td><small>{{request_count}}</small></td>
-			</tr>
-			{{/each}}
+				{{#if sorted.av.few}}
+					{{#each sorted.av.few}}
+					<td class="text-center"><input type="checkbox"></td>
+					<td><b style="whitespace:no-wrap;">{{title}}</b></td>
+					<td><small>{{bib}}</small></td>
+					<td><small>{{call_number}}</small></td>
+					<td><small>{{collection}}</small></td>
+					<td><small>{{copies}}</small></td>
+					<td><small>{{received_date}}</small></td>
+					<td><small>{{request_count}}</small></td>
+				</tr>
+				{{/each}}
+			{{/if}}
+			{{#if sorted.av.many}}
+					{{#each sorted.av.many}}
+					<td class="text-center"><input type="checkbox"></td>
+					<td><b style="whitespace:no-wrap;">{{title}}</b></td>
+					<td><small>{{bib}}</small></td>
+					<td><small>{{call_number}}</small></td>
+					<td><small>{{collection}}</small></td>
+					<td><small>{{copies}}</small></td>
+					<td><small>{{received_date}}</small></td>
+					<td><small>{{request_count}}</small></td>
+				</tr>
+				{{/each}}
+			{{/if}}
 			</table>
     </div>
     
@@ -82,18 +97,34 @@
 				<th>Req.</th>
 			</tr>
 			</thead>
-			{{#each sorted.print}}
-			<tr>
-				<td class="text-center"><input type="checkbox"></td>
-				<td><b style="whitespace:no-wrap;">{{title}}</b></td>
-				<td><small>{{bib}}</small></td>
-				<td><small>{{call_number}}</small></td>
-				<td><small>{{collection}}</small></td>
-				<td><small>{{copies}}</small></td>
-				<td><small>{{received_date}}</small></td>
-				<td><small>{{request_count}}</small></td>
-			</tr>
-			{{/each}}
+			{{#if sorted.print.few}}
+				{{#each sorted.print.few}}
+				<tr>
+					<td class="text-center"><input type="checkbox"></td>
+					<td><b style="whitespace:no-wrap;">{{title}}</b></td>
+					<td><small>{{bib}}</small></td>
+					<td><small>{{call_number}}</small></td>
+					<td><small>{{collection}}</small></td>
+					<td><small>{{copies}}</small></td>
+					<td><small>{{received_date}}</small></td>
+					<td><small>{{request_count}}</small></td>
+				</tr>
+				{{/each}}
+			{{/if}}
+			{{#if sorted.print.many}}
+				{{#each sorted.print.many}}
+				<tr>
+					<td class="text-center"><input type="checkbox"></td>
+					<td><b style="whitespace:no-wrap;">{{title}}</b></td>
+					<td><small>{{bib}}</small></td>
+					<td><small>{{call_number}}</small></td>
+					<td><small>{{collection}}</small></td>
+					<td><small>{{copies}}</small></td>
+					<td><small>{{received_date}}</small></td>
+					<td><small>{{request_count}}</small></td>
+				</tr>
+				{{/each}}
+			{{/if}}
 			</table>
     </div>
   </div>
