@@ -59,13 +59,27 @@
 			<thead>
 			<tr>
 				<th>Name</th>
+				<th>Email</th>
 				<th>Sent</th>
+				<th>Detail</th>
 			</tr>
 			</thead>	
 			{{#each sorted}}
 			<tr>
 				<td>{{full_name}}</td>
+				<td>{{email}}</td>
 				<td>{{datestamp}}</td>
+				<td>
+					</p>
+					<a class="btn btn-block" href="#">More Detail</a>
+					</p>
+					{{#if ../../meta.display.material}}
+					Material Due
+					{{/if}}
+					{{#if ../../meta.display.expiry}}
+					Expiring Card
+					{{/if}}
+				</td>
 			</tr>
 			{{/each}}
 			</table>
