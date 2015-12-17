@@ -46,23 +46,26 @@
 			<h4>{{sorted.error}}</h4>
 		</div>
 		{{else}}
+			<h4>
 			{{#if ../meta.display.material}}
-			Material Due
+			Material Due Notices
 			{{/if}}
-
 			{{#if ../meta.display.expiry}}
-			Card Expiry
+			Expiring Card Notices
 			{{/if}}
+			</h4>
 
 			<table class="dynatable table table-condensed table-bordered table-striped">
 			<thead>
 			<tr>
 				<th>Name</th>
+				<th>Sent</th>
 			</tr>
 			</thead>	
 			{{#each sorted}}
 			<tr>
 				<td>{{full_name}}</td>
+				<td>{{datestamp}}</td>
 			</tr>
 			{{/each}}
 			</table>
