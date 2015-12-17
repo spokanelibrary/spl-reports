@@ -45,6 +45,20 @@
 		<div class="alert alert-danger">
 			<h4>{{sorted.error}}</h4>
 		</div>
+		{{else}}
+			<table class="dynatable table table-condensed table-bordered table-striped">
+			<thead>
+			<tr>
+				<th><i class="glyphicon glyphicon-ok"></i></th>
+				<th>Name</th>
+			</tr>
+			</thead>	
+			{{#each sorted}}
+			<tr>
+				{{sorted.full_name}}
+			</tr>
+			{{/each}}
+			</table>
 		{{/if}}
 	{{/if}}
 {{/with}}
