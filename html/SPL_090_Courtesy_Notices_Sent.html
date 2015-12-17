@@ -40,6 +40,12 @@
 </div>
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
-
+	{{#if sorted}}
+		{{#if sorted.error}}
+		<div class="alert alert-danger">
+			<h4>sorted.error</h4>
+		</div>
+		{{/if}}
+	{{/if}}
 {{/with}}
 </script>
