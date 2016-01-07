@@ -700,9 +700,10 @@ class SPL_Report {
 
 		$intra->fin->audit->label = 'Internal Audit';
 		$intra->fin->audit->list[] = array('Library cards renewed with money owing (Weekly)'
-																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=63');
+		/*																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=63');
 		$intra->fin->audit->list[] = array('Staff card waives'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=61');
+		*/
 		$intra->fin->audit->list[] = array('Weekly blocks deleted'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=62');
 				
