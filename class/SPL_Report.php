@@ -348,6 +348,10 @@ class SPL_Report {
 		/*
 		 *	Converted Reports
 		 */
+		$reports->circ->label = 'Customers';
+		$reports->circ->list[] = array('Courtesy Notices Sent'
+													,'./90/');
+
 		$reports->coll->label = 'Collection Development';
 		$reports->coll->list[] = array('Unique Items by Branch'
 													,'./34/');
