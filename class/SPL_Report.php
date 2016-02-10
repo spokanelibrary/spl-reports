@@ -368,8 +368,11 @@ class SPL_Report {
 		 *	Other Reports
 		 */
 		$other->circ->label = 'Circulation';
+		/*
+		// obsolete (SMM)
 		$other->circ->list[] = array('Fee Waive Summary by Customer'
 																,'http://web.spokanelibrary.org/reports/176');
+		*/
 		$other->circ->list[] = array('Item Borrower History (Jacque Only)'
 																,'http://web.spokanelibrary.org/reports/177');
 		$other->circ->list[] = array('Borrowers Forced to Debt Collection'
