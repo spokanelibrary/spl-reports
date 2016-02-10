@@ -403,6 +403,9 @@ class SPL_Report {
 													,'http://web.spokanelibrary.org/oneclick/');
 		$apps->ss->list[] = array('Process OverDrive Metadata'
 													,'http://web.spokanelibrary.org/overdrive/');
+		$apps->ss->list[] = array('Spellchecker for bib records'
+													,'http://web.spokanelibrary.org/spellcheck/');
+
 		
 		$apps->nmr->label = 'New Material Requests';
 		$apps->nmr->list[] = array('NMR Staff Portal'
