@@ -403,7 +403,7 @@ class SPL_Report {
 													,'http://web.spokanelibrary.org/oneclick/');
 		$apps->ss->list[] = array('Process OverDrive Metadata'
 													,'http://web.spokanelibrary.org/overdrive/');
-		$apps->ss->list[] = array('Spellchecker for bib records'
+		$apps->ss->list[] = array('Spellchecker for Bib Records'
 													,'http://web.spokanelibrary.org/spellcheck/');
 
 		
