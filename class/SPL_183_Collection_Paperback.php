@@ -1,6 +1,6 @@
 <?php
 
-class SPL_183_Collection_Paperback extends SPL_Report {
+class SPL_Report_Stub extends SPL_Report {
 
 	/*
 	 *	overload api endpoint, if necessary
