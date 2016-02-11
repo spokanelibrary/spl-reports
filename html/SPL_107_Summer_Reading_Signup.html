@@ -22,7 +22,7 @@
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
 	{{#with sorted}}
-		<table class="table table-condensed table-bordered table-striped">
+	<table class="table table-condensed table-bordered table-striped">
 		<tr class="info">
 			<th colspan="2" class="text-center">
 				Signups after {{../meta.date}}
@@ -39,6 +39,21 @@
 			<th>{{totals.total.count}}</th>
 		</tr>
 		</table>
+		<table class="table table-condensed table-bordered table-striped">
+			<tr class="info">
+			<th colspan="2" class="text-center">
+				Signup Detail
+			</th>
+		</tr>
+		{{#each detail}}
+			<tr>
+				<td>{{name}}</td>
+				<td>{{age}}</td>
+				<td>{{branch}}</td>
+				<td>{{date}}</td>
+			</tr>
+		{{/each}}
+	</table>
 	{{/with}}
 {{/with}}
 </script>
