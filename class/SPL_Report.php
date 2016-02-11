@@ -360,6 +360,10 @@ class SPL_Report {
 		$reports->ss->list[] = array('New Items with Holds'
 													,'./11/');
 
+		$reports->prog->label = 'Programming';
+		$reports->prog->list[] = array('Summer Reading Signups'
+													,'./107/');
+
 		$todo->create->label = 'Reports Needed';
 		$todo->create->list[] = array('Non-res tieout'
 													,'./');
@@ -381,9 +385,10 @@ class SPL_Report {
 		$other->cust->label = 'Customers';
 		$other->cust->list[] = array('WiFi Use Count'
 																,'http://web.spokanelibrary.org/spl-wireless-track/');
+		/*
 		$other->cust->list[] = array('Summer Reading Signup'
 																,'http://web.spokanelibrary.org/reports/107');
-
+		*/
 		$other->ss->label = 'Support Services';
 		$other->ss->list[] = array(' Support Services Stats Summary Monthly'
 																,'http://web.spokanelibrary.org/reports/153');
