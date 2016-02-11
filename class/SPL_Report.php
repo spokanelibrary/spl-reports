@@ -351,6 +351,8 @@ class SPL_Report {
 		$reports->circ->label = 'Customers';
 		$reports->circ->list[] = array('Courtesy Notices Sent'
 													,'./90/');
+		$reports->circ->list[] = array('Item History'
+													,'./177/');
 
 		$reports->coll->label = 'Collection Development';
 		$reports->coll->list[] = array('Unique Items by Branch'
@@ -377,8 +379,11 @@ class SPL_Report {
 		$other->circ->list[] = array('Fee Waive Summary by Customer'
 																,'http://web.spokanelibrary.org/reports/176');
 		*/
+		/*
 		$other->circ->list[] = array('Item Borrower History (Jacque Only)'
 																,'http://web.spokanelibrary.org/reports/177');
+		
+		*/
 		$other->circ->list[] = array('Borrowers Forced to Debt Collection'
 																,'http://web.spokanelibrary.org/reports/184');
 
