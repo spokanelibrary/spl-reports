@@ -271,7 +271,7 @@ class SPL_Report {
 			$html = file_get_contents( dirname(__DIR__).'/html/'.get_class($this).'.html' );
 		}
 
-		$html .= get_class($this);
+		$html .= print_r($this,true);
 		return $html;
 	}
 
