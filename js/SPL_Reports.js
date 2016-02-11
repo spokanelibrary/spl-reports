@@ -23,7 +23,7 @@ var splReport = {
 			_this.getReport();
 		});
 
-
+		/*
 		$datepicker = $('.date');
 		if ( $datepicker.length ) {
 			$datepicker.datepicker({
@@ -33,7 +33,7 @@ var splReport = {
 	        autoclose: true
 	    });
 		}
-
+		*/
 
 	}
 	,getVals: function() {
