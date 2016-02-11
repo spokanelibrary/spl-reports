@@ -364,7 +364,7 @@ class SPL_Report {
 		$reports->ss->label = 'Support Services';
 		$reports->ss->list[] = array('New Items with Holds'
 													,'./11/');
-		$reports->ss->list[] = array('Paperbacks by Location'
+		$reports->ss->list[] = array('Paperbacks by Location - Obsolete?'
 													,'./183/');
 
 		$reports->prog->label = 'Programming';
