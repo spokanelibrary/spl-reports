@@ -8,9 +8,7 @@
 var splReportUI = {
 
 	setUI: function() {
-		console.log('stub');
+		console.log('183');
 	}
 
 }.setUI();
-
-alert('test');

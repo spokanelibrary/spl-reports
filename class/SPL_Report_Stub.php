@@ -7,6 +7,8 @@ class SPL_Report_Stub extends SPL_Report {
 	 */
 	//var $api = '';
 
+	// This file is also required to trigger .js loading
+
 	/*
 	 *	overload data processing, if necessary
 	 */
