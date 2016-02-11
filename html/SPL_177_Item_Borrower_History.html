@@ -32,6 +32,19 @@
 </div>
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
-
+	<h4>Results for {{meta.ibarcode}}</h4>
+	<table class="table table-bordered table-condensed table-striped">
+		{{#each sorted.detail}}
+		<tr>
+			<td>{{status_date}}</td>
+			<td>{{cur_location}}</td>
+			<td>{{user_id}}</td>
+			<td>{{stat_old}}</td>
+			<td>{{stat_new}}</td>
+			<td>{{borrower_barcode}}</td>
+			<td>{{borrower_name}}</td>
+		</tr>
+		{{/each}}
+	</table>
 {{/with}}
 </script>
