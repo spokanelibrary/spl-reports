@@ -218,6 +218,7 @@ class SPL_Report {
 
           $class->path = plugin_dir_path( __FILE__ ).$class->name.'.php';
           $class->tmpl = plugin_dir_path( __DIR__ ).'html/'. $file;
+          //$class->js = plugin_dir_path( __DIR__ ).'js/'. $file;
         }
       }
     }
@@ -270,6 +271,7 @@ class SPL_Report {
 			$html = file_get_contents( dirname(__DIR__).'/html/'.get_class($this).'.html' );
 		}
 
+		$html .= get_class($this);
 		return $html;
 	}
 
