@@ -259,8 +259,9 @@ class SPL_Report {
 
 		wp_enqueue_script( 'spl-reports-config', plugins_url('js/SPL_Reports.js', dirname(__FILE__)) );
 		//if ( file_exists(plugins_url('js/'.get_class($this).'.js')) ) {	
+		if ( file_exists(dirname(__DIR__).'/js/'.get_class($this).'.js') ) {}
 			wp_enqueue_script( get_class(), plugins_url('js/'.get_class($this).'.js', dirname(__FILE__)) );
-		//}
+		}
 	}
 
 	protected function getTmpl($tmpl=null) {
