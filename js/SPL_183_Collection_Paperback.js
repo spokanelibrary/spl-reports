@@ -11,4 +11,4 @@ var splReportUI = {
 		console.log('stub');
 	}
 
-}.setUI();
+}.setReportUI();
