@@ -29,10 +29,11 @@ var splReport = {
 			$datepicker.datepicker({
 	        //startDate: "+1d",
 	        //endDate: "+1y",
+	        defaultDate: '-1y',
 	        daysOfWeekDisabled: "0",
 	        autoclose: true
 	    });
-	    $datepicker.datepicker( 'update', new Date('-1y') );
+	    //$datepicker.datepicker( 'update', new Date() );
 		}
 		
 
