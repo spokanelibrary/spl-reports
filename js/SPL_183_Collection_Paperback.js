@@ -8,7 +8,7 @@
 var splReportUI = {
 
 	setUI: function() {
-		console.log('183');
+		$datepicker.datepicker( 'update', new Date() );
 	}
 
 }.setUI();
