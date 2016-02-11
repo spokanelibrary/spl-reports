@@ -1,0 +1,37 @@
+<form class="form-inline spl-report-control">
+	<h2>Item History <small>by item barcode</small></h2>
+	<fieldset>
+		<legend>
+			This report may take a minute or two to run.
+		</legend>
+		<div class="form-group">
+			<label>Barcode:</label>
+			<input type="text" name="barcode"> 
+		</div>
+
+		<button type="submit" class="btn btn-success">
+			Run Report <small class="glyphicon glyphicon-arrow-right"></small>
+		</button>
+		<a href="./" class="btn btn-default pull-right">
+			<small class="glyphicon glyphicon-refresh"></small> Reset</a>
+
+	</fieldset>
+</form>
+
+<hr>
+
+<div class="spl-report-result"></div>
+
+<br>
+<br>
+<div class="well well-sm spl-report-summary">
+	<h3>Summary</h3>
+	<p>
+
+	</p>
+</div>
+<script class="spl-report-tmpl" type="text/x-handlebars-template">
+{{#with report}}
+
+{{/with}}
+</script>
