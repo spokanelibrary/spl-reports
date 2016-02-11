@@ -29,6 +29,7 @@ var splReport = {
 			$datepicker.datepicker({
 	        //startDate: "+1d",
 	        //endDate: "+1y",
+	        setDate: new Date(),
 	        daysOfWeekDisabled: "0",
 	        autoclose: true
 	    });
