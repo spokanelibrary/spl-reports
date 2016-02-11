@@ -28,6 +28,9 @@
 </div>
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
+	{{#unless sorted.detail}}
+		<h4>No results found</h4>
+	{{else}}
 	<table class="table table-bordered table-condensed table-striped">
 		<tr class="info">
 			<th>Block Date</th>
@@ -40,5 +43,6 @@
 		</tr>
 		{{/each}}
 	</table>
+	{{/unless}}
 {{/with}}
 </script>
