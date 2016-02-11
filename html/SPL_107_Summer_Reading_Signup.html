@@ -21,18 +21,22 @@
 
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
-	<h4>Signups after {{meta.date}}</h4>
 	{{#with sorted}}
 		<table class="table table-condensed table-bordered table-striped">
+		<tr>
+			<td colspan="2" class="text-center">
+				<h4>Signups after {{../../meta.date}}</h4>
+			</td>
+		</tr>
 		{{#each totals.locations}}
 			<tr>
 			  <th>{{#if name}}{{name}}{{else}}{{branch}}{{/if}}</th>
-				<th>{{count}}</th>
+				<td>{{count}}</td>
 			</tr>
 		{{/each}}
 		<tr class="info">
-			<th>Total</th>
-			<td>{{totals.total.count}}</td>
+			<th class="text-right">Total</th>
+			<th>{{totals.total.count}}</th>
 		</tr>
 		</table>
 	{{/with}}
