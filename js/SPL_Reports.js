@@ -32,7 +32,7 @@ var splReport = {
 	        daysOfWeekDisabled: "0",
 	        autoclose: true
 	    });
-	    $datepicker.datepicker( 'update', new Date() );
+	    $datepicker.datepicker( 'update', new Date('-1y') );
 		}
 		
 
