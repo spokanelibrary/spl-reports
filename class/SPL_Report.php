@@ -353,6 +353,8 @@ class SPL_Report {
 													,'./90/');
 		$reports->circ->list[] = array('Item History'
 													,'./177/');
+		$reports->circ->list[] = array('Borrowers Forced to Debt Collection'
+													,'./184/');
 
 		$reports->coll->label = 'Collection Development';
 		$reports->coll->list[] = array('Unique Items by Branch'
@@ -384,9 +386,10 @@ class SPL_Report {
 																,'http://web.spokanelibrary.org/reports/177');
 		
 		*/
+		/*
 		$other->circ->list[] = array('Borrowers Forced to Debt Collection'
 																,'http://web.spokanelibrary.org/reports/184');
-
+		*/
 		$other->cust->label = 'Customers';
 		$other->cust->list[] = array('WiFi Use Count'
 																,'http://web.spokanelibrary.org/spl-wireless-track/');
