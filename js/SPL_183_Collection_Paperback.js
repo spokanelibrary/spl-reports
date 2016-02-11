@@ -8,7 +8,9 @@
 var splReportUI = {
 
 	setUI: function() {
-		$datepicker.datepicker( 'update', new Date() );
+		var defaultDate = new Date();
+		defaultDate.setMonth(defaultDate.getMonth() -- 12);
+		$datepicker.datepicker( 'update', defaultDate );
 	}
 
 }.setUI();
