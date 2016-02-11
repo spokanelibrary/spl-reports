@@ -58,13 +58,19 @@
 	{{else}}
 	<table class="table table-bordered table-condensed table-striped">
 		<tr class="info">
-			<th>Block Date</th>
-			<th>Borrower Barcode</th>
+			<th>Barcode</th>
+			<th>Call #</th>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Lask CKO</th>
 		</tr>
 		{{#each sorted.detail}}
 		<tr>
-			<td>{{block_date}}</td>
 			<td>{{barcode}}</td>
+			<td>{{bib_call}}</td>
+			<td>{{title}}</td>
+			<td>{{author}}</td>
+			<td>{{last_cko_date}}</td>
 		</tr>
 		{{/each}}
 	</table>
