@@ -23,14 +23,14 @@
 {{#with report}}
 	<h4>Signups after {{meta.date}}</h4>
 	{{#with sorted}}
-		<table class="table table-condensed table-bordered">
+		<table class="table table-condensed table-bordered table-striped">
 		{{#each totals.locations}}
 			<tr>
 			  <th>{{#if name}}{{name}}{{else}}{{branch}}{{/if}}</th>
-				<td>{{count}}</td>
+				<th>{{count}}</th>
 			</tr>
 		{{/each}}
-		<tr>
+		<tr class="info">
 			<th>Total</th>
 			<td>{{totals.total.count}}</td>
 		</tr>
