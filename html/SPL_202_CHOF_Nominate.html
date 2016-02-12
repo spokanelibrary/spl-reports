@@ -37,7 +37,8 @@
 	{{#unless sorted.detail}}
 		<h4>No results found</h4>
 	{{else}}
-
+		{{#with sorted.detail}}
+		
 		<h4></h4>
 		{{id}}
 
@@ -65,7 +66,7 @@
 		<h4></h4>
 		{{nominee_essay}}
 
-
+		{{/with}}
 	{{/unless}}
 {{/with}}
 </script>
