@@ -8,7 +8,7 @@
 var splReportUI = {
 
 	setUI: function() {
-		id = $.url.param("id");
+		//id = Jquery.url.param("id");
 		if (id) {
 			console.log(id);
 		}
