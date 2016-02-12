@@ -43,36 +43,36 @@
 		<h1>{{id}} <small>{{datestamp}}</small></h1>
 		-->
 
+		
 		<h2>{{nominee_name}} <small>{{nominee_epoch}}</small></h2>
 		
 		<h3>Category</h3>
 		{{{nominee_category}}}
 
-
-		<h4>Contacts</h4>
-		<div class="row">
-			<div class="col-md-6">
-				<dl>
-					<dt>Nominee email</dt>
-					<dd>{{nominee_email}}</dd>
-					<dt>Nominee phone</dt>
-					<dd>{{nominee_phone}}</dd>
-				</dl>		
-			</div>
-			<div class="col-md-6">
-				<dl>
-					<dt>Submitted by</dt>
-					<dd>{{submitter_name}}</dd>
-					<dt>Submitter phone</dt>
-					<dd>{{submitter_phone}}</dd>
-					<dt>Submitter email</dt>
-					<dd>{{submitter_email}}</dd>
-				</dl>
+		<div class="well well-sm">
+			<h4>Contacts</h4>
+			<div class="row">
+				<div class="col-md-6">
+					<dl class="dl-horizontal">
+						<dt>Nominee email</dt>
+						<dd>{{nominee_email}}</dd>
+						<dt>Nominee phone</dt>
+						<dd>{{nominee_phone}}</dd>
+					</dl>		
+				</div>
+				<div class="col-md-6">
+					<dl class="dl-horizontal">
+						<dt>Submitted by</dt>
+						<dd>{{submitter_name}}</dd>
+						<dt>Submitter phone</dt>
+						<dd>{{submitter_phone}}</dd>
+						<dt>Submitter email</dt>
+						<dd>{{submitter_email}}</dd>
+					</dl>
+				</div>
 			</div>
 		</div>
-
-		<hr>
-
+		
 		{{{submitter_essay}}}
 
 		{{/with}}
