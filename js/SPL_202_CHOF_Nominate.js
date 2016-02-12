@@ -20,10 +20,10 @@ var splReportUI = {
 		    return decodeURIComponent(results[1].replace(/\+/g, " "));
 		  }
 		}
-		
+
 		var id = getParameterByName('id');;
 		if (id) {
-			console.log(id);
+			$('#chof').val(id);
 		}
 	}
 
