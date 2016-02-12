@@ -21,9 +21,10 @@ var splReportUI = {
 		  }
 		}
 
-		var id = getParameterByName('id');;
+		var id = getParameterByName('id');
 		if (id) {
 			$('#chof').val(id);
+			$('.spl-report-control').submit();
 		}
 	}
 
