@@ -13,7 +13,6 @@ var splReportUI = {
 		$datefinish = $('.datefinish');
 		var dateFinish = new Date(date.getFullYear(), date.getMonth(), 1);
 		$datefinish.datepicker( 'update', dateFinish );
-		$datefinish.datepicker( {dateFormat: 'YYYY-MM-DD'} );
 
 		$datebegin = $('.datebegin');
 		var dateBegin = new Date(dateFinish.getFullYear(), dateFinish.getMonth()-1, 1);
