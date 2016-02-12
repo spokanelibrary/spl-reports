@@ -30,7 +30,7 @@ var splReport = {
 	        //startDate: "+1d",
 	        //endDate: "+1y",
 	        defaultDate: 'now',
-	        daysOfWeekDisabled: "0",
+	        //daysOfWeekDisabled: "0",
 	        autoclose: true
 	    });
 	    //$datepicker.datepicker( 'update', new Date() );
