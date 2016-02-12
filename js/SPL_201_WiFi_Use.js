@@ -10,9 +10,8 @@ var splReportUI = {
 	setUI: function() {
 		$datebegin = $('.datebegin');
 
-		var defaultDate = new Date();
-		defaultDate.setMonth(defaultDate.getMonth() - 12);
-		$datebegin.datepicker( 'update', defaultDate );
+		var dateBegin = new Date(date.getFullYear(), date.getMonth(), 1);
+		$datebegin.datepicker( 'update', dateBegin );
 	}
 
 }.setUI();
