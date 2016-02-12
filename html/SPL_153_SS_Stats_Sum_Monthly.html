@@ -1,0 +1,79 @@
+
+<form class="form-inline spl-report-control hidden-print">
+	<h2>Paperback Collection <small>by location</small></h2>
+	<fieldset>
+		<legend>
+			Lists items in the following collection codes: <i>pbka, pbkj</i>
+		</legend>
+
+		<div class="form-group">
+			<label>Select Branch:</label>
+			<select class="form-control" name="branch">
+		    <option value="dt">Downtown</option>
+		    <option value="es">East Side</option>
+		    <option value="hy">Hillyard</option>
+		    <option value="it">Indian Trail</option>
+		    <option value="sh">Shadle</option>
+		    <option value="so">South Hill</option>
+		    <option value="ou">Outreach</option>
+			</select> 
+		</div>
+
+		<div class="form-group">
+			<div class="input-group date">
+				<span class="input-group-addon"><b>No CKO Since:</b></span>
+	      <input type="text" 
+	      				value=""
+	              class="form-control required" 
+	              name="datebegin"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+	    </div>
+	  </div>
+
+		<button type="submit" class="btn btn-success">
+			Run Report <small class="glyphicon glyphicon-arrow-right"></small>
+		</button>
+		<a href="./" class="btn btn-default pull-right">
+			<small class="glyphicon glyphicon-refresh"></small> Reset</a>
+
+	</fieldset>
+</form>
+
+
+<hr class="hidden-print">
+
+<div class="spl-report-result"></div>
+<!--
+<br>
+<br>
+<div class="well well-sm spl-report-summary hidden-print">
+	<h3>Summary</h3>
+	<p>
+	</p>
+</div>
+-->
+<script class="spl-report-tmpl" type="text/x-handlebars-template">
+{{#with report}}
+	{{#unless sorted.detail}}
+		<h4>No results found</h4>
+	{{else}}
+	<table class="table table-bordered table-condensed table-striped">
+		<tr class="info">
+			<th>Barcode</th>
+			<th>Call #</th>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Lask CKO</th>
+		</tr>
+		{{#each sorted.detail}}
+		<tr>
+			<td>{{barcode}}</td>
+			<td>{{bib_call}}</td>
+			<td>{{title}}</td>
+			<td>{{author}}</td>
+			<td>{{last_cko_date}}</td>
+		</tr>
+		{{/each}}
+	</table>
+	{{/unless}}
+{{/with}}
+</script>
