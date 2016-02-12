@@ -8,10 +8,14 @@
 var splReportUI = {
 
 	setUI: function() {
-		$datebegin = $('.datebegin');
-
 		var date = new Date();
-		var dateBegin = new Date(date.getFullYear(), date.getMonth(), 1);
+
+		$datefinish = $('.datefinish');
+		var dateFinish = new Date(date.getFullYear(), date.getMonth(), 1);
+		$datefinish.datepicker( 'update', dateFinish );
+
+		$datebegin = $('.datebegin');
+		var dateBegin = new Date(dateFinish.getFullYear(), dateFinish.getMonth()-1, 1);
 		$datebegin.datepicker( 'update', dateBegin );
 	}
 
