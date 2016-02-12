@@ -1,8 +1,8 @@
 <form class="form-inline spl-report-control hidden-print">
-	<h2>Borrowers Forced to Debt Collection</h2>
+	<h2>WiFi Use Stats</h2>
 	<fieldset>
 		<legend>
-			Lists customers with an 'fdc' block
+			Interfaces with the Radius Accounting server
 		</legend>
 
 		<button type="submit" class="btn btn-success">
@@ -31,18 +31,6 @@
 	{{#unless sorted.detail}}
 		<h4>No results found</h4>
 	{{else}}
-	<table class="table table-bordered table-condensed table-striped">
-		<tr class="info">
-			<th>Block Date</th>
-			<th>Borrower Barcode</th>
-		</tr>
-		{{#each sorted.detail}}
-		<tr>
-			<td>{{block_date}}</td>
-			<td>{{barcode}}</td>
-		</tr>
-		{{/each}}
-	</table>
 	{{/unless}}
 {{/with}}
 </script>
