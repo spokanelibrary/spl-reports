@@ -1,0 +1,42 @@
+<form class="form-inline spl-report-control hidden-print">
+	<h2>CHoF Nominations <small>by ID</small></h2>
+	<fieldset>
+		<legend>
+			Clean up CHoF Nominations
+		</legend>
+
+		<div class="form-group">
+			<label>Nomination ID:</label>
+			<input type="text" name="chof"> 
+		</div>
+
+
+		<button type="submit" class="btn btn-success">
+			Run Report <small class="glyphicon glyphicon-arrow-right"></small>
+		</button>
+		<a href="./" class="btn btn-default pull-right">
+			<small class="glyphicon glyphicon-refresh"></small> Reset</a>
+
+	</fieldset>
+</form>
+
+<hr class="hidden-print">
+
+<div class="spl-report-result"></div>
+<!--
+<br>
+<br>
+<div class="well well-sm spl-report-summary hidden-print">
+	<h3>Summary</h3>
+	<p>
+	</p>
+</div>
+-->
+<script class="spl-report-tmpl" type="text/x-handlebars-template">
+{{#with report}}
+	{{#unless sorted.detail}}
+		<h4>No results found</h4>
+	{{else}}
+	{{/unless}}
+{{/with}}
+</script>
