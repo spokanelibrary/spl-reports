@@ -2,7 +2,7 @@
 	<h2>CHoF Nominations <small>by ID</small></h2>
 	<fieldset>
 		<legend>
-			Clean up CHoF Nominations
+			Clean up Citizen Hall of Fame Nominations
 		</legend>
 
 		<div class="form-group">
@@ -47,31 +47,39 @@
 		<h2>{{nominee_name}} <small>{{nominee_epoch}}</small></h2>
 
 		
-		<div class="well well-sm">
-			<h4>Category</h4>
-			{{{nominee_category}}}
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4>Category</h4>
+			</div>
+			<div class="panel-body">
+				{{{nominee_category}}}
+			</div>
 		</div>
 
-		<div class="well well-sm">
-			<h4>Contacts</h4>
-			<div class="row">
-				<div class="col-md-6">
-					<dl class="dl-horizontal">
-						<dt>Nominee email</dt>
-						<dd>{{nominee_email}}</dd>
-						<dt>Nominee phone</dt>
-						<dd>{{nominee_phone}}</dd>
-					</dl>		
-				</div>
-				<div class="col-md-6">
-					<dl class="dl-horizontal">
-						<dt>Submitted by</dt>
-						<dd>{{submitter_name}}</dd>
-						<dt>Submitter phone</dt>
-						<dd>{{submitter_phone}}</dd>
-						<dt>Submitter email</dt>
-						<dd>{{submitter_email}}</dd>
-					</dl>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4>Contacts</h4>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<dl class="dl-horizontal">
+							<dt>Nominee email</dt>
+							<dd>{{nominee_email}}</dd>
+							<dt>Nominee phone</dt>
+							<dd>{{nominee_phone}}</dd>
+						</dl>		
+					</div>
+					<div class="col-md-6">
+						<dl class="dl-horizontal">
+							<dt>Submitted by</dt>
+							<dd>{{submitter_name}}</dd>
+							<dt>Submitter phone</dt>
+							<dd>{{submitter_phone}}</dd>
+							<dt>Submitter email</dt>
+							<dd>{{submitter_email}}</dd>
+						</dl>
+					</div>
 				</div>
 			</div>
 		</div>
