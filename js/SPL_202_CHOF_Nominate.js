@@ -7,8 +7,19 @@
  */
 var splReportUI = {
 
+	function getParameterByName( name ){
+	    var regexS = "[\\?&]"+name+"=([^&#]*)", 
+	  regex = new RegExp( regexS ),
+	  results = regex.exec( window.location.search );
+	  if( results == null ){
+	    return "";
+	  } else{
+	    return decodeURIComponent(results[1].replace(/\+/g, " "));
+	  }
+	}
+
 	setUI: function() {
-		//id = Jquery.url.param("id");
+		var id = getParameterByName('id');;
 		if (id) {
 			console.log(id);
 		}
