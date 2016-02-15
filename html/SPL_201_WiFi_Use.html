@@ -51,10 +51,11 @@
 	{{#unless sorted.detail}}
 		<h4>No results found</h4>
 	{{else}}
+		{{sorted.range.now}}
 		{{#with sorted.detail}}
 		<div class="panel panel-success">
 			<div class="panel-heading">
-				<h3 class="panel-title">Right Now <small>{{../range.now}}</small></h3>
+				<h3 class="panel-title">Right Now <small>{{sorted.range.now}}</small></h3>
 			</div><!-- /.panel-heading -->
 			<div class="panel-body">
 				<table class="table table-condensed table-bordered table-striped">
