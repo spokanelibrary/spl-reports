@@ -51,41 +51,43 @@
 	{{#unless sorted.detail}}
 		<h4>No results found</h4>
 	{{else}}
-	<div class="panel panel-success">
-		<div class="panel-heading">
-			<h3 class="panel-title">Right Now {{range.now}} <small>{{range.now}}</small></h3>
-		</div><!-- /.panel-heading -->
-		{{#with sorted.detail}}
-		<div class="panel-body">
-			<table class="table table-condensed table-bordered table-striped">
-				<tr>
-					<th>&nbsp;</th>
-					<th>Mobile</th>
-					<th>Non-mobile</th>
-					<th>Total</th>
-				</tr>
-				<tr>
-					<th>Downtown</th>
-					<td>{{active.branch.dt.mobile}}</td>
-					<td>{{active.branch.dt.non-mobile}}</td>
-					<td class="text-right">{{active.branch.dt.count}}</td>
-				</tr>
-				<tr>
-					<th>East Side</th>
-					<td>{{active.branch.es.mobile}}</td>
-					<td>{{active.branch.es.non-mobile}}</td>
-					<td class="text-right">{{active.branch.es.count}}</td>
-				</tr>
-				<tr>
-					<th>All Locations</th>
-					<td>{{active.total.mobile}}</td>
-					<td>{{active.total.non-mobile}}</td>
-					<td class="text-right">{{active.total.count}}</td>
-				</tr>
-			</table>
-			{{/with}}
-		</div><!-- /.panel-body -->
-	</div><!-- /.panel -->
+		{{#with sorted}}
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title">Right Now <small>{{range.now}}</small></h3>
+			</div><!-- /.panel-heading -->
+			{{#with detail}}
+			<div class="panel-body">
+				<table class="table table-condensed table-bordered table-striped">
+					<tr>
+						<th>&nbsp;</th>
+						<th>Mobile</th>
+						<th>Non-mobile</th>
+						<th>Total</th>
+					</tr>
+					<tr>
+						<th>Downtown</th>
+						<td>{{active.branch.dt.mobile}}</td>
+						<td>{{active.branch.dt.non-mobile}}</td>
+						<td class="text-right">{{active.branch.dt.count}}</td>
+					</tr>
+					<tr>
+						<th>East Side</th>
+						<td>{{active.branch.es.mobile}}</td>
+						<td>{{active.branch.es.non-mobile}}</td>
+						<td class="text-right">{{active.branch.es.count}}</td>
+					</tr>
+					<tr>
+						<th>All Locations</th>
+						<td>{{active.total.mobile}}</td>
+						<td>{{active.total.non-mobile}}</td>
+						<td class="text-right">{{active.total.count}}</td>
+					</tr>
+				</table>
+				{{/with}}
+			</div><!-- /.panel-body -->
+		</div><!-- /.panel -->
+		{{/with}}
 	{{/unless}}
 {{/with}}
 </script>
