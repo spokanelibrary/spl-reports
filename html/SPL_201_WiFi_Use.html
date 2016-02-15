@@ -52,14 +52,12 @@
 		<h4>No results found</h4>
 	{{else}}
 		{{#with sorted.detail}}
-		<div class="row">
-			<div class="col-md-12">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title">Right Now <small>{{../range.now}}</small></h3>
+			</div><!-- /.panel-heading -->
+			<div class="panel-body">
 				<table class="table table-condensed table-bordered table-striped">
-					<tr>
-						<th colspan="4">
-							<h3>Right Now <small>{{../range.now}}</small></h3>
-						</th>
-					</tr>
 					<tr>
 						<th>&nbsp;</th>
 						<th>Mobile</th>
@@ -85,8 +83,8 @@
 						<td class="text-right">{{active.total.count}}</td>
 					</tr>
 				</table>
-			</div><!-- /.col -->
-		</div><!-- /.row -->
+			</div><!-- /.panel-body -->
+		</div><!-- /.panel -->
 
 		{{/with}}
 	{{/unless}}
