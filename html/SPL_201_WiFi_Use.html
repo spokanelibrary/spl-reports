@@ -53,10 +53,21 @@
 	{{else}}
 		{{#with sorted.detail}}
 		<div class="row">
-			<div class="col-md-3">
-				All locations
+			<div class="col-md-4">
+				<table class="table table-condensed">
+					<tr>
+						<th>Mobile</th>
+						<th>Non-mobile</th>
+						<th>Total</th>
+					</tr>
+					<tr>
+						<td>{{active.total.mobile}}</td>
+						<td>{{active.total.non-mobile}}</td>
+						<td>{{active.totalcount}}</td>
+					</tr>
+				</table>
 			</div><!-- /.col -->
-			<div class="col-md-9">
+			<div class="col-md-8">
 				Branch locations
 			</div><!-- /.col -->
 		</div><!-- /.row -->
