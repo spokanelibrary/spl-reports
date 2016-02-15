@@ -54,7 +54,7 @@
 		{{#with sorted.detail}}
 		<div class="row">
 			<div class="col-md-12">
-				<table class="table table-condensed">
+				<table class="table table-condensed table-bordered table-striped">
 					<tr>
 						<th>Location</th>
 						<th>Mobile</th>
@@ -65,13 +65,19 @@
 						<th>Downtown</th>
 						<td>{{active.branch.dt.mobile}}</td>
 						<td>{{active.branch.dt.non-mobile}}</td>
-						<td>{{active.branch.dt.count}}</td>
+						<td class="text-right">{{active.branch.dt.count}}</td>
+					</tr>
+					<tr>
+						<th>East Side</th>
+						<td>{{active.branch.es.mobile}}</td>
+						<td>{{active.branch.es.non-mobile}}</td>
+						<td class="text-right">{{active.branch.es.count}}</td>
 					</tr>
 					<tr>
 						<th>All Locations</th>
 						<td>{{active.total.mobile}}</td>
 						<td>{{active.total.non-mobile}}</td>
-						<td>{{active.total.count}}</td>
+						<td class="text-right">{{active.total.count}}</td>
 					</tr>
 				</table>
 			</div><!-- /.col -->
