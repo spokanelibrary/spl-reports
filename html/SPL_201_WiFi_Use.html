@@ -51,6 +51,17 @@
 	{{#unless sorted.detail}}
 		<h4>No results found</h4>
 	{{else}}
+		{{#with sorted.detail}}
+		<div class="row">
+			<div class="col-md-3">
+				All locations
+			</div><!-- /.col -->
+			<div class="col-md-9">
+				Branch locations
+			</div><!-- /.col -->
+		</div><!-- /.row -->
+
+		{{/with}}
 	{{/unless}}
 {{/with}}
 </script>
