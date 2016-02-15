@@ -53,22 +53,27 @@
 	{{else}}
 		{{#with sorted.detail}}
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-12">
 				<table class="table table-condensed">
 					<tr>
+						<th>Location</th>
 						<th>Mobile</th>
 						<th>Non-mobile</th>
 						<th>Total</th>
 					</tr>
 					<tr>
+						<th>Downtown</th>
+						<td>{{active.branch.dt.mobile}}</td>
+						<td>{{active.branch.dt.non-mobile}}</td>
+						<td>{{active.branch.dt.count}}</td>
+					</tr>
+					<tr>
+						<th>All Locations</th>
 						<td>{{active.total.mobile}}</td>
 						<td>{{active.total.non-mobile}}</td>
-						<td>{{active.totalcount}}</td>
+						<td>{{active.total.count}}</td>
 					</tr>
 				</table>
-			</div><!-- /.col -->
-			<div class="col-md-8">
-				Branch locations
 			</div><!-- /.col -->
 		</div><!-- /.row -->
 
