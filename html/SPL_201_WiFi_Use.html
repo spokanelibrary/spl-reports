@@ -243,9 +243,9 @@
 							<b>{{session.total.count}}</b>
 						</td>
 					</tr>
-					{{#each branch}}
+					{{#each loop}}
 					<tr>
-						<th>{{label}}</th>
+						<th>{{session.{{i}}label}} {{i}}</th>
 						<td>{{mobile}}</td>
 						<td>{{non-mobile}}</td>
 						<td class="text-right">{{count}}</td>
