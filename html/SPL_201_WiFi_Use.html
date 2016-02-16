@@ -104,7 +104,7 @@
 								data-target="#spl-wifi-today-panel">Today: {{range.today}} 
 								<span class="caret"></span></button>
 			</div><!-- /.panel-heading -->
-			{{#with detail.today}}
+			{{#with detail.today.total}}
 			<div class="panel-body collapse" id="spl-wifi-today-panel">
 				<table class="table table-condensed table-bordered">
 					<tr>
@@ -113,7 +113,7 @@
 						<th>Non-mobile</th>
 						<th>Total</th>
 					</tr>
-					<tr class="success">
+					<tr class="info">
 						<th>{{total.label}}</th>
 						<td>
 							<b>{{total.mobile}}</b>
