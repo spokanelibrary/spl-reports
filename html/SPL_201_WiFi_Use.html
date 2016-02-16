@@ -247,6 +247,9 @@
 					<tr>
 						<th>
 						{{@index}}
+						{{#with (lookup ../session.branch @index)}}
+		            {{label}}
+		        {{/with}}
 						</th>
 						<td></td>
 						<td></td>
