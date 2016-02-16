@@ -146,6 +146,52 @@
 			</div><!-- /.panel-body -->
 		</div><!-- /.panel -->
 
+		<!-- YESTERDAY -->
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-md-3">
+						<button class="btn btn-block btn-info" 
+										data-toggle="collapse" 
+										data-target="#spl-wifi-yesterday-panel"><b>Yesterday:</b> {{range.yesterday}} 
+						<span class="caret"></span></button>
+					</div>
+				</div>
+			</div><!-- /.panel-heading -->
+			{{#with detail.yesterday.total}}
+			<div class="panel-body collapse" id="spl-wifi-yesterday-panel">
+				<table class="table table-condensed table-bordered">
+					<tr>
+						<th>&nbsp;</th>
+						<th>Mobile</th>
+						<th>Non-mobile</th>
+						<th>Total</th>
+					</tr>
+					<tr class="info">
+						<th>{{total.label}}</th>
+						<td>
+							<b>{{total.mobile}}</b>
+						</td>
+						<td>
+							<b>{{total.non-mobile}}</b>
+						</td>
+						<td class="text-right">
+							<span class="label label-info">{{total.count}}</span>
+						</td>
+					</tr>
+					{{#each branch}}
+					<tr>
+						<th>{{label}}</th>
+						<td>{{mobile}}</td>
+						<td>{{non-mobile}}</td>
+						<td class="text-right">{{count}}</td>
+					</tr>
+					{{/each}}
+				</table>
+				{{/with}}
+			</div><!-- /.panel-body -->
+		</div><!-- /.panel -->
+
 		{{/with}}
 	{{/unless}}
 {{/with}}
