@@ -65,6 +65,18 @@
 						<th>Non-mobile</th>
 						<th>Total</th>
 					</tr>
+					<tr class="success">
+						<th>All Locations</th>
+						<td>
+							<b>{{active.total.mobile}}</b>
+						</td>
+						<td>
+							<b>{{active.total.non-mobile}}</b>
+						</td>
+						<td class="text-right">
+							<span class="label label-success">{{active.total.count}}</span>
+						</td>
+					</tr>
 					<tr>
 						<th>Downtown</th>
 						<td>{{active.branch.dt.mobile}}</td>
@@ -76,14 +88,6 @@
 						<td>{{active.branch.es.mobile}}</td>
 						<td>{{active.branch.es.non-mobile}}</td>
 						<td class="text-right">{{active.branch.es.count}}</td>
-					</tr>
-					<tr>
-						<th>All Locations</th>
-						<td>{{active.total.mobile}}</td>
-						<td>{{active.total.non-mobile}}</td>
-						<td class="text-right">
-							<span class="label label-success">{{active.total.count}}</span>
-						</td>
 					</tr>
 				</table>
 				{{/with}}
