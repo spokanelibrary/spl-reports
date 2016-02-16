@@ -95,58 +95,17 @@
 			</div><!-- /.panel-body -->
 		</div><!-- /.panel -->
 
-		<!-- ACTIVE -->
-		<div class="panel panel-success">
-			<div class="panel-heading">
-				<button class="btn btn-success" 
-								data-toggle="collapse" 
-								data-target="#spl-wifi-active-panel">Right Now: {{range.now}} 
-								<span class="caret"></span></button>
-			</div><!-- /.panel-heading -->
-			{{#with detail.active}}
-			<div class="panel-body collapse" id="spl-wifi-active-panel">
-				<table class="table table-condensed table-bordered">
-					<tr>
-						<th>&nbsp;</th>
-						<th>Mobile</th>
-						<th>Non-mobile</th>
-						<th>Total</th>
-					</tr>
-					<tr class="success">
-						<th>{{total.label}}</th>
-						<td>
-							<b>{{total.mobile}}</b>
-						</td>
-						<td>
-							<b>{{total.non-mobile}}</b>
-						</td>
-						<td class="text-right">
-							<span class="label label-success">{{total.count}}</span>
-						</td>
-					</tr>
-					{{#each branch}}
-					<tr>
-						<th>{{label}}</th>
-						<td>{{mobile}}</td>
-						<td>{{non-mobile}}</td>
-						<td class="text-right">{{count}}</td>
-					</tr>
-					{{/each}}
-				</table>
-				{{/with}}
-			</div><!-- /.panel-body -->
-		</div><!-- /.panel -->
-
+		
 		<!-- TODAY -->
-		<div class="panel panel-success">
+		<div class="panel panel-info">
 			<div class="panel-heading">
-				<button class="btn btn-success" 
+				<button class="btn btn-info" 
 								data-toggle="collapse" 
-								data-target="#spl-wifi-active-panel">Today: {{range.today}} 
+								data-target="#spl-wifi-today-panel">Today: {{range.today}} 
 								<span class="caret"></span></button>
 			</div><!-- /.panel-heading -->
 			{{#with detail.today}}
-			<div class="panel-body collapse" id="spl-wifi-active-panel">
+			<div class="panel-body collapse" id="spl-wifi-today-panel">
 				<table class="table table-condensed table-bordered">
 					<tr>
 						<th>&nbsp;</th>
