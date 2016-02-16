@@ -37,15 +37,19 @@
 <hr class="hidden-print">
 
 <div class="spl-report-result"></div>
-<!--
+
 <br>
 <br>
 <div class="well well-sm spl-report-summary hidden-print">
 	<h3>Summary</h3>
 	<p>
+		Note: The end date is <b>not</b> counted. I.e., if you want to report on January, you should select Jan 1 &ndash; Feb 1.
+	</p>
+	<p>
+		We have a gap in data from about mid December 2015 &ndash; Feb 2, 2016. 
 	</p>
 </div>
--->
+
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
 	{{#unless sorted.detail}}
@@ -130,7 +134,7 @@
 						<td>Unique Devices</td>
 						<td>Daily Sessions</td>
 					</tr>
-					<tr class="info">
+					<tr class="warning">
 						<th>{{session.total.label}}</th>
 						<td class="text-right">
 							<b>{{unique.total.mobile}}</b>
