@@ -204,7 +204,7 @@
 					</div>
 				</div>
 			</div><!-- /.panel-heading -->
-			{{#with detail.thismonth.total}}
+			{{#with detail.thismonth}}
 			<div class="panel-body collapse in" id="spl-wifi-thismonth-panel">
 				<table class="table table-condensed table-bordered">
 					<tr>
@@ -213,7 +213,7 @@
 						<th colspan="2">Non-mobile</th>
 						<th colspan="2">Total</th>
 					</tr>
-					<tr>
+					<tr class="active">
 						<th>&nbsp;</th>
 						<td>Unique Devices</td>
 						<td>Daily Sessions</td>
@@ -223,21 +223,21 @@
 						<td>Daily Sessions</td>
 					</tr>
 					<tr class="info">
-						<th>{{total.label}}</th>
+						<th>{{total.total.label}}</th>
 						<td>
-							<b>{{total.mobile}}</b>
+							<b>{{unique.total.mobile}}</b>
 						</td>
 						<td>
-							<b>{{total.mobile}}</b>
+							<b>{{total.total.mobile}}</b>
 						</td>
 						<td>
-							<b>{{total.non-mobile}}</b>
+							<b>{{unique.total.non-mobile}}</b>
 						</td>
 						<td>
-							<b>{{total.non-mobile}}</b>
+							<b>{{total.total.non-mobile}}</b>
 						</td>
 						<td class="text-right">
-							<b>{{total.count}}</b>
+							<b>{{unique.count}}</b>
 						</td>
 						<td class="text-right">
 							<b>{{total.count}}</b>
