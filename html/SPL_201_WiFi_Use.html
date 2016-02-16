@@ -243,18 +243,14 @@
 							<b>{{session.total.count}}</b>
 						</td>
 					</tr>
-					{{#each loop}}
 					<tr>
-						<th>
-						{{@index}}
-						
-		            
+		        <th>
+		        	{{session.branch.0.label}}  
 		        </th>
 						<td></td>
 						<td></td>
 						<td class="text-right"></td>
 					</tr>
-					{{/each}}
 				</table>
 				{{/with}}
 			</div><!-- /.panel-body -->
