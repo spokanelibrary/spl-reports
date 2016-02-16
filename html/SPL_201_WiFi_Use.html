@@ -81,42 +81,14 @@
 							<span class="label label-success">{{total.count}}</span>
 						</td>
 					</tr>
+					{{#each branch}}
 					<tr>
-						<th>Downtown</th>
-						<td>{{branch.dt.mobile}}</td>
-						<td>{{branch.dt.non-mobile}}</td>
-						<td class="text-right">{{branch.dt.count}}</td>
+						<th>{{label}}</th>
+						<td>{{mobile}}</td>
+						<td>{{non-mobile}}</td>
+						<td class="text-right">{{count}}</td>
 					</tr>
-					<tr>
-						<th>East Side</th>
-						<td>{{branch.es.mobile}}</td>
-						<td>{{branch.es.non-mobile}}</td>
-						<td class="text-right">{{branch.es.count}}</td>
-					</tr>
-					<tr>
-						<th>Hillyard</th>
-						<td>{{branch.hy.mobile}}</td>
-						<td>{{branch.hy.non-mobile}}</td>
-						<td class="text-right">{{branch.hy.count}}</td>
-					</tr>
-					<tr>
-						<th>Indian Trail</th>
-						<td>{{branch.it.mobile}}</td>
-						<td>{{branch.it.non-mobile}}</td>
-						<td class="text-right">{{branch.it.count}}</td>
-					</tr>
-					<tr>
-						<th>Shadle</th>
-						<td>{{branch.sh.mobile}}</td>
-						<td>{{branch.sh.non-mobile}}</td>
-						<td class="text-right">{{branch.sh.count}}</td>
-					</tr>
-					<tr>
-						<th>South Hill</th>
-						<td>{{branch.so.mobile}}</td>
-						<td>{{active.branch.so.non-mobile}}</td>
-						<td class="text-right">{{branch.so.count}}</td>
-					</tr>
+					{{/each}}
 				</table>
 				{{/with}}
 			</div><!-- /.panel-body -->
