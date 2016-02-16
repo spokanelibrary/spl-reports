@@ -37,6 +37,9 @@ class SPL_Report {
 						$report->loadJs();
 						//$html .= '<div class="row">'.PHP_EOL;
 						//$html .= '<div class="col-sm-12">'.PHP_EOL;
+						$html .= '<style>';
+						$html .= '.popup { z-index : 5000; }';
+						$html .= '</style>';
 						$html .= '<div class="spl-report"
 											data-spl-report-nonce="'.wp_create_nonce( 'spl-report-nonce-'.$this->params['id'] ).'"
 											data-spl-report-id="'.$this->params['id'] .'">'.PHP_EOL;
