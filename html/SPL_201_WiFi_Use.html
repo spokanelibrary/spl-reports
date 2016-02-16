@@ -51,6 +51,7 @@
 	{{#unless sorted.detail}}
 		<h4>No results found</h4>
 	{{else}}
+		<!-- ACTIVE -->
 		{{#with sorted}}
 		<div class="panel panel-success">
 			<div class="panel-heading">
@@ -88,6 +89,30 @@
 						<td>{{active.branch.es.mobile}}</td>
 						<td>{{active.branch.es.non-mobile}}</td>
 						<td class="text-right">{{active.branch.es.count}}</td>
+					</tr>
+					<tr>
+						<th>Hillyard</th>
+						<td>{{active.branch.hy.mobile}}</td>
+						<td>{{active.branch.hy.non-mobile}}</td>
+						<td class="text-right">{{active.branch.hy.count}}</td>
+					</tr>
+					<tr>
+						<th>Indian Trail</th>
+						<td>{{active.branch.it.mobile}}</td>
+						<td>{{active.branch.it.non-mobile}}</td>
+						<td class="text-right">{{active.branch.it.count}}</td>
+					</tr>
+					<tr>
+						<th>Shadle</th>
+						<td>{{active.branch.sh.mobile}}</td>
+						<td>{{active.branch.sh.non-mobile}}</td>
+						<td class="text-right">{{active.branch.sh.count}}</td>
+					</tr>
+					<tr>
+						<th>South Hill</th>
+						<td>{{active.branch.so.mobile}}</td>
+						<td>{{active.branch.so.non-mobile}}</td>
+						<td class="text-right">{{active.branch.so.count}}</td>
 					</tr>
 				</table>
 				{{/with}}
