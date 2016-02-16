@@ -209,9 +209,18 @@
 				<table class="table table-condensed table-bordered">
 					<tr>
 						<th>&nbsp;</th>
-						<th>Mobile</th>
-						<th>Non-mobile</th>
-						<th>Total</th>
+						<th colspan="2">Mobile</th>
+						<th colspan="2">Non-mobile</th>
+						<th colspan="2">Total</th>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<th>Unique Devices</th>
+						<th>Daily Sessions</th>
+						<th>Unique Devices</th>
+						<th>Daily Sessions</th>
+						<th>Unique Devices</th>
+						<th>Daily Sessions</th>
 					</tr>
 					<tr class="info">
 						<th>{{total.label}}</th>
@@ -219,7 +228,16 @@
 							<b>{{total.mobile}}</b>
 						</td>
 						<td>
+							<b>{{total.mobile}}</b>
+						</td>
+						<td>
 							<b>{{total.non-mobile}}</b>
+						</td>
+						<td>
+							<b>{{total.non-mobile}}</b>
+						</td>
+						<td class="text-right">
+							<b>{{total.count}}</b>
 						</td>
 						<td class="text-right">
 							<b>{{total.count}}</b>
