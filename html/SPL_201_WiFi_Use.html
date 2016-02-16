@@ -55,10 +55,13 @@
 		{{#with sorted}}
 		<div class="panel panel-success">
 			<div class="panel-heading">
+				<button class="btn btn-success pull-right" 
+								data-toggle="collapse" 
+								data-target="#spl-wifi-active-panel">Show <span class="caret"></span></button>
 				<h3 class="panel-title">Right Now &ndash; {{range.now}}</h3>
 			</div><!-- /.panel-heading -->
 			{{#with detail}}
-			<div class="panel-body">
+			<div class="panel-body collapse" id="spl-wifi-active-panel">
 				<table class="table table-condensed table-bordered">
 					<tr>
 						<th>&nbsp;</th>
