@@ -245,7 +245,11 @@
 					</tr>
 					{{#each loop}}
 					<tr>
-						<th>{{#with lookup ../session.branch @index}} {{/with}}</th>
+						<th>
+						{{#with (lookup ../session.branch @index)}}
+		            {{label}
+		        {{/with}}
+						</th>
 						<td></td>
 						<td></td>
 						<td class="text-right"></td>
