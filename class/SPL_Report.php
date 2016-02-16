@@ -38,7 +38,7 @@ class SPL_Report {
 						//$html .= '<div class="row">'.PHP_EOL;
 						//$html .= '<div class="col-sm-12">'.PHP_EOL;
 						$html .= '<style>';
-						$html .= '.popup, .datepicker { z-index : 5000; }';
+						$html .= '.popup, .datepicker { z-index : 5000 !important; }';
 						$html .= '</style>';
 						$html .= '<div class="spl-report"
 											data-spl-report-nonce="'.wp_create_nonce( 'spl-report-nonce-'.$this->params['id'] ).'"
