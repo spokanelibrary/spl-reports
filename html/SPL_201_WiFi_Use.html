@@ -112,7 +112,7 @@
 					</div>
 				</div>
 			</div><!-- /.panel-heading -->
-			{{#with detail.today.total}}
+			{{#with detail.today.session}}
 			<div class="panel-body collapse" id="spl-wifi-today-panel">
 				<table class="table table-condensed table-bordered">
 					<tr>
@@ -158,7 +158,7 @@
 					</div>
 				</div>
 			</div><!-- /.panel-heading -->
-			{{#with detail.yesterday.total}}
+			{{#with detail.yesterday.session}}
 			<div class="panel-body collapse" id="spl-wifi-yesterday-panel">
 				<table class="table table-condensed table-bordered">
 					<tr>
@@ -228,19 +228,19 @@
 							<b>{{unique.total.mobile}}</b>
 						</td>
 						<td>
-							<b>{{total.total.mobile}}</b>
+							<b>{{session.total.mobile}}</b>
 						</td>
 						<td>
 							<b>{{unique.total.non-mobile}}</b>
 						</td>
 						<td>
-							<b>{{total.total.non-mobile}}</b>
+							<b>{{session.total.non-mobile}}</b>
 						</td>
 						<td class="text-right">
 							<b>{{unique.total.count}}</b>
 						</td>
 						<td class="text-right">
-							<b>{{total.total.count}}</b>
+							<b>{{session.total.count}}</b>
 						</td>
 					</tr>
 					{{#each branch}}
