@@ -371,8 +371,8 @@ class SPL_Report {
 		$reports->prog->list[] = array('Summer Reading Signups'
 													,'./107/');
 
-		$reports->tech->label = 'Technology';
-		$reports->tech->list[] = array('WiFi Stats'
+		$reports->cust->label = 'Technology';
+		$reports->cust->list[] = array('WiFi Use'
 													,'./201/');
 
 		$reports->fdtn->label = 'SPL Foundation';
@@ -401,9 +401,11 @@ class SPL_Report {
 		$other->circ->list[] = array('Borrowers Forced to Debt Collection'
 																,'http://web.spokanelibrary.org/reports/184');
 		*/
+		/*
 		$other->cust->label = 'Customers';
 		$other->cust->list[] = array('WiFi Use Count'
 																,'http://web.spokanelibrary.org/spl-wireless-track/');
+		*/
 		/*
 		$other->cust->list[] = array('Summer Reading Signup'
 																,'http://web.spokanelibrary.org/reports/107');
