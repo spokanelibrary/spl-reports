@@ -99,6 +99,129 @@
 			</div><!-- /.panel-body -->
 		</div><!-- /.panel -->
 
+
+		<!-- DATE RANGE -->
+		<div class="panel panel-warning">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-md-4">
+						<button class="btn btn-block btn-warning" 
+										data-toggle="collapse" 
+										data-target="#spl-wifi-daterange-panel"><b>Date Range:</b> {{range.datebegin}} &ndash; {{range.datefinish}} 
+						<span class="caret"></span></button>
+					</div>
+				</div>
+			</div><!-- /.panel-heading -->
+			{{#with detail.daterange}}
+			<div class="panel-body collapse in" id="spl-wifi-daterange-panel">
+				<table class="table table-condensed table-bordered">
+					<tr>
+						<th>&nbsp;</th>
+						<th colspan="2">Mobile</th>
+						<th colspan="2">Non-mobile</th>
+						<th colspan="2">Total</th>
+					</tr>
+					<tr class="active">
+						<th>&nbsp;</th>
+						<td>Unique Devices</td>
+						<td>Daily Sessions</td>
+						<td>Unique Devices</td>
+						<td>Daily Sessions</td>
+						<td>Unique Devices</td>
+						<td>Daily Sessions</td>
+					</tr>
+					<tr class="info">
+						<th>{{session.total.label}}</th>
+						<td class="text-right">
+							<b>{{unique.total.mobile}}</b>
+						</td>
+						<td class="text-right">
+							<b>{{session.total.mobile}}</b>
+						</td>
+						<td class="text-right">
+							<b>{{unique.total.non-mobile}}</b>
+						</td>
+						<td class="text-right">
+							<b>{{session.total.non-mobile}}</b>
+						</td>
+						<td class="text-right">
+							<b>{{unique.total.count}}</b>
+						</td>
+						<td class="text-right">
+							<b>{{session.total.count}}</b>
+						</td>
+					</tr>
+					<tr>
+		        <th>
+		        	{{session.branch.0.label}}  
+		        </th>
+						<td class="text-right">{{unique.branch.0.mobile}}</td>
+						<td class="text-right">{{session.branch.0.mobile}}</td>
+						<td class="text-right">{{unique.branch.0.non-mobile}}</td>
+						<td class="text-right">{{session.branch.0.non-mobile}}</td>
+						<td class="text-right">{{unique.branch.0.count}}</td>
+						<td class="text-right">{{session.branch.0.count}}</td>
+					</tr>
+					<tr>
+		        <th>
+		        	{{session.branch.1.label}}  
+		        </th>
+						<td class="text-right">{{unique.branch.1.mobile}}</td>
+						<td class="text-right">{{session.branch.1.mobile}}</td>
+						<td class="text-right">{{unique.branch.1.non-mobile}}</td>
+						<td class="text-right">{{session.branch.1.non-mobile}}</td>
+						<td class="text-right">{{unique.branch.1.count}}</td>
+						<td class="text-right">{{session.branch.1.count}}</td>
+					</tr>
+					<tr>
+		        <th>
+		        	{{session.branch.2.label}}  
+		        </th>
+						<td class="text-right">{{unique.branch.2.mobile}}</td>
+						<td class="text-right">{{session.branch.2.mobile}}</td>
+						<td class="text-right">{{unique.branch.2.non-mobile}}</td>
+						<td class="text-right">{{session.branch.2.non-mobile}}</td>
+						<td class="text-right">{{unique.branch.2.count}}</td>
+						<td class="text-right">{{session.branch.2.count}}</td>
+					</tr>
+					<tr>
+		        <th>
+		        	{{session.branch.3.label}}  
+		        </th>
+						<td class="text-right">{{unique.branch.3.mobile}}</td>
+						<td class="text-right">{{session.branch.3.mobile}}</td>
+						<td class="text-right">{{unique.branch.3.non-mobile}}</td>
+						<td class="text-right">{{session.branch.3.non-mobile}}</td>
+						<td class="text-right">{{unique.branch.3.count}}</td>
+						<td class="text-right">{{session.branch.3.count}}</td>
+					</tr>
+					<tr>
+		        <th>
+		        	{{session.branch.4.label}}  
+		        </th>
+						<td class="text-right">{{unique.branch.4.mobile}}</td>
+						<td class="text-right">{{session.branch.4.mobile}}</td>
+						<td class="text-right">{{unique.branch.4.non-mobile}}</td>
+						<td class="text-right">{{session.branch.4.non-mobile}}</td>
+						<td class="text-right">{{unique.branch.4.count}}</td>
+						<td class="text-right">{{session.branch.4.count}}</td>
+					</tr>
+					<tr>
+		        <th>
+		        	{{session.branch.5.label}}  
+		        </th>
+						<td class="text-right">{{unique.branch.5.mobile}}</td>
+						<td class="text-right">{{session.branch.5.mobile}}</td>
+						<td class="text-right">{{unique.branch.5.non-mobile}}</td>
+						<td class="text-right">{{session.branch.5.non-mobile}}</td>
+						<td class="text-right">{{unique.branch.5.count}}</td>
+						<td class="text-right">{{session.branch.5.count}}</td>
+					</tr>
+				</table>
+				{{/with}}
+			</div><!-- /.panel-body -->
+		</div><!-- /.panel -->
+
 		
 		<!-- TODAY -->
 		<div class="panel panel-info">
@@ -205,7 +328,7 @@
 				</div>
 			</div><!-- /.panel-heading -->
 			{{#with detail.thismonth}}
-			<div class="panel-body collapse in" id="spl-wifi-thismonth-panel">
+			<div class="panel-body collapse" id="spl-wifi-thismonth-panel">
 				<table class="table table-condensed table-bordered">
 					<tr>
 						<th>&nbsp;</th>
@@ -307,7 +430,7 @@
 						<td class="text-right">{{unique.branch.5.non-mobile}}</td>
 						<td class="text-right">{{session.branch.5.non-mobile}}</td>
 						<td class="text-right">{{unique.branch.5.count}}</td>
-						<td class="text-right">{{session.branch.6.count}}</td>
+						<td class="text-right">{{session.branch.5.count}}</td>
 					</tr>
 				</table>
 				{{/with}}
