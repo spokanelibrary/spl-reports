@@ -76,10 +76,10 @@
 					</tr>
 					<tr class="success">
 						<th>{{total.label}}</th>
-						<td>
+						<td class="text-right">
 							<b>{{total.mobile}}</b>
 						</td>
-						<td>
+						<td class="text-right">
 							<b>{{total.non-mobile}}</b>
 						</td>
 						<td class="text-right">
@@ -123,10 +123,10 @@
 					</tr>
 					<tr class="info">
 						<th>{{total.label}}</th>
-						<td>
+						<td class="text-right">
 							<b>{{total.mobile}}</b>
 						</td>
-						<td>
+						<td class="text-right">
 							<b>{{total.non-mobile}}</b>
 						</td>
 						<td class="text-right">
@@ -135,9 +135,9 @@
 					</tr>
 					{{#each branch}}
 					<tr>
-						<th>{{label}}</th>
-						<td>{{mobile}}</td>
-						<td>{{non-mobile}}</td>
+						<th class="text-right">{{label}}</th>
+						<td class="text-right">{{mobile}}</td>
+						<td class="text-right">{{non-mobile}}</td>
 						<td class="text-right">{{count}}</td>
 					</tr>
 					{{/each}}
@@ -169,7 +169,7 @@
 					</tr>
 					<tr class="info">
 						<th>{{total.label}}</th>
-						<td>
+						<td class="text-right">
 							<b>{{total.mobile}}</b>
 						</td>
 						<td>
@@ -182,8 +182,8 @@
 					{{#each branch}}
 					<tr>
 						<th>{{label}}</th>
-						<td>{{mobile}}</td>
-						<td>{{non-mobile}}</td>
+						<td class="text-right">{{mobile}}</td>
+						<td class="text-right">{{non-mobile}}</td>
 						<td class="text-right">{{count}}</td>
 					</tr>
 					{{/each}}
@@ -224,16 +224,16 @@
 					</tr>
 					<tr class="info">
 						<th>{{session.total.label}}</th>
-						<td>
+						<td class="text-right">
 							<b>{{unique.total.mobile}}</b>
 						</td>
-						<td>
+						<td class="text-right">
 							<b>{{session.total.mobile}}</b>
 						</td>
-						<td>
+						<td class="text-right">
 							<b>{{unique.total.non-mobile}}</b>
 						</td>
-						<td>
+						<td class="text-right">
 							<b>{{session.total.non-mobile}}</b>
 						</td>
 						<td class="text-right">
@@ -247,9 +247,12 @@
 		        <th>
 		        	{{session.branch.0.label}}  
 		        </th>
-						<td></td>
-						<td></td>
-						<td class="text-right"></td>
+						<td class="text-right">unique.branch.0.mobile</td>
+						<td class="text-right">session.branch.0.mobile</td>
+						<td class="text-right">unique.branch.0.non-mobile</td>
+						<td class="text-right">session.branch.0.non-mobile</td>
+						<td class="text-right">unique.branch.0.total</td>
+						<td class="text-right">session.branch.0.total</td>
 					</tr>
 				</table>
 				{{/with}}
