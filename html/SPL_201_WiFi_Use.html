@@ -89,8 +89,8 @@
 					{{#each branch}}
 					<tr>
 						<th>{{label}}</th>
-						<td>{{mobile}}</td>
-						<td>{{non-mobile}}</td>
+						<td class="text-right">{{mobile}}</td>
+						<td class="text-right">{{non-mobile}}</td>
 						<td class="text-right">{{count}}</td>
 					</tr>
 					{{/each}}
@@ -172,7 +172,7 @@
 						<td class="text-right">
 							<b>{{total.mobile}}</b>
 						</td>
-						<td>
+						<td class="text-right">
 							<b>{{total.non-mobile}}</b>
 						</td>
 						<td class="text-right">
@@ -251,8 +251,8 @@
 						<td class="text-right">{{session.branch.0.mobile}}</td>
 						<td class="text-right">{{unique.branch.0.non-mobile}}</td>
 						<td class="text-right">{{session.branch.0.non-mobile}}</td>
-						<td class="text-right">{{unique.branch.0.total}}</td>
-						<td class="text-right">{{session.branch.0.total}}</td>
+						<td class="text-right">{{unique.branch.0.count}}</td>
+						<td class="text-right">{{session.branch.0.count}}</td>
 					</tr>
 				</table>
 				{{/with}}
