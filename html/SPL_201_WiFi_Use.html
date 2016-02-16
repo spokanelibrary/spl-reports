@@ -103,10 +103,14 @@
 		<!-- TODAY -->
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				<button class="btn btn-info" 
-								data-toggle="collapse" 
-								data-target="#spl-wifi-today-panel"><b>Today:</b> {{range.today}} 
-								<span class="caret"></span></button>
+				<div class="row">
+					<div class="col-md-3">
+						<button class="btn btn-block btn-info" 
+										data-toggle="collapse" 
+										data-target="#spl-wifi-today-panel"><b>Today:</b> {{range.today}} 
+						<span class="caret"></span></button>
+					</div>
+				</div>
 			</div><!-- /.panel-heading -->
 			{{#with detail.today.total}}
 			<div class="panel-body collapse" id="spl-wifi-today-panel">
