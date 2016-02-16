@@ -371,6 +371,14 @@ class SPL_Report {
 		$reports->prog->list[] = array('Summer Reading Signups'
 													,'./107/');
 
+		$reports->tech->label = 'Technology';
+		$reports->tech->list[] = array('WiFi Stats'
+													,'./201/');
+
+		$reports->fdtn->label = 'SPL Foundation';
+		$reports->fdtn->list[] = array('CHoF Nominations'
+													,'./202/');
+
 		$todo->create->label = 'Reports Needed';
 		$todo->create->list[] = array('Non-res tieout'
 													,'./');
