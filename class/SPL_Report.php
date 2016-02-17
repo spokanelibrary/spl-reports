@@ -52,7 +52,7 @@ class SPL_Report {
 							$this->params['vals'] = $_REQUEST;
 							//$html .= print_r($_FILES, true);
 							$html .= print_r($this->params, true);
-							$html .= print_r($report->processData($report->getReportData()), true);
+							$html .= print_r($report->getReportData(), true);
 						}
 
 						$html .= PHP_EOL.'</div>'.PHP_EOL;
