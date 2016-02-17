@@ -50,11 +50,11 @@ class SPL_Report {
 						if ( $_REQUEST['noajax'] ) {
 							//$this->params = array_merge( $this->params, $_REQUEST );
 							$report->params['vals'] = $_REQUEST;
-							//$html .= print_r($_FILES, true);
-							$html .= '<pre>'.print_r($this->params, true).'</pre>';
-							$html .= '<pre>'.print_r($report, true).'</pre>';
+							$report->params['files'] = $_FILES;
 
-							$html .= print_r($report->getReportData(), true);
+							//$html .= '<pre>'.print_r($report, true).'</pre>';
+
+							$html .= '<pre>'.print_r($report->getReportData(), true).'</pre>';
 						}
 
 						$html .= PHP_EOL.'</div>'.PHP_EOL;
