@@ -2,7 +2,7 @@
 	<h2>OverDrive MetaData <small>recursive parser</small></h2>
 	<fieldset>
 		<legend>
-			Covert an OverDrive Metadata spreadsheet to a .mrc file.
+			Convert an OverDrive Metadata spreadsheet to a .mrc file.
 		</legend>
 
 		<div class="form-group">
@@ -34,15 +34,26 @@
 <hr class="hidden-print">
 
 <div class="spl-report-result"></div>
-<!--
+
 <br>
 <br>
 <div class="well well-sm spl-report-summary hidden-print">
 	<h3>Summary</h3>
-	<p>
-	</p>
+	<ol>
+    <li>Begin with a metadata spreadsheet from OverDrive in .xls format. Edit if necessary.</li>
+    <li>Save the OverDrive metadata file as a CSV file (File » Save AS » Comma Separated Values).</li>
+    <li>Using the form below, browse to the CSV file you just saved, select it, and press the Process File Now! button.</li>
+    <li>Wait. Once the file is processed you will see a screen displaying the results.</li>
+    <li>Download the MARC output file and save it in a convenient location.</li>
+    <li>Download the Error Log and save it in a convenient location as well.</li>
+    <li>Open the Error Log spreadsheet (.xls). Fill in missing values. Create appropriate OCLC records.</li>
+    <li>Repeat these steps using the edited Error Log file as the source metadata spreadsheet in step 1.</li>
+  </ol>
+  <blockquote>
+		You are finished when the Error Log is empty! Let me know if you have any questions. <small>sean</small>
+	</blockquote>
 </div>
--->
+
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
 	{{#unless sorted.detail}}
