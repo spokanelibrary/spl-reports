@@ -26,6 +26,10 @@ var splReport = {
 			}
 		});
 
+		if ( $('.spl-report-json') ) {
+			console.log('json');
+		}
+
 		
 		$datepicker = $('.date');
 		if ( $datepicker.length ) {

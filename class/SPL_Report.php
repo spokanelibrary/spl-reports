@@ -48,13 +48,12 @@ class SPL_Report {
 						$html .= $report->getTmpl($class->tmpl);	
 						
 						if ( $_REQUEST['noajax'] ) {
-							//$this->params = array_merge( $this->params, $_REQUEST );
 							$report->params['vals'] = $_REQUEST;
 							$report->params['files'] = $_FILES;
-
-							//$html .= '<pre>'.print_r($report, true).'</pre>';
-
-							$html .= '<pre>'.print_r($report->getReportData(), true).'</pre>';
+							$html .= PHP_EOL;
+							$html .= '<script id="spl-report-json" type="application/json">'.PHP_EOL;
+							$html .= json_encode($report->getReportData(), true);
+							$html .= '</script>'.PHP_EOL;
 						}
 
 						$html .= PHP_EOL.'</div>'.PHP_EOL;
