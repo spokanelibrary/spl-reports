@@ -19,6 +19,7 @@ var splReport = {
 	}
 	,initUI: function() {
 		$('body').on('submit', '.spl-report-control', function(e) {
+			console.log(this.data('noajax'));
 			e.preventDefault();
 			_this.getReport();
 		});
