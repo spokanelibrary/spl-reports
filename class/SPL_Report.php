@@ -38,11 +38,7 @@ class SPL_Report {
 						//$html .= '<div class="row">'.PHP_EOL;
 						//$html .= '<div class="col-sm-12">'.PHP_EOL;
 
-						if ( $_REQUEST['noajax'] ) {
-							$html .= print_r($_FILES, true);
-						}
-
-
+						
 						$html .= '<style>';
 						$html .= '.popup, .datepicker { z-index : 5000 !important; }';
 						$html .= '</style>';
@@ -50,6 +46,11 @@ class SPL_Report {
 											data-spl-report-nonce="'.wp_create_nonce( 'spl-report-nonce-'.$this->params['id'] ).'"
 											data-spl-report-id="'.$this->params['id'] .'">'.PHP_EOL;
 						$html .= $report->getTmpl($class->tmpl);	
+						
+						if ( $_REQUEST['noajax'] ) {
+							$html .= print_r($_FILES, true);
+						}
+
 						$html .= PHP_EOL.'</div>'.PHP_EOL;
 						//$html .= PHP_EOL.'</div>'.PHP_EOL;
 						//$html .= PHP_EOL.'</div>'.PHP_EOL;
