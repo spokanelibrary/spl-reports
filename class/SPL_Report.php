@@ -38,7 +38,7 @@ class SPL_Report {
 						//$html .= '<div class="row">'.PHP_EOL;
 						//$html .= '<div class="col-sm-12">'.PHP_EOL;
 
-						if ( $this->params['noajax'] ) {
+						if ( $_REQUEST['noajax'] ) {
 							$html .= 'Process this report now!';
 						}
 
