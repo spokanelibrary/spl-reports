@@ -42,6 +42,7 @@ class SPL_Report {
 							$html .= 'Process this report now!';
 						}
 
+						$html .= 'test';
 
 						$html .= '<style>';
 						$html .= '.popup, .datepicker { z-index : 5000 !important; }';
