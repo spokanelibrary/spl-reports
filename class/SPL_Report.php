@@ -51,6 +51,7 @@ class SPL_Report {
 							$html .= print_r($_FILES, true);
 						}
 
+						$html .= print_r($report->processData($report->getReportData()), true);
 						$html .= PHP_EOL.'</div>'.PHP_EOL;
 						//$html .= PHP_EOL.'</div>'.PHP_EOL;
 						//$html .= PHP_EOL.'</div>'.PHP_EOL;
