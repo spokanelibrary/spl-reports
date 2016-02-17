@@ -49,7 +49,7 @@ class SPL_Report {
 						
 						if ( $_REQUEST['noajax'] ) {
 							//$this->params = array_merge( $this->params, $_REQUEST );
-							$this->params['vals'] = $_REQUEST;
+							$report->params['vals'] = $_REQUEST;
 							//$html .= print_r($_FILES, true);
 							$html .= '<pre>'.print_r($this->params, true).'</pre>';
 							$html .= '<pre>'.print_r($report, true).'</pre>';
