@@ -51,7 +51,9 @@ class SPL_Report {
 							//$this->params = array_merge( $this->params, $_REQUEST );
 							$this->params['vals'] = $_REQUEST;
 							//$html .= print_r($_FILES, true);
-							$html .= print_r($this->params, true);
+							$html .= '<pre>'.print_r($this->params, true).'</pre>';
+							$html .= '<pre>'.print_r($report).'</pre>';
+
 							$html .= print_r($report->getReportData(), true);
 						}
 
