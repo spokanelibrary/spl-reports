@@ -49,7 +49,9 @@ class SPL_Report {
 						
 						if ( $_REQUEST['noajax'] ) {
 							$report->params['vals'] = $_REQUEST;
-							$report->params['files'] = $_FILES;
+							if ( !empty($_FILES) ) {
+								$report->params['files'] = $_FILES;
+							}
 							$html .= PHP_EOL;
 							$html .= '<script id="spl-report-json" type="application/json">'.PHP_EOL;
 							$html .= json_encode($report->getReportData(), true);
