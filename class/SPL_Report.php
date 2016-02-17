@@ -48,7 +48,8 @@ class SPL_Report {
 						$html .= $report->getTmpl($class->tmpl);	
 						
 						if ( $_REQUEST['noajax'] ) {
-							$this->params = array_merge( $this->params, $_REQUEST );
+							//$this->params = array_merge( $this->params, $_REQUEST );
+							$this->params['vals'] = $_REQUEST;
 							//$html .= print_r($_FILES, true);
 							$html .= print_r($this->params, true);
 							$html .= print_r($report->processData($report->getReportData()), true);
