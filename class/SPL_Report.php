@@ -39,10 +39,9 @@ class SPL_Report {
 						//$html .= '<div class="col-sm-12">'.PHP_EOL;
 
 						if ( $_REQUEST['noajax'] ) {
-							$html .= 'Process this report now!';
+							$html .= print_r($_FILES, true);
 						}
 
-						$html .= 'test';
 
 						$html .= '<style>';
 						$html .= '.popup, .datepicker { z-index : 5000 !important; }';
