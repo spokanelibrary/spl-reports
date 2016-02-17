@@ -27,8 +27,8 @@ var splReport = {
 		});
 
 
-		if ( $('.spl-report-json').length > 0 ) { 
-      var $report = $('.spl-report-json');
+		if ( $('#spl-report-json').length > 0 ) { 
+      var $report = $('#spl-report-json');
       //if ( $account && $account.text().length > 0 ) {
       if ( $report && $report.html().length > 0 ) {
         //var user = JSON.parse($account.text());
