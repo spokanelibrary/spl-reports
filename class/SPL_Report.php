@@ -52,7 +52,7 @@ class SPL_Report {
 							$this->params['vals'] = $_REQUEST;
 							//$html .= print_r($_FILES, true);
 							$html .= '<pre>'.print_r($this->params, true).'</pre>';
-							$html .= '<pre>'.print_r($report).'</pre>';
+							$html .= '<pre>'.print_r($report, true).'</pre>';
 
 							$html .= print_r($report->getReportData(), true);
 						}
