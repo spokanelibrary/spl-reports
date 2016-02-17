@@ -48,10 +48,11 @@ class SPL_Report {
 						$html .= $report->getTmpl($class->tmpl);	
 						
 						if ( $_REQUEST['noajax'] ) {
+							$this->params['vals'] = $_REQUEST;
 							$html .= print_r($_FILES, true);
+							$html .= print_r($report->processData($report->getReportData()), true);
 						}
 
-						$html .= print_r($report->processData($report->getReportData()), true);
 						$html .= PHP_EOL.'</div>'.PHP_EOL;
 						//$html .= PHP_EOL.'</div>'.PHP_EOL;
 						//$html .= PHP_EOL.'</div>'.PHP_EOL;
