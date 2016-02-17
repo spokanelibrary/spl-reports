@@ -49,7 +49,7 @@ class SPL_Report {
 						
 						if ( $_REQUEST['noajax'] ) {
 							$this->params['vals'] = $_REQUEST;
-							$html .= print_r($_FILES, true);
+							//$html .= print_r($_FILES, true);
 							$html .= print_r($report->processData($report->getReportData()), true);
 						}
 
