@@ -50,7 +50,18 @@ class SPL_Report {
 						if ( $_REQUEST['noajax'] ) {
 							$report->params['vals'] = $_REQUEST;
 							if ( !empty($_FILES) ) {
-								$report->params['files'] = $_FILES;
+								// move files to scratch dir so we can process them out-of-band
+								// you must delete your own scratch files!
+								foreach ( $_FILES as $file ) {
+									if ( UPLOAD_ERR_OK == $file['error'] ) {
+						        $upload = move_uploaded_file($file['tmp_name']
+						          , '/var/web/---/upload/'.$file['tmp_name']);
+						        
+							    }
+								}
+
+								$report->params['files'] = $upload;
+								//$report->params['files'] = $_FILES;
 							}
 							$html .= PHP_EOL;
 							$html .= '<script id="spl-report-json" type="application/json">'.PHP_EOL;
