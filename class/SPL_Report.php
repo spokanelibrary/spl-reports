@@ -6,6 +6,7 @@ class SPL_Report {
 	var $config;
 	var $apikey;
 	var $output;
+	var $upload = '/var/web/---/upload/';
 	var $endpoint = 'https://app.spokanelibrary.org/v3/spl-reports/';
 
 	function __construct($params=null, $config=null) {
@@ -55,13 +56,12 @@ class SPL_Report {
 								foreach ( $_FILES as $file ) {
 									if ( UPLOAD_ERR_OK == $file['error'] ) {
 						        $upload = move_uploaded_file($file['tmp_name']
-						          , '/var/web/---/upload/'.$file['tmp_name']);
+						          , $this->upload.$file['tmp_name']);
 						        
 							    }
 								}
 
-								$report->params['files'] = $upload;
-								//$report->params['files'] = $_FILES;
+								$report->params['files'] = $_FILES;
 							}
 							$html .= PHP_EOL;
 							$html .= '<script id="spl-report-json" type="application/json">'.PHP_EOL;
