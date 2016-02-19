@@ -56,12 +56,21 @@
 					<a rel="external" class="btn btn-primary" href="http://staff.spokanelibrary.org/dl/?file=ocmrc">Download MARC File</a>
 				</p>
 				<p>
-					<button class="btn btn-success" data-toggle="collapse" data-target="#overdrive-mrc">View MARC Output</button>
+					<button class="btn btn-success" data-toggle="collapse" data-target="#oneclick-mrc">View MARC Output</button>
 				</p>
 				{{else}}
 					<h5>No MARC records proccessed :(</h5>
 				{{/if}}
 			</div>
+		</div>
+
+		<div class="collapse" id="oneclick-mrc">
+			{{#if sorted.records}}
+				{{#each sorted.records}}
+					<span class="label label-success"># {{id}}</span>
+					<pre style="background:#fff;">{{{marc}}}</pre>
+				{{/each}}
+			{{/if}}
 		</div>
 
 	{{/unless}}
