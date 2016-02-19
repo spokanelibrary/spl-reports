@@ -83,10 +83,10 @@
 					</div>
 					<div class="panel-body">
 						<p>
-							<a rel="external" class="btn btn-primary" href="http://staff.spokanelibrary.org/dl/?file=oderr">Download Error Log</a>
+							<a rel="external" class="btn btn-danger" href="http://staff.spokanelibrary.org/dl/?file=oderr">Download Error Log</a>
 						</p>
 						<p>
-							<button class="btn btn-success" data-toggle="collapse" data-target="#overdrive-err">View Error Log</button>
+							<button class="btn btn-warning" data-toggle="collapse" data-target="#overdrive-err">View Error Log</button>
 						</p>
 					</div>
 				</div>
@@ -116,7 +116,7 @@
 			{{#if sorted.records}}
 				{{#each sorted.records}}
 					<span class="label label-success"># {{id}}</span>
-					<pre>{{{marc}}}</pre>
+					<pre style="background:#fff;">{{{marc}}}</pre>
 				{{/each}}
 			{{/if}}
 		</div>
