@@ -396,6 +396,8 @@ class SPL_Report {
 													,'./183/');
 		$reports->ss->list[] = array('OverDrive MetaData Parser'
 													,'./203/');
+		$reports->ss->list[] = array('OneClick MARC Record Parser'
+													,'./204/');
 
 		$reports->prog->label = 'Programming';
 		$reports->prog->list[] = array('Summer Reading Signups'
