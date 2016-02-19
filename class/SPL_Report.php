@@ -394,6 +394,8 @@ class SPL_Report {
 													,'./11/');
 		$reports->ss->list[] = array('Paperbacks by Location - Obsolete?'
 													,'./183/');
+		$reports->ss->list[] = array('OverDrive MetaData Parser'
+													,'./203/');
 
 		$reports->prog->label = 'Programming';
 		$reports->prog->list[] = array('Summer Reading Signups'
