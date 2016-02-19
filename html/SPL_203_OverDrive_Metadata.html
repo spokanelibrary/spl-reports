@@ -67,6 +67,7 @@
 						<h4 class="panel-title">MARC File</h4>
 					</div>
 					<div class="panel-body">
+						<button class="btn btn-success" data-toggle="collapse" data-target="#overdrive-mrc">View MARC Output</button>
 					</div>
 				</div>
 			</div>
@@ -76,18 +77,19 @@
 						<h4 class="panel-title">Error Log</h4>
 					</div>
 					<div class="panel-body">
+						<button class="btn btn-success" data-toggle="collapse" data-target="#overdrive-err">View Error Log</button>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="collapse in" id="overdrive-mrc">
+		<div class="collapse" id="overdrive-err">
 			{{#if sorted.errors}}
 				{{#each sorted.errors}}
 					<span class="label label-warning">Row # {{row}}</span>
 					<div class="panel panel-default">
 						<div class="panel-body">
-							<h5>{{title}}</h5>
+							<h4>{{title}}</h4>
 							<dl class="dl-horizontal">
 								<dt>ISBN</dt>
 								<dd>{{isbn}}</dd>
@@ -99,6 +101,8 @@
 					</div>
 				{{/each}}
 			{{/if}}
+		</div>
+		<div class="collapse" id="overdrive-mrc">
 			{{#if sorted.records}}
 				{{#each sorted.records}}
 					<span class="label label-success"># {{id}}</span>
