@@ -82,6 +82,23 @@
 		</div>
 
 		<div class="collapse in" id="overdrive-mrc">
+			{{#if sorted.errors}}
+				{{#each sorted.errors}}
+					<span class="label label-warning">Row # {{row}}</span>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h5>{{title}}</h5>
+							<dl class="dl-horizontal">
+								<dt>ISBN</dt>
+								<dd>{{isbn}}</dd>
+								<dt>OCLC</dt>
+								<dd>{{oclc}}</dd>
+							</dl>
+							<a href="{{url}}">{{url}}</a>
+						</div>
+					</div>
+				{{/each}}
+			{{/if}}
 			{{#if sorted.records}}
 				{{#each sorted.records}}
 					<span class="label label-success"># {{id}}</span>
