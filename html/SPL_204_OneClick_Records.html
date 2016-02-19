@@ -1,0 +1,52 @@
+<form class="form-inline spl-report-control hidden-print" data-noajax="true" method="post" enctype="multipart/form-data">
+	<h2>OverClick Records <small>MARC cleanup</small></h2>
+	<fieldset>
+		<legend>
+			Drop a OneClick .mrc file in and get it back with SPL optimizations.
+		</legend>
+
+		<div class="form-group">
+			<input type="file" name="metadata"> 
+		</div>
+
+
+		<input type="hidden" name="noajax" value="true">
+
+		<button type="submit" class="btn btn-success">
+			Run Report <small class="glyphicon glyphicon-arrow-right"></small>
+		</button>
+		<a href="./" class="btn btn-default pull-right">
+			<small class="glyphicon glyphicon-refresh"></small> Reset</a>
+
+	</fieldset>
+</form>
+
+<hr class="hidden-print">
+
+<div class="spl-report-result"></div>
+
+<br>
+<br>
+<div class="well well-sm spl-report-summary hidden-print">
+	<h3>Instructions</h3>
+	<ol>
+    <li>Begin with a single MARC file from OneClick.</li>
+    <li>Select this file using the <i>Choose File</i> button and then press the <b>Run Report</b> button.</li>
+    <li>Wait. Once the file is processed you will see a screen displaying the results.</li>
+    <li>Download the MARC output file and save it in a convenient location.</li>
+    <li>That's it.</li>
+  </ol>
+  <blockquote>
+		Let me know if you have any questions. <small>sean</small>
+	</blockquote>
+</div>
+
+<script class="spl-report-tmpl" type="text/x-handlebars-template">
+{{#with report}}
+	{{#unless sorted}}
+		<h4>No results found</h4>
+	{{else}}
+
+	{{/unless}}
+{{/with}}
+</script>
