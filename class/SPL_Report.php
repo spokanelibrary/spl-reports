@@ -190,7 +190,7 @@ class SPL_Report {
 						if ( $item['divider'] ) {
 							//$html .= '<li role="separator" class="divider"></li>';
 						} else {
-							$html .= '<li><a href="'.$item[1].'">'.$item[0].'</a></li>';
+							$html .= '<li><a rel="external" href="'.$item[1].'">'.$item[0].'</a></li>';
 						}
 					}	
 					$html .= '</ul>';
