@@ -42,11 +42,6 @@ class SPL_Report {
 						
 						$html .= '<style>';
 						$html .= '.popup, .datepicker { z-index : 5000 !important; }'.PHP_EOL;
-						$html .= '.no-href {
-											  a[href]:after {
-											    content: none !important;
-											  }
-											}';
 						$html .= '</style>';
 						$html .= '<div class="spl-report"
 											data-spl-report-nonce="'.wp_create_nonce( 'spl-report-nonce-'.$this->params['id'] ).'"
@@ -283,9 +278,12 @@ class SPL_Report {
 	}
 
 	protected function loadJs() {
+		wp_enqueue_style( 'spl-reports-custom-css', plugins_url('css/spl-report.css', dirname(__FILE__)) );
+		
+
 		wp_enqueue_script( 'spl-reports-datepicker', plugins_url('js/vendor/bootstrap-datepicker.js', dirname(__FILE__)) );
 		wp_enqueue_style( 'spl-reports-datepicker-css', plugins_url('css/vendor/datepicker.min.css', dirname(__FILE__)) );
-		
+
 		wp_enqueue_script( 'spl-reports-dynatable', plugins_url('js/vendor/jquery.dynatable.js', dirname(__FILE__)) );
 		wp_enqueue_style( 'spl-reports-dynatable-css', plugins_url('css/vendor/jquery.dynatable.css', dirname(__FILE__)) );
 		
