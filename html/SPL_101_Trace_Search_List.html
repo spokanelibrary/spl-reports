@@ -33,7 +33,7 @@
 	{{#if sorted.locations}}
 	<ul class="nav nav-tabs" role="tablist">
 	  {{#each sorted.locations}}
-	  <li role="presentation"><a class="{{#compare @index 0}}active{{/compare}}" href="#{{code}}" aria-controls="nav" role="tab" data-toggle="tab">{{label}}</a></li>
+	  <li role="presentation" class="{{#compare @index 0}}active{{/compare}}"><a href="#{{code}}" aria-controls="nav" role="tab" data-toggle="tab">{{label}}</a></li>
 	  {{/each}}
 	</ul>
 	
