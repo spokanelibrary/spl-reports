@@ -46,7 +46,7 @@ class SPL_Report {
 											  a[href]:after {
 											    content: " (" attr(href) ")";
 											  }
-											}'
+											}';
 						$html .= '</style>';
 						$html .= '<div class="spl-report"
 											data-spl-report-nonce="'.wp_create_nonce( 'spl-report-nonce-'.$this->params['id'] ).'"
