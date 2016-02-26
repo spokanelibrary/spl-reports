@@ -40,7 +40,7 @@
 	<!-- Tab panes -->
   <div class="tab-content">
     {{#each sorted.locations}}
-    <div role="tabpanel" class="tab-pane active" id="av">
+    <div role="tabpanel" class="tab-pane active" id="{{code}}">
 
 			<h4 class="text-success">{{label}}</h4>
 			<table class="dynatable table table-condensed table-bordered table-striped">
@@ -52,7 +52,7 @@
 				<th>Coll.</th>
 			</tr>
 			</thead>
-			{{#each sorted.locations.items}}
+			{{#each items}}
 			<tr>
 				<td class="text-center"><input type="checkbox"></td>
 				<td><b style="whitespace:no-wrap;">{{title}}</b></td>
