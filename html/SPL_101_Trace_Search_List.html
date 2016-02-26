@@ -30,34 +30,39 @@
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
 
-	{{#if sorted.locations}}
+	{{#if sorted}}
 	<ul class="nav nav-tabs" role="tablist">
+	  <li role="presentation" class="active"><a href="#all" aria-controls="nav" role="tab" data-toggle="tab">All Locations</a></li>
 	  {{#each sorted.locations}}
-	  <li role="presentation" class="{{#compare @index 0}}active{{/compare}}"><a href="#{{code}}" aria-controls="nav" role="tab" data-toggle="tab">{{label}}</a></li>
+	  <li role="presentation" class=""><a href="#{{code}}" aria-controls="nav" role="tab" data-toggle="tab">{{label}}</a></li>
 	  {{/each}}
 	</ul>
 	
 	<!-- Tab panes -->
   <div class="tab-content">
     {{#each sorted.locations}}
-    <div role="tabpanel" class="tab-pane {{#compare @index 0}}active{{/compare}}" id="{{code}}">
+    <div role="tabpanel" class="tab-pane" id="{{code}}">
 
 			<h4 class="text-success">{{label}} <small>Trace List</small></h4>
 			<table class="dynatable table table-condensed table-bordered table-striped">
 			<thead>
 			<tr>
 				<th><i class="glyphicon glyphicon-ok"></i></th>
-				<th>Title</th>
 				<th>Call #</th>
 				<th>Coll.</th>
+				<th>Title</th>
+				<th>Barcode</th>
+				<th>Status</th>
 			</tr>
 			</thead>
 			{{#each items}}
 			<tr>
 				<td class="text-center"><input type="checkbox"></td>
-				<td><b style="whitespace:no-wrap;">{{title}}</b></td>
 				<td><small>{{call_number}}</small></td>
 				<td><small>{{collection}}</small></td>
+				<td><b style="whitespace:no-wrap;">{{title}}</b></td>
+				<td><small>{{barcode}}</small></td>
+				<td><small>{{item_status}}</small></td>
 			</tr>
 			{{/each}}
 			</table>
