@@ -391,6 +391,9 @@ class SPL_Report {
 		$reports->coll->label = 'Collection Development';
 		$reports->coll->list[] = array('Unique Items by Branch'
 													,'./34/');
+		$reports->coll->label = 'Collection Development';
+		$reports->coll->list[] = array('Trace Search List (New)'
+													,'./101/');
 
 		$reports->ss->label = 'Support Services';
 		$reports->ss->list[] = array('New Items with Holds'
