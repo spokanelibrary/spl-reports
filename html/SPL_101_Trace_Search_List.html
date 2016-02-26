@@ -30,144 +30,42 @@
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
 
-	{{#if sorted}}
+	{{#if sorted.locations}}
 	<ul class="nav nav-tabs" role="tablist">
 	  {{#each sorted.locations}}
 	  <li role="presentation"><a href="#{{code}}" aria-controls="nav" role="tab" data-toggle="tab">{{label}}</a></li>
 	  {{/each}}
 	</ul>
-	{{/if}}
+	
 	<!-- Tab panes -->
   <div class="tab-content">
-    
+    {{#each sorted.locations}}
     <div role="tabpanel" class="tab-pane active" id="av">
 
-			{{#if sorted.av.many}}
-			<h4 class="text-success">AV titles with 3 or more requests</h4>
+			<h4 class="text-success">{{label}}</h4>
 			<table class="dynatable table table-condensed table-bordered table-striped">
 			<thead>
 			<tr>
 				<th><i class="glyphicon glyphicon-ok"></i></th>
 				<th>Title</th>
-				<th>Bib #</th>
 				<th>Call #</th>
 				<th>Coll.</th>
-				<th>Cop.</th>
-				<th>Rec.</th>
-				<th>Req.</th>
 			</tr>
 			</thead>
-			{{#each sorted.av.many}}
+			{{#each sorted.locations.items}}
 			<tr>
 				<td class="text-center"><input type="checkbox"></td>
 				<td><b style="whitespace:no-wrap;">{{title}}</b></td>
-				<td><small>{{bib}}</small></td>
 				<td><small>{{call_number}}</small></td>
 				<td><small>{{collection}}</small></td>
-				<td><small>{{copies}}</small></td>
-				<td><small>{{received_date}}</small></td>
-				<td><small>{{request_count}}</small></td>
 			</tr>
 			{{/each}}
 			</table>
-			{{/if}}
 
-			{{#if sorted.av.few}}
-	    <h4 class="text-success">AV titles with 1&ndash;2 requests</h4>
-	    <table class="dynatable table table-condensed table-bordered table-striped">
-			<thead>
-			<tr>
-				<th><i class="glyphicon glyphicon-ok"></i></th>
-				<th>Title</th>
-				<th>Bib #</th>
-				<th>Call #</th>
-				<th>Coll.</th>
-				<th>Cop.</th>
-				<th>Rec.</th>
-				<th>Req.</th>
-			</tr>
-			</thead>	
-			{{#each sorted.av.few}}
-			<tr>
-				<td class="text-center"><input type="checkbox"></td>
-				<td><b style="whitespace:no-wrap;">{{title}}</b></td>
-				<td><small>{{bib}}</small></td>
-				<td><small>{{call_number}}</small></td>
-				<td><small>{{collection}}</small></td>
-				<td><small>{{copies}}</small></td>
-				<td><small>{{received_date}}</small></td>
-				<td><small>{{request_count}}</small></td>
-			</tr>
-			{{/each}}
-			</table>
-			{{/if}}
 			
     </div>
-    
-    <div role="tabpanel" class="tab-pane" id="print">
-	    
-	    {{#if sorted.print.many}}
-			<h4 class="text-success"I >Print titles with 3 or more requests</h4>
-			<table class="dynatable table table-condensed table-bordered table-striped">
-	    <thead>
-			<tr>
-				<th><i class="glyphicon glyphicon-ok"></i></th>
-				<th>Title</th>
-				<th>Bib #</th>
-				<th>Call #</th>
-				<th>Coll.</th>
-				<th>Cop.</th>
-				<th>Rec.</th>
-				<th>Req.</th>
-			</tr>
-			</thead>
-			{{#each sorted.print.many}}
-			<tr>
-				<td class="text-center"><input type="checkbox"></td>
-				<td><b style="whitespace:no-wrap;">{{title}}</b></td>
-				<td><small>{{bib}}</small></td>
-				<td><small>{{call_number}}</small></td>
-				<td><small>{{collection}}</small></td>
-				<td><small>{{copies}}</small></td>
-				<td><small>{{received_date}}</small></td>
-				<td><small>{{request_count}}</small></td>
-			</tr>
-			{{/each}}
-			</table>
-    	{{/if}}
-
-    	{{#if sorted.print.few}}
-	    <h4 class="text-success">Print titles with 1&ndash;2 requests</h4>
-	    <table class="dynatable table table-condensed table-bordered table-striped">
-	    <thead>
-			<tr>
-				<th><i class="glyphicon glyphicon-ok"></i></th>
-				<th>Title</th>
-				<th>Bib #</th>
-				<th>Call #</th>
-				<th>Coll.</th>
-				<th>Cop.</th>
-				<th>Rec.</th>
-				<th>Req.</th>
-			</tr>
-			</thead>			
-			{{#each sorted.print.few}}
-			<tr>
-				<td class="text-center"><input type="checkbox"></td>
-				<td><b style="whitespace:no-wrap;">{{title}}</b></td>
-				<td><small>{{bib}}</small></td>
-				<td><small>{{call_number}}</small></td>
-				<td><small>{{collection}}</small></td>
-				<td><small>{{copies}}</small></td>
-				<td><small>{{received_date}}</small></td>
-				<td><small>{{request_count}}</small></td>
-			</tr>
-			{{/each}}
-			</table>
-			{{/if}}
-
-    </div>
+    {{/each}}
   </div>
-
+  {{/if}}
 {{/with}}
 </script>
