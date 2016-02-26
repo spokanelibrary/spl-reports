@@ -31,9 +31,8 @@
 {{#with report}}
 
 	{{#if sorted}}
-	test
 	<ul class="nav nav-tabs" role="tablist">
-	  {{#each locations}}
+	  {{#each sorted.locations}}
 	  <li role="presentation"><a href="#{{code}}" aria-controls="nav" role="tab" data-toggle="tab">{{label}}</a></li>
 	  {{/each}}
 	</ul>
