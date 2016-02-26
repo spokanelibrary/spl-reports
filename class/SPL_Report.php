@@ -41,8 +41,8 @@ class SPL_Report {
 
 						
 						$html .= '<style>';
-						$html .= '.popup, .datepicker { z-index : 5000 !important; }';
-						$html .= '@media print {
+						$html .= '.popup, .datepicker { z-index : 5000 !important; }';.PHP_EOL;
+						$html .= '.no-href {
 											  a[href]:after {
 											    content: " (" attr(href) ")" !important;
 											  }
