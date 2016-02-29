@@ -10,14 +10,13 @@ var splReportUI = {
 	
 
 	setUI: function() {
-		console.log('retreiving char sets');
+		//console.log('retreiving char sets');
 		$.ajax(
 			_this.api
 		)
 		.done(function(obj) { 
-			//_this.showReport(obj);
 			//console.log(obj);
-			if (obj.charsets) {
+			if (obj.chars) {
 				$('#search-list-chars').append(obj.chars);
 				$('#search-list-chars-warning').collapse('hide')
 				$('#search-list-chars-wrapper').collapse('show');
