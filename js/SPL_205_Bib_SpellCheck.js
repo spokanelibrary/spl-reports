@@ -16,7 +16,11 @@ var splReportUI = {
 		)
 		.done(function(obj) { 
 			//_this.showReport(obj);
-			console.log(obj);
+			//console.log(obj);
+			if (obj.chars) {
+				$('#search-list-chars').append(obj.chars);
+				$('#search-list-chars-wrapper').show();
+			}
 		})
 		.fail(function() {
 		})
