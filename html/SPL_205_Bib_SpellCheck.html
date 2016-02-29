@@ -47,17 +47,23 @@
 					<li>Chose <code>$#@!...</code> to indicate special characters (non-alphanumeric). </li>
 				</ul>
 				
-				<div class="form-group">
-					<label>Select Branch:</label>
-					<select class="form-control" name="list">
-				    <option value="chars">$#@!...</option>
-					</select> 
+				<div class="alert alert-warning">
+					Loading character sets&hellip;
+				</div>
+				<div class="collapse">
+					<div class="form-group">
+						<label>First character:</label>
+						<select class="form-control" name="list">
+					    <option value="chars">$#@!...</option>
+						</select> 
+					</div>
+
+
+					<button type="submit" class="btn btn-success">
+						Run Report <small class="glyphicon glyphicon-arrow-right"></small>
+					</button>
 				</div>
 
-
-				<button type="submit" class="btn btn-success">
-					Run Report <small class="glyphicon glyphicon-arrow-right"></small>
-				</button>
 				<a href="./" class="btn btn-default pull-right">
 					<small class="glyphicon glyphicon-refresh"></small> Reset</a>
 			</fieldset>
