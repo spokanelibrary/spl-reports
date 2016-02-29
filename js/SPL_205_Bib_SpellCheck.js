@@ -17,9 +17,15 @@ var splReportUI = {
 		.done(function(obj) { 
 			//_this.showReport(obj);
 			//console.log(obj);
-			if (obj.chars) {
+			if (obj.charsets) {
 				$('#search-list-chars').append(obj.chars);
+				$('#search-list-chars-warning').hide()
 				$('#search-list-chars-wrapper').show();
+			} else {
+				$('#search-list-chars-warning')
+				.removeClass('alert-warning')
+				.addClass('alert-danger')
+				.html('Unable to load character sets.');
 			}
 		})
 		.fail(function() {
