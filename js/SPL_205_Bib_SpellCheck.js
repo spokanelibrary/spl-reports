@@ -17,7 +17,7 @@ var splReportUI = {
 		.done(function(obj) { 
 			//_this.showReport(obj);
 			//console.log(obj);
-			if (obj.charsets) {
+			if (obj.chars) {
 				$('#search-list-chars').append(obj.chars);
 				$('#search-list-chars-warning').hide()
 				$('#search-list-chars-wrapper').show();
