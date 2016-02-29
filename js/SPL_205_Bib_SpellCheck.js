@@ -19,8 +19,8 @@ var splReportUI = {
 			//console.log(obj);
 			if (obj.chars) {
 				$('#search-list-chars').append(obj.chars);
-				$('#search-list-chars-warning').hide()
-				$('#search-list-chars-wrapper').show();
+				$('#search-list-chars-warning').collapse('hide')
+				$('#search-list-chars-wrapper').collapse('show');
 			} else {
 				$('#search-list-chars-warning')
 				.removeClass('alert-warning')
