@@ -9,8 +9,7 @@
 <div class="tab-content">
 
 	<div role="tabpanel" class="tab-pane active" id="search-term">
-
-		<form class="form-inline spl-report-control hidden-print" data-noajax="true" method="post" enctype="multipart/form-data">
+		<form class="form-inline spl-report-control hidden-print">
 			<h3>Search a term</h3>	
 			<fieldset>
 				<legend>
@@ -32,12 +31,37 @@
 				</button>
 				<a href="./" class="btn btn-default pull-right">
 					<small class="glyphicon glyphicon-refresh"></small> Reset</a>
-
 			</fieldset>
 		</form>
 	</div>
+
 	<div role="tabpanel" class="tab-pane" id="search-list">
-		Search the list.
+		<form class="form-inline spl-report-control hidden-print">
+			<h3>Search the list</h3>	
+			<fieldset>
+				<legend>
+					Searching against the entire database of common misspellings would take several hours. 
+				</legend>
+				<ul>
+					<li>We'll limit search terms to those beginning with the character selected here.</li>
+					<li>Chose <code>$#@!...</code> to indicate special characters (non-alphanumeric). </li>
+				</ul>
+				
+				<div class="form-group">
+					<label>Select Branch:</label>
+					<select class="form-control" name="list">
+				    <option value="chars">$#@!...</option>
+					</select> 
+				</div>
+
+
+				<button type="submit" class="btn btn-success">
+					Run Report <small class="glyphicon glyphicon-arrow-right"></small>
+				</button>
+				<a href="./" class="btn btn-default pull-right">
+					<small class="glyphicon glyphicon-refresh"></small> Reset</a>
+			</fieldset>
+		</form>
 	</div>
 </div>
 
