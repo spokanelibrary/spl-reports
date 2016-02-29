@@ -11,20 +11,18 @@ var splReportUI = {
 
 	setUI: function() {
 		console.log('retreiving char sets');
-		console.log(_this.api);
-		/*
 		$.ajax(
 			_this.api
 		)
 		.done(function(obj) { 
-			_this.showReport(obj);
+			//_this.showReport(obj);
+			console.log(obj);
 		})
 		.fail(function() {
 		})
 		.always(function() {
 		});
-		*/
-
+		
 	}
 
 }.setUI();
