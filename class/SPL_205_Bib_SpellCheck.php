@@ -1,6 +1,6 @@
 <?php
 
-class SPL_202_CHOF_Nominate extends SPL_Report {
+class SPL_205_Bib_SpellCheck extends SPL_Report {
 
 	/*
 	 *	overload api endpoint, if necessary
