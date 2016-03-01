@@ -42,9 +42,9 @@
 					Search against a precompiled list of common misspellings. 
 				</legend>
 				<ul>
-					<li>Searching the entire list at once would take several hours.</li>
 					<li>Limit search terms to those beginning with the character selected here.</li>
 					<li>Chose <code>$#@!...</code> to indicate special characters (non-alphanumeric). </li>
+					<li>Letters with many terms are broken into subsets (scroll down list).</li>
 				</ul>
 				
 				<div class="alert alert-warning collapse in" id="search-list-chars-warning">
@@ -77,19 +77,24 @@
 
 <br>
 <br>
-<!--
+
 <div class="well well-sm spl-report-summary hidden-print">
-	<h3>Summary</h3>
+	<h3>Note</h3>
 	<p>
+		This can take a while to run. 
+		Please don't close your browser until it has finished!
+	</p>
+	<p>
+		This won't completely lock up the database, but it is probably a good idea to run it when we're not open!
 	</p>
 </div>
--->
+
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
 	{{#unless sorted}}
 		<h4>No results found</h4>
 	{{else}}
-		
+		<h4>Search results ({{sorted.count}})</h4>		
 
 	{{/unless}}
 {{/with}}

@@ -13,13 +13,13 @@ var splReportUI = {
 		//console.log('retreiving char sets');
 		var vals = {chars:true};
 		_this.api.data.params.vals = vals;
-		console.log(_this.api.data.params);
+		//console.log(_this.api.data.params);
 
 		$.ajax(
 			_this.api
 		)
 		.done(function(obj) { 
-			console.log(obj);
+			//console.log(obj);
 			if (obj.chars) {
 				$('#search-list-chars').append(obj.chars);
 				$('#search-list-chars-warning').collapse('hide')
