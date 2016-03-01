@@ -18,7 +18,7 @@ var splReportUI = {
 			_this.api
 		)
 		.done(function(obj) { 
-			//console.log(obj);
+			console.log(obj);
 			if (obj.chars) {
 				$('#search-list-chars').append(obj.chars);
 				$('#search-list-chars-warning').collapse('hide')
