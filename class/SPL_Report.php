@@ -404,6 +404,8 @@ class SPL_Report {
 													,'./203/');
 		$reports->ss->list[] = array('OneClick MARC Records Parser'
 													,'./204/');
+		$reports->ss->list[] = array('Check BIBs for misspellings'
+													,'./205/');
 
 		$reports->prog->label = 'Programming';
 		$reports->prog->list[] = array('Summer Reading Signups'
