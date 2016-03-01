@@ -11,7 +11,8 @@ var splReportUI = {
 
 	setUI: function() {
 		//console.log('retreiving char sets');
-		_this.api.data.params.chars = true;
+		var vals = {chars:true};
+		_this.api.data.params.vals = vals;
 		console.log(_this.api.data.params);
 
 		$.ajax(
