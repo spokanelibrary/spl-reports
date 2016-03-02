@@ -243,16 +243,144 @@
 				</table>
 		    </div>   
 		    <div role="tabpanel" class="tab-pane" id="items">
-				<h4 class="text-success">ITEM <small>record activity</small></h4>
+				<h3 class="text-success">
+					ITEM Record Activity 
+					<small>{{../meta.date.stamp}}</small>
+				</h3>
 				<table class="table table-condensed table-bordered">
 				<thead>
-				<tr>
-					<th></th>
+				<tr class="info">
+					<th class="text-center">ITEM Format</th>
+					<th class="text-center text-info" colspan="4">Month of: {{../meta.date.begin_month}} &ndash; {{../meta.date.end}}</th>
+					<th class="text-center text-info" colspan="4">Year-to-Date: {{../meta.date.begin_year}} &ndash; {{../meta.date.end}}</th>
+				</tr>
+				<tr class="warning">
+					<th>&nbsp;</th>
+					
+					<th class="text-center">Adult</th>
+					<th class="text-center">Y. Adult</th>
+					<th class="text-center">Juvenile</th>
+					<th class="text-center uppercase active">Total</th>
+					
+					<th class="text-center">Adult (YTD)</th>
+					<th class="text-center">Y. Adult (YTD)</th>
+					<th class="text-center">Juvenile</th>
+					<th class="text-center uppercase active">Total (YTD)</th>
 				</tr>
 				</thead>
+				<tbody>
 				<tr>
-					<td></td>
+					<th class="text-center text-muted uppercase">
+						<small>Printed Matter</small>
+					</th>
+					<td colspan="3">&nbsp;</td>
+					<td class="active">&nbsp;</td>
+					<td colspan="3">&nbsp;</td>
+					<td class="active">&nbsp;</td>
 				</tr>
+				<tr>
+					<th>Print Titles</th>
+					<td class="text-right">{{bib_printa}}</td>
+					<td class="text-right">{{bib_printya}}</td>
+					<td class="text-right">{{bib_printj}}</td>
+					<td class="text-right active">{{bib_print}}</td>
+					<td class="text-right">{{bib_ytd_printa}}</td>
+					<td class="text-right">{{bib_ytd_printya}}</td>
+					<td class="text-right">{{bib_ytd_printj}}</td>
+					<td class="text-right active">{{bib_ytd_print}}</td>
+				</tr>
+				<tr>
+					<th>Short Rec. Titles</th>
+					<td class="text-right">{{bib_sca}}</td>
+					<td class="text-right">{{bib_scya}}</td>
+					<td class="text-right">{{bib_scj}}</td>
+					<td class="text-right active">{{bib_sc}}</td>
+					<td class="text-right">{{bib_ytd_sca}}</td>
+					<td class="text-right">{{bib_ytd_scya}}</td>
+					<td class="text-right">{{bib_ytd_scj}}</td>
+					<td class="text-right active">{{bib_ytd_sc}}</td>
+				</tr>
+				<tr class="active">
+					<th class="text-right"><i>Subtotal</i></th>
+					<td class="text-right">{{bib_sub_printa}}</td>
+					<td class="text-right">{{bib_sub_printya}}</td>
+					<td class="text-right">{{bib_sub_printj}}</td>
+					<th class="text-right">{{bib_sub_print}}</th>
+					<td class="text-right">{{bib_ytd_sub_printa}}</td>
+					<td class="text-right">{{bib_ytd_sub_printya}}</td>
+					<td class="text-right">{{bib_ytd_sub_printj}}</td>
+					<th class="text-right">{{bib_ytd_sub_print}}</th>
+				</tr>
+				<tr>
+					<th class="text-center text-muted uppercase">
+						<small>Recorded Matter</small>
+					</th>
+					<td colspan="3">&nbsp;</td>
+					<td class="active">&nbsp;</td>
+					<td colspan="3">&nbsp;</td>
+					<td class="active">&nbsp;</td>
+				</tr>
+				<tr>
+					<th>Books on CD</th>
+					<td class="text-right">{{bib_spcda}}</td>
+					<td class="text-right">{{bib_spcdya}}</td>
+					<td class="text-right">{{bib_spcdj}}</td>
+					<td class="text-right active">{{bib_spcd}}</td>
+					<td class="text-right">{{bib_ytd_spcda}}</td>
+					<td class="text-right">{{bib_ytd_spcdya}}</td>
+					<td class="text-right">{{bib_ytd_spcdj}}</td>
+					<td class="text-right active">{{bib_ytd_spcd}}</td>
+				</tr>
+				<tr>
+					<th>Music on CD</th>
+					<td class="text-right">{{bib_musica}}</td>
+					<td class="text-right">{{bib_musicya}}</td>
+					<td class="text-right">{{bib_musicj}}</td>
+					<td class="text-right active">{{bib_music}}</td>
+					<td class="text-right">{{bib_ytd_musica}}</td>
+					<td class="text-right">{{bib_ytd_musicya}}</td>
+					<td class="text-right">{{bib_ytd_musicj}}</td>
+					<td class="text-right active">{{bib_ytd_music}}</td>
+				</tr>
+				<tr>
+					<th>DVD Recordings</th>
+					<td class="text-right">{{bib_dvda}}</td>
+					<td class="text-right">{{bib_dvdya}}</td>
+					<td class="text-right">{{bib_dvdj}}</td>
+					<td class="text-right active">{{bib_dvd}}</td>
+					<td class="text-right">{{bib_ytd_dvda}}</td>
+					<td class="text-right">{{bib_ytd_dvdya}}</td>
+					<td class="text-right">{{bib_ytd_dvdj}}</td>
+					<td class="text-right active">{{bib_ytd_dvd}}</td>
+				</tr>
+				<tr class="active">
+					<th class="text-right"><i>Subtotal</i></th>
+					<td class="text-right">{{bib_sub_nonprinta}}</td>
+					<td class="text-right">{{bib_sub_nonprintya}}</td>
+					<td class="text-right">{{bib_sub_nonprintj}}</td>
+					<th class="text-right">{{bib_sub_nonprint}}</th>
+					<td class="text-right">{{bib_ytd_sub_nonprinta}}</td>
+					<td class="text-right">{{bib_ytd_sub_nonprintya}}</td>
+					<td class="text-right">{{bib_ytd_sub_nonprintj}}</td>
+					<th class="text-right">{{bib_ytd_sub_nonprint}}</th>
+				</tr>
+				<tr>
+					<th class="text-center text-muted uppercase">
+						<small>All Titles</small>
+					</th>
+					<td colspan="3">&nbsp;</td>
+					<td class="active">&nbsp;</td>
+					<td colspan="3">&nbsp;</td>
+					<td class="active">&nbsp;</td>
+				</tr>
+				<tr class="success">
+					<th class="text-right text-success">Total</th>
+					<td colspan="3">&nbsp;</td>
+					<th class="text-right">{{bib_total_elec}}</th>
+					<td colspan="3">&nbsp;</td>
+					<th class="text-right">{{bib_ytd_total_elec}}</th>
+				</tr>
+				</tbody>
 				</table>
 		    </div>    
 	  	</div>
