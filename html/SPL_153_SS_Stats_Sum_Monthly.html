@@ -29,21 +29,27 @@
 <hr class="hidden-print">
 
 <div class="spl-report-result"></div>
-<!--
+
 <br>
 <br>
 <div class="well well-sm spl-report-summary hidden-print">
 	<h3>Summary</h3>
 	<p>
+		Returns a Monthly / YTD count of ITEM &amp; BIB records added by Support Services. 
 	</p>
 </div>
--->
+
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
 	{{#unless sorted}}
 		<h4>No results found</h4>
 	{{else}}
-	It is all sorted!
+	<ul class="nav nav-tabs hidden-print" role="tablist">
+	  <li role="presentation" class="active"><a href="#bibs" aria-controls="nav" role="tab" data-toggle="tab">BIB Records Added</a></li>
+	  {{#each sorted.locations}}
+	  <li role="presentation" class=""><a href="#items" aria-controls="nav" role="tab" data-toggle="tab">ITEM Records Added</a></li>
+	  {{/each}}
+	</ul>
 	{{/unless}}
 {{/with}}
 </script>
