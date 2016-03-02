@@ -44,39 +44,56 @@
 	{{#unless sorted}}
 		<h4>No results found</h4>
 	{{else}}
-	<ul class="nav nav-tabs hidden-print" role="tablist">
-	  <li role="presentation" class="active"><a href="#bibs" aria-controls="nav" role="tab" data-toggle="tab">BIB Records Added</a></li>
-	  <li role="presentation" class=""><a href="#items" aria-controls="nav" role="tab" data-toggle="tab">ITEM Records Added</a></li>
-	</ul>
-	<!-- Tab panes -->
-  	<div class="tab-content">
-	  	<div role="tabpanel" class="tab-pane active" id="bibs">
-			<h4 class="text-success">BIB <small>record activity</small></h4>
-			<table class="table table-condensed table-bordered table-striped">
-			<thead>
-			<tr>
-				<th></th>
-			</tr>
-			</thead>
-			<tr>
-				<td></td>
-			</tr>
-			</table>
-	    </div>   
-	    <div role="tabpanel" class="tab-pane" id="items">
-			<h4 class="text-success">ITEM <small>record activity</small></h4>
-			<table class="table table-condensed table-bordered table-striped">
-			<thead>
-			<tr>
-				<th></th>
-			</tr>
-			</thead>
-			<tr>
-				<td></td>
-			</tr>
-			</table>
-	    </div>    
-  	</div>
+		{{#with sorted}}
+		<ul class="nav nav-tabs hidden-print" role="tablist">
+		  <li role="presentation" class="active"><a href="#bibs" aria-controls="nav" role="tab" data-toggle="tab">BIB Records Added</a></li>
+		  <li role="presentation" class=""><a href="#items" aria-controls="nav" role="tab" data-toggle="tab">ITEM Records Added</a></li>
+		</ul>
+		<!-- Tab panes -->
+	  	<div class="tab-content">
+		  	<div role="tabpanel" class="tab-pane active" id="bibs">
+				<h4 class="text-success">BIB <small>record activity</small></h4>
+				<table class="table table-condensed table-bordered table-striped">
+				<thead>
+				<tr>
+					<th>BIB Format</th>
+					<th colspan="4">Month of:</th>
+					<th>Year-to-Date:</th>
+				</tr>
+				<tr>
+					<th>&nbsp;</th>
+					
+					<th>Adult</th>
+					<th>Y. Adult</th>
+					<th>Juvenile</th>
+					<th>Total</th>
+					
+					<th>Adult (YTD)</th>
+					<th>Y. Adult (YTD)</th>
+					<th>Juvenile</th>
+					<th>Total (YTD)</th>
+				</tr>
+				</thead>
+				<tr>
+					<td></td>
+				</tr>
+				</table>
+		    </div>   
+		    <div role="tabpanel" class="tab-pane" id="items">
+				<h4 class="text-success">ITEM <small>record activity</small></h4>
+				<table class="table table-condensed table-bordered table-striped">
+				<thead>
+				<tr>
+					<th></th>
+				</tr>
+				</thead>
+				<tr>
+					<td></td>
+				</tr>
+				</table>
+		    </div>    
+	  	</div>
+  		{{/with}}
 	{{/unless}}
 {{/with}}
 </script>
