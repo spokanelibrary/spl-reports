@@ -1,6 +1,6 @@
 <?php
 
-class SPL_205_Bib_SpellCheck extends SPL_Report {
+class SPL_153_Stats_Sum_Monthly extends SPL_Report {
 
 	/*
 	 *	overload api endpoint, if necessary
