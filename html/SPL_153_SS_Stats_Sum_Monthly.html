@@ -52,13 +52,16 @@
 		<!-- Tab panes -->
 	  	<div class="tab-content">
 		  	<div role="tabpanel" class="tab-pane active" id="bibs">
-				<h4 class="text-success">BIB Record Activity <small>{{../meta.date.stamp}}</small></h4>
+				<h3 class="text-success">
+					BIB Record Activity 
+					<small>{{../meta.date.stamp}}</small>
+				</h3>
 				<table class="table table-condensed table-bordered">
 				<thead>
 				<tr class="info">
 					<th class="text-center">BIB Format</th>
-					<th class="text-center text-muted" colspan="4">Month of:</th>
-					<th class="text-center text-muted" colspan="4">Year-to-Date:</th>
+					<th class="text-center text-muted" colspan="4">Month of: {{../meta.date.begin_month}} &ndash; {{../meta.date.end}}</th>
+					<th class="text-center text-muted" colspan="4">Year-to-Date: {{../meta.date.begin_year}} &ndash; {{../meta.date.end}}</th>
 				</tr>
 				<tr class="warning">
 					<th>&nbsp;</th>
