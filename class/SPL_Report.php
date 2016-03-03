@@ -398,6 +398,8 @@ class SPL_Report {
 		$reports->ss->label = 'Support Services';
 		$reports->ss->list[] = array('New Items with Holds'
 													,'./11/');
+		$reports->ss->list[] = array('Support Services Stats Monthly?'
+													,'./153/');
 		$reports->ss->list[] = array('Paperbacks by Location - Obsolete?'
 													,'./183/');
 		$reports->ss->list[] = array('OverDrive MetaData Parser'
@@ -589,6 +591,7 @@ class SPL_Report {
 		$intra->circ->ca->list[] = array('Patrons going to debt collection soon'
 																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=46');
 
+		/*
 		$intra->circ->search->label = 'Search Lists';
 		$intra->circ->search->list[] = array('Complete trace search list searching at the site'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=97');
@@ -602,6 +605,7 @@ class SPL_Report {
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=99');
 		$intra->circ->search->list[] = array('View current search list'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=101');
+		*/
 
 		$intra->circ->ill->label = 'ILL';
 		$intra->circ->ill->list[] = array('ILL Cards Expiration Update'
