@@ -398,7 +398,7 @@ class SPL_Report {
 		$reports->ss->label = 'Support Services';
 		$reports->ss->list[] = array('New Items with Holds'
 													,'./11/');
-		$reports->ss->list[] = array('Support Services Stats Monthly?'
+		$reports->ss->list[] = array('Support Services Stats Monthly'
 													,'./153/');
 		$reports->ss->list[] = array('Paperbacks by Location - Obsolete?'
 													,'./183/');
@@ -452,10 +452,11 @@ class SPL_Report {
 		$other->cust->list[] = array('Summer Reading Signup'
 																,'http://web.spokanelibrary.org/reports/107');
 		*/
+		/*
 		$other->ss->label = 'Support Services';
 		$other->ss->list[] = array(' Support Services Stats Summary Monthly'
 																,'http://web.spokanelibrary.org/reports/153');
-
+		*/
 
 		$other->fin->label = 'Business & Finance';
 		$other->fin->list[] = array('EnvisionWare Tableau Server'
