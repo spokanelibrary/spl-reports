@@ -28,6 +28,7 @@ var splReport = {
 
 
 		if ( $('#spl-report-json').length > 0 ) { 
+			console.log('test');
       var $report = $('#spl-report-json');
       //if ( $account && $account.text().length > 0 ) {
       if ( $report && $report.html().length > 0 ) {
