@@ -32,7 +32,7 @@ var splReport = {
       if ( $report && $report.html().length > 0 ) {
         //var user = JSON.parse($account.text());
         var report = JSON.parse($report.html());
-        alert('test');
+        console.log('test');
       	//console.log(report);
         _this.showReport(report);
       }
