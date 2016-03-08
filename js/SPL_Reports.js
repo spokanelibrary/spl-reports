@@ -25,7 +25,6 @@ var splReport = {
 				_this.getReport();
 			}
 		});
-		console.log('test');
 
 		if ( $('#spl-report-json').length > 0 ) { 
       var $report = $('#spl-report-json');
@@ -33,6 +32,7 @@ var splReport = {
       if ( $report && $report.html().length > 0 ) {
         //var user = JSON.parse($account.text());
         var report = JSON.parse($report.html());
+        alert('test');
       	//console.log(report);
         _this.showReport(report);
       }
