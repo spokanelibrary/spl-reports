@@ -25,16 +25,15 @@ var splReport = {
 				_this.getReport();
 			}
 		});
-
+		console.log('test');
 
 		if ( $('#spl-report-json').length > 0 ) { 
-			console.log('test');
       var $report = $('#spl-report-json');
       //if ( $account && $account.text().length > 0 ) {
       if ( $report && $report.html().length > 0 ) {
         //var user = JSON.parse($account.text());
         var report = JSON.parse($report.html());
-      	console.log(report);
+      	//console.log(report);
         _this.showReport(report);
       }
     }
