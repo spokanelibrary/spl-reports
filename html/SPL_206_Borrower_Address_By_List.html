@@ -54,13 +54,30 @@
 		<h4>No results found</h4>
 	{{else}}
 		
-		<h4>OK!</h4>
+		<h3 class="text-success">OK! <small>processed {{params.files.vendorlist.name}}</small></h3>
+		{{#with sorted.fileInspection}}
 		<dl class="dl-horizontal">
-			<dt>File name</dt>
-			<dd>{{params.files.vendorlist.name}}</dd>
+
 			<dt>File type</dt>
-			<dd>{{sorted.fileInspection.fileType}}</dd>
+			<dd>{{fileType}}</dd>
+			
+			<dt>Match type</dt>
+			<dd>{{type}}</dd>
+
+			<dt>Match Column</dt>
+			<dd>{{column}}</dd>
+
+			<dt># Rows</dt>
+			<dd>{{highestRow}}</dd>
+
+			<dt>Header?</dt>
+			<dd>{{#if header}}yes{{else}}no{{/if}}</dd>
+
+			<dt>Total matches</dt>
+			<dd>{{addressMatches}}</dd>			
+
 		</dl>
+		{{/with}}
 
 		<p>
 			<a rel="external" class="btn btn-primary" href="http://staff.spokanelibrary.org/dl/?file=address">Download Address File</a>
