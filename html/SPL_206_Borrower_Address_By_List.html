@@ -8,15 +8,15 @@
 		<div class="form-group">
 			<input type="file" name="vendorlist"> 
 		</div>
-
+		<!--
 		<div class="form-group">
 			<label>Type of list:</label>
 			<select class="form-control" name="records">
 		    <option value="barcode" selected="selected">Barcode</option>
         <option value="email">Email Address</option>
-
 			</select> 
 		</div>
+		-->
 
 		<input type="hidden" name="noajax" value="true">
 
@@ -40,6 +40,12 @@
 	<ol>
     <li>Start at the beginning.</li>
   </ol>
+  <p>
+  	This program autodetects barcode/email, and extracts the column for matching against our ILS.
+  </p>
+  <p>
+  	If the autodetection isn't working (maybe it's not picking the column you want), just save a file with one column containing the data you want to match, and upload that.
+  </p>
   <blockquote>
 		<small>sean</small>
 	</blockquote>
