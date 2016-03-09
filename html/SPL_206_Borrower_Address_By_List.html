@@ -37,11 +37,8 @@
 <br>
 <div class="well well-sm spl-report-summary hidden-print">
 	<h3>Instructions</h3>
-	<ol>
-    <li>Start at the beginning.</li>
-  </ol>
   <p>
-  	This program autodetects barcode/email, and extracts the column for matching against our ILS.
+  	This program autodetects barcode/email in a spreadsheet, and extracts the column for matching against our ILS.
   </p>
   <p>
   	If the autodetection isn't working (maybe it's not picking the column you want), just save a file with one column containing the data you want to match, and upload that.
@@ -57,10 +54,16 @@
 		<h4>No results found</h4>
 	{{else}}
 		
-		OK!
+		<h4>OK!</h4>
+		<dl class="dl-horizontal">
+			<dt>File name</dt>
+			<dd>params.files.vendorlist.name</dd>
+			<dt>File type</dt>
+			<dd>sorted.fileInspection.fileType</dd>
+		</dl>
 
 		<p>
-			<a rel="external" class="btn btn-primary" href="http://staff.spokanelibrary.org/dl/index.php?file=address">Download Address File</a>
+			<a rel="external" class="btn btn-primary" href="http://staff.spokanelibrary.org/dl/?file=address">Download Address File</a>
 		</p>
 
 	{{/unless}}
