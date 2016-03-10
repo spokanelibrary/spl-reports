@@ -57,6 +57,13 @@
 		
 		<h3 class="text-success">OK!</h3>
 		<h4>{{params.files.vendorlist.name}}</h4>
+
+		<p>
+			<a rel="external" class="btn btn-primary" href="http://staff.spokanelibrary.org/dl/?file=address">
+			<i class="glyphicon glyphicon-download-alt"></i> 
+			Download Address File</a>
+		</p>
+
 		{{#with sorted.fileInspection}}
 		<dl class="dl-horizontal">
 
@@ -67,10 +74,7 @@
 			<dd>{{#if header}}Yes{{else}}No{{/if}}</dd>
 
 			<dt>Match type</dt>
-			<dd>{{type}}</dd>
-
-			<dt>Match column</dt>
-			<dd>{{column}}</dd>
+			<dd class="uppercase">{{type}}</dd>
 
 			<dt># Rows</dt>
 			<dd>{{highestRow}}</dd>
@@ -78,14 +82,11 @@
 			<dt>Total Matches</dt>
 			<dd>{{addressMatches}}</dd>			
 
+			<dt>Match column</dt>
+			<dd>{{column}}</dd>
+
 		</dl>
 		{{/with}}
-
-		<p>
-			<a rel="external" class="btn btn-primary" href="http://staff.spokanelibrary.org/dl/?file=address">
-			<i class="glyphicon glyphicon-download-alt"></i> 
-			Download Address File</a>
-		</p>
 
 	{{/unless}}
 {{/with}}
