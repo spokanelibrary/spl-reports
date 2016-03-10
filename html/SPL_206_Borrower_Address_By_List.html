@@ -60,22 +60,22 @@
 		{{#with sorted.fileInspection}}
 		<dl class="dl-horizontal">
 
-			<dt>File type</dt>
+			<dt>File type:</dt>
 			<dd>{{fileType}}</dd>
 			
+			<dt>Header row:</dt>
+			<dd>{{#if header}}Yes{{else}}No{{/if}}</dd>
+
 			<dt>Match type</dt>
 			<dd>{{type}}</dd>
 
-			<dt>Match Column</dt>
+			<dt>Match column</dt>
 			<dd>{{column}}</dd>
 
 			<dt># Rows</dt>
 			<dd>{{highestRow}}</dd>
 
-			<dt>Header?</dt>
-			<dd>{{#if header}}Yes{{else}}No{{/if}}</dd>
-
-			<dt>Total matches</dt>
+			<dt>Total Matches</dt>
 			<dd>{{addressMatches}}</dd>			
 
 		</dl>
