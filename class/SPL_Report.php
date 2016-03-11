@@ -101,6 +101,9 @@ class SPL_Report {
 			Reports already converted are listed under <b>Converted Reports</b>.
 			<small>sean</small>
 		</blockquote>
+		<div class="alert alert-warning">
+			<b>Protip:</b> Remember to scroll WAAAAAY down.
+		</div>
 		<div class="panel spl-hero-intranet spl-hero-brand-blue-f">
 			<div class="panel-heading">
 				<h4 class="">Newer Reports</h4>
@@ -408,6 +411,10 @@ class SPL_Report {
 													,'./204/');
 		$reports->ss->list[] = array('Check BIBs for misspellings'
 													,'./205/');
+
+		$reports->ss->list[] = array('Addresses from vendor-suplied list'
+													,'./206/');
+
 
 		$reports->prog->label = 'Programming';
 		$reports->prog->list[] = array('Summer Reading Signups'
