@@ -647,8 +647,10 @@ class SPL_Report {
 
 		
 		$intra->coll->clean->label = 'Clean Up';
+		/*
 		$intra->coll->clean->list[] = array('8-digit barcodes by location and collection'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=160');
+		*/
 		$intra->coll->clean->list[] = array('Bibs with a cutter beginning with a number'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=163');
 		$intra->coll->clean->list[] = array('Drama cleanup'
