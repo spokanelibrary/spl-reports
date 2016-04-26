@@ -553,13 +553,13 @@ class SPL_Report {
 		/*
 		 *	Intra Reports
 		 */
-
+		/*
 		$intra->circ->borr->label = 'Borrowers';
 		$intra->circ->borr->list[] = array('Cost of all materials currently out to customer'
 																,'http://web.spokanelibrary.org/reports/091');
 		$intra->circ->borr->list[] = array('Outreach cards by location'
 																,'http://web.spokanelibrary.org/reports/066');
-
+		*/
 
 		$intra->circ->bus->label = 'Business Office';
 		$intra->circ->bus->list[] = array('Daily Fee Payment Detail'
