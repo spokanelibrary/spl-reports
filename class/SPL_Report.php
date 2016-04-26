@@ -477,6 +477,7 @@ class SPL_Report {
 		$apps->circ->list[] = array('Process New Library Cards'
 													,'http://dash.spokanelibrary.org/connect/libcard');
 
+		/*
 		$apps->ss->label = 'Support Services';
 		$apps->ss->list[] = array('Process OneClick MARC Records'
 													,'http://web.spokanelibrary.org/oneclick/');
@@ -484,7 +485,7 @@ class SPL_Report {
 													,'http://web.spokanelibrary.org/overdrive/');
 		$apps->ss->list[] = array('Spellchecker for Bib Records'
 													,'http://web.spokanelibrary.org/spellcheck/');
-
+		*/
 		
 		$apps->nmr->label = 'New Material Requests';
 		$apps->nmr->list[] = array('NMR Staff Portal'
