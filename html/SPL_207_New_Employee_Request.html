@@ -172,12 +172,12 @@
 	{{else}}
 		<div class="alert alert-success">
 			<h4>Request sent succesfully.</h4>
+			{{#if sorted.cc}}
+				<p>
+					A copy was sent to {{sorted.cc}}.
+				</p>
+			{{/if}}
 		</div>
-		{{#if sorted.cc}}
-			<p>
-				A copy was sent to {{sorted.cc}}.
-			</p>
-		{{/if}}
 
 	{{/unless}}
 {{/with}}
