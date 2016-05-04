@@ -1,4 +1,4 @@
-<form class="form spl-report-control hidden-print" method="post">
+<form class="form-horizontal spl-report-control hidden-print" method="post">
 	<h2>New Employee Request <small>for IT</small></h2>
 	<fieldset>
 		<legend>
@@ -8,18 +8,19 @@
 		
 		<div class="form-group">
 			<label>Primary location:</label>
-			<select class="form-control col-md-4" name="location">
+			<select class="form-control" name="location">
 			    <option value="Downtown" selected="selected">Downtown</option>
 		        <option value="East Side">East Side</option>
 			</select> 
 		</div>
 		
-
-		<button type="submit" class="btn btn-success">
-			Generate Request <small class="glyphicon glyphicon-arrow-right"></small>
-		</button>
-		<a href="./" class="btn btn-default pull-right">
-			<small class="glyphicon glyphicon-refresh"></small> Reset</a>
+		<div class="form-group">
+			<button type="submit" class="btn btn-success">
+				Generate Request <small class="glyphicon glyphicon-arrow-right"></small>
+			</button>
+			<a href="./" class="btn btn-default pull-right">
+				<small class="glyphicon glyphicon-refresh"></small> Reset</a>
+		</div>
 
 	</fieldset>
 </form>
