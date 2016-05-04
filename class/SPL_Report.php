@@ -473,9 +473,15 @@ class SPL_Report {
 		/*
 		 *	Apps & Tools
 		 */
+		$apps->hr->label = 'HR';
+		$apps->hr->list[] = array('New Employee Setup Request'
+													,'./207/');
+		
 		$apps->circ->label = 'Circulation';
 		$apps->circ->list[] = array('Process New Library Cards'
 													,'http://dash.spokanelibrary.org/connect/libcard');
+
+
 
 		/*
 		$apps->ss->label = 'Support Services';
