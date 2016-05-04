@@ -173,16 +173,12 @@
 		<div class="alert alert-success">
 			<h4>Request sent succesfully.</h4>
 		</div>
-		{{#if vals.cc}}
+		{{#if sorted.cc}}
 			<p>
-				A copy was sent to {{vals.cc}}.
+				A copy was sent to {{sorted.cc}}.
 			</p>
 		{{/if}}
-		<!--
-		<pre>
-		{{sorted}}
-		</pre>
-		-->
+
 	{{/unless}}
 {{/with}}
 </script>
