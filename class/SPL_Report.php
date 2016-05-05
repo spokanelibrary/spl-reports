@@ -391,6 +391,9 @@ class SPL_Report {
 		$reports->circ->list[] = array('Borrowers Forced to Debt Collection'
 													,'./184/');
 
+		$reports->circ->list[] = array('Borrowers With 50+ Line Items'
+													,'./208/');
+
 		$reports->coll->label = 'Collection Development';
 		$reports->coll->list[] = array('Unique Items by Branch'
 													,'./34/');
@@ -476,7 +479,7 @@ class SPL_Report {
 		$apps->hr->label = 'HR';
 		$apps->hr->list[] = array('New Employee Setup Request'
 													,'./207/');
-		
+
 		$apps->circ->label = 'Circulation';
 		$apps->circ->list[] = array('Process New Library Cards'
 													,'http://dash.spokanelibrary.org/connect/libcard');
