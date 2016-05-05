@@ -48,25 +48,19 @@
 			<thead>
 			<tr>
 				<th><i class="glyphicon glyphicon-ok"></i></th>
-				<th>Call #</th>
-				<th>Coll.</th>
-				<th>Title</th>
 				<th>Barcode</th>
-				<th>Status</th>
-				<th class="">Date</th>
-				<th class="">Loc.</th>
+				<th>Name</th>
+				<th># Blocks</th>
+				<th>Amount Owed</th>
 			</tr>
 			</thead>
 			{{#each sorted.all}}
 			<tr>
 				<td class="text-center"><input type="checkbox"></td>
-				<td><small>{{call_number}}</small></td>
-				<td><small>{{collection}}</small></td>
-				<td><b style="whitespace:no-wrap;"><a rel="external" href="http://www.spokanelibrary.org/bib/{{bib}}">{{title}}</a></b></td>
-				<td><small>{{barcode}}</small></td>
-				<td><small>{{item_status}}</small></td>
-				<td><small class="">{{last_status_update_date}}</small></td>
-				<td><small class="">{{location}}</small></td>
+				<td><small>{{bbarcode}}</small></td>
+				<td><small>{{bname}}</small></td>
+				<td><small>{{blocks}}</small></td>
+				<td><small>${{amount}}</small></td>
 			</tr>
 			{{/each}}
 			</table>
