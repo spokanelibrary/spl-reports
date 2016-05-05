@@ -58,7 +58,7 @@
 			</tr>
 			</thead>
 			{{#each sorted.all}}
-			<tr class="{{#if debt_collect}}text-danger{{/if}">
+			<tr class="{{#if debt_collect}}text-danger{{else}}{{/if}">
 				<td class="text-center"><input type="checkbox"></td>
 				<td><small>{{bbarcode}}</small></td>
 				<td><small>{{bname}}</small></td>
