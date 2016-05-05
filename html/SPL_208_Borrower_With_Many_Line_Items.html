@@ -43,7 +43,7 @@
 
   	<div role="tabpanel" class="tab-pane active" id="all">
 
-			<h4 class="text-success">All Locations <small>Trace List</small></h4>
+			<h4 class="text-success">All Locations <small>50+ line items</small></h4>
 			<table class="dynatable table table-condensed table-bordered table-striped small-print">
 			<thead>
 			<tr>
@@ -52,6 +52,9 @@
 				<th>Name</th>
 				<th># Blocks</th>
 				<th>Amount Owed</th>
+				<th>Last CKO</th>
+				<th>Last Auth</th>
+				<th>Location</th>
 			</tr>
 			</thead>
 			{{#each sorted.all}}
@@ -61,6 +64,9 @@
 				<td><small>{{bname}}</small></td>
 				<td><small>{{blocks}}</small></td>
 				<td><small>${{amount}}</small></td>
+				<td><small>{{last_cko}}</small></td>
+				<td><small>{{last_auth}}</small></td>
+				<td><small>{{location}}</small></td>
 			</tr>
 			{{/each}}
 			</table>
@@ -70,7 +76,7 @@
     {{#each sorted.locations}}
     <div role="tabpanel" class="tab-pane" id="{{code}}">
 
-			<h4 class="text-success">{{label}} <small>Trace List</small></h4>
+			<h4 class="text-success">{{label}} <small>50+ line items</small></h4>
 			<table class="dynatable table table-condensed table-bordered table-striped small-print">
 			<thead>
 			<tr>
