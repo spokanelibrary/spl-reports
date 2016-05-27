@@ -19,7 +19,7 @@ var splReportUI = {
 			_this.api
 		)
 		.done(function(obj) { 
-			console.log(obj);
+			//console.log(obj);
 			if ( obj.controls ) {
 				console.log(obj.controls);
 			}
