@@ -20,7 +20,7 @@ var splReportUI = {
 		)
 		.done(function(obj) { 
 			console.log(obj);
-			if obj.controls() {
+			if ( obj.controls ) {
 				console.log(obj.controls);
 			}
 			/*
