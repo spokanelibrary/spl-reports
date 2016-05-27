@@ -1,0 +1,112 @@
+<form class="form-inline spl-report-control hidden-print">
+	<h2>Borrowers with many line items <small>50+</small></h2>
+	<fieldset>
+		<legend>
+			Returns a list of borrowers who need to have their fines and fees "merged"
+		</legend>
+
+	  </div>
+
+		<button type="submit" class="btn btn-success">
+			Run Report <small class="glyphicon glyphicon-arrow-right"></small>
+		</button>
+		<a href="./" class="btn btn-default pull-right">
+			<small class="glyphicon glyphicon-refresh"></small> Reset</a>
+
+	</fieldset>
+</form>
+
+<hr class="hidden-print">
+
+<div class="spl-report-result"></div>
+
+<br>
+<br>
+<div class="well well-sm spl-report-summary hidden-print">
+	<h3>Summary</h3>
+	<h5>Lists borrowers with more than 50 line items</h5>
+	<p>Borrowers who do not have a last_cko_date or last_authentication_date within the last year are excluded.</p>
+</div>
+<script class="spl-report-tmpl" type="text/x-handlebars-template">
+{{#with report}}
+
+	{{#if sorted}}
+	<ul class="nav nav-tabs hidden-print" role="tablist">
+	  <li role="presentation" class="active"><a href="#all" aria-controls="nav" role="tab" data-toggle="tab">All <span class="hidden-xs hidden-sm">Locations</span></a></li>
+	  {{#each sorted.locations}}
+	  <li role="presentation" class=""><a href="#{{code}}" aria-controls="nav" role="tab" data-toggle="tab"><span class="visible-xs visible-sm uppercase">{{code}}</span><span class="visible-md visible-lg">{{label}}</span></a></li>
+	  {{/each}}
+	</ul>
+	
+	<!-- Tab panes -->
+  <div class="tab-content">
+
+  	<div role="tabpanel" class="tab-pane active" id="all">
+
+			<h4 class="text-success">All Locations <small>50+ line items</small></h4>
+			<table class="table table-condensed table-bordered table-striped small-print">
+			<thead>
+			<tr>
+				<th><i class="glyphicon glyphicon-ok"></i></th>
+				<th>Barcode</th>
+				<th>Name</th>
+				<th># Blocks</th>
+				<th>Amount Owed</th>
+				<th>Last CKO</th>
+				<th>Last Auth</th>
+				<th>Location</th>
+			</tr>
+			</thead>
+			{{#each sorted.all}}
+			<tr {{#if debt_collect}}class="danger"{{else}}{{#if blocked}}class="warning"{{/if}}{{/if}}>
+				<td class="text-center"><input type="checkbox"></td>
+				<td><small>{{bbarcode}}</small></td>
+				<td><small>{{bname}}</small></td>
+				<td><small>{{blocks}}</small></td>
+				<td><small>${{amount}}</small></td>
+				<td><small>{{last_cko}}</small></td>
+				<td><small>{{last_auth}}</small></td>
+				<td><small>{{location}}</small></td>
+			</tr>
+			{{/each}}
+			</table>
+			
+    </div>
+
+    {{#each sorted.locations}}
+    <div role="tabpanel" class="tab-pane" id="{{code}}">
+
+			<h4 class="text-success">{{label}} <small>50+ line items</small></h4>
+			<table class="table table-condensed table-bordered table-striped small-print">
+			<thead>
+			<tr>
+				<th><i class="glyphicon glyphicon-ok"></i></th>
+				<th>Barcode</th>
+				<th>Name</th>
+				<th># Blocks</th>
+				<th>Amount Owed</th>
+				<th>Last CKO</th>
+				<th>Last Auth</th>
+				<th>Location</th>
+			</tr>
+			</thead>
+			{{#each borrowers}}
+			<tr {{#if debt_collect}}class="danger"{{else}}{{#if blocked}}class="warning"{{/if}}{{/if}}>
+				<td class="text-center"><input type="checkbox"></td>
+				<td><small>{{bbarcode}}</small></td>
+				<td><small>{{bname}}</small></td>
+				<td><small>{{blocks}}</small></td>
+				<td><small>${{amount}}</small></td>
+				<td><small>{{last_cko}}</small></td>
+				<td><small>{{last_auth}}</small></td>
+				<td><small>{{location}}</small></td>
+			</tr>
+			{{/each}}
+			</table>
+			
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+{{/with}}
+</script>
