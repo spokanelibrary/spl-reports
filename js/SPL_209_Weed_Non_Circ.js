@@ -20,6 +20,9 @@ var splReportUI = {
 		)
 		.done(function(obj) { 
 			console.log(obj);
+			if obj.controls() {
+				console.log(obj.controls);
+			}
 			/*
 			if (obj.chars) {
 				$('#search-list-chars').append(obj.chars);
