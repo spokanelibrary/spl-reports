@@ -10,8 +10,8 @@ var splReportUI = {
 	
 
 	setUI: function() {
-		//console.log('retreiving control params');
-		var vals = {init:true};
+		//console.log('retreiving char sets');
+		var vals = {chars:true};
 		_this.api.data.params.vals = vals;
 		//console.log(_this.api.data.params);
 
@@ -19,8 +19,7 @@ var splReportUI = {
 			_this.api
 		)
 		.done(function(obj) { 
-			console.log(obj);
-			/*
+			//console.log(obj);
 			if (obj.chars) {
 				$('#search-list-chars').append(obj.chars);
 				$('#search-list-chars-warning').collapse('hide')
@@ -31,7 +30,6 @@ var splReportUI = {
 				.addClass('alert-danger')
 				.html('Unable to load character sets.');
 			}
-			*/
 		})
 		.fail(function() {
 		})
