@@ -13,7 +13,7 @@ var splReportUI = {
 		//console.log('retreiving control params');
 		var vals = {init:true};
 		_this.api.data.params.vals = vals;
-		//console.log(_this.api.data.params);
+		console.log(_this.api.data.params);
 
 		$.ajax(
 			_this.api
