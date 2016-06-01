@@ -8,11 +8,19 @@
 		<div class="spl-report-controls"></div>
 		<script class="spl-report-controls-tmpl" type="text/x-handlebars-template">
 		{{#with controls}}
-			<select name="weed-cgroup" class="form-control">
+			<select name="spl-cgroup-selector" class="form-control">
 			{{#each cgroups}}
-				<option>{{label}}</option>			
+				<option value="{{code}}">{{label}}</option>			
 			{{/each}}
 			</select>
+
+			{{#each cgroups}}
+				<select class="collapse spl-cgroup" id="spl-cgroup-{{code}}">
+				{{#each #collections}}
+					<option value="{{code}}">{{label}}</option>
+				{{/each}}
+				</select>
+			{{/each}}
 		{{/with}}
 		<button type="submit" class="btn btn-success">
 				Run Report <small class="glyphicon glyphicon-arrow-right"></small>
