@@ -16,9 +16,9 @@ var splReportUI = {
 		//console.log(_this.api.data.params);
 
 		$('body').on('change', '.spl-cgroup-selector', function(e) {
-			//$('.spl-cgroup').removeClass('in');
 			console.log( $(this).val() );
-			//$('#spl-cgroup-'+$(this).value())
+			$('.spl-cgroup').removeClass('in');
+			$('#spl-cgroup-'+$(this).val()).addClass('in');
 		});
 
 		$.ajax(
