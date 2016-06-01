@@ -17,7 +17,7 @@ var splReportUI = {
 
 		$('body').on('change', '.spl-cgroup-selector', function(e) {
 			//$('.spl-cgroup').removeClass('in');
-			console.log( this.val() );
+			console.log( $(this).val() );
 			//$('#spl-cgroup-'+$(this).value())
 		});
 
