@@ -24,6 +24,12 @@ var splReportUI = {
 				console.log(obj.controls);
 				tmpl = Handlebars.compile( $('.spl-report-controls-tmpl').html() );
 				$('.spl-report-controls').html( tmpl({ controls:obj.controls }));
+			
+				$('body').on('change', '.spl-cgroup-selector', function(e) {
+					$('.spl-cgroup').removeClass('in');
+					console.log($(this).val());
+					//$('#spl-cgroup-'+$(this).value())
+				});
 			}
 			/*
 
