@@ -8,8 +8,11 @@
 		<div class="spl-report-controls"></div>
 		<script class="spl-report-controls-tmpl" type="text/x-handlebars-template">
 		{{#with controls}}
-			These are dynamic controls.			
-			
+			<select name="weed-cgroup" class="form-control">
+			{{#each cgroups}}
+				<option>{{label}}</option>			
+			{{/each}}
+			</select>
 		{{/with}}
 		<button type="submit" class="btn btn-success">
 				Run Report <small class="glyphicon glyphicon-arrow-right"></small>
