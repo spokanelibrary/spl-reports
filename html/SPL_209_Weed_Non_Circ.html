@@ -16,13 +16,8 @@
 	test
 
 	<div class="spl-report-control"></div>
-		<script class="spl-report-control-tmpl" type="text/x-handlebars-template">
-		{{#with controls}}
-
-			These are controls.			
-		{{/with}}
-		</script>
 		
+
 </form>
 
 <hr class="hidden-print">
@@ -34,6 +29,14 @@
 <div class="well well-sm spl-report-summary hidden-print">
 	<p></p>
 </div>
+
+<script class="spl-report-control-tmpl" type="text/x-handlebars-template">
+{{#with controls}}
+
+	These are controls.			
+{{/with}}
+</script>
+
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
 
