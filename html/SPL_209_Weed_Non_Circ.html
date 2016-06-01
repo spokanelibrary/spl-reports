@@ -5,7 +5,13 @@
 			
 		</legend>
 
-	  </div>
+		<div class="spl-report-control"></div>
+		<script class="spl-report-control-tmpl" type="text/x-handlebars-template">
+		{{#with controls}}
+
+			These are controls.			
+		{{/with}}
+		</script>
 
 		<button type="submit" class="btn btn-success">
 			Run Report <small class="glyphicon glyphicon-arrow-right"></small>

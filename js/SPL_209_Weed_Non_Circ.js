@@ -22,8 +22,11 @@ var splReportUI = {
 			//console.log(obj);
 			if ( obj.controls ) {
 				console.log(obj.controls);
+				tmpl = Handlebars.compile( $('.spl-report-control-tmpl').html() );
+				$('.spl-report-control').html( this.tmpl({ controls:obj.controls }));
 			}
 			/*
+
 			if (obj.chars) {
 				$('#search-list-chars').append(obj.chars);
 				$('#search-list-chars-warning').collapse('hide')
