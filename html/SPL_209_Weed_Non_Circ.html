@@ -5,6 +5,14 @@
 			
 		</legend>
 
+		<div class="spl-report-controls"></div>
+		<script class="spl-report-controls-tmpl" type="text/x-handlebars-template">
+		{{#with controls}}
+
+			These are controls.			
+		{{/with}}
+		</script>
+
 		<button type="submit" class="btn btn-success">
 			Run Report <small class="glyphicon glyphicon-arrow-right"></small>
 		</button>
@@ -14,14 +22,7 @@
 	</fieldset>
 
 	test
-
-	
-		
-
 </form>
-
-
-<div class="spl-report-control"> </div>
 
 <hr class="hidden-print">
 
@@ -32,14 +33,6 @@
 <div class="well well-sm spl-report-summary hidden-print">
 	<p></p>
 </div>
-
-<script class="spl-report-control-tmpl" type="text/x-handlebars-template">
-{{#with controls}}
-
-	These are controls.			
-{{/with}}
-</script>
-
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
 
