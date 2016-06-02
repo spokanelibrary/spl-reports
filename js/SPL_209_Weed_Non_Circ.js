@@ -23,6 +23,14 @@ var splReportUI = {
 			$('#spl-cgroup-'+cgroup+' input[type=checkbox]').prop('checked', true);
 		});
 
+		$('body').on('click', '#spl-cgroup-select-all', function(e) {
+			console.log( 'select all' );
+		});
+
+		$('body').on('click', '#spl-cgroup-deselect-all', function(e) {
+			console.log( 'deselect all' );
+		});
+
 		$.ajax(
 			_this.api
 		)
