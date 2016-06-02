@@ -5,10 +5,9 @@
 			
 		</legend>
 
-		<div class="well well-sm">
+		
 		<div class="spl-report-controls hidden-print"></div>
-		<div class="clearfix"></div>
-		</div>
+		
 		<script class="spl-report-controls-tmpl" type="text/x-handlebars-template">
 		
 		<div class="form-group">
@@ -18,7 +17,7 @@
 			<a href="./" class="btn btn-default pull-right">
 				<small class="glyphicon glyphicon-refresh"></small> Reset</a>
 		</div>
-		<hr>
+		<div class="well well-sm">
 		<div class="form-group">
 		{{#with controls}}
 			<div class="col-md-3">
@@ -65,6 +64,8 @@
 				</select>
 			</div>
 		{{/with}}
+		</div>
+		<div class="clearfix"></div>
 		</div>		
 		</script>
 
