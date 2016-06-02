@@ -26,13 +26,17 @@ var splReportUI = {
 		$('body').on('click', '#spl-cgroup-select-all', function(e) {
 			$(this).addClass('disabled');
 			$('#spl-cgroup-deselect-all').removeClass('disabled');
-			console.log( 'select all' );
+			//console.log( $('.spl-cgroup-selector').val() );
+
+			$cgroup = $('.spl-cgroup-selector').val();
+			$('#spl-cgroup-'+cgroup+' input[type=checkbox]').prop('checked', true);
+
 		});
 
 		$('body').on('click', '#spl-cgroup-deselect-all', function(e) {
 			$(this).addClass('disabled');
 			$('#spl-cgroup-select-all').removeClass('disabled');
-			console.log( 'deselect all' );
+			$('.spl-cgroup input[type=checkbox]').prop('checked', false);
 		});
 
 		$.ajax(
