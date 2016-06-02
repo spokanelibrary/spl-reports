@@ -18,7 +18,7 @@ var splReportUI = {
 		$('body').on('change', '.spl-cgroup-selector', function(e) {
 			var cgroup = $(this).val();
 			$('.spl-cgroup').removeClass('in')
-			//$('.spl-cgroup input[type=checkbox]').prop('checked', false);
+			$('.spl-cgroup input[type=checkbox]').prop('checked', false);
 			$('#spl-cgroup-'+cgroup).addClass('in');
 			$('#spl-cgroup-'+cgroup+' input[type=checkbox]').prop('checked', true);
 		});
@@ -35,6 +35,7 @@ var splReportUI = {
 			}
 			// reveal first cgroup
 			$('#spl-cgroup-'+obj.controls.cgroups[0].code).addClass('in');
+			$('#spl-cgroup-'+obj.controls.cgroups[0].code+' input[type=checkbox]').prop('checked', true);
 
 		})
 		.fail(function() {
