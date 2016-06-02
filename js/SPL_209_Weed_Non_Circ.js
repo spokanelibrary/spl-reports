@@ -32,7 +32,7 @@ var splReportUI = {
 				$('.spl-report-controls').html( tmpl({ controls:obj.controls }));
 			}
 
-			console.log(obj.controls.cgroups[0]);
+			$('#spl-cgroup-'+obj.controls.cgroups[0].code)).addClass('in');
 
 		})
 		.fail(function() {
