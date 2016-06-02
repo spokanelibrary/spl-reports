@@ -32,11 +32,11 @@ var splReportUI = {
 				console.log(obj.controls);
 				tmpl = Handlebars.compile( $('.spl-report-controls-tmpl').html() );
 				$('.spl-report-controls').html( tmpl({ controls:obj.controls }));
-			}
-			// reveal first cgroup
-			$('#spl-cgroup-'+obj.controls.cgroups[0].code).addClass('in');
-			$('#spl-cgroup-'+obj.controls.cgroups[0].code+' input[type=checkbox]').prop('checked', true);
-
+				
+				// reveal first cgroup
+				$('#spl-cgroup-'+obj.controls.cgroups[0].code).addClass('in');
+				$('#spl-cgroup-'+obj.controls.cgroups[0].code+' input[type=checkbox]').prop('checked', true);
+			}			
 		})
 		.fail(function() {
 		})
