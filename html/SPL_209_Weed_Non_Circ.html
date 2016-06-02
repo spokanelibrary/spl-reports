@@ -25,7 +25,8 @@
 		{{#with controls}}
 			<div class="col-md-3">
 				<label>Collection group</label>
-				<select name="spl-cgroup-selector" class="form-control spl-cgroup-selector">
+				<select name="spl-cgroup-selector" 
+						class="form-control spl-cgroup-selector">
 				{{#each cgroups}}
 					<option value="{{code}}">{{label}}</option>			
 				{{/each}}
@@ -38,7 +39,8 @@
 				{{#each collections}}
 				<div class="checkbox">
 					<label>
-						<input name="spl-weed-cgroup[]" type="checkbox" value="{{code}}">{{label}}
+						<input name="spl-weed-cgroup[]" 
+								type="checkbox" value="{{code}}">{{label}}
 					</label>
 				</div>
 				{{/each}}
