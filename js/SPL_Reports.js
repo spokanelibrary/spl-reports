@@ -58,11 +58,14 @@ var splReport = {
 		//return form;
 		$.each(form, function() {
 			if ( this.name.indexOf('[]' > -1) ) { 
-				//name = this.name.replace('[]', '');
+				name = this.name.replace('[]', '');
+				console.log(name);
 				//vals[name][] = this.value || '';
 			} else {
-				vals[this.name] = this.value || '';
+				//vals[this.name] = this.value || '';
 			}
+
+			vals[this.name] = this.value || '';
 		});
 		return vals;
 	}
