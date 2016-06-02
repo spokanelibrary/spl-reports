@@ -15,11 +15,11 @@
 			</select>
 
 			{{#each cgroups}}
-				<select class="form-control spl-cgroup" id="spl-cgroup-{{code}}">
+				<div class="form-control hidden spl-cgroup" id="spl-cgroup-{{code}}">
 				{{#each collections}}
-					<option value="{{code}}">{{label}}</option>
+					<input type="checkbox" checked="checked" value="{{code}}">{{label}}
 				{{/each}}
-				</select>
+				</div>
 			{{/each}}
 		{{/with}}
 		<button type="submit" class="btn btn-success">
