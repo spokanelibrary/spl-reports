@@ -15,10 +15,10 @@
 			</select>
 
 			{{#each cgroups}}
-				<div class="spl-cgroup" id="spl-cgroup-{{code}}">
+				<div class="spl-cgroup collapse" id="spl-cgroup-{{code}}">
 				{{#each collections}}
-					{{code}}
 					<input type="checkbox" checked="checked" value="{{code}}">{{label}}
+					<br>
 				{{/each}}
 				</div>
 			{{/each}}
