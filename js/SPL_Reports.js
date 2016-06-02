@@ -61,6 +61,9 @@ var splReport = {
 				//console.log(this.name.indexOf("[]"));
 				name = this.name.replace('[]', '');
 				console.log(name);
+				if ( !vals[name] ) {
+					vals[name] = new Array();
+				}
 				//vals[name][] = this.value || '';
 			} else {
 				vals[this.name] = this.value || '';
