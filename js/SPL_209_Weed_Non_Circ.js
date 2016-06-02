@@ -32,6 +32,10 @@ var splReportUI = {
 				$('.spl-report-controls').html( tmpl({ controls:obj.controls }));
 			}
 
+			for ( x in obj.controls ) {
+				console.log(obj.controls[x].code);
+			}
+
 		})
 		.fail(function() {
 		})
