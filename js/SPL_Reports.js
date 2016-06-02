@@ -64,7 +64,7 @@ var splReport = {
 				if ( !vals[name] ) {
 					vals[name] = new Array();
 				}
-				//vals[name][] = this.value || '';
+				vals[name][] = this.value || '';
 			} else {
 				vals[this.name] = this.value || '';
 			}
