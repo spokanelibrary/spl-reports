@@ -20,7 +20,7 @@ var splReportUI = {
 			$('.spl-cgroup').removeClass('in')
 			$('.spl-cgroup input[type=checkbox]').prop('checked', false);
 			$('#spl-cgroup-'+cgroup).addClass('in');
-			//$('#spl-cgroup-'+cgroup+' input[type=checkbox]').prop('checked', true);
+			$('#spl-cgroup-'+cgroup+' input[type=checkbox]').prop('checked', true);
 		});
 
 		$.ajax(
