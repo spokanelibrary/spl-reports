@@ -57,12 +57,12 @@ var splReport = {
 		var form = $('form.spl-report-control').serializeArray();
 		//return form;
 		$.each(form, function() {
-			//if ( this.name.indexOf('[]') ) { 
+			if ( this.name.indexOf('[]' > -1) ) { 
 				//name = this.name.replace('[]', '');
 				//vals[name][] = this.value || '';
-			//} else {
+			} else {
 				vals[this.name] = this.value || '';
-			//}
+			}
 		});
 		return vals;
 	}
