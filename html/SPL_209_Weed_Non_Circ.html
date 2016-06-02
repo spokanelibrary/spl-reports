@@ -48,6 +48,7 @@
 			{{/each}}
 			</div>
 			
+			<!--
 			<div class="col-md-3">
 				<label>Call number range</label>
 				<input name="spl-weed-call-begin" type="text" class="form-control" placeholder="From">
@@ -56,6 +57,15 @@
 					<b>Optional.</b>
 					Enter an appropriate range to limit the search.
 				</span>
+			</div>
+			-->
+
+			<div class="col-md-3">
+				<select name="spl-weed-location" class="form-control">
+				{{#each locations}}
+					<option value="{{code}}">{{label}}</option>
+				{{/each}}	
+				</select>
 			</div>
 		
 			<div class="col-md-2">
