@@ -58,9 +58,10 @@ var splReport = {
 		//return form;
 		$.each(form, function() {
 			if ( this.name.indexOf('[]') >= 0 ) { 
+				// allow a one-dimensional array (checkboxes)
 				name = this.name.replace('[]', '');
 				if ( !vals[name] ) {
-					//vals[name] = new Array();
+					vals[name] = new Array();
 				}
 				vals[name].push(this.value);
 			} else {
