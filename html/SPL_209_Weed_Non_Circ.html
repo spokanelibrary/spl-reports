@@ -32,7 +32,7 @@
 				{{#each collections}}
 				<div class="checkbox">
 					<label>
-						<input type="checkbox" value="{{code}}">{{label}}
+						<input name="spl-weed-cgroup" type="checkbox" value="{{code}}">{{label}}
 					</label>
 				</div>
 				{{/each}}
@@ -40,15 +40,15 @@
 			{{/each}}
 			</div>
 			
-			<div class="col-md-2">
+			<div class="col-md-3">
 				<label>Call number range</label>
-				<input type="text" class="form-control" placeholder="From">
-				<input type="text" class="form-control" placeholder="To">
+				<input name="spl-weed-call-begin" type="text" class="form-control" placeholder="From">
+				<input name="spl-weed-call-finish" type="text" class="form-control" placeholder="To">
 			</div>
 		
 			<div class="col-md-2">
 				<label>No circ for</label>
-				<select class="form-control">
+				<select name="spl-weed-cutoff" class="form-control">
 				  <option value="12">12 months</option>
 				  <option value="18">18 months</option>
 				  <option value="24" selected>24 months</option>
