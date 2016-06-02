@@ -58,8 +58,8 @@ var splReport = {
 		//return form;
 		$.each(form, function() {
 			if ( this.name.indexOf('[]') ) { 
-				name = this.name.replace('[]', '');
-				vals[name][] = this.value || '';
+				//name = this.name.replace('[]', '');
+				//vals[name][] = this.value || '';
 			} else {
 				vals[this.name] = this.value || '';
 			}
