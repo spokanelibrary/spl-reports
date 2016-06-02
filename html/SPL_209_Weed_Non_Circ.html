@@ -13,9 +13,11 @@
 		<script class="spl-report-controls-tmpl" type="text/x-handlebars-template">
 		
 		<div class="form-group">
+			<!--
 			<button type="submit" class="btn btn-success">
 				Run Report <small class="glyphicon glyphicon-arrow-right"></small>
 			</button>
+			-->
 			<a href="./" class="btn btn-default pull-right">
 				<small class="glyphicon glyphicon-refresh"></small> Reset</a>
 		</div>
@@ -85,6 +87,7 @@
 				{{/each}}	
 				</select>
 
+				<p>&nbsp;</p>
 
 				<label>No circulation</label>
 				<select name="spl-weed-cutoff" class="form-control">
@@ -96,6 +99,8 @@
 				  <option value="60">5 years</option>
 				</select>
 
+				<p>&nbsp;</p>
+
 				<label>Non-viable items</label>
 				<div class="checkbox">
 					<label>
@@ -103,11 +108,13 @@
 								type="checkbox" value="">Include?
 					</label>
 				</div>
-				
+
 			</div>
 		
 			<div class="col-md-2">
-				
+				<button type="submit" class="btn btn-success">
+					Run Report <small class="glyphicon glyphicon-arrow-right"></small>
+				</button>
 			</div>
 		{{/with}}
 		</div>
