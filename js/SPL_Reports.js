@@ -55,6 +55,7 @@ var splReport = {
 	,getVals: function() {
 		var vals = {};
 		var form = $('form.spl-report-control').serializeArray();
+		return form;
 		$.each(form, function() {
 			vals[this.name] = this.value || '';
 		});
