@@ -29,7 +29,7 @@ var splReportUI = {
 		.done(function(obj) { 
 			//console.log(obj);
 			if ( obj.controls ) {
-				console.log(obj.controls);
+				//console.log(obj.controls);
 				tmpl = Handlebars.compile( $('.spl-report-controls-tmpl').html() );
 				$('.spl-report-controls').html( tmpl({ controls:obj.controls }));
 				
