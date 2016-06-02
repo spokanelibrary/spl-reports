@@ -26,9 +26,7 @@ var splReportUI = {
 		$('body').on('click', '#spl-cgroup-select-all', function(e) {
 			$(this).addClass('disabled');
 			$('#spl-cgroup-deselect-all').removeClass('disabled');
-			//console.log( $('.spl-cgroup-selector').val() );
-
-			$cgroup = $('.spl-cgroup-selector').val();
+			var cgroup = $('.spl-cgroup-selector').val();
 			$('#spl-cgroup-'+cgroup+' input[type=checkbox]').prop('checked', true);
 
 		});
