@@ -17,7 +17,8 @@ var splReportUI = {
 
 		$('body').on('change', '.spl-cgroup-selector', function(e) {
 			var cgroup = $(this).val();
-			$('.spl-cgroup').removeClass('in').find.('input[type=checkbox]').prop('checked', false);
+			$('.spl-cgroup').removeClass('in')
+			$('.spl-cgroup input:checkbox').prop('checked', false);
 			$('#spl-cgroup-'+cgroup).addClass('in'); //.children('input[type=checkbox]').prop('checked', true);
 		});
 
