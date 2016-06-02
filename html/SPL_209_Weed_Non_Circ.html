@@ -84,9 +84,7 @@
 					<option value="{{code}}">{{label}}</option>
 				{{/each}}	
 				</select>
-			</div>
-		
-			<div class="col-md-2">
+
 				<label>No circulation</label>
 				<select name="spl-weed-cutoff" class="form-control">
 				  <option value="12">1 year</option>
@@ -96,6 +94,15 @@
 				  <option value="48">4 years</option>
 				  <option value="60">5 years</option>
 				</select>
+			</div>
+		
+			<div class="col-md-2">
+				<div class="checkbox">
+					<label>
+						<input name="spl-weed-non-viable" 
+								type="checkbox" value="">Include non-viable items?
+					</label>
+				</div>
 			</div>
 		{{/with}}
 		</div>
