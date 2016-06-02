@@ -15,8 +15,9 @@
 			</select>
 
 			{{#each cgroups}}
-				<div class="form-control hidden spl-cgroup" id="spl-cgroup-{{code}}">
+				<div class="spl-cgroup" id="spl-cgroup-{{code}}">
 				{{#each collections}}
+					{{code}}
 					<input type="checkbox" checked="checked" value="{{code}}">{{label}}
 				{{/each}}
 				</div>
