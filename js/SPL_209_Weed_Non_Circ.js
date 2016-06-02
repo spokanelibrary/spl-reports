@@ -16,9 +16,9 @@ var splReportUI = {
 		//console.log(_this.api.data.params);
 
 		$('body').on('change', '.spl-cgroup-selector', function(e) {
-			console.log( $(this).val() );
-			$('.spl-cgroup').removeClass('in');
-			$('#spl-cgroup-'+$(this).val()).addClass('in');
+			var cgroup = $(this).val();
+			$('.spl-cgroup').removeClass('in').('input[type=checkbox]').prop('checked', false);
+			$('#spl-cgroup-'+cgroup).addClass('in'); //.children('input[type=checkbox]').prop('checked', true);
 		});
 
 		$.ajax(
@@ -31,7 +31,7 @@ var splReportUI = {
 				tmpl = Handlebars.compile( $('.spl-report-controls-tmpl').html() );
 				$('.spl-report-controls').html( tmpl({ controls:obj.controls }));
 			}
-
+			// reveal first cgroup
 			$('#spl-cgroup-'+obj.controls.cgroups[0].code).addClass('in');
 
 		})
