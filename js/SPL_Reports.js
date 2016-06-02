@@ -58,11 +58,9 @@ var splReport = {
 		//return form;
 		$.each(form, function() {
 			if ( this.name.indexOf('[]') >= 0 ) { 
-				//console.log(this.name.indexOf("[]"));
 				name = this.name.replace('[]', '');
-				console.log(name);
 				if ( !vals[name] ) {
-					vals[name] = new Array();
+					//vals[name] = new Array();
 				}
 				vals[name].push(this.value);
 			} else {
