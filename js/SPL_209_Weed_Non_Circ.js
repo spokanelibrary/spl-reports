@@ -24,10 +24,14 @@ var splReportUI = {
 		});
 
 		$('body').on('click', '#spl-cgroup-select-all', function(e) {
+			$(this).addClass('disabled');
+			$('#spl-cgroup-deselect-all').removeClass('disabled');
 			console.log( 'select all' );
 		});
 
 		$('body').on('click', '#spl-cgroup-deselect-all', function(e) {
+			$(this).addClass('disabled');
+			$('#spl-cgroup-select-all').removeClass('disabled');
 			console.log( 'deselect all' );
 		});
 
