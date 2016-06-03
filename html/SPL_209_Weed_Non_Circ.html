@@ -143,7 +143,22 @@
 -->
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
-
-	
+	{{#unless sorted}}
+	No items found
+	{{else}}
+		<table class="tablesorter table table-condensed table-bordered table-striped">
+			<thead>
+			<tr>
+				<th>Title</th>
+			</tr>
+			</thead>
+			<tbody>
+			{{#each sorted}}
+			<tr>
+				<td>{{title}}</td>
+			</tr>
+			{{/with}}
+			</tbody>
+	{{/unless}}
 {{/with}}
 </script>
