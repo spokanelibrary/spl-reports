@@ -156,7 +156,7 @@
 				<th>Title</th>
 				<th>Status</th>
 				<th>Last CKO</th>
-				<th># CKOs</th>
+				<th>CKOs</th>
 				<th>Added</th>
 				<th>Barcode</th>
 			</tr>
@@ -166,7 +166,11 @@
 			<tr>
 				<td class="text-center"><input type="checkbox"></td>
 				<td><small><small>{{call_number}}</small></td>
-				<td><b style="overflow: hidden;text-overflow: ellipsis; white-space: nowrap;"><a rel="external" href="http://www.spokanelibrary.org/bib/{{bib}}"><small>{{title}}</small></a></b></td>
+				<td style="overflow: hidden;text-overflow: ellipsis;">
+					<b><a rel="external" 
+					href="http://www.spokanelibrary.org/bib/{{bib}}"
+					><small>{{title}}</small></a></b>
+				</td>
 				<td><small>{{item_status}}</small></td>
 				<td><small>{{last_cko}}</small></td>
 				<td><small>{{n_ckos}}</small></td>
