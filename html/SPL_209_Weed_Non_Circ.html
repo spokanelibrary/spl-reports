@@ -148,9 +148,10 @@
 		<h4>No items found</h4>
 	</div>
 	{{else}}
-		<table class="tablesorter table table-condensed table-bordered table-striped">
+		<table class="dynatable small-print table table-condensed table-bordered table-striped">
 			<thead>
 			<tr>
+				<th><i class="glyphicon glyphicon-ok"></i></th>
 				<th>Call #</th>
 				<th>Title</th>
 				<th>Status</th>
@@ -159,9 +160,10 @@
 			<tbody>
 			{{#each sorted}}
 			<tr>
-				<td>{{call}}</td>
-				<td>{{title}}</td>
-				<td>{{status}}</td>
+				<td class="text-center"><input type="checkbox"></td>
+				<td><small>{{call_number}}</small></td>
+				<td><b style="whitespace:no-wrap;"><a rel="external" href="http://www.spokanelibrary.org/bib/{{bib}}">{{title}}</a></b></td>
+				<td><small>{{item_status}}</small></td>
 			</tr>
 			{{/each}}
 			</tbody>
