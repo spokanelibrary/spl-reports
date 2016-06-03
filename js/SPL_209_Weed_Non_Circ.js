@@ -25,7 +25,7 @@ var splReportUI = {
 			$('#spl-cgroup-deselect-all').removeClass('disabled');
 			$('#spl-cgroup-select-all').addClass('disabled');
 
-
+			$('.spl-report-result').html('');
 		});
 
 		$('body').on('click', '#spl-cgroup-select-all', function(e) {
