@@ -395,9 +395,10 @@ class SPL_Report {
 													,'./208/');
 
 		$reports->coll->label = 'Collection Development';
+		$reports->coll->list[] = array('NEW Non-Circ Weedinfg'
+													,'./209/');
 		$reports->coll->list[] = array('Unique Items by Branch'
 													,'./34/');
-		$reports->coll->label = 'Collection Development';
 		$reports->coll->list[] = array('Trace Search List (New)'
 													,'./101/');
 
