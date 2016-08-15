@@ -32,10 +32,17 @@
 		<h4>No results found</h4>
 	{{else}}
 		
+		<h3>BIB-level Holds <small>item info is illustrative only</small></h3>
 		<table class="table table-bordered table-condensed table-striped">
 			<tr class="info">
 				<th>Bib#</th>
-				<th>Item#</th>
+				<th>Staff</th>
+				<th>Loc.</th>
+				<th>Title</th>
+				<th>Item Status</th>
+				<th>Last Update</th>
+				<th>Due Date</th>
+				<th>Collection</th>
 			</tr>
 			{{#each sorted.detail.bibs}}
 			<tr>
@@ -45,6 +52,7 @@
 			{{/each}}
 		</table>
 
+		<h3>ITEM-level Holds</h3>
 		<table class="table table-bordered table-condensed table-striped">
 			<tr class="info">
 				<th>Bib#</th>
