@@ -65,6 +65,7 @@
 			<thead>
 			<tr class="info">
 				<th>Bib#</th>
+				<th>Barcode</th>
 				<th>Staff</th>
 				<th>Loc.</th>
 				<th>Title</th>
@@ -77,6 +78,7 @@
 			{{#each sorted.detail.items}}
 			<tr>
 				<td><small>{{bib}}</small></td>
+				<td><small>{{ibarcode}}</small></td>
 				<td><small>{{is_staff}}</small></td>
 				<td><small>{{location}}</small></td>
 				<td><small>{{title}}</small></td>
