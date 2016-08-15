@@ -46,8 +46,14 @@
 			</tr>
 			{{#each sorted.detail.bibs}}
 			<tr>
-				<td>{{bib}}</td>
-				<td>{{item}}</td>
+				<td><small>{{bib}}</small></td>
+				<td><small>{{is_staff}}</small></td>
+				<td><small>{{location}}</small></td>
+				<td><small>{{Title}}</small></td>
+				<td><small>{{Item Status}}</small></td>
+				<td><small>{{Last Update}}</small></td>
+				<td><small>{{Due Date}}</small></td>
+				<td><small>{{Collection}}</small></td>
 			</tr>
 			{{/each}}
 		</table>
