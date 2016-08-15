@@ -61,15 +61,29 @@
 		</table>
 
 		<h3>ITEM-level Holds</h3>
-		<table class="table table-bordered table-condensed table-striped">
+		<table class="dynatable small-print table table-bordered table-condensed table-striped">
+			<thead>
 			<tr class="info">
 				<th>Bib#</th>
-				<th>Item#</th>
+				<th>Staff</th>
+				<th>Loc.</th>
+				<th>Title</th>
+				<th>Status</th>
+				<th>Updated</th>
+				<th>Due</th>
+				<th>Collection</th>
 			</tr>
+			</thead>
 			{{#each sorted.detail.items}}
 			<tr>
-				<td>{{bib}}</td>
-				<td>{{item}}</td>
+				<td><small>{{bib}}</small></td>
+				<td><small>{{is_staff}}</small></td>
+				<td><small>{{location}}</small></td>
+				<td><small>{{title}}</small></td>
+				<td><small>{{item_status}}</small></td>
+				<td><small>{{last_update}}</small></td>
+				<td><small>{{due_date}}</small></td>
+				<td><small>{{collection}}</small></td>
 			</tr>
 			{{/each}}
 		</table>
