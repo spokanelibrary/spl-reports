@@ -31,6 +31,7 @@
 	{{#unless sorted.detail}}
 		<h4>No results found</h4>
 	{{else}}
+		
 		<table class="table table-bordered table-condensed table-striped">
 			<tr class="info">
 				<th>Bib#</th>
@@ -43,6 +44,20 @@
 			</tr>
 			{{/each}}
 		</table>
+
+		<table class="table table-bordered table-condensed table-striped">
+			<tr class="info">
+				<th>Bib#</th>
+				<th>Item#</th>
+			</tr>
+			{{#each sorted.detail.item}}
+			<tr>
+				<td>{{bib}}</td>
+				<td>{{item}}</td>
+			</tr>
+			{{/each}}
+		</table>
+
 	{{/unless}}
 {{/with}}
 </script>
