@@ -31,18 +31,19 @@
 	{{#unless sorted.detail}}
 		<h4>No results found</h4>
 	{{else}}
-	<table class="table table-bordered table-condensed table-striped">
-		<tr class="info">
-			<th>Block Date</th>
-			<th>Borrower Barcode</th>
-		</tr>
-		{{#each sorted.detail}}
-		<tr>
-			<td>{{block_date}}</td>
-			<td>{{barcode}}</td>
-		</tr>
+		<table class="table table-bordered table-condensed table-striped">
+			<tr class="info">
+				<th>Bib#</th>
+				<th>Item#</th>
+			</tr>
+			{{#each sorted.detail.bibs}}
+			<tr>
+				<td>{{bib#}}</td>
+				<td>{{item#}}</td>
+			</tr>
+			{{/each}}
+		</table>
 		{{/each}}
-	</table>
 	{{/unless}}
 {{/with}}
 </script>
