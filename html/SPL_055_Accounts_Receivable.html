@@ -31,9 +31,21 @@
 	{{#unless sorted.detail}}
 		<h4>No results found</h4>
 	{{else}}
-		
-		
-
+		<table class="table table-condensed table-bordered table-striped">
+		{{#each detail}}
+		<tr>
+			<td>{{id}}</td>
+			<td>{{epoch}}</td>
+			<td>{{query}}</td>
+			<td>{{lable}}</td>
+			<td>{{quant}}</td>
+			<td>{{total}}</td>
+			<td>{{lost}}</td>
+			<td>{{fines}}</td>
+			<td>{{other}}</td>
+		</tr>
+		{{/each}}
+		</table>
 	{{/unless}}
 {{/with}}
 </script>
