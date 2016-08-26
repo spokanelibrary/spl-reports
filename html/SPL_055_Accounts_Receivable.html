@@ -42,9 +42,32 @@
 			<th>Other</th>
 		</thead>
 		<tbody>
-		<tr class="warning">
+		<tr class="info">
 			<th colspan="7" class="text-left">All Accounts Receivable</th>
 		</tr>
+		<tr>
+			<td><small>{{sorted.detail.0.query}}</small></td>
+			<td><small>{{sorted.detail.0.label}}</small></td>
+			<td class="text-right"><small>{{sorted.detail.0.quant}}</small></td>
+			<td class="text-right"><small>{{sorted.detail.0.total}}</small></td>
+			<td class="text-right"><small>{{sorted.detail.0.lost}}</small></td>
+			<td class="text-right"><small>{{sorted.detail.0.fines}}</small></td>
+			<td class="text-right"><small>{{sorted.detail.0.other}}</small></td>
+		</tr>
+		<tr class="success">
+			<th colspan="7" class="text-left">Less than 30 days</th>
+		</tr>
+		<tr class="warning">
+			<th colspan="7" class="text-left">30&ndash;60 days</th>
+		</tr>
+		<tr class="warning">
+			<th colspan="7" class="text-left">60&ndash;90 days</th>
+		</tr>
+		<tr class="danger">
+			<th colspan="7" class="text-left">Over 90 days</th>
+		</tr>
+
+
 		{{#each sorted.detail}}
 		<tr>
 			<td><small>{{query}}</small></td>
