@@ -31,7 +31,17 @@
 	{{#unless sorted.detail}}
 		<h4>No results found</h4>
 	{{else}}
-		<table class="table table-condensed table-bordered table-striped">
+		<table class="datatable table table-condensed table-bordered table-striped">
+		<thead>
+			<th>Query</th>
+			<th>Label</th>
+			<th># Customers</th>
+			<th>Total Amount</th>
+			<th>Lost</th>
+			<th>Fines</th>
+			<th>Other</th>
+		</thead>
+		<tbody>
 		{{#each sorted.detail}}
 		<tr>
 			<td><small>{{query}}</small></td>
@@ -43,6 +53,7 @@
 			<td class="text-right"><small>{{other}}</small></td>
 		</tr>
 		{{/each}}
+		</tbody>
 		</table>
 	{{/unless}}
 {{/with}}
