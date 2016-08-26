@@ -31,7 +31,7 @@
 	{{#unless sorted.detail}}
 		<h4>No results found</h4>
 	{{else}}
-		<table class="datatable table table-condensed table-bordered table-striped">
+		<table class="table table-condensed table-bordered table-striped">
 		<thead>
 			<th>Query</th>
 			<th>Label</th>
@@ -42,6 +42,9 @@
 			<th>Other</th>
 		</thead>
 		<tbody>
+		<tr class="warning">
+			<th colspan="7" class="text-left">All Accounts Receivable</th>
+		</tr>
 		{{#each sorted.detail}}
 		<tr>
 			<td><small>{{query}}</small></td>
