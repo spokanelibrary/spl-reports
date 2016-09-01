@@ -1,0 +1,41 @@
+<form class="form-inline spl-report-control">
+	<h2>Reset Pick List <small>by branch</small></h2>
+	<fieldset>
+		<legend>
+			This will reset the pick list for the selected location. <b>Choose wisely!</b>
+		</legend>
+		<div class="form-group">
+			<label>Select Branch:</label>
+			<select class="form-control" name="branch">
+			    <option value="dt">Downtown</option>
+			    <option value="es">East Side</option>
+			    <option value="hy">Hillyard</option>
+			    <option value="it">Indian Trail</option>
+			    <option value="sh">Shadle</option>
+			    <option value="so">South Hill</option>
+			    <option value="all">All Locations</option>
+			</select> 
+		</div>
+
+		<button type="submit" class="btn btn-success">
+			Run Report <small class="glyphicon glyphicon-arrow-right"></small>
+		</button>
+		<a href="./" class="btn btn-default pull-right">
+			<small class="glyphicon glyphicon-refresh"></small> Reset</a>
+
+	</fieldset>
+</form>
+
+<hr>
+
+<div class="spl-report-result"></div>
+
+<br>
+<br>
+<div class="well well-sm spl-report-summary">
+</div>
+<script class="spl-report-tmpl" type="text/x-handlebars-template">
+{{#with report}}
+
+{{/with}}
+</script>
