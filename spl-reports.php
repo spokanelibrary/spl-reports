@@ -65,7 +65,7 @@ function spl_reports($params=null, $config=null) {
 	$report = new SPL_Report($params, $config);
 	$report->getReport();
 	if ( is_object($report) ) {
-		return $report->output() . '<pre>'.wp_get_current_user().'</pre>';
+		return $report->output() . '<pre>'.print_r(wp_get_current_user(),true).'</pre>';
 	} else {
 		return 'Uh oh. Error loading report.';
 	}
