@@ -81,7 +81,7 @@ function spl_reports_restricted($params=null, $config=null) {
 
 	$user = wp_get_current_user();
 	if ( 207 == $params['id'] ) {
-		if ( !in_array($user->data->user_login, array('administrator')) ) {
+		if ( !in_array($user->data->user_login, array('sgirard')) ) {
 			$restrict = true;	
 		}
 	}
