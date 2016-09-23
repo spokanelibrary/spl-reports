@@ -72,7 +72,7 @@ function spl_reports($params=null, $config=null) {
 			return 'Uh oh. Error loading report.';
 		}
 	} else {
-		return '<h4 class="text-danger">Access to this page is restricted.</h4>'.'<pre>'.print_r(wp_get_current_user(),true).'</pre>';
+		return '<h4 class="text-danger">Access to this page is restricted.</h4>';
 	}
 }
 
