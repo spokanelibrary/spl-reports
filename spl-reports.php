@@ -67,12 +67,12 @@ function spl_reports($params=null, $config=null) {
 
 	if ( !spl_reports_restricted($params, $config) ) { 
 		if ( is_object($report) ) {
-			return $report->output() . '<pre>'.print_r(wp_get_current_user(),true).'</pre>';
+			return $report->output();
 		} else {
 			return 'Uh oh. Error loading report.';
 		}
 	} else {
-		return 'Access to this page is restricted.';
+		return '<h4 class="text-danger">Access to this page is restricted.</h4>'.'<pre>'.print_r(wp_get_current_user(),true).'</pre>';
 	}
 }
 
