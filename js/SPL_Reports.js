@@ -23,7 +23,7 @@ var splReport = {
 			if ( $(this).data('noajax') ) {
 			} else {
 				if ( $(this).valid() ) {
-					e.preventDefault();
+					//e.preventDefault();
 					_this.getReport();
 				}
 			}
