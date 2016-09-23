@@ -77,7 +77,7 @@ function spl_reports($params=null, $config=null) {
 }
 
 function spl_reports_restricted($params=null, $config=null) {
-	return true;
+	return false;
 }
 
 function spl_reports_ajax() {
