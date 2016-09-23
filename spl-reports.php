@@ -77,7 +77,13 @@ function spl_reports($params=null, $config=null) {
 }
 
 function spl_reports_restricted($params=null, $config=null) {
-	return false;
+	$restricted = false;
+
+	if ( 207 == $params['id'] ) {
+
+	}
+
+	return $restricted;
 }
 
 function spl_reports_ajax() {
