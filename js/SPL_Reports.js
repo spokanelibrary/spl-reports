@@ -22,8 +22,8 @@ var splReport = {
 		$('body').on('submit', '.spl-report-control', function(e) {
 			if ( $(this).data('noajax') ) {
 			} else {
+				e.preventDefault();
 				if ( $(this).valid() ) {
-					//e.preventDefault();
 					_this.getReport();
 				}
 			}
