@@ -17,31 +17,15 @@ var splReport = {
 		_this = this;
 		this.initUI();
 
-		$('form').validate({
-	        highlight: function(element) {
-	            $(element).closest('.form-group').addClass('has-error');
-	        },
-	        unhighlight: function(element) {
-	            $(element).closest('.form-group').removeClass('has-error');
-	        },
-	        errorElement: 'span',
-	        errorClass: 'help-block',
-	        errorPlacement: function(error, element) {
-	            if(element.parent('.input-group').length) {
-	                error.insertAfter(element.parent());
-	            } else {
-	                error.insertAfter(element);
-	            }
-	        }
-	    });
-			
 	}
 	,initUI: function() {
 		$('body').on('submit', '.spl-report-control', function(e) {
 			if ( $(this).data('noajax') ) {
 			} else {
-				e.preventDefault();
-				_this.getReport();
+				if ( $(this).valid() ) {
+					e.preventDefault();
+					_this.getReport();
+				}
 			}
 		});
 
