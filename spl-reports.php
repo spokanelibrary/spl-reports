@@ -64,11 +64,20 @@ add_shortcode('spl_reports', 'wp_spl_reports');
 function spl_reports($params=null, $config=null) {
 	$report = new SPL_Report($params, $config);
 	$report->getReport();
-	if ( is_object($report) ) {
-		return $report->output() . '<pre>'.print_r(wp_get_current_user(),true).'</pre>';
+
+	if ( !spl_reports_restricted($params, $config) ) { 
+		if ( is_object($report) ) {
+			return $report->output() . '<pre>'.print_r(wp_get_current_user(),true).'</pre>';
+		} else {
+			return 'Uh oh. Error loading report.';
+		}
 	} else {
-		return 'Uh oh. Error loading report.';
+		return 'Access to this page is restricted.';
 	}
+}
+
+function spl_reports_restricted($params=null, $config=null) {
+	return false;
 }
 
 function spl_reports_ajax() {
