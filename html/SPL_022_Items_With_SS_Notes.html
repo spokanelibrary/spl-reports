@@ -26,8 +26,20 @@
 </div>
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
+	<table>
+	<tr>
+		<th>Barcode</th>
+		<th>Title</th>
+		<th>Note</th>
+	</tr>
 
-	
+	{{#each sorted}}
+	<tr>
+		<td>{{ibarcode}}</td>
+		<td>{{title}}</td>
+		<td>{{internal_note}}</td>
+	</tr>
+	{{/each}}
 
 {{/with}}
 </script>
