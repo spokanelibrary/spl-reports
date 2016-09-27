@@ -432,7 +432,6 @@ class SPL_Report {
 		$reports->fdtn->list[] = array('CHoF Nominations'
 													,'./202/');
 
-
 		$todo->create->label = 'Reports Needed';
 		$todo->create->list[] = array('Non-res tieout'
 													,'./');
@@ -473,10 +472,7 @@ class SPL_Report {
 		$other->fin->label = 'Business & Finance';
 		$other->fin->list[] = array('EnvisionWare Tableau Server'
 																,'http://10.14.51.103/');
-		/*
-		$other->fin->list[] = array('Accounts Receivable (new)'
-																,'./055');
-		*/
+
 
 		/*
 		 *	Apps & Tools
@@ -560,9 +556,9 @@ class SPL_Report {
 													,'http://dash.spokanelibrary.org/stats/item-request-limits');
 		
 		$dash->fin->label = 'Business & Finance';
-		//$dash->fin->list[] = array('Balance Sheet (beta)'
+		$dash->fin->list[] = array('Balance Sheet (beta)'
 																,'http://dash.spokanelibrary.org/stats/balance-sheet');
-		
+
 
 		/*
 		 *	Intra Reports
