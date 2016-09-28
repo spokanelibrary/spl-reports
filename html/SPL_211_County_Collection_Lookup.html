@@ -1,0 +1,98 @@
+<form class="form-inline spl-report-control hidden-print" data-noajax="true" method="post" enctype="multipart/form-data">
+	<h2>Customer Addresses <small>from vendor-supplied list</small></h2>
+	<fieldset>
+		<legend>
+			Generate an address file from a list of barcodes or email addresses
+		</legend>
+
+		<div class="form-group">
+			<input type="file" name="vendorlist"> 
+		</div>
+		<!--
+		<div class="form-group">
+			<label>Type of list:</label>
+			<select class="form-control" name="records">
+		    <option value="barcode" selected="selected">Barcode</option>
+        <option value="email">Email Address</option>
+			</select> 
+		</div>
+		-->
+
+		<input type="hidden" name="noajax" value="true">
+
+		<button type="submit" class="btn btn-success">
+			Run Report <small class="glyphicon glyphicon-arrow-right"></small>
+		</button>
+		<a href="./" class="btn btn-default pull-right">
+			<small class="glyphicon glyphicon-refresh"></small> Reset</a>
+
+	</fieldset>
+</form>
+
+<hr class="hidden-print">
+
+<div class="spl-report-result"></div>
+
+<br>
+<br>
+<div class="well well-sm spl-report-summary hidden-print">
+	<h3>Summary</h3>
+  <p>
+  	This program autodetects barcode or email columns in a spreadsheet, and extracts the column for matching against borrower information in our ILS.
+  </p>
+  <ul>
+  	<li><b>To use:</b> Choose a file you want to match against, press Run Report, and save the generated spreadsheet.</li>
+  </ul>
+  <blockquote>
+  	If the autodetection isn't working (maybe it's not picking the column you want), just save a file with one column containing the data you want to match, and upload that.
+  	<small>sean</small>
+  </blockquote>
+</div>
+
+<script class="spl-report-tmpl" type="text/x-handlebars-template">
+{{#with report}}
+
+	{{#if error}}
+		<h3 class="text-danger">Error: {{error}}</h3>
+	{{/if}}
+
+	{{#unless sorted}}
+		<h4>No results found</h4>
+	{{else}}
+		
+		<h3 class="text-success">OK!</h3>
+		<h4>{{params.files.vendorlist.name}}</h4>
+
+		<p>
+			<a rel="external" class="btn btn-primary" href="http://staff.spokanelibrary.org/dl/?file=address">
+			<i class="glyphicon glyphicon-download-alt"></i> 
+			Download Address File</a>
+		</p>
+
+		{{#with sorted.fileInspection}}
+		<dl class="dl-horizontal">
+
+			<dt>File type:</dt>
+			<dd>{{fileType}}</dd>
+
+			<dt>Match type:</dt>
+			<dd class="uppercase">{{type}}</dd>
+
+			<dt>Header row:</dt>
+			<dd>{{#if header}}Yes{{else}}No{{/if}}</dd>
+
+			<dt>Match column:</dt>
+			<dd>{{column}}</dd>
+
+			<dt>Searched Rows:</dt>
+			<dd><b class="text-info">{{highestRow}}</b></dd>
+
+			<dt>Unique Matches:</dt>
+			<dd><b class="text-success">{{addressMatches}}</b></dd>			
+
+		</dl>
+		{{/with}}
+
+	{{/unless}}
+{{/with}}
+</script>
