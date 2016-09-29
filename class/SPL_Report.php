@@ -113,8 +113,6 @@ class SPL_Report {
 					<div class="col-sm-6 col-md-3">
 						<h4>Converted Reports</h4>
 						'.$this->getReportList($db->reports).'
-						<h4>ToDo Reports</h4>
-						'.$this->getReportList($db->todo).'
 					</div>
 					<div class="col-sm-6 col-md-3">
 						<h4>Dashboard Reports</h4>
