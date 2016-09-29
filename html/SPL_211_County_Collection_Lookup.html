@@ -1,22 +1,14 @@
 <form class="form-inline spl-report-control hidden-print" data-noajax="true" method="post" enctype="multipart/form-data">
-	<h2>Customer Addresses <small>from vendor-supplied list</small></h2>
+	<h2>County Collections <small>import</small></h2>
 	<fieldset>
 		<legend>
-			Generate an address file from a list of barcodes or email addresses
+			Load a pipe-seperated .txt file from SCLD. 
+			File should be named COLLECTION.txt
 		</legend>
 
 		<div class="form-group">
 			<input type="file" name="collectionlist"> 
 		</div>
-		<!--
-		<div class="form-group">
-			<label>Type of list:</label>
-			<select class="form-control" name="records">
-		    <option value="barcode" selected="selected">Barcode</option>
-        <option value="email">Email Address</option>
-			</select> 
-		</div>
-		-->
 
 		<input type="hidden" name="noajax" value="true">
 
@@ -38,15 +30,11 @@
 <div class="well well-sm spl-report-summary hidden-print">
 	<h3>Summary</h3>
   <p>
-  	This program autodetects barcode or email columns in a spreadsheet, and extracts the column for matching against borrower information in our ILS.
+  	SCLD sends us a file of borrowers in debt collection.
+  	Use this program to upload that file into the SQL server.
+  	Staff can search against that table (using a different report) when creating new cards.
   </p>
-  <ul>
-  	<li><b>To use:</b> Choose a file you want to match against, press Run Report, and save the generated spreadsheet.</li>
-  </ul>
-  <blockquote>
-  	If the autodetection isn't working (maybe it's not picking the column you want), just save a file with one column containing the data you want to match, and upload that.
-  	<small>sean</small>
-  </blockquote>
+
 </div>
 
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
@@ -54,15 +42,9 @@
 
 	{{#if error}}
 		<h3 class="text-danger">Error: {{error}}</h3>
+	{{else}}	
+		<h3 class="text-success">OK!</h3>
 	{{/if}}
 
-	{{#unless sorted}}
-		<h4>No results found</h4>
-	{{else}}
-		
-		<h3 class="text-success">OK!</h3>
-
-
-	{{/unless}}
 {{/with}}
 </script>
