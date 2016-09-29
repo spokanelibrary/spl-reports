@@ -394,6 +394,11 @@ class SPL_Report {
 		$reports->circ->list[] = array('Borrowers With 50+ Line Items'
 													,'./208/');
 
+		$reports->circ->list[] = array('County Collection Import'
+													,'./211/');
+		$reports->circ->list[] = array('County Collection Lookup'
+													,'./212/');
+
 		$reports->coll->label = 'Collection Development';
 		$reports->coll->list[] = array('NEW Non-Circ Weedinfg'
 													,'./209/');
