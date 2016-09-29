@@ -185,7 +185,9 @@ class SPL_Report {
 				//$html .= '<button type="button" class="btn btn-lg btn-'.$class.' dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
 				//$html .= $menu->label.' <span class="caret"></span></button>';
 				if ( is_array($menu->list) ) {
+					$html .= '<hr>';
 					$html .= '<h5 class="text-center">'.$menu->label.'</h5>';
+					$html .= '<hr>';
 					//$html .= '<ul class="dropdown-menu">';
 					$html .= '<ul class="nav nav-pills nav-stacked">';
 					foreach ( $menu->list as $i=>$item ) {
