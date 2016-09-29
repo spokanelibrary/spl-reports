@@ -667,8 +667,9 @@ class SPL_Report {
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=163');
 		$intra->coll->clean->list[] = array('Drama cleanup'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=1');
-		$intra->coll->clean->list[] = array('Items with support services notes'
+		/*$intra->coll->clean->list[] = array('Items with support services notes'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=22');
+		*/															
 		$intra->coll->clean->list[] = array('JTAutoentry: Bibs to mark staff_only'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=133');
 		$intra->coll->clean->list[] = array('JTAutoentry: Bibs to unmark staff_only'
