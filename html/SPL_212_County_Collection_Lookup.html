@@ -36,7 +36,17 @@
 			<h4>{{sorted.error}}</h4>
 		</div>
 		{{else}}
-			yep
+			<table class="table table-bordered table-condensed table-striped">
+			{{#each sorted}}
+				<tr>
+					<td>{{name}}</td>
+					<td>{{address}}</td>
+					<td>{{city}}</td>
+					<td>{{zip}}</td>
+					<td>{{bithdate}}</td>
+				</tr>
+			{{/each}}
+			</table>
 		{{/if}}
 	{{/if}}
 {{/with}}
