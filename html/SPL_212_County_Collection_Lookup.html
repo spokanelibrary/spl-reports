@@ -1,0 +1,43 @@
+<form class="form-inline spl-report-control">
+	<h2>County Collections <small>import</small></h2>
+	<fieldset>
+		<legend>
+			Search for customers in debt collection at SCLD.
+		</legend>
+
+		<div class="form-group">
+			<label>Customer Last Name:</label>
+			<input type="text" name="lastname"> 
+		</div>
+
+		<button type="submit" class="btn btn-success">
+			Run Report <small class="glyphicon glyphicon-arrow-right"></small>
+		</button>
+		<a href="./" class="btn btn-default pull-right">
+			<small class="glyphicon glyphicon-refresh"></small> Reset</a>
+
+	</fieldset>
+</form>
+
+<hr>
+
+<div class="spl-report-result"></div>
+
+<br>
+<br>
+<div class="well well-sm spl-report-summary">
+
+</div>
+<script class="spl-report-tmpl" type="text/x-handlebars-template">
+{{#with report}}
+	{{#if sorted}}
+		{{#if sorted.error}}
+		<div class="alert alert-danger">
+			<h4>{{sorted.error}}</h4>
+		</div>
+		{{else}}
+			yep
+		{{/if}}
+	{{/if}}
+{{/with}}
+</script>
