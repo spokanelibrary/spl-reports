@@ -86,6 +86,16 @@ function spl_reports_restricted($params=null, $config=null) {
 		}
 	}
 
+
+	if ( 211 == $params['id'] ) {
+		if ( !in_array($user->data->user_login
+						, array('administrator'
+								, 'sgirard')) ) {
+			$restrict = true;	
+		}
+	}
+
+
 	return $restrict;
 }
 
