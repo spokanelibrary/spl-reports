@@ -240,6 +240,7 @@ class SPL_Report {
     $class = new stdClass();
 
     $files = scandir( plugin_dir_path( __DIR__ ).'html' );
+    natsort($files);
     foreach ($files as $file) {
       // ignore directories and hidden files
       if(0 !== stripos($file, '.') && !isset($class->name) ) {
