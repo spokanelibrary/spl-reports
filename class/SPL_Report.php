@@ -242,7 +242,7 @@ class SPL_Report {
     $files = scandir( plugin_dir_path( __DIR__ ).'html' );
     foreach ($files as $file) {
       // ignore directories and hidden files
-      if(0 !== stripos($file, '.')) {
+      if(0 !== stripos($file, '.') && !isset($class->name) ) {
         //$class->scan = $this->params['id'];
         if ( substr_count(strtolower(str_ireplace('_', '-', $file)), strtolower($this->params['id'])) ) {
           // trim off file extension
