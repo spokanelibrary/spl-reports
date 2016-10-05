@@ -1,0 +1,51 @@
+<form class="form-inline spl-report-control hidden-print" data-noajax="true" method="post" enctype="multipart/form-data">
+	<h2>Naturalization <small>import</small></h2>
+	<fieldset>
+		<legend>
+			Load a .csv file into the DB. 
+		</legend>
+
+		<div class="form-group">
+			<input type="file" name="collectionlist"> 
+		</div>
+
+		<input type="hidden" name="noajax" value="true">
+
+		<button type="submit" class="btn btn-success">
+			Run Report <small class="glyphicon glyphicon-arrow-right"></small>
+		</button>
+		<a href="./" class="btn btn-default pull-right">
+			<small class="glyphicon glyphicon-refresh"></small> Reset</a>
+
+	</fieldset>
+</form>
+
+<hr class="hidden-print">
+
+<div class="spl-report-result"></div>
+
+<br>
+<br>
+<div class="well well-sm spl-report-summary hidden-print">
+	<h3>Summary</h3>
+  <p>
+  	You MUST:
+  	<ul>
+  		<li>Upload a .csv file (you can save from excel)</li>
+  		<li>named naturalization.csv</li>
+  	</ul>
+  </p>
+
+</div>
+
+<script class="spl-report-tmpl" type="text/x-handlebars-template">
+{{#with report}}
+
+	{{#if error}}
+		<h3 class="text-danger">Error: {{error}}</h3>
+	{{else}}	
+		<h3 class="text-success">OK!</h3>
+	{{/if}}
+
+{{/with}}
+</script>
