@@ -482,6 +482,10 @@ class SPL_Report {
 		$other->fin->list[] = array('Accounts Receivable (new)'
 																,'./055/');
 
+		$other->gen->label = 'Genealogy';
+		$other->gen->list[] = array('Import Naturalization records'
+																,'./213/');
+
 		/*
 		 *	Apps & Tools
 		 */
