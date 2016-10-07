@@ -19,5 +19,9 @@
 <script class="spl-report-tmpl" type="text/x-handlebars-template">
 {{#with report}}
 
+	{{#if sorted.passphrase}}
+		Current passphrase: <b>{{sorted.passphrase}}</b>
+	{{/if}}
+
 {{/with}}
 </script>
