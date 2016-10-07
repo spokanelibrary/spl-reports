@@ -486,6 +486,10 @@ class SPL_Report {
 		$other->gen->list[] = array('Import Naturalization records'
 																,'./213/');
 
+		$other->lvl->label = 'Level Up';
+		$other->lvl->list[] = array('Get/Set Current Passphrase'
+																,'./214/');
+
 		/*
 		 *	Apps & Tools
 		 */
