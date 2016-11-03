@@ -8,9 +8,9 @@
 		<div class="form-group col-md-3">
 			<div class="input-group date datebegin" data-date-format="yyyy-mm-dd">
 				<span class="input-group-addon"><b>Begin</b></span>
-	      <input type="text" 
+	      <input type="text"
 	      				value=""
-	              class="form-control required" 
+	              class="form-control required"
 	              name="datebegin"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 	    </div>
 	  </div>
@@ -18,9 +18,9 @@
 	  <div class="form-group col-md-3">
 			<div class="input-group date datefinish" data-date-format="yyyy-mm-dd">
 				<span class="input-group-addon"><b>End</b></span>
-	      <input type="text" 
+	      <input type="text"
 	      				value=""
-	      				class="form-control required" 
+	      				class="form-control required"
 	              name="datefinish"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 	    </div>
 	  </div>
@@ -46,7 +46,7 @@
 		Note: The end date is <b>not</b> counted. I.e., if you want to report on January, you should select Jan 1 &ndash; Feb 1.
 	</p>
 	<p>
-		We have a gap in data from about mid December 2015 &ndash; Feb 2, 2016. 
+		We have a gap in data from about mid December 2015 &ndash; Feb 2, 2016.
 	</p>
 </div>
 
@@ -62,9 +62,9 @@
 			<div class="panel-heading">
 				<div class="row">
 					<div class="col-md-4">
-						<button class="btn btn-block btn-success" 
-										data-toggle="collapse" 
-										data-target="#spl-wifi-active-panel"><b>Right Now:</b> {{range.now}} 
+						<button class="btn btn-block btn-success"
+										data-toggle="collapse"
+										data-target="#spl-wifi-active-panel"><b>Right Now:</b> {{range.now}}
 						<span class="caret"></span></button>
 					</div>
 				</div>
@@ -109,9 +109,9 @@
 			<div class="panel-heading">
 				<div class="row">
 					<div class="col-md-4">
-						<button class="btn btn-block btn-warning" 
-										data-toggle="collapse" 
-										data-target="#spl-wifi-daterange-panel"><b>Date Range:</b> {{range.datebegin}} &ndash; {{range.datefinish}} 
+						<button class="btn btn-block btn-warning"
+										data-toggle="collapse"
+										data-target="#spl-wifi-daterange-panel"><b>Date Range:</b> {{range.datebegin}} &ndash; {{range.datefinish}}
 						<span class="caret"></span></button>
 					</div>
 				</div>
@@ -157,7 +157,7 @@
 					</tr>
 					<tr>
 		        <th>
-		        	{{session.branch.0.label}}  
+		        	{{session.branch.0.label}}
 		        </th>
 						<td class="text-right">{{unique.branch.0.mobile}}</td>
 						<td class="text-right">{{session.branch.0.mobile}}</td>
@@ -168,7 +168,7 @@
 					</tr>
 					<tr>
 		        <th>
-		        	{{session.branch.1.label}}  
+		        	{{session.branch.1.label}}
 		        </th>
 						<td class="text-right">{{unique.branch.1.mobile}}</td>
 						<td class="text-right">{{session.branch.1.mobile}}</td>
@@ -179,7 +179,7 @@
 					</tr>
 					<tr>
 		        <th>
-		        	{{session.branch.2.label}}  
+		        	{{session.branch.2.label}}
 		        </th>
 						<td class="text-right">{{unique.branch.2.mobile}}</td>
 						<td class="text-right">{{session.branch.2.mobile}}</td>
@@ -190,7 +190,7 @@
 					</tr>
 					<tr>
 		        <th>
-		        	{{session.branch.3.label}}  
+		        	{{session.branch.3.label}}
 		        </th>
 						<td class="text-right">{{unique.branch.3.mobile}}</td>
 						<td class="text-right">{{session.branch.3.mobile}}</td>
@@ -201,7 +201,7 @@
 					</tr>
 					<tr>
 		        <th>
-		        	{{session.branch.4.label}}  
+		        	{{session.branch.4.label}}
 		        </th>
 						<td class="text-right">{{unique.branch.4.mobile}}</td>
 						<td class="text-right">{{session.branch.4.mobile}}</td>
@@ -212,7 +212,7 @@
 					</tr>
 					<tr>
 		        <th>
-		        	{{session.branch.5.label}}  
+		        	{{session.branch.5.label}}
 		        </th>
 						<td class="text-right">{{unique.branch.5.mobile}}</td>
 						<td class="text-right">{{session.branch.5.mobile}}</td>
@@ -221,20 +221,33 @@
 						<td class="text-right">{{unique.branch.5.count}}</td>
 						<td class="text-right">{{session.branch.5.count}}</td>
 					</tr>
+
+					<tr>
+					 			<th>
+							        	{{session.branch.6.label}}
+							        </th>
+											<td class="text-right">{{unique.branch.6.mobile}}</td>
+											<td class="text-right">{{session.branch.6.mobile}}</td>
+											<td class="text-right">{{unique.branch.6.non-mobile}}</td>
+											<td class="text-right">{{session.branch.6.non-mobile}}</td>
+											<td class="text-right">{{unique.branch.6.count}}</td>
+											<td class="text-right">{{session.branch.6.count}}</td>
+										</tr>
+					
 				</table>
 				{{/with}}
 			</div><!-- /.panel-body -->
 		</div><!-- /.panel -->
 
-		
+
 		<!-- TODAY -->
 		<div class="panel panel-info">
 			<div class="panel-heading">
 				<div class="row">
 					<div class="col-md-4">
-						<button class="btn btn-block btn-info" 
-										data-toggle="collapse" 
-										data-target="#spl-wifi-today-panel"><b>Today:</b> {{range.today}} 
+						<button class="btn btn-block btn-info"
+										data-toggle="collapse"
+										data-target="#spl-wifi-today-panel"><b>Today:</b> {{range.today}}
 						<span class="caret"></span></button>
 					</div>
 				</div>
@@ -278,9 +291,9 @@
 			<div class="panel-heading">
 				<div class="row">
 					<div class="col-md-4">
-						<button class="btn btn-block btn-info" 
-										data-toggle="collapse" 
-										data-target="#spl-wifi-yesterday-panel"><b>Yesterday:</b> {{range.yesterday}} 
+						<button class="btn btn-block btn-info"
+										data-toggle="collapse"
+										data-target="#spl-wifi-yesterday-panel"><b>Yesterday:</b> {{range.yesterday}}
 						<span class="caret"></span></button>
 					</div>
 				</div>
@@ -324,9 +337,9 @@
 			<div class="panel-heading">
 				<div class="row">
 					<div class="col-md-4">
-						<button class="btn btn-block btn-info" 
-										data-toggle="collapse" 
-										data-target="#spl-wifi-thismonth-panel"><b>This Month:</b> {{range.thismonth}} &ndash; {{range.nextmonth}} 
+						<button class="btn btn-block btn-info"
+										data-toggle="collapse"
+										data-target="#spl-wifi-thismonth-panel"><b>This Month:</b> {{range.thismonth}} &ndash; {{range.nextmonth}}
 						<span class="caret"></span></button>
 					</div>
 				</div>
@@ -372,7 +385,7 @@
 					</tr>
 					<tr>
 		        <th>
-		        	{{session.branch.0.label}}  
+		        	{{session.branch.0.label}}
 		        </th>
 						<td class="text-right">{{unique.branch.0.mobile}}</td>
 						<td class="text-right">{{session.branch.0.mobile}}</td>
@@ -383,7 +396,7 @@
 					</tr>
 					<tr>
 		        <th>
-		        	{{session.branch.1.label}}  
+		        	{{session.branch.1.label}}
 		        </th>
 						<td class="text-right">{{unique.branch.1.mobile}}</td>
 						<td class="text-right">{{session.branch.1.mobile}}</td>
@@ -394,7 +407,7 @@
 					</tr>
 					<tr>
 		        <th>
-		        	{{session.branch.2.label}}  
+		        	{{session.branch.2.label}}
 		        </th>
 						<td class="text-right">{{unique.branch.2.mobile}}</td>
 						<td class="text-right">{{session.branch.2.mobile}}</td>
@@ -405,7 +418,7 @@
 					</tr>
 					<tr>
 		        <th>
-		        	{{session.branch.3.label}}  
+		        	{{session.branch.3.label}}
 		        </th>
 						<td class="text-right">{{unique.branch.3.mobile}}</td>
 						<td class="text-right">{{session.branch.3.mobile}}</td>
@@ -416,7 +429,7 @@
 					</tr>
 					<tr>
 		        <th>
-		        	{{session.branch.4.label}}  
+		        	{{session.branch.4.label}}
 		        </th>
 						<td class="text-right">{{unique.branch.4.mobile}}</td>
 						<td class="text-right">{{session.branch.4.mobile}}</td>
@@ -427,7 +440,7 @@
 					</tr>
 					<tr>
 		        <th>
-		        	{{session.branch.5.label}}  
+		        	{{session.branch.5.label}}
 		        </th>
 						<td class="text-right">{{unique.branch.5.mobile}}</td>
 						<td class="text-right">{{session.branch.5.mobile}}</td>
