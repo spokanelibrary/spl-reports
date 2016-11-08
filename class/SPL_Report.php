@@ -604,8 +604,8 @@ class SPL_Report {
 																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=90');
 		$intra->circ->circ->list[] = array('Customers with an "edc" block'
 																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=122');
-		$intra->circ->circ->list[] = array('Item status check'
-																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=33');
+		/*$intra->circ->circ->list[] = array('Item status check'
+																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=33');*/
 		$intra->circ->circ->list[] = array('System Notice Lookup'
 																,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=165');
 		//$intra->circ->circ->list[] = array('Zip codes of checked out items'
@@ -650,8 +650,8 @@ class SPL_Report {
 
 
 		$intra->coll->bib->label = 'Bib Records';
-		$intra->coll->bib->list[] = array('1XX, 6XX, 7XX text not proper authority cross-reference'
-																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=129');
+		/*$intra->coll->bib->list[] = array('1XX, 6XX, 7XX text not proper authority cross-reference'
+																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=129');*/
 		$intra->coll->bib->list[] = array('Bibs potentially marked erroneously as "staff-only"'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=4');
 		$intra->coll->bib->list[] = array('Bibs potentially marked with an incorrect bib status'
@@ -680,9 +680,9 @@ class SPL_Report {
 		*/
 		$intra->coll->clean->list[] = array('Bibs with a cutter beginning with a number'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=163');
-		$intra->coll->clean->list[] = array('Drama cleanup'
+		/*$intra->coll->clean->list[] = array('Drama cleanup'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=1');
-		/*$intra->coll->clean->list[] = array('Items with support services notes'
+		$intra->coll->clean->list[] = array('Items with support services notes'
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=22');
 		*/															
 		$intra->coll->clean->list[] = array('JTAutoentry: Bibs to mark staff_only'
@@ -763,8 +763,8 @@ class SPL_Report {
 		$intra->fin->borr->label = 'Bib Records';
 		$intra->fin->borr->list[] = array('Customers with credit balances in Horizon'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=59');
-		$intra->fin->borr->list[] = array('Library cards with staff btypes'
-																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=58');
+		/*$intra->fin->borr->list[] = array('Library cards with staff btypes'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=58');*/
 		
 		
 		$intra->fin->budget->label = 'Budget';
@@ -790,8 +790,8 @@ class SPL_Report {
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=135');
 		$intra->fin->bus->list[] = array('Deleted item search'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=60');
-		$intra->fin->bus->list[] = array('Deleted Items List'
-																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=175');
+		/*$intra->fin->bus->list[] = array('Deleted Items List'
+																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=175');*/
 		$intra->fin->bus->list[] = array('Item holdings with values'
 																		,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=57');
 		$intra->fin->bus->list[] = array('Monthly pay waive'
