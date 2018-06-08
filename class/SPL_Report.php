@@ -499,7 +499,7 @@ class SPL_Report {
 
 		$apps->circ->label = 'Circulation';
 		$apps->circ->list[] = array('Process New Library Cards'
-													,'http://dash.spokanelibrary.org/connect/libcard');
+													,'https://dash.spokanelibrary.org/connect/libcard');
 
 
 
@@ -515,13 +515,13 @@ class SPL_Report {
 		
 		$apps->nmr->label = 'New Material Requests';
 		$apps->nmr->list[] = array('NMR Staff Portal'
-													,'http://dash.spokanelibrary.org/connect/request');
+													,'https://dash.spokanelibrary.org/connect/request');
 		//$apps->nmr->list[] = array('NMR on our website'
 		//											,'http://www.spokanelibrary.org/request');
 
 		$apps->cfr->label = 'Content Filter Requests';
 		$apps->cfr->list[] = array('View &amp; Manage Content Filter Requests'
-													,'http://dash.spokanelibrary.org/connect/unblock');
+													,'https://dash.spokanelibrary.org/connect/unblock');
 		$apps->cfr->list[] = array('Process Content Filter Requests in Firewall'
 													,'https://199.237.16.1/login');
 		/*
@@ -530,50 +530,50 @@ class SPL_Report {
 
 		$dash->circ->label = 'Circulation';
 		$dash->circ->list[] = array('Circulation Monthly: Totals by Collection'
-													,'http://dash.spokanelibrary.org/stats/circulation-monthly');
+													,'https://dash.spokanelibrary.org/stats/circulation-monthly');
 		$dash->circ->list[] = array('Circulation Daily: by Hour'
-													,'http://dash.spokanelibrary.org/stats/circulation-daily');
+													,'https://dash.spokanelibrary.org/stats/circulation-daily');
 		$dash->circ->list[] = array('Circulation Hourly: in Date Range'
-													,'http://dash.spokanelibrary.org/stats/circulation-hourly-date-range');
+													,'https://dash.spokanelibrary.org/stats/circulation-hourly-date-range');
 		$dash->circ->list[] = array('divider'=>true);
 		$dash->circ->list[] = array('X1 Circulation History'
-													,'http://dash.spokanelibrary.org/stats/circulation-x1-history');
+													,'https://dash.spokanelibrary.org/stats/circulation-x1-history');
 		$dash->circ->list[] = array('divider'=>true);
 		$dash->circ->list[] = array('Circulation Snapshot: Right Now!'
-													,'http://dash.spokanelibrary.org/stats/circulation-snapshot');
+													,'https://dash.spokanelibrary.org/stats/circulation-snapshot');
 		$dash->circ->list[] = array('Circulation Snapshot Averages: Live in the Past!'
-													,'http://dash.spokanelibrary.org/stats/circulation-snapshot-average');
+													,'https://dash.spokanelibrary.org/stats/circulation-snapshot-average');
 		$dash->circ->list[] = array('divider'=>true);
 		$dash->circ->list[] = array('Circulation Turnover by Call Type'
-													,'http://dash.spokanelibrary.org/stats/circulation-monthly-call-type');
+													,'https://dash.spokanelibrary.org/stats/circulation-monthly-call-type');
 
 		$dash->coll->label = 'Collection Development';
 		$dash->coll->list[] = array('Collection Balancing'
-													,'http://dash.spokanelibrary.org/stats/collection-balance');
+													,'https://dash.spokanelibrary.org/stats/collection-balance');
 		$dash->coll->list[] = array('Lost in Transfer'
-													,'http://dash.spokanelibrary.org/stats/collection-transfer');
+													,'https://dash.spokanelibrary.org/stats/collection-transfer');
 		$dash->coll->list[] = array('divider'=>true);
 		$dash->coll->list[] = array('New Material Requests (monthly)'
-													,'http://dash.spokanelibrary.org/stats/collection-nmr');
+													,'https://dash.spokanelibrary.org/stats/collection-nmr');
 		
 		$dash->cust->label = 'Customers';
 		$dash->cust->list[] = array('EnvisionWare Gates &amp; Events'
-													,'http://dash.spokanelibrary.org/stats/envisionware-gates-events');
+													,'https://dash.spokanelibrary.org/stats/envisionware-gates-events');
 		$dash->cust->list[] = array('EnvisionWare PC Activity'
-													,'http://dash.spokanelibrary.org/stats/envisionware-pc-activity');
+													,'https://dash.spokanelibrary.org/stats/envisionware-pc-activity');
 		$dash->cust->list[] = array('divider'=>true);
 		$dash->cust->list[] = array('Customer Fines &amp; Fees Waived'
-													,'http://dash.spokanelibrary.org/stats/customer-fines-waived');
+													,'https://dash.spokanelibrary.org/stats/customer-fines-waived');
 		$dash->cust->list[] = array('New Cards Issued'
-													,'http://dash.spokanelibrary.org/stats/new-cards');
+													,'https://dash.spokanelibrary.org/stats/new-cards');
 		$dash->cust->list[] = array('Hold Activity: Picked Up / Expired'
-													,'http://dash.spokanelibrary.org/stats/hold-activity-weekly');
+													,'https://dash.spokanelibrary.org/stats/hold-activity-weekly');
 		$dash->cust->list[] = array('Item &amp; Request Limits'
-													,'http://dash.spokanelibrary.org/stats/item-request-limits');
+													,'https://dash.spokanelibrary.org/stats/item-request-limits');
 		
 		$dash->fin->label = 'Business & Finance';
 		$dash->fin->list[] = array('Balance Sheet (beta)'
-																,'http://dash.spokanelibrary.org/stats/balance-sheet');
+																,'https://dash.spokanelibrary.org/stats/balance-sheet');
 
 
 		/*
