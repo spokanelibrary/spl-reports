@@ -320,6 +320,8 @@ class SPL_Report {
 
 	  // create a new cURL resource
 	  $ch = curl_init();
+	  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+	  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
 	  if ( 'post' == $method ) {
 	    // setup for an http post
