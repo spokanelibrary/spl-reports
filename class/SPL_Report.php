@@ -320,6 +320,8 @@ class SPL_Report {
 
 	  // create a new cURL resource
 	  $ch = curl_init();
+	  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+	  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
 	  if ( 'post' == $method ) {
 	    // setup for an http post
@@ -557,7 +559,7 @@ class SPL_Report {
 													,'https://dash.spokanelibrary.org/stats/collection-nmr');
 		
 		$dash->cust->label = 'Customers';
-		$dash->cust->list[] = array('EnvisionWare Gates &amp; Events'
+		$dash->cust->list[] = array('Gates &amp; Events'
 													,'https://dash.spokanelibrary.org/stats/envisionware-gates-events');
 		$dash->cust->list[] = array('EnvisionWare PC Activity'
 													,'https://dash.spokanelibrary.org/stats/envisionware-pc-activity');
