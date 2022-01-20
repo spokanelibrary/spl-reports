@@ -738,14 +738,14 @@ class SPL_Report {
 																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=37');
 
 		$intra->coll->labels->label = 'Label Requests';
-		$intra->coll->labels->list[] = array('Approved call number labels'
-																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=80');
+		//$intra->coll->labels->list[] = array('Approved call number labels'
+		//															,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=80');
 		$intra->coll->labels->list[] = array('New call number label request'
-																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=79');
-		$intra->coll->labels->list[] = array('Unapproved call number label requests (av)'
-																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=74');
-		$intra->coll->labels->list[] = array('Unapproved call number label requests (print)'
-																	,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=78');
+																	,'https://forms.office.com/r/rkxQKG7vhN');
+		//$intra->coll->labels->list[] = array('Unapproved call number label requests (av)'
+		//															,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=74');
+		//$intra->coll->labels->list[] = array('Unapproved call number label requests (print)'
+		//															,'http://intra.spokanelibrary.org/reports/detail.asp?report_id=78');
 		
 		$intra->coll->subjects->label = 'Subject Headings';
 		$intra->coll->subjects->list[] = array('Adult records with juvenile fiction subject headings'
